@@ -1,0 +1,147 @@
+# week1
+
+> **定义 1.1 (绝对误差与误差限)**
+> 
+> 设 $x^{*}$ 为准确值 $x$ 的一个近似值, 称 $e\left(x^{*}\right)=x-x^{*}$ 为近似值 $x^{*}$ 的绝对误差, 简称误差. 若存在正数 $\varepsilon$ 使得 $\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\varepsilon$, 则称 $\varepsilon$ 为近似值 $x^{*}$ 的绝对误差限, 简称误差限.
+
+> **定理 1.1 (相对误差限与有效数字的关系)**
+> 
+> 若 $x$ 的近似值 $x^{*}=\pm0.a_1a_2\cdots{a}_n\times10^{m}\left(a_1\ne0\right)$ 有 $n$ 位有效数字, 则 $\frac{1}{2a_1}\times10^{-n+1}$ 为其相对误差限. 反之, 若 $x^{*}$ 的相对误差限 $\varepsilon_r$ 满足 $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, 则 $x^{*}$ 至少具有 $n$ 位有效数字.
+
+> **定义 1.2 (相对误差与相对误差限)**
+> 
+> 设 $x^{*}$ 为准确值 $x$ 的近似值, 称 $e_r\left(x^{*}\right)=\frac{e\left(x^{*}\right)}{x^{*}}$ 为近似值 $x^{*}$ 的相对误差. 若存在正数 $\varepsilon_r$ 使得 $\left|e_r\left(x^{*}\right)\right|\le\varepsilon_r$, 则称 $\varepsilon_r$ 为 $x^{*}$ 的相对误差限.
+
+> **定义 1.3 (有效数字)**
+> 
+> 如果近似值 $x^{*}$ 的规格化形式为 $x^{*}=\pm0.a_1a_2\cdots{a}_n\cdots\times10^{m}$, 其中 $m$ 为整数, $a_1\ne0$, 且 $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, 则称近似值 $x^{*}$ 有 $n$ 位有效数字.
+
+## 1-3
+
+已知 $a=1.2031$, $b=0.978$ 是经过四舍五入后得到的近似值, 问 $a+b$, $a\times{b}$ 有几位有效数字?
+
+### 解答 1-3
+
+由**定义 1.1 (绝对误差与误差限)** 及四舍五入的含义, $a=1.2031$ 有 5 位有效数字, 其误差限为 $\frac{1}{2}\times10^{-4}$; $b=0.978$ 有 3 位有效数字, 其误差限为 $\frac{1}{2}\times10^{-3}$.
+
+先看和 $a+b=1.2031+0.978=2.1811$. 由误差在基本运算中的传播, 和的误差限不超过各数误差限之和, 故
+
+$$
+\left|e\left(a+b\right)\right|\le\left|e\left(a\right)\right|+\left|e\left(b\right)\right|\le\frac{1}{2}\times10^{-4}+\frac{1}{2}\times10^{-3}=0.00055.
+$$
+
+又 $2.1811=0.21811\times10^{1}$ ($m=1$), 而 $\frac{1}{2}\times10^{1-4}=\frac{1}{2}\times10^{-3}=0.0005<0.00055\le\frac{1}{2}\times10^{1-3}=\frac{1}{2}\times10^{-2}=0.005$, 故由**定义 1.3 (有效数字)**, $a+b$ 有 3 位有效数字.
+
+再看积 $a\times{b}=1.2031\times0.978=1.17663$. 由**定义 1.2 (相对误差与相对误差限)** 及误差在基本运算中的传播, 积的相对误差限不超过各数相对误差限之和, 故
+
+$$
+\left|e_r\left(a\right)\right|\le\frac{\frac{1}{2}\times10^{-4}}{1.2031}\approx4.156\times10^{-5},\quad\left|e_r\left(b\right)\right|\le\frac{\frac{1}{2}\times10^{-3}}{0.978}\approx5.113\times10^{-4},
+$$
+
+$$
+\left|e_r\left(a\times{b}\right)\right|\le\left|e_r\left(a\right)\right|+\left|e_r\left(b\right)\right|\approx5.528\times10^{-4},
+$$
+
+$$
+\left|e\left(a\times{b}\right)\right|\approx\left|a\times{b}\right|\cdot\left|e_r\left(a\times{b}\right)\right|\approx1.17663\times5.528\times10^{-4}\approx6.505\times10^{-4}.
+$$
+
+又 $1.17663=0.117663\times10^{1}$ ($m=1$), 且 $\frac{1}{2}\times10^{-3}=0.0005<6.505\times10^{-4}\le\frac{1}{2}\times10^{-2}=0.005$, 故由**定义 1.3 (有效数字)**, $a\times{b}$ 有 3 位有效数字.
+
+$\blacksquare$
+
+## 1-7
+
+正方形的边长约 $100$ 厘米, 问测量边长时误差应多大, 才能保证面积的误差不超过 $1$ 厘米$^{2}$?
+
+### 解答 1-7
+
+设正方形边长为 $a\approx100$ 厘米, 面积为 $S=a^{2}$. 由误差在基本运算中的传播, 面积的绝对误差满足
+
+$$
+\left|e\left(S\right)\right|\approx\left|S'\left(a\right)\right|\cdot\left|e\left(a\right)\right|=2a\left|e\left(a\right)\right|=200\left|e\left(a\right)\right|.
+$$
+
+要保证面积的误差不超过 $1$ 厘米$^{2}$, 即 $\left|e\left(S\right)\right|\le1$, 只需
+
+$$
+200\left|e\left(a\right)\right|\le1\,\Rightarrow\,\left|e\left(a\right)\right|\le\frac{1}{200}=0.005.
+$$
+
+故测量边长时, 边长误差的误差限应不超过 $0.005$ 厘米.
+
+$\blacksquare$
+
+## 1-9
+
+设 $s=\frac{1}{2}gt^{2}$, 假定 $g$ 是准确的, 而对 $t$ 的测量有 $\pm0.1$ 秒的误差, 试证当 $t$ 增大时, $s$ 的绝对误差增大而相对误差却减小.
+
+### 解答 1-9
+
+由误差在基本运算中的传播, $s=\frac{1}{2}gt^{2}$, 因 $g$ 准确即 $e\left(g\right)=0$, 故 $s$ 的绝对误差近似为
+
+$$
+\left|e\left(s\right)\right|\approx\left|\frac{\partial{s}}{\partial{t}}\right|\left|e\left(t\right)\right|=gt\left|e\left(t\right)\right|=0.1gt.
+$$
+
+当 $t$ 增大时, $0.1gt$ 增大, 故 $s$ 的绝对误差增大.
+
+又由误差在基本运算中的传播, 对 $\ln{s}=\ln\frac{g}{2}+2\ln{t}$, 有
+
+$$
+\left|e_r\left(s\right)\right|\approx\left|2\frac{e\left(t\right)}{t}\right|=\frac{2\times0.1}{t}=\frac{0.2}{t}.
+$$
+
+当 $t$ 增大时, $\frac{0.2}{t}$ 减小, 故 $s$ 的相对误差减小. 综上, 当 $t$ 增大时, $s$ 的绝对误差增大而相对误差减小.
+
+$\blacksquare$
+
+## 1-10
+
+已知 $\sqrt{783}\approx27.983$ 有 5 位有效数字, 试求方程 $x^{2}-56x+1=0$ 的两个根, 使它们至少有 4 位有效数字.
+
+### 解答 1-10
+
+方程 $x^{2}-56x+1=0$ 的判别式为
+
+$$
+\Delta=56^{2}-4=3136-4=3132=4\times783,
+$$
+
+故 $\sqrt{\Delta}=2\sqrt{783}\approx2\times27.983=55.966$. 由求根公式, 两根可写为
+
+$$
+x_1=\frac{56+\sqrt{\Delta}}{2}=28+\sqrt{783}\approx28+27.983=55.983,
+$$
+
+$$
+x_2=\frac{56-\sqrt{\Delta}}{2}=28-\sqrt{783}\approx28-27.983=0.017.
+$$
+
+若直接按 $28-\sqrt{783}$ 计算 $x_2$, 则是两个相近的数相减, 由避免两个相近的数相减, 有效数字会严重丢失, 故不能直接这样算.
+
+由韦达定理, 两根之积 $x_1x_2=1$, 故 $x_2=\frac{1}{x_1}$ (注意 $x_1\ne0$). 先算 $x_1$: 由**定义 1.3 (有效数字)**, $\sqrt{783}\approx27.983=0.27983\times10^{2}$ 有 5 位有效数字, 误差限为 $\frac{1}{2}\times10^{2-5}=\frac{1}{2}\times10^{-3}=0.0005$, 故
+
+$$
+\left|e\left(x_1\right)\right|=\left|e\left(\sqrt{783}\right)\right|\le0.0005\le\frac{1}{2}\times10^{2-4}=0.005,
+$$
+
+即 $x_1\approx55.983$ 至少有 4 位有效数字.
+
+再由误差在基本运算中的传播, $x_2=\frac{1}{x_1}$, 商的相对误差近似等于分子分母相对误差之差, 故
+
+$$
+\left|e_r\left(x_2\right)\right|\approx\left|e_r\left(x_1\right)\right|\le\frac{0.0005}{55.983}\approx8.93\times10^{-6},
+$$
+
+而 $x_2=\frac{1}{55.983}\approx0.017862=0.17862\times10^{-1}$, 故
+
+$$
+\left|e\left(x_2\right)\right|\approx{x}_2\left|e_r\left(x_2\right)\right|\approx0.017862\times8.93\times10^{-6}\approx1.595\times10^{-7}\le\frac{1}{2}\times10^{-1-4}=\frac{1}{2}\times10^{-5},
+$$
+
+由**定义 1.3 (有效数字)**, $x_2\approx0.017862$ 至少有 4 位有效数字.
+
+故所求两根为 $x_1\approx55.983$, $x_2\approx0.017862$, 均至少有 4 位有效数字.
+
+$\blacksquare$
