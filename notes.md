@@ -168,7 +168,13 @@ $$
 
 **雅可比迭代法** (式 (3.12))
 
-设方程组 $Ax=b$ 的系数矩阵 $A$ 分裂为 $A=D-L-U$, 其中 $D=\mathrm{diag}\left(a_{11},a_{22},\dots,a_{nn}\right)$, 则雅可比迭代格式为
+设方程组 $Ax=b$ 的系数矩阵 $A$ 分裂为 $A=D-L-U$, 其中
+
+$$
+D=\mathrm{diag}\left(a_{11},a_{22},\dots,a_{nn}\right).
+$$
+
+则雅可比迭代格式为
 
 $$
 x^{\left(k+1\right)}=Bx^{\left(k\right)}+g,\qquad B=I-D^{-1}A,\qquad g=D^{-1}b,
@@ -198,7 +204,13 @@ $$
 x^{\left(k+1\right)}=\left(D-\omega L\right)^{-1}\left[\left(1-\omega\right)D+\omega U\right]x^{\left(k\right)}+\omega\left(D-\omega L\right)^{-1}b,
 $$
 
-迭代矩阵为 $M_{\omega}=\left(D-\omega L\right)^{-1}\left[\left(1-\omega\right)D+\omega U\right]$; 当 $\omega=1$ 时即为高斯-赛德尔迭代法.
+迭代矩阵为
+
+$$
+M_{\omega}=\left(D-\omega L\right)^{-1}\left[\left(1-\omega\right)D+\omega U\right];
+$$
+
+当 $\omega=1$ 时即为高斯-赛德尔迭代法.
 
 **定义 3.3** (谱半径)
 
@@ -312,7 +324,13 @@ $$
 
 **定义 5.4** (差商与牛顿插值多项式)
 
-称 $f\left[x_i,x_j\right]=\frac{f\left(x_i\right)-f\left(x_j\right)}{x_i-x_j}$ 为 $f\left(x\right)$ 关于点 $x_i,x_j$ 的一阶差商, 并递推地称 $f\left[x_0,x_1,\dots,x_k\right]=\frac{f\left[x_1,\dots,x_k\right]-f\left[x_0,\dots,x_{k-1}\right]}{x_k-x_0}$ 为 $k$ 阶差商. 由此得牛顿插值多项式
+称 $f\left[x_i,x_j\right]=\frac{f\left(x_i\right)-f\left(x_j\right)}{x_i-x_j}$ 为 $f\left(x\right)$ 关于点 $x_i,x_j$ 的一阶差商, 并递推地称
+
+$$
+f\left[x_0,x_1,\dots,x_k\right]=\frac{f\left[x_1,\dots,x_k\right]-f\left[x_0,\dots,x_{k-1}\right]}{x_k-x_0}
+$$
+
+为 $k$ 阶差商. 由此得牛顿插值多项式
 
 $$
 N_n\left(x\right)=f\left[x_0\right]+\left(x-x_0\right)f\left[x_0,x_1\right]+\left(x-x_0\right)\left(x-x_1\right)f\left[x_0,x_1,x_2\right]+\cdots+\left(x-x_0\right)\cdots\left(x-x_{n-1}\right)f\left[x_0,\dots,x_n\right].
@@ -368,7 +386,13 @@ $$
 
 **线性最小二乘法的一般形式** (式 (6.7) – (6.9))
 
-对数据组 $\left(x_i,y_i\right)\left(i=1,2,\dots,n\right)$, 取 $\left[a,b\right]$ 上一组线性无关的函数 $\varphi_k\left(x\right)\left(k=0,1,\dots,m\right)$, 求 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使残差加权平方和 $\sum_{i=1}^n w_i\left[y_i-p\left(x_i\right)\right]^2$ 最小. 系数满足正则方程组
+对数据组 $\left(x_i,y_i\right)\left(i=1,2,\dots,n\right)$, 取 $\left[a,b\right]$ 上一组线性无关的函数
+
+$$
+\varphi_k\left(x\right)\left(k=0,1,\dots,m\right),
+$$
+
+求 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使残差加权平方和 $\sum_{i=1}^n w_i\left[y_i-p\left(x_i\right)\right]^2$ 最小. 系数满足正则方程组
 
 $$
 \sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(y,\varphi_j\right)\qquad\left(j=0,1,\dots,m\right),\qquad\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^n w_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right),\qquad\left(y,\varphi_j\right)=\sum_{i=1}^n w_i y_i\varphi_j\left(x_i\right).
@@ -382,29 +406,59 @@ $$
 
 **非线性拟合的线性化** (6.1.2 指数拟合, 6.1.3 分式线性拟合)
 
-对指数型 $y=ae^{bx}$, 两端取对数得 $\ln y=\ln a+bx$, 先对变换后的数据组 $\left(x_i,\ln y_i\right)$ 按**线性最小二乘法的一般形式**作一次线性拟合, 再取指数还原; 对可分离变量的分式型 $y=\dfrac{x}{ax+b}$, 两端取倒数得 $\dfrac{1}{y}=a+b\dfrac{1}{x}$, 先对数据组 $\left(\dfrac{1}{x_i},\dfrac{1}{y_i}\right)$ 作一次线性拟合, 再取倒数还原.
+对指数型 $y=ae^{bx}$, 两端取对数得 $\ln y=\ln a+bx$, 先对变换后的数据组 $\left(x_i,\ln y_i\right)$ 按**线性最小二乘法的一般形式**作一次线性拟合, 再取指数还原; 对可分离变量的分式型 $y=\frac{x}{ax+b}$, 两端取倒数得 $\frac{1}{y}=a+b\frac{1}{x}$, 先对数据组 $\left(\frac{1}{x_i},\frac{1}{y_i}\right)$ 作一次线性拟合, 再取倒数还原.
 
 **定义 6.2** (正交函数系)
 
-若函数系 $\left\{\varphi_k\left(x\right)\right\}$ 在区间 $\left[a,b\right]$ 上满足 $\left(\varphi_j,\varphi_k\right)=\int_a^b w\left(x\right)\varphi_j\left(x\right)\varphi_k\left(x\right)\,\mathrm dx=0\ \left(j\ne k\right)$ 且 $\left(\varphi_k,\varphi_k\right)>0$, 则称其为 $\left[a,b\right]$ 上关于权函数 $w\left(x\right)$ 的正交函数系, 其中 $\left(\varphi,\psi\right)=\int_a^b w\left(x\right)\varphi\left(x\right)\psi\left(x\right)\,\mathrm dx$ 称为函数的内积.
+若函数系 $\left\{\varphi_k\left(x\right)\right\}$ 在区间 $\left[a,b\right]$ 上满足
+
+$$
+\left(\varphi_j,\varphi_k\right)=\int_a^b w\left(x\right)\varphi_j\left(x\right)\varphi_k\left(x\right)\,\mathrm dx=0\ \left(j\ne k\right)
+$$
+
+且 $\left(\varphi_k,\varphi_k\right)>0$, 则称其为 $\left[a,b\right]$ 上关于权函数 $w\left(x\right)$ 的正交函数系, 其中 $\left(\varphi,\psi\right)=\int_a^b w\left(x\right)\varphi\left(x\right)\psi\left(x\right)\,\mathrm dx$ 称为函数的内积.
 
 **定义 6.3** (最佳平方逼近函数)
 
-设 $f\left(x\right)$ 在 $\left[a,b\right]$ 上连续, $H=\operatorname{Span}\left\{\varphi_0,\varphi_1,\dots,\varphi_m\right\}$, 若 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使 $\int_a^b w\left(x\right)\left[f\left(x\right)-p\left(x\right)\right]^2\,\mathrm dx$ 为最小, 则称 $p\left(x\right)$ 为 $f\left(x\right)$ 在 $H$ 中关于权函数 $w\left(x\right)$ 的最佳平方逼近函数.
+设 $f\left(x\right)$ 在 $\left[a,b\right]$ 上连续,
+
+$$
+H=\operatorname{Span}\left\{\varphi_0,\varphi_1,\dots,\varphi_m\right\},
+$$
+
+若 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使
+
+$$
+\int_a^b w\left(x\right)\left[f\left(x\right)-p\left(x\right)\right]^2\,\mathrm dx
+$$
+
+为最小, 则称 $p\left(x\right)$ 为 $f\left(x\right)$ 在 $H$ 中关于权函数 $w\left(x\right)$ 的最佳平方逼近函数.
 
 **最佳平方逼近的正则方程组** (式 (6.32), (6.35), (6.36))
 
-按**定义 6.3**, 系数 $a_k$ 满足正则方程组 $\sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(f,\varphi_j\right)\ \left(j=0,1,\dots,m\right)$, 其中 $\left(f,\varphi_j\right)=\int_a^b w\left(x\right)f\left(x\right)\varphi_j\left(x\right)\,\mathrm dx$. 若 $\left\{\varphi_k\right\}$ 为正交函数系, 则方程组对角化, 解为 $a_k=\dfrac{\left(f,\varphi_k\right)}{\left(\varphi_k,\varphi_k\right)}$, 最佳平方逼近函数为 $p\left(x\right)=\sum_{k=0}^m\dfrac{\left(f,\varphi_k\right)}{\left(\varphi_k,\varphi_k\right)}\varphi_k\left(x\right)$.
+按**定义 6.3**, 系数 $a_k$ 满足正则方程组
+
+$$
+\sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(f,\varphi_j\right)\ \left(j=0,1,\dots,m\right),
+$$
+
+其中 $\left(f,\varphi_j\right)=\int_a^b w\left(x\right)f\left(x\right)\varphi_j\left(x\right)\,\mathrm dx$. 若 $\left\{\varphi_k\right\}$ 为正交函数系, 则方程组对角化, 解为 $a_k=\frac{\left(f,\varphi_k\right)}{\left(\varphi_k,\varphi_k\right)}$, 最佳平方逼近函数为 $p\left(x\right)=\sum_{k=0}^m\frac{\left(f,\varphi_k\right)}{\left(\varphi_k,\varphi_k\right)}\varphi_k\left(x\right)$.
 
 **勒让德多项式** (式 (6.18), (6.19))
 
-前几项为 $P_0\left(x\right)=1$, $P_1\left(x\right)=x$, $P_2\left(x\right)=\dfrac{3x^2-1}{2}$, $P_3\left(x\right)=\dfrac{5x^3-3x}{2}$. 它是 $\left[-1,1\right]$ 上关于权 $w\left(x\right)\equiv1$ 的正交多项式系, 且 $\left(P_n,P_m\right)=0\ \left(n\ne m\right)$, $\left(P_n,P_n\right)=\dfrac{2}{2n+1}$. 在区间 $\left[a,b\right]$ 上使用时作变量替换 $t=\dfrac{2x-\left(b+a\right)}{b-a}$, 取 $\varphi_k\left(x\right)=P_k\left(t\right)$.
+前几项为 $P_0\left(x\right)=1$, $P_1\left(x\right)=x$, $P_2\left(x\right)=\frac{3x^2-1}{2}$, $P_3\left(x\right)=\frac{5x^3-3x}{2}$. 它是 $\left[-1,1\right]$ 上关于权 $w\left(x\right)\equiv1$ 的正交多项式系, 且 $\left(P_n,P_m\right)=0\ \left(n\ne m\right)$, $\left(P_n,P_n\right)=\frac{2}{2n+1}$. 在区间 $\left[a,b\right]$ 上使用时作变量替换 $t=\frac{2x-\left(b+a\right)}{b-a}$, 取 $\varphi_k\left(x\right)=P_k\left(t\right)$.
 
 ## 数值微分与数值积分
 
 **定义 7.1** (代数精确度)
 
-若当 $f\left(x\right)$ 为任意次数不高于 $m$ 的多项式时, 求积公式 $\int_a^b f\left(x\right)dx\approx\sum_{k=0}^n A_k f\left(x_k\right)$ 均精确成立, 而对某个 $m+1$ 次多项式公式不精确成立, 则称该求积公式具有 $m$ 次代数精确度.
+若当 $f\left(x\right)$ 为任意次数不高于 $m$ 的多项式时, 求积公式
+
+$$
+\int_a^b f\left(x\right)dx\approx\sum_{k=0}^n A_k f\left(x_k\right)
+$$
+
+均精确成立, 而对某个 $m+1$ 次多项式公式不精确成立, 则称该求积公式具有 $m$ 次代数精确度.
 
 **定理 7.2** (梯形公式的误差)
 
@@ -470,7 +524,13 @@ $$
 T_{2^m}=\frac{1}{2}T_{2^{m-1}}+\frac{b-a}{2^m}\sum_{k=1}^{2^{m-1}}f\left(a+\left(2k-1\right)\frac{b-a}{2^m}\right),
 $$
 
-且事后误差估计为 $\left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|$, 当 $\left|T_{2^m}-T_{2^{m-1}}\right|<3\varepsilon$ 时停止计算.
+且事后误差估计为
+
+$$
+\left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|,
+$$
+
+当 $\left|T_{2^m}-T_{2^{m-1}}\right|<3\varepsilon$ 时停止计算.
 
 **龙贝格求积公式** (式 (7.41))
 
@@ -484,7 +544,13 @@ $$
 
 **定义 7.2** (高斯点与高斯型求积公式)
 
-若 $n$ 个节点 $x_1,\dots,x_n\in\left[a,b\right]$ 使带权求积公式 $\int_a^b \rho\left(x\right)f\left(x\right)dx\approx\sum_{k=1}^n A_k f\left(x_k\right)$ 具有 $2n-1$ 次代数精确度, 则称这组节点为高斯点, 公式称为带权 $\rho\left(x\right)$ 的高斯型求积公式.
+若 $n$ 个节点 $x_1,\dots,x_n\in\left[a,b\right]$ 使带权求积公式
+
+$$
+\int_a^b \rho\left(x\right)f\left(x\right)dx\approx\sum_{k=1}^n A_k f\left(x_k\right)
+$$
+
+具有 $2n-1$ 次代数精确度, 则称这组节点为高斯点, 公式称为带权 $\rho\left(x\right)$ 的高斯型求积公式.
 
 **定理 7.4** (高斯点与正交多项式的关系)
 
@@ -538,7 +604,13 @@ $$
 
 **定理 8.4** (迭代法收敛阶与迭代函数导数的关系)
 
-设迭代函数 $\varphi\left(x\right)$ 在 $x^{*}$ 邻近有 $r$ 阶连续导数 $\left(r\ge2\right)$, 且 $x^{*}=\varphi\left(x^{*}\right)$, $\varphi'\left(x^{*}\right)=\varphi''\left(x^{*}\right)=\dots=\varphi^{\left(r-1\right)}\left(x^{*}\right)=0$, 而 $\varphi^{\left(r\right)}\left(x^{*}\right)\ne0$, 则迭代序列 $\left\{x_n\right\}$ 是 $r$ 阶收敛的; 若 $x^{*}=\varphi\left(x^{*}\right)$ 而 $0<\left|\varphi'\left(x^{*}\right)\right|<1$, 则 $\left\{x_n\right\}$ 是线性收敛的.
+设迭代函数 $\varphi\left(x\right)$ 在 $x^{*}$ 邻近有 $r$ 阶连续导数 $\left(r\ge2\right)$, 且
+
+$$
+x^{*}=\varphi\left(x^{*}\right),\quad\varphi'\left(x^{*}\right)=\varphi''\left(x^{*}\right)=\dots=\varphi^{\left(r-1\right)}\left(x^{*}\right)=0,
+$$
+
+而 $\varphi^{\left(r\right)}\left(x^{*}\right)\ne0$, 则迭代序列 $\left\{x_n\right\}$ 是 $r$ 阶收敛的; 若 $x^{*}=\varphi\left(x^{*}\right)$ 而 $0<\left|\varphi'\left(x^{*}\right)\right|<1$, 则 $\left\{x_n\right\}$ 是线性收敛的.
 
 **牛顿迭代法** (切线法, 式 (8.16))
 
