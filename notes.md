@@ -225,7 +225,7 @@ $$
 对任意初始向量 $x^{\left(0\right)}$ 和右端项 $g$, 由迭代格式 $x^{\left(k+1\right)}=Mx^{\left(k\right)}+g$ 产生的向量序列收敛的充要条件是
 
 $$
-\rho\left(M\right)<1.
+\rho\left(M\right)< 1.
 $$
 
 **定义 3.4** (对角占优矩阵)
@@ -240,13 +240,13 @@ $$
 
 **几个常用的充分收敛条件** (判敛)
 
-设方程组 $Ax=b$: (1) 若 $A$ 为严格对角占优矩阵 (或不可约弱对角占优矩阵), 则雅可比迭代法与高斯-赛德尔迭代法均收敛; (2) 若 $A$ 为对称正定矩阵且 $0<\omega<2$, 则松弛法收敛 (此条件为充要条件).
+设方程组 $Ax=b$: (1) 若 $A$ 为严格对角占优矩阵 (或不可约弱对角占优矩阵), 则雅可比迭代法与高斯-赛德尔迭代法均收敛; (2) 若 $A$ 为对称正定矩阵且 $0< \omega< 2$, 则松弛法收敛 (此条件为充要条件).
 
 ## 特征值计算
 
 **幂法** (求按模最大的特征值与特征向量)
 
-设 $n\times n$ 实矩阵 $A$ 的特征值满足 $\left|\lambda_1\right|>\left|\lambda_2\right|\ge\cdots\ge\left|\lambda_n\right|$, 相应特征向量 $u_1,u_2,\dots,u_n$ 线性无关. 取初始向量 $\alpha^{\left(0\right)}\ne0$, 由迭代 $\alpha^{\left(k+1\right)}=A\alpha^{\left(k\right)}$ (式 (4.1)) 产生向量序列, 当 $k$ 充分大时 $\alpha^{\left(k+1\right)}$ 即可作为 $\lambda_1$ 相应特征向量的近似, 且
+设 $n\times n$ 实矩阵 $A$ 的特征值满足 $\left|\lambda_1\right|> \left|\lambda_2\right|\ge\cdots\ge\left|\lambda_n\right|$, 相应特征向量 $u_1,u_2,\dots,u_n$ 线性无关. 取初始向量 $\alpha^{\left(0\right)}\ne0$, 由迭代 $\alpha^{\left(k+1\right)}=A\alpha^{\left(k\right)}$ (式 (4.1)) 产生向量序列, 当 $k$ 充分大时 $\alpha^{\left(k+1\right)}$ 即可作为 $\lambda_1$ 相应特征向量的近似, 且
 
 $$
 \lambda_1\approx\frac{\alpha_i^{\left(k+1\right)}}{\alpha_i^{\left(k\right)}}
@@ -374,7 +374,7 @@ $$
 
 **定义 5.11** (三次样条插值)
 
-已知 $f\left(x\right)$ 在节点 $a=x_0<x_1<\cdots<x_n=b$ 上的值 $y_i=f\left(x_i\right)$, 若 $S\left(x\right)$ 满足 $S\left(x_i\right)=y_i$, 在每个小区间 $\left[x_i,x_{i+1}\right]$ 上是三次多项式, 在 $\left[a,b\right]$ 上二阶连续可微, 则称 $S\left(x\right)$ 为三次样条插值函数. 以 $M_i=S''\left(x_i\right)$ 为参数得三弯矩方程
+已知 $f\left(x\right)$ 在节点 $a=x_0< x_1< \cdots< x_n=b$ 上的值 $y_i=f\left(x_i\right)$, 若 $S\left(x\right)$ 满足 $S\left(x_i\right)=y_i$, 在每个小区间 $\left[x_i,x_{i+1}\right]$ 上是三次多项式, 在 $\left[a,b\right]$ 上二阶连续可微, 则称 $S\left(x\right)$ 为三次样条插值函数. 以 $M_i=S''\left(x_i\right)$ 为参数得三弯矩方程
 
 $$
 \alpha_j M_{j-1}+2M_j+\beta_j M_{j+1}=C_j\qquad\left(j=1,\dots,n-1\right),
@@ -416,7 +416,7 @@ $$
 \left(\varphi_j,\varphi_k\right)=\int_a^b w\left(x\right)\varphi_j\left(x\right)\varphi_k\left(x\right)\,\mathrm dx=0\ \left(j\ne k\right)
 $$
 
-且 $\left(\varphi_k,\varphi_k\right)>0$, 则称其为 $\left[a,b\right]$ 上关于权函数 $w\left(x\right)$ 的正交函数系, 其中 $\left(\varphi,\psi\right)=\int_a^b w\left(x\right)\varphi\left(x\right)\psi\left(x\right)\,\mathrm dx$ 称为函数的内积.
+且 $\left(\varphi_k,\varphi_k\right)> 0$, 则称其为 $\left[a,b\right]$ 上关于权函数 $w\left(x\right)$ 的正交函数系, 其中 $\left(\varphi,\psi\right)=\int_a^b w\left(x\right)\varphi\left(x\right)\psi\left(x\right)\,\mathrm dx$ 称为函数的内积.
 
 **定义 6.3** (最佳平方逼近函数)
 
@@ -530,7 +530,7 @@ $$
 \left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|,
 $$
 
-当 $\left|T_{2^m}-T_{2^{m-1}}\right|<3\varepsilon$ 时停止计算.
+当 $\left|T_{2^m}-T_{2^{m-1}}\right|< 3\varepsilon$ 时停止计算.
 
 **龙贝格求积公式** (式 (7.41))
 
@@ -586,7 +586,7 @@ $$
 
 **定理 8.2** (不动点迭代法的收敛条件)
 
-设函数 $\varphi\left(x\right)$ 在区间 $\left[a,b\right]$ 上满足条件: (1) 对任意 $x\in\left[a,b\right]$, 有 $\varphi\left(x\right)\in\left[a,b\right]$; (2) 存在常数 $0<L<1$, 使得对任意 $x\in\left[a,b\right]$, 都有 $\left|\varphi'\left(x\right)\right|\le L$. 则方程 $x=\varphi\left(x\right)$ 在 $\left[a,b\right]$ 上有唯一的根 $x^{*}$, 对任意初值 $x_0\in\left[a,b\right]$, 迭代序列 $x_{n+1}=\varphi\left(x_n\right)$ 收敛于 $x^{*}$, 并有事后误差估计
+设函数 $\varphi\left(x\right)$ 在区间 $\left[a,b\right]$ 上满足条件: (1) 对任意 $x\in\left[a,b\right]$, 有 $\varphi\left(x\right)\in\left[a,b\right]$; (2) 存在常数 $0< L< 1$, 使得对任意 $x\in\left[a,b\right]$, 都有 $\left|\varphi'\left(x\right)\right|\le L$. 则方程 $x=\varphi\left(x\right)$ 在 $\left[a,b\right]$ 上有唯一的根 $x^{*}$, 对任意初值 $x_0\in\left[a,b\right]$, 迭代序列 $x_{n+1}=\varphi\left(x_n\right)$ 收敛于 $x^{*}$, 并有事后误差估计
 
 $$
 \left|x^{*}-x_n\right|\le\frac{L}{1-L}\left|x_n-x_{n-1}\right|.
@@ -600,7 +600,7 @@ $$
 \lim_{n\to\infty}\frac{\left|x_{n+1}-x^{*}\right|}{\left|x_n-x^{*}\right|^{r}}=a
 $$
 
-成立 (当 $r=1$ 时要求 $a<1$), 则称序列 $\left\{x_n\right\}$ 是 $r$ 阶收敛的; $r=1$ 称线性收敛, $r=2$ 称平方收敛.
+成立 (当 $r=1$ 时要求 $a< 1$), 则称序列 $\left\{x_n\right\}$ 是 $r$ 阶收敛的; $r=1$ 称线性收敛, $r=2$ 称平方收敛.
 
 **定理 8.4** (迭代法收敛阶与迭代函数导数的关系)
 
@@ -610,7 +610,7 @@ $$
 x^{*}=\varphi\left(x^{*}\right),\quad\varphi'\left(x^{*}\right)=\varphi''\left(x^{*}\right)=\dots=\varphi^{\left(r-1\right)}\left(x^{*}\right)=0,
 $$
 
-而 $\varphi^{\left(r\right)}\left(x^{*}\right)\ne0$, 则迭代序列 $\left\{x_n\right\}$ 是 $r$ 阶收敛的; 若 $x^{*}=\varphi\left(x^{*}\right)$ 而 $0<\left|\varphi'\left(x^{*}\right)\right|<1$, 则 $\left\{x_n\right\}$ 是线性收敛的.
+而 $\varphi^{\left(r\right)}\left(x^{*}\right)\ne0$, 则迭代序列 $\left\{x_n\right\}$ 是 $r$ 阶收敛的; 若 $x^{*}=\varphi\left(x^{*}\right)$ 而 $0< \left|\varphi'\left(x^{*}\right)\right|< 1$, 则 $\left\{x_n\right\}$ 是线性收敛的.
 
 **牛顿迭代法** (切线法, 式 (8.16))
 
