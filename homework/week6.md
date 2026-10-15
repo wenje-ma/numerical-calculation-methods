@@ -1,6 +1,6 @@
 # 作业 6
 
-> **线性最小二乘法的一般形式** (式(6.7)–(6.9)) <br>对数据组 $\left(x_i,y_i\right)\left(i=1,2,\dots,n\right)$, 取 $\left[a,b\right]$ 上一组线性无关的函数 $\varphi_k\left(x\right)\left(k=0,1,\dots,m\right)$, 求 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使残差加权平方和 $\sum_{i=1}^n w_i\left[y_i-p\left(x_i\right)\right]^2$ 最小. 系数满足正则方程组 $$\sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(y,\varphi_j\right)\qquad\left(j=0,1,\dots,m\right),\qquad\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^n w_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right),\qquad\left(y,\varphi_j\right)=\sum_{i=1}^n w_i y_i\varphi_j\left(x_i\right).$$ 特别地, 取 $\varphi_k\left(x\right)=x^k$ 即多项式拟合; 一次拟合 $y=a_0+a_1x$ ($w_i=1$) 的正则方程组为 $$\begin{cases}n a_0+a_1\sum\limits_{i=1}^n x_i=\sum\limits_{i=1}^n y_i,\\a_0\sum\limits_{i=1}^n x_i+a_1\sum\limits_{i=1}^n x_i^2=\sum\limits_{i=1}^n x_i y_i.\end{cases}$$
+> **线性最小二乘法的一般形式** (式(6.7)–(6.9)) <br>对数据组 $\left(x_i,y_i\right)\left(i=1,2,\dots,n\right)$, 取 $\left[a,b\right]$ 上一组线性无关的函数 $\varphi_k\left(x\right)\left(k=0,1,\dots,m\right)$, 求 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使残差加权平方和 $\sum_{i=1}^n w_i\left[y_i-p\left(x_i\right)\right]^2$ 最小. 系数满足正则方程组 $$\sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(y,\varphi_j\right)\quad\left(j=0,1,\dots,m\right),\quad\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^n w_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right),\quad\left(y,\varphi_j\right)=\sum_{i=1}^n w_i y_i\varphi_j\left(x_i\right).$$ 特别地, 取 $\varphi_k\left(x\right)=x^k$ 即多项式拟合; 一次拟合 $y=a_0+a_1x$ ($w_i=1$) 的正则方程组为 $$\begin{cases}n a_0+a_1\sum\limits_{i=1}^n x_i=\sum\limits_{i=1}^n y_i,\\a_0\sum\limits_{i=1}^n x_i+a_1\sum\limits_{i=1}^n x_i^2=\sum\limits_{i=1}^n x_i y_i.\end{cases}$$
 
 > **非线性拟合的线性化** (6.1.2 指数拟合, 6.1.3 分式线性拟合) <br>对指数型 $y=ae^{bx}$, 两端取对数得 $\ln y=\ln a+bx$, 先对变换后的数据组 $\left(x_i,\ln y_i\right)$ 按**线性最小二乘法的一般形式**作一次线性拟合, 再取指数还原; 对可分离变量的分式型 $y=\frac{x}{ax+b}$, 两端取倒数得 $\frac{1}{y}=a+b\frac{1}{x}$, 先对数据组 $\left(\frac{1}{x_i},\frac{1}{y_i}\right)$ 作一次线性拟合, 再取倒数还原.
 
@@ -19,7 +19,7 @@
 ### 解答 习题一
 
 设一次拟合多项式为 $y=a_0+a_1x$, 按**线性最小二乘法的一般形式** (一次拟合正则方程组) , 由 $n=8$ 计算各求和项: $$
-\sum_{i=1}^8 x_i=15.26,\qquad\sum_{i=1}^8 y_i=145.227,\qquad\sum_{i=1}^8 x_i^2=30.1556,\qquad\sum_{i=1}^8 x_i y_i=284.83628.
+\sum_{i=1}^8 x_i=15.26,\quad\sum_{i=1}^8 y_i=145.227,\quad\sum_{i=1}^8 x_i^2=30.1556,\quad\sum_{i=1}^8 x_i y_i=284.83628.
 $$
 
 代入正则方程组: $$
@@ -43,7 +43,7 @@ $\blacksquare$
 按散点分布近似直线, 设含碳量 $x$ 与冶炼时间 $y$ 的函数关系为 $y=a_0+a_1x$. 由**线性最小二乘法的一般形式** (一次拟合正则方程组) , $n=5$, 各求和项为
 
 $$
-\sum_{i=1}^5 x_i=700,\qquad\sum_{i=1}^5 y_i=758,\qquad\sum_{i=1}^5 x_i^2=99376,\qquad\sum_{i=1}^5 x_i y_i=108146.
+\sum_{i=1}^5 x_i=700,\quad\sum_{i=1}^5 y_i=758,\quad\sum_{i=1}^5 x_i^2=99376,\quad\sum_{i=1}^5 x_i y_i=108146.
 $$
 
 代入正则方程组: $$
@@ -67,13 +67,13 @@ $\blacksquare$
 令 $u=x^2$, 则拟合函数化为 $y=a+bu$, 它是关于基函数 $\varphi_0\left(x\right)=1$, $\varphi_1\left(x\right)=x^2$ 的线性最小二乘问题. 由**线性最小二乘法的一般形式**, 变换后数据为
 
 $$
-u_i=x_i^2=361,625,961,1444,1936\qquad\left(n=5\right),
+u_i=x_i^2=361,625,961,1444,1936\quad\left(n=5\right),
 $$
 
 各求和项为
 
 $$
-\sum u_i=5327,\qquad\sum y_i=271.4,\qquad\sum u_i^2=7277699,\qquad\sum u_i y_i=369321.5.
+\sum u_i=5327,\quad\sum y_i=271.4,\quad\sum u_i^2=7277699,\quad\sum u_i y_i=369321.5.
 $$
 
 代入关于 $a,b$ 的正则方程组: $$
@@ -101,7 +101,7 @@ $$
 各求和项为
 
 $$
-\sum x_i=36,\qquad\sum Y_i=29.9795,\qquad\sum x_i^2=204,\qquad\sum x_iY_i=147.1406.
+\sum x_i=36,\quad\sum Y_i=29.9795,\quad\sum x_i^2=204,\quad\sum x_iY_i=147.1406.
 $$
 
 代入正则方程组: $$
@@ -131,7 +131,7 @@ $$
 令 $u=\frac{1}{t}$, $z=\frac{1}{y}$, 则 $z=a+bu$, 对数据组 $\left(u_i,z_i\right)=\left(\frac{1}{t_i},\frac{1}{y_i}\right)$ 作一次线性最小二乘拟合. 由 $n=10$, 计算得
 
 $$
-\sum u_i=2.6923,\qquad\sum z_i=1.2330,\qquad\sum u_i^2=1.4930,\qquad\sum u_i z_i=0.45858.
+\sum u_i=2.6923,\quad\sum z_i=1.2330,\quad\sum u_i^2=1.4930,\quad\sum u_i z_i=0.45858.
 $$
 
 代入正则方程组: $$
@@ -177,11 +177,11 @@ $$
 求下列函数在指定区间上关于 $f\left(x\right)$ 的一次最佳平方逼近多项式: (1) $f\left(x\right)=\sqrt{x}$, $\left[0,1\right]$; (2) $f\left(x\right)=e^x$, $\left[0,1\right]$; (3) $f\left(x\right)=\sin\frac{\pi}{2}x$, $\left[0,1\right]$. (仅要求第 (2) 小题) ### 解答 习题七
 
 对 $f\left(x\right)=e^x$, $\left[0,1\right]$, 取权 $w\left(x\right)\equiv1$, 基函数 $\varphi_0\left(x\right)=1$, $\varphi_1\left(x\right)=x$, 即 $H=\operatorname{Span}\left\{1,x\right\}$. 由**定义 6.3** 与**最佳平方逼近的正则方程组** (式(6.32)) , 先计算各内积: $$
-\left(\varphi_0,\varphi_0\right)=\int_0^1\mathrm dx=1,\qquad\left(\varphi_0,\varphi_1\right)=\left(\varphi_1,\varphi_0\right)=\int_0^1x\,\mathrm dx=\frac12,\qquad\left(\varphi_1,\varphi_1\right)=\int_0^1x^2\,\mathrm dx=\frac13,
+\left(\varphi_0,\varphi_0\right)=\int_0^1\mathrm dx=1,\quad\left(\varphi_0,\varphi_1\right)=\left(\varphi_1,\varphi_0\right)=\int_0^1x\,\mathrm dx=\frac12,\quad\left(\varphi_1,\varphi_1\right)=\int_0^1x^2\,\mathrm dx=\frac13,
 $$
 
 $$
-\left(f,\varphi_0\right)=\int_0^1 e^x\,\mathrm dx=e-1,\qquad\left(f,\varphi_1\right)=\int_0^1x e^x\,\mathrm dx=\left[x e^x-e^x\right]_0^1=1.
+\left(f,\varphi_0\right)=\int_0^1 e^x\,\mathrm dx=e-1,\quad\left(f,\varphi_1\right)=\int_0^1x e^x\,\mathrm dx=\left[x e^x-e^x\right]_0^1=1.
 $$
 
 代入正则方程组: $$
@@ -215,13 +215,13 @@ $$
 $$
 
 因 $\sin\!\left(\frac{\pi t}{2}\right)$ 为奇函数, $P_0\left(t\right)=1$, $P_2\left(t\right)=\frac{3t^2-1}{2}$ 为偶函数, 故 $\left(f,\varphi_0\right)=\left(f,\varphi_2\right)=0$, 只需计算 $a_1,a_3$. 计算积分: $$
-\int_{-1}^1 t\sin\!\left(\frac{\pi t}{2}\right)\mathrm dt=\frac{8}{\pi^2},\qquad\int_{-1}^1 t^3\sin\!\left(\frac{\pi t}{2}\right)\mathrm dt=\frac{24}{\pi^2}-\frac{192}{\pi^4},
+\int_{-1}^1 t\sin\!\left(\frac{\pi t}{2}\right)\mathrm dt=\frac{8}{\pi^2},\quad\int_{-1}^1 t^3\sin\!\left(\frac{\pi t}{2}\right)\mathrm dt=\frac{24}{\pi^2}-\frac{192}{\pi^4},
 $$
 
 于是
 
 $$
-\left(f,\varphi_1\right)=\frac{\pi}{2}\cdot\frac{8}{\pi^2}=\frac{4}{\pi},\qquad\left(f,\varphi_3\right)=\frac{\pi}{2}\left[\frac52\left(\frac{24}{\pi^2}-\frac{192}{\pi^4}\right)-\frac32\cdot\frac{8}{\pi^2}\right]=\frac{24}{\pi}-\frac{240}{\pi^3}.
+\left(f,\varphi_1\right)=\frac{\pi}{2}\cdot\frac{8}{\pi^2}=\frac{4}{\pi},\quad\left(f,\varphi_3\right)=\frac{\pi}{2}\left[\frac52\left(\frac{24}{\pi^2}-\frac{192}{\pi^4}\right)-\frac32\cdot\frac{8}{\pi^2}\right]=\frac{24}{\pi}-\frac{240}{\pi^3}.
 $$
 
 由式(6.35): $$

@@ -99,7 +99,7 @@ $$
 将方程组的增广矩阵逐列消元, 化为等价的上三角形方程组, 再按变量逆序回代求解. 第 $k$ 步以 $a_{kk}^{\left(k\right)}\ne0$ 为主元, 乘子 $l_{ik}=a_{ik}^{\left(k\right)}/a_{kk}^{\left(k\right)}$; 回代公式为
 
 $$
-x_n=\frac{b_n^{\left(n\right)}}{a_{nn}^{\left(n\right)}},\qquad x_k=\frac{b_k^{\left(k\right)}-\sum_{j=k+1}^{n}a_{kj}^{\left(k\right)}x_j}{a_{kk}^{\left(k\right)}}\ \left(k=n-1,\dots,1\right).
+x_n=\frac{b_n^{\left(n\right)}}{a_{nn}^{\left(n\right)}},\quad x_k=\frac{b_k^{\left(k\right)}-\sum_{j=k+1}^{n}a_{kj}^{\left(k\right)}x_j}{a_{kk}^{\left(k\right)}}\ \left(k=n-1,\dots,1\right).
 $$
 
 为抑制小主元引起的舍入误差增长, 可在第 $k$ 列 (列主元素法) 或全部剩余元素 (全主元素法) 中选绝对值最大者, 作相应行 (列) 交换后再消元.
@@ -109,7 +109,7 @@ $$
 设 $A$ 为 $n$ 阶方阵, 若 $A$ 的各阶顺序主子式 $\det A_i\ \left(i=1,2,\dots,n-1\right)$ 均不为零, 则 $A$ 有唯一的杜利特尔分解 $A=LU$, 其中 $L$ 为单位下三角形矩阵, $U$ 为上三角形矩阵. 此时解 $Ax=b$ 等价于依次求解
 
 $$
-Ly=b,\qquad Ux=y.
+Ly=b,\quad Ux=y.
 $$
 
 **式 (2.10)** (紧凑格式三角分解计算公式)
@@ -117,7 +117,7 @@ $$
 按"第 1 行, 第 1 列, 第 2 行, 第 2 列,..."的顺序, 由比较 $A=LU$ 得
 
 $$
-u_{1j}=a_{1j},\qquad l_{i1}=\frac{a_{i1}}{u_{11}},\qquad u_{rj}=a_{rj}-\sum_{k=1}^{r-1}l_{rk}u_{kj},\qquad l_{ir}=\frac{a_{ir}-\sum_{k=1}^{r-1}l_{ik}u_{kr}}{u_{rr}}.
+u_{1j}=a_{1j},\quad l_{i1}=\frac{a_{i1}}{u_{11}},\quad u_{rj}=a_{rj}-\sum_{k=1}^{r-1}l_{rk}u_{kj},\quad l_{ir}=\frac{a_{ir}-\sum_{k=1}^{r-1}l_{ik}u_{kr}}{u_{rr}}.
 $$
 
 求解时把右端向量 $b$ 列在最后, 按同一紧凑格式先前代求 $y$, 再由 $x_k=\left(y_k-\sum_{j=k+1}^{n}u_{kj}x_j\right)/u_{kk}$ 回代求 $x$.
@@ -127,7 +127,7 @@ $$
 设 $A$ 为对称正定矩阵, 则存在唯一的对角元皆为正数的下三角形矩阵 $L$, 使 $A=LL^{\mathrm T}$, 即平方根法. 由比较 $A=LL^{\mathrm T}$ 得
 
 $$
-l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2},\qquad l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}.
+l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2},\quad l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}.
 $$
 
 求解 $Ax=b$ 化为依次解 $Ly=b$ 与 $L^{\mathrm T}x=y$. 又 $A$ 可分解为 $A=LDL^{\mathrm T}$ (改进平方根法, $L$ 为单位下三角, $D$ 为对角阵), 运算中无须开方.
@@ -143,7 +143,7 @@ $$
 **定理 2.3** (追赶法) 当 $A$ 满足按行对角占优条件时, 可分解为 $A=LU$, 其中 $u_1=b_1$, $l_i=a_i/u_{i-1}$, $u_i=b_i-c_{i-1}l_i$;"追" (前代) 为 $y_1=d_1$, $y_k=d_k-l_k y_{k-1}$,"赶" (回代) 为
 
 $$
-x_n=\frac{y_n}{u_n},\qquad x_k=\frac{y_k-c_k x_{k+1}}{u_k}\ \left(k=n-1,\dots,1\right).
+x_n=\frac{y_n}{u_n},\quad x_k=\frac{y_k-c_k x_{k+1}}{u_k}\ \left(k=n-1,\dots,1\right).
 $$
 
 **定理 2.5** (矩阵的算子范数)
@@ -151,7 +151,7 @@ $$
 由向量范数诱导的矩阵范数为 $\left\|A\right\|=\max_{\left\|x\right\|=1}\left\|Ax\right\|$, 且满足相容性 $\left\|Ax\right\|\le\left\|A\right\|\left\|x\right\|$. 常用的 1-范数 (列范数) 与 $\infty$-范数 (行范数) 为
 
 $$
-\left\|A\right\|_1=\max_{1\le j\le n}\sum_{i=1}^{n}\left|a_{ij}\right|,\qquad \left\|A\right\|_\infty=\max_{1\le i\le n}\sum_{j=1}^{n}\left|a_{ij}\right|.
+\left\|A\right\|_1=\max_{1\le j\le n}\sum_{i=1}^{n}\left|a_{ij}\right|,\quad \left\|A\right\|_\infty=\max_{1\le i\le n}\sum_{j=1}^{n}\left|a_{ij}\right|.
 $$
 
 **定义 2.4** (矩阵的条件数)
@@ -159,7 +159,7 @@ $$
 对非奇异矩阵 $A$, 称 $\mathrm{cond}\left(A\right)=\left\|A\right\|\,\left\|A^{-1}\right\|$ 为 $A$ 的条件数, 特别地
 
 $$
-\mathrm{cond}\left(A\right)_1=\left\|A\right\|_1\left\|A^{-1}\right\|_1,\qquad \mathrm{cond}\left(A\right)_\infty=\left\|A\right\|_\infty\left\|A^{-1}\right\|_\infty.
+\mathrm{cond}\left(A\right)_1=\left\|A\right\|_1\left\|A^{-1}\right\|_1,\quad \mathrm{cond}\left(A\right)_\infty=\left\|A\right\|_\infty\left\|A^{-1}\right\|_\infty.
 $$
 
 条件数越大, 方程组 $Ax=b$ 关于右端项或系数矩阵扰动的"病态"越严重, 且恒有 $\mathrm{cond}\left(A\right)\ge1$.
@@ -177,7 +177,7 @@ $$
 则雅可比迭代格式为
 
 $$
-x^{\left(k+1\right)}=Bx^{\left(k\right)}+g,\qquad B=I-D^{-1}A,\qquad g=D^{-1}b,
+x^{\left(k+1\right)}=Bx^{\left(k\right)}+g,\quad B=I-D^{-1}A,\quad g=D^{-1}b,
 $$
 
 分量形式为
@@ -233,7 +233,7 @@ $$
 若 $n$ 阶方阵 $A=\left(a_{ij}\right)$ 满足
 
 $$
-\left|a_{ii}\right|\ge\sum_{j\ne i}\left|a_{ij}\right|\qquad\left(i=1,2,\dots,n\right),
+\left|a_{ii}\right|\ge\sum_{j\ne i}\left|a_{ij}\right|\quad\left(i=1,2,\dots,n\right),
 $$
 
 且至少有一个 $i$ 使严格不等式成立, 则称 $A$ 为弱对角占优矩阵; 若对所有 $i$ 均严格成立, 则称 $A$ 为严格对角占优矩阵.
@@ -255,7 +255,7 @@ $$
 (式 (4.3)). 为避免迭代中溢出或归零, 实际计算每次归一化:
 
 $$
-\alpha^{\left(k+1\right)}=Ay^{\left(k\right)},\qquad y^{\left(k+1\right)}=\frac{\alpha^{\left(k+1\right)}}{\max_i\left|\alpha_i^{\left(k+1\right)}\right|},\qquad\lambda_1\approx\max_i\left|\alpha_i^{\left(k+1\right)}\right|
+\alpha^{\left(k+1\right)}=Ay^{\left(k\right)},\quad y^{\left(k+1\right)}=\frac{\alpha^{\left(k+1\right)}}{\max_i\left|\alpha_i^{\left(k+1\right)}\right|},\quad\lambda_1\approx\max_i\left|\alpha_i^{\left(k+1\right)}\right|
 $$
 
 (式 (4.5)). 收敛速度由收敛因子 $\left|\lambda_2/\lambda_1\right|$ 决定, 其值越小收敛越快.
@@ -307,7 +307,7 @@ $$
 设 $x_0,x_1,\dots,x_n$ 是 $\left[a,b\right]$ 上的互异节点, $P_n\left(x\right)$ 是过这组节点的 $n$ 次插值多项式. 如果 $f\left(x\right)$ 在 $\left[a,b\right]$ 上 $n+1$ 次连续可导, 则对 $\left[a,b\right]$ 内任意点 $x$, 插值余项为
 
 $$
-R_n\left(x\right)=f\left(x\right)-P_n\left(x\right)=\frac{f^{\left(n+1\right)}\left(\xi\right)}{\left(n+1\right)!}\omega_{n+1}\left(x\right),\qquad \xi\in\left(a,b\right),
+R_n\left(x\right)=f\left(x\right)-P_n\left(x\right)=\frac{f^{\left(n+1\right)}\left(\xi\right)}{\left(n+1\right)!}\omega_{n+1}\left(x\right),\quad \xi\in\left(a,b\right),
 $$
 
 其中 $\omega_{n+1}\left(x\right)=\prod_{j=0}^{n}\left(x-x_j\right)$.
@@ -317,7 +317,7 @@ $$
 称满足 $l_i\left(x_j\right)=\delta_{ij}$ ($i=j$ 时为 $1$, 否则为 $0$) 的 $n$ 次多项式
 
 $$
-l_i\left(x\right)=\prod_{\substack{j=0\\j\ne i}}^{n}\frac{x-x_j}{x_i-x_j}\qquad\left(i=0,1,\dots,n\right)
+l_i\left(x\right)=\prod_{\substack{j=0\\j\ne i}}^{n}\frac{x-x_j}{x_i-x_j}\quad\left(i=0,1,\dots,n\right)
 $$
 
 为拉格朗日插值基函数, 而 $L_n\left(x\right)=\sum_{i=0}^{n}y_i l_i\left(x\right)$ 称为 $n$ 次拉格朗日插值多项式.
@@ -369,7 +369,7 @@ $$
 设共有 $n+1$ 个函数值节点与 $m+1$ 个导数条件 (在节点 $x_{i_0},\dots,x_{i_m}$ 上), 若 $f\left(x\right)\in C^{n+m+2}\left[a,b\right]$, 则对任意 $x\in\left[a,b\right]$, 有
 
 $$
-R\left(x\right)=f\left(x\right)-H\left(x\right)=\frac{f^{\left(n+m+2\right)}\left(\xi\right)}{\left(n+m+2\right)!}\omega_{n+1}\left(x\right)\prod_{k=0}^{m}\left(x-x_{i_k}\right),\qquad \xi\in\left(a,b\right).
+R\left(x\right)=f\left(x\right)-H\left(x\right)=\frac{f^{\left(n+m+2\right)}\left(\xi\right)}{\left(n+m+2\right)!}\omega_{n+1}\left(x\right)\prod_{k=0}^{m}\left(x-x_{i_k}\right),\quad \xi\in\left(a,b\right).
 $$
 
 **定义 5.11** (三次样条插值)
@@ -377,7 +377,7 @@ $$
 已知 $f\left(x\right)$ 在节点 $a=x_0< x_1< \cdots< x_n=b$ 上的值 $y_i=f\left(x_i\right)$, 若 $S\left(x\right)$ 满足 $S\left(x_i\right)=y_i$, 在每个小区间 $\left[x_i,x_{i+1}\right]$ 上是三次多项式, 在 $\left[a,b\right]$ 上二阶连续可微, 则称 $S\left(x\right)$ 为三次样条插值函数. 以 $M_i=S''\left(x_i\right)$ 为参数得三弯矩方程
 
 $$
-\alpha_j M_{j-1}+2M_j+\beta_j M_{j+1}=C_j\qquad\left(j=1,\dots,n-1\right),
+\alpha_j M_{j-1}+2M_j+\beta_j M_{j+1}=C_j\quad\left(j=1,\dots,n-1\right),
 $$
 
 其中 $\alpha_j=\frac{h_{j-1}}{h_{j-1}+h_j}$, $\beta_j=1-\alpha_j$, $C_j=\frac{1}{h_{j-1}+h_j}\left(\frac{y_{j+1}-y_j}{h_j}-\frac{y_j-y_{j-1}}{h_{j-1}}\right)$; 端点边界条件可取给定导数值 $S'\left(a\right)=m_0,\ S'\left(b\right)=m_n$ 或给定二阶导数值 $S''\left(a\right)=M_0,\ S''\left(b\right)=M_n$.
@@ -395,7 +395,7 @@ $$
 求 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使残差加权平方和 $\sum_{i=1}^n w_i\left[y_i-p\left(x_i\right)\right]^2$ 最小. 系数满足正则方程组
 
 $$
-\sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(y,\varphi_j\right)\qquad\left(j=0,1,\dots,m\right),\qquad\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^n w_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right),\qquad\left(y,\varphi_j\right)=\sum_{i=1}^n w_i y_i\varphi_j\left(x_i\right).
+\sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(y,\varphi_j\right)\quad\left(j=0,1,\dots,m\right),\quad\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^n w_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right),\quad\left(y,\varphi_j\right)=\sum_{i=1}^n w_i y_i\varphi_j\left(x_i\right).
 $$
 
 特别地, 取 $\varphi_k\left(x\right)=x^k$ 即多项式拟合; 一次拟合 $y=a_0+a_1x$ ($w_i=1$) 的正则方程组为
@@ -623,7 +623,7 @@ $$
 **定理 8.5** (牛顿法的局部收敛性) 指出: 当 $f'\left(x^{*}\right)\ne0$ (即 $x^{*}$ 为单根) 时, 牛顿法在 $x^{*}$ 邻近至少二阶收敛; 当 $x^{*}$ 为 $r$ 重根时牛顿法退化为线性收敛, 其改进格式为
 
 $$
-x_{n+1}=x_n-r\frac{f\left(x_n\right)}{f'\left(x_n\right)}\qquad\left(n=0,1,2,\dots\right)
+x_{n+1}=x_n-r\frac{f\left(x_n\right)}{f'\left(x_n\right)}\quad\left(n=0,1,2,\dots\right)
 $$
 
 (式 (8.17)), 至少二阶收敛.
@@ -633,5 +633,5 @@ $$
 用差商代替导数, 得两步迭代公式
 
 $$
-x_{n+1}=x_n-\frac{f\left(x_n\right)\left(x_n-x_{n-1}\right)}{f\left(x_n\right)-f\left(x_{n-1}\right)}\qquad\left(n=1,2,\dots\right).
+x_{n+1}=x_n-\frac{f\left(x_n\right)\left(x_n-x_{n-1}\right)}{f\left(x_n\right)-f\left(x_{n-1}\right)}\quad\left(n=1,2,\dots\right).
 $$

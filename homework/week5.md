@@ -2,9 +2,9 @@
 
 > **定义 5.1** (插值问题) <br>已知函数 $f\left(x\right)$ 在区间 $\left[a,b\right]$ 上 $n+1$ 个互异节点 $x_0,x_1,\dots,x_n$ 处的函数值 $y_i=f\left(x_i\right)$, 求一个至多 $n$ 次的多项式 $P_n\left(x\right)$, 使其在给定点处满足插值条件 $P_n\left(x_i\right)=f\left(x_i\right)=y_i\ \left(i=0,1,\dots,n\right)$, $P_n\left(x\right)$ 即称为插值多项式.
 
-> **定理 5.1** (插值余项) <br>设 $x_0,x_1,\dots,x_n$ 是 $\left[a,b\right]$ 上的互异节点, $P_n\left(x\right)$ 是过这组节点的 $n$ 次插值多项式. 如果 $f\left(x\right)$ 在 $\left[a,b\right]$ 上 $n+1$ 次连续可导, 则对 $\left[a,b\right]$ 内任意点 $x$, 插值余项为 $$R_n\left(x\right)=f\left(x\right)-P_n\left(x\right)=\frac{f^{\left(n+1\right)}\left(\xi\right)}{\left(n+1\right)!}\omega_{n+1}\left(x\right),\qquad \xi\in\left(a,b\right),$$ 其中 $\omega_{n+1}\left(x\right)=\prod_{j=0}^{n}\left(x-x_j\right)$.
+> **定理 5.1** (插值余项) <br>设 $x_0,x_1,\dots,x_n$ 是 $\left[a,b\right]$ 上的互异节点, $P_n\left(x\right)$ 是过这组节点的 $n$ 次插值多项式. 如果 $f\left(x\right)$ 在 $\left[a,b\right]$ 上 $n+1$ 次连续可导, 则对 $\left[a,b\right]$ 内任意点 $x$, 插值余项为 $$R_n\left(x\right)=f\left(x\right)-P_n\left(x\right)=\frac{f^{\left(n+1\right)}\left(\xi\right)}{\left(n+1\right)!}\omega_{n+1}\left(x\right),\quad \xi\in\left(a,b\right),$$ 其中 $\omega_{n+1}\left(x\right)=\prod_{j=0}^{n}\left(x-x_j\right)$.
 
-> **定义 5.3** (拉格朗日插值多项式) <br>称满足 $l_i\left(x_j\right)=\delta_{ij}$ ($i=j$ 时为 $1$, 否则为 $0$) 的 $n$ 次多项式 $$l_i\left(x\right)=\prod_{\substack{j=0\\j\ne i}}^{n}\frac{x-x_j}{x_i-x_j}\qquad\left(i=0,1,\dots,n\right)$$ 为拉格朗日插值基函数, 而 $L_n\left(x\right)=\sum_{i=0}^{n}y_i l_i\left(x\right)$ 称为 $n$ 次拉格朗日插值多项式.
+> **定义 5.3** (拉格朗日插值多项式) <br>称满足 $l_i\left(x_j\right)=\delta_{ij}$ ($i=j$ 时为 $1$, 否则为 $0$) 的 $n$ 次多项式 $$l_i\left(x\right)=\prod_{\substack{j=0\\j\ne i}}^{n}\frac{x-x_j}{x_i-x_j}\quad\left(i=0,1,\dots,n\right)$$ 为拉格朗日插值基函数, 而 $L_n\left(x\right)=\sum_{i=0}^{n}y_i l_i\left(x\right)$ 称为 $n$ 次拉格朗日插值多项式.
 
 > **定义 5.4** (差商与牛顿插值多项式) <br>称 $f\left[x_i,x_j\right]=\frac{f\left(x_i\right)-f\left(x_j\right)}{x_i-x_j}$ 为 $f\left(x\right)$ 关于点 $x_i,x_j$ 的一阶差商, 并递推地称 $f\left[x_0,x_1,\dots,x_k\right]=\frac{f\left[x_1,\dots,x_k\right]-f\left[x_0,\dots,x_{k-1}\right]}{x_k-x_0}$ 为 $k$ 阶差商. 由此得牛顿插值多项式 $$N_n\left(x\right)=f\left[x_0\right]+\left(x-x_0\right)f\left[x_0,x_1\right]+\left(x-x_0\right)\left(x-x_1\right)f\left[x_0,x_1,x_2\right]+\cdots+\left(x-x_0\right)\cdots\left(x-x_{n-1}\right)f\left[x_0,\dots,x_n\right].$$
 
@@ -14,9 +14,9 @@
 
 > **定义 5.9** (埃尔米特插值) <br>给定函数 $f\left(x\right)$ 在互异节点上的函数值 $y_i=f\left(x_i\right)$, 并指定在若干节点 $x_{i_k}$ 上的导数值 $y'_{i_k}=f'\left(x_{i_k}\right)$, 要求一个多项式 $H\left(x\right)$ 同时满足 $H\left(x_i\right)=y_i$ 与 $H'\left(x_{i_k}\right)=y'_{i_k}$, 称为埃尔米特插值多项式.
 
-> **定理 5.5** (埃尔米特插值余项) <br>设共有 $n+1$ 个函数值节点与 $m+1$ 个导数条件 (在节点 $x_{i_0},\dots,x_{i_m}$ 上) , 若 $f\left(x\right)\in C^{n+m+2}\left[a,b\right]$, 则对任意 $x\in\left[a,b\right]$, 有 $$R\left(x\right)=f\left(x\right)-H\left(x\right)=\frac{f^{\left(n+m+2\right)}\left(\xi\right)}{\left(n+m+2\right)!}\omega_{n+1}\left(x\right)\prod_{k=0}^{m}\left(x-x_{i_k}\right),\qquad \xi\in\left(a,b\right).$$
+> **定理 5.5** (埃尔米特插值余项) <br>设共有 $n+1$ 个函数值节点与 $m+1$ 个导数条件 (在节点 $x_{i_0},\dots,x_{i_m}$ 上) , 若 $f\left(x\right)\in C^{n+m+2}\left[a,b\right]$, 则对任意 $x\in\left[a,b\right]$, 有 $$R\left(x\right)=f\left(x\right)-H\left(x\right)=\frac{f^{\left(n+m+2\right)}\left(\xi\right)}{\left(n+m+2\right)!}\omega_{n+1}\left(x\right)\prod_{k=0}^{m}\left(x-x_{i_k}\right),\quad \xi\in\left(a,b\right).$$
 
-> **定义 5.11** (三次样条插值) <br>已知 $f\left(x\right)$ 在节点 $a=x_0<x_1<\cdots<x_n=b$ 上的值 $y_i=f\left(x_i\right)$, 若 $S\left(x\right)$ 满足 $S\left(x_i\right)=y_i$, 在每个小区间 $\left[x_i,x_{i+1}\right]$ 上是三次多项式, 在 $\left[a,b\right]$ 上二阶连续可微, 则称 $S\left(x\right)$ 为三次样条插值函数. 以 $M_i=S''\left(x_i\right)$ 为参数得三弯矩方程 $$\alpha_j M_{j-1}+2M_j+\beta_j M_{j+1}=C_j\qquad\left(j=1,\dots,n-1\right),$$ 其中 $\alpha_j=\frac{h_{j-1}}{h_{j-1}+h_j}$, $\beta_j=1-\alpha_j$, $C_j=\frac{1}{h_{j-1}+h_j}\left(\frac{y_{j+1}-y_j}{h_j}-\frac{y_j-y_{j-1}}{h_{j-1}}\right)$; 端点边界条件可取给定导数值 $S'\left(a\right)=m_0,\ S'\left(b\right)=m_n$ 或给定二阶导数值 $S''\left(a\right)=M_0,\ S''\left(b\right)=M_n$.
+> **定义 5.11** (三次样条插值) <br>已知 $f\left(x\right)$ 在节点 $a=x_0<x_1<\cdots<x_n=b$ 上的值 $y_i=f\left(x_i\right)$, 若 $S\left(x\right)$ 满足 $S\left(x_i\right)=y_i$, 在每个小区间 $\left[x_i,x_{i+1}\right]$ 上是三次多项式, 在 $\left[a,b\right]$ 上二阶连续可微, 则称 $S\left(x\right)$ 为三次样条插值函数. 以 $M_i=S''\left(x_i\right)$ 为参数得三弯矩方程 $$\alpha_j M_{j-1}+2M_j+\beta_j M_{j+1}=C_j\quad\left(j=1,\dots,n-1\right),$$ 其中 $\alpha_j=\frac{h_{j-1}}{h_{j-1}+h_j}$, $\beta_j=1-\alpha_j$, $C_j=\frac{1}{h_{j-1}+h_j}\left(\frac{y_{j+1}-y_j}{h_j}-\frac{y_j-y_{j-1}}{h_{j-1}}\right)$; 端点边界条件可取给定导数值 $S'\left(a\right)=m_0,\ S'\left(b\right)=m_n$ 或给定二阶导数值 $S''\left(a\right)=M_0,\ S''\left(b\right)=M_n$.
 
 ### 习题一 (习题 5-3)
 
@@ -51,7 +51,7 @@ $$
 代入 $x=2$, 各基函数取值为
 
 $$
-l_0\left(2\right)=\frac{4}{15},\qquad l_1\left(2\right)=\frac{4}{3},\qquad l_2\left(2\right)=-\frac{2}{3},\qquad l_3\left(2\right)=\frac{1}{15},
+l_0\left(2\right)=\frac{4}{15},\quad l_1\left(2\right)=\frac{4}{3},\quad l_2\left(2\right)=-\frac{2}{3},\quad l_3\left(2\right)=\frac{1}{15},
 $$
 
 于是
@@ -99,7 +99,7 @@ f\left[x_0,x_1\right]=\frac{2.462\,59-2.414\,50}{1.634-1.615}=2.531\,05,
 $$
 
 $$
-f\left[x_1,x_2\right]=\frac{2.652\,71-2.462\,59}{1.702-1.634}=2.795\,88,\qquad
+f\left[x_1,x_2\right]=\frac{2.652\,71-2.462\,59}{1.702-1.634}=2.795\,88,\quad
 f\left[x_2,x_3\right]=\frac{3.030\,35-2.652\,71}{1.828-1.702}=2.997\,14.
 $$
 
@@ -222,7 +222,7 @@ $$
 这里函数值节点为 $0,1,2$ ($n=2$) , 导数条件加在节点 $1,2$ 上 (共 $m+1=2$ 个, $m=1$) , 由**定理 5.5** (埃尔米特插值余项) , 且 $f\left(x\right)\in C^5\left[0,2\right]$, 余项为
 
 $$
-f\left(x\right)-H_4\left(x\right)=\frac{f^{\left(5\right)}\left(\xi\right)}{5!}\,x\left(x-1\right)\left(x-2\right)\,\left(x-1\right)\left(x-2\right)=\frac{f^{\left(5\right)}\left(\xi\right)}{120}\,x\left(x-1\right)^2\left(x-2\right)^2,\qquad \xi\in\left(0,2\right).\ \blacksquare
+f\left(x\right)-H_4\left(x\right)=\frac{f^{\left(5\right)}\left(\xi\right)}{5!}\,x\left(x-1\right)\left(x-2\right)\,\left(x-1\right)\left(x-2\right)=\frac{f^{\left(5\right)}\left(\xi\right)}{120}\,x\left(x-1\right)^2\left(x-2\right)^2,\quad \xi\in\left(0,2\right).\ \blacksquare
 $$
 
 ### 习题七 (习题 5-17)
@@ -234,19 +234,19 @@ $$
 节点等距 $h=1$, 且所有 $y_i=0$. 由**定义 5.11** (三次样条插值) , 三弯矩方程中
 
 $$
-\alpha_j=\beta_j=\frac{1}{2},\qquad C_j=\frac{1}{h_{j-1}+h_j}\left(\frac{y_{j+1}-y_j}{h_j}-\frac{y_j-y_{j-1}}{h_{j-1}}\right)=0.
+\alpha_j=\beta_j=\frac{1}{2},\quad C_j=\frac{1}{h_{j-1}+h_j}\left(\frac{y_{j+1}-y_j}{h_j}-\frac{y_j-y_{j-1}}{h_{j-1}}\right)=0.
 $$
 
 **(1) 边界条件 $m_0=S'\left(0\right)=1$, $m_3=S'\left(3\right)=0$** (给定两端导数值) . 由端点导数条件得补充方程
 
 $$
-2M_0+M_1=6\left(\frac{y_1-y_0}{h_0}-m_0\right)=-6,\qquad M_2+2M_3=6\left(m_3-\frac{y_3-y_2}{h_2}\right)=0.
+2M_0+M_1=6\left(\frac{y_1-y_0}{h_0}-m_0\right)=-6,\quad M_2+2M_3=6\left(m_3-\frac{y_3-y_2}{h_2}\right)=0.
 $$
 
 与内部方程
 
 $$
-\frac12 M_0+2M_1+\frac12 M_2=0,\qquad \frac12 M_1+2M_2+\frac12 M_3=0
+\frac12 M_0+2M_1+\frac12 M_2=0,\quad \frac12 M_1+2M_2+\frac12 M_3=0
 $$
 
 联立, 解得 $M_0=-\frac{52}{15}$, $M_1=\frac{14}{15}$, $M_2=-\frac{4}{15}$, $M_3=\frac{2}{15}$. 由三次样条的分段表达式 (取 $h=1$, $y_i=0$) $$
@@ -256,33 +256,33 @@ $$
 化简得
 
 $$
-S_0\left(x\right)=\frac{x\left(1-x\right)\left(15-11x\right)}{15},\qquad x\in\left[0,1\right],
+S_0\left(x\right)=\frac{x\left(1-x\right)\left(15-11x\right)}{15},\quad x\in\left[0,1\right],
 $$
 
 $$
-S_1\left(x\right)=\frac{\left(x-1\right)\left(2-x\right)\left(3x-7\right)}{15},\qquad x\in\left[1,2\right],
+S_1\left(x\right)=\frac{\left(x-1\right)\left(2-x\right)\left(3x-7\right)}{15},\quad x\in\left[1,2\right],
 $$
 
 $$
-S_2\left(x\right)=\frac{\left(x-2\right)\left(3-x\right)^2}{15},\qquad x\in\left[2,3\right].
+S_2\left(x\right)=\frac{\left(x-2\right)\left(3-x\right)^2}{15},\quad x\in\left[2,3\right].
 $$
 
 **(2) 边界条件 $M_0=S''\left(0\right)=1$, $M_3=S''\left(3\right)=0$** (给定两端二阶导数值) . 代入内部方程
 
 $$
-\frac12 M_0+2M_1+\frac12 M_2=0,\qquad \frac12 M_1+2M_2+\frac12 M_3=0,
+\frac12 M_0+2M_1+\frac12 M_2=0,\quad \frac12 M_1+2M_2+\frac12 M_3=0,
 $$
 
 解得 $M_1=-\frac{4}{15}$, $M_2=\frac{1}{15}$. 同理化简得分段表达式
 
 $$
-S_0\left(x\right)=\frac{x\left(1-x\right)\left(19x-26\right)}{90},\qquad x\in\left[0,1\right],
+S_0\left(x\right)=\frac{x\left(1-x\right)\left(19x-26\right)}{90},\quad x\in\left[0,1\right],
 $$
 
 $$
-S_1\left(x\right)=\frac{\left(x-1\right)\left(2-x\right)\left(12-5x\right)}{90},\qquad x\in\left[1,2\right],
+S_1\left(x\right)=\frac{\left(x-1\right)\left(2-x\right)\left(12-5x\right)}{90},\quad x\in\left[1,2\right],
 $$
 
 $$
-S_2\left(x\right)=\frac{\left(x-2\right)\left(3-x\right)\left(x-4\right)}{90},\qquad x\in\left[2,3\right].\ \blacksquare
+S_2\left(x\right)=\frac{\left(x-2\right)\left(3-x\right)\left(x-4\right)}{90},\quad x\in\left[2,3\right].\ \blacksquare
 $$

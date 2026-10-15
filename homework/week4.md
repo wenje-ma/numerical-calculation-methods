@@ -1,6 +1,6 @@
 # 作业 4
 
-> **幂法** (求按模最大的特征值与特征向量) <br>设 $n\times n$ 实矩阵 $A$ 的特征值满足 $\left|\lambda_1\right|>\left|\lambda_2\right|\ge\cdots\ge\left|\lambda_n\right|$, 相应特征向量 $u_1,u_2,\dots,u_n$ 线性无关. 取初始向量 $\alpha^{\left(0\right)}\ne0$, 由迭代 $\alpha^{\left(k+1\right)}=A\alpha^{\left(k\right)}$ (式(4.1)) 产生向量序列, 当 $k$ 充分大时 $\alpha^{\left(k+1\right)}$ 即可作为 $\lambda_1$ 相应特征向量的近似, 且 $$\lambda_1\approx\frac{\alpha_i^{\left(k+1\right)}}{\alpha_i^{\left(k\right)}}$$ (式(4.3)) . 为避免迭代中溢出或归零, 实际计算每次归一化: $$\alpha^{\left(k+1\right)}=Ay^{\left(k\right)},\qquad y^{\left(k+1\right)}=\frac{\alpha^{\left(k+1\right)}}{\max_i\left|\alpha_i^{\left(k+1\right)}\right|},\qquad\lambda_1\approx\max_i\left|\alpha_i^{\left(k+1\right)}\right|$$ (式(4.5)) . 收敛速度由收敛因子 $\left|\lambda_2/\lambda_1\right|$ 决定, 其值越小收敛越快.
+> **幂法** (求按模最大的特征值与特征向量) <br>设 $n\times n$ 实矩阵 $A$ 的特征值满足 $\left|\lambda_1\right|>\left|\lambda_2\right|\ge\cdots\ge\left|\lambda_n\right|$, 相应特征向量 $u_1,u_2,\dots,u_n$ 线性无关. 取初始向量 $\alpha^{\left(0\right)}\ne0$, 由迭代 $\alpha^{\left(k+1\right)}=A\alpha^{\left(k\right)}$ (式(4.1)) 产生向量序列, 当 $k$ 充分大时 $\alpha^{\left(k+1\right)}$ 即可作为 $\lambda_1$ 相应特征向量的近似, 且 $$\lambda_1\approx\frac{\alpha_i^{\left(k+1\right)}}{\alpha_i^{\left(k\right)}}$$ (式(4.3)) . 为避免迭代中溢出或归零, 实际计算每次归一化: $$\alpha^{\left(k+1\right)}=Ay^{\left(k\right)},\quad y^{\left(k+1\right)}=\frac{\alpha^{\left(k+1\right)}}{\max_i\left|\alpha_i^{\left(k+1\right)}\right|},\quad\lambda_1\approx\max_i\left|\alpha_i^{\left(k+1\right)}\right|$$ (式(4.5)) . 收敛速度由收敛因子 $\left|\lambda_2/\lambda_1\right|$ 决定, 其值越小收敛越快.
 
 > **幂法的艾特肯加速** (算法4.2) <br>若幂法产生的特征值近似序列 $\left\{a_k\right\}$ 线性收敛到 $a$, 即 $\lim_{k\to\infty}\frac{a_{k+1}-a}{a_k-a}=c\ne1$, 则当 $k$ 充分大时 $$\hat a_k=a_k-\frac{\left(a_{k+1}-a_k\right)^2}{a_{k+2}-2a_{k+1}+a_k}$$ 比 $\left\{a_k\right\}$ 更快地收敛到 $a$, 将其用于幂法所产生的序列即可加速收敛.
 
@@ -13,27 +13,27 @@
 用幂法计算下列矩阵的按模最大的特征值及相应的特征向量, 取 $x^{\left(0\right)}=\left(1,0,0\right)^{\mathrm T}$: (1) $A=\begin{bmatrix}-4&14&0\\-5&13&0\\-1&0&2\end{bmatrix}$; (2) $A=\begin{bmatrix}4&-1&1\\-1&3&-2\\1&-2&3\end{bmatrix}$. (仅做第 (2) 小题) ### 解答 习题一
 
 对 (2) 中矩阵 $A=\begin{bmatrix}4&-1&1\\-1&3&-2\\1&-2&3\end{bmatrix}$, 由**幂法** (式(4.5)) , 取 $y^{\left(0\right)}=x^{\left(0\right)}=\left(1,0,0\right)^{\mathrm T}$, 每次迭代后取绝对值最大分量归一化. 计算如下: $$
-\alpha^{\left(1\right)}=Ay^{\left(0\right)}=\left(4,-1,1\right)^{\mathrm T},\qquad\lambda_1\approx4,\qquad y^{\left(1\right)}=\left(1,-0.25,0.25\right)^{\mathrm T},
+\alpha^{\left(1\right)}=Ay^{\left(0\right)}=\left(4,-1,1\right)^{\mathrm T},\quad\lambda_1\approx4,\quad y^{\left(1\right)}=\left(1,-0.25,0.25\right)^{\mathrm T},
 $$
 
 $$
-\alpha^{\left(2\right)}=Ay^{\left(1\right)}=\left(4.5,-2.25,2.25\right)^{\mathrm T},\qquad\lambda_2\approx4.5,\qquad y^{\left(2\right)}=\left(1,-0.5,0.5\right)^{\mathrm T},
+\alpha^{\left(2\right)}=Ay^{\left(1\right)}=\left(4.5,-2.25,2.25\right)^{\mathrm T},\quad\lambda_2\approx4.5,\quad y^{\left(2\right)}=\left(1,-0.5,0.5\right)^{\mathrm T},
 $$
 
 $$
-\alpha^{\left(3\right)}=Ay^{\left(2\right)}=\left(5,-3.5,3.5\right)^{\mathrm T},\qquad\lambda_3\approx5,\qquad y^{\left(3\right)}=\left(1,-0.7,0.7\right)^{\mathrm T},
+\alpha^{\left(3\right)}=Ay^{\left(2\right)}=\left(5,-3.5,3.5\right)^{\mathrm T},\quad\lambda_3\approx5,\quad y^{\left(3\right)}=\left(1,-0.7,0.7\right)^{\mathrm T},
 $$
 
 $$
-\alpha^{\left(4\right)}=Ay^{\left(3\right)}=\left(5.4,-4.5,4.5\right)^{\mathrm T},\qquad\lambda_4\approx5.4,\qquad y^{\left(4\right)}=\left(1,-0.8333,0.8333\right)^{\mathrm T},
+\alpha^{\left(4\right)}=Ay^{\left(3\right)}=\left(5.4,-4.5,4.5\right)^{\mathrm T},\quad\lambda_4\approx5.4,\quad y^{\left(4\right)}=\left(1,-0.8333,0.8333\right)^{\mathrm T},
 $$
 
 $$
-\alpha^{\left(5\right)}=Ay^{\left(4\right)}=\left(5.6667,-5.1667,5.1667\right)^{\mathrm T},\qquad\lambda_5\approx5.6667,\qquad y^{\left(5\right)}=\left(1,-0.9118,0.9118\right)^{\mathrm T},
+\alpha^{\left(5\right)}=Ay^{\left(4\right)}=\left(5.6667,-5.1667,5.1667\right)^{\mathrm T},\quad\lambda_5\approx5.6667,\quad y^{\left(5\right)}=\left(1,-0.9118,0.9118\right)^{\mathrm T},
 $$
 
 $$
-\alpha^{\left(6\right)}=Ay^{\left(5\right)}=\left(5.8235,-5.5588,5.5588\right)^{\mathrm T},\qquad\lambda_6\approx5.8235,\qquad y^{\left(6\right)}=\left(1,-0.9545,0.9545\right)^{\mathrm T}.
+\alpha^{\left(6\right)}=Ay^{\left(5\right)}=\left(5.8235,-5.5588,5.5588\right)^{\mathrm T},\quad\lambda_6\approx5.8235,\quad y^{\left(6\right)}=\left(1,-0.9545,0.9545\right)^{\mathrm T}.
 $$
 
 可见特征值近似 $\lambda_k$ 单调上升并趋于 $6$, 归一化向量 $y^{\left(k\right)}$ 的后两个分量趋于等值反号. 继续迭代得按模最大特征值 $\lambda_1\approx6$, 相应特征向量 $x\approx\left(1,-1,1\right)^{\mathrm T}$. 检验: $A\left(1,-1,1\right)^{\mathrm T}=\left(6,-6,6\right)^{\mathrm T}=6\left(1,-1,1\right)^{\mathrm T}$. $\blacksquare$
@@ -77,7 +77,7 @@ $$
 ### 习题四 (习题 4-7)
 
 设 $A$ 为 $n$ 阶实对称矩阵. 对任意非零向量 $x\in\mathbb R^n$, 称 $\frac{\left\langle Ax,x\right\rangle}{\left\langle x,x\right\rangle}=\frac{x^{\mathrm T}Ax}{x^{\mathrm T}x}$ 为 $A$ 的瑞利商, 求证: $$
-\min_{x\ne0}\frac{\left\langle Ax,x\right\rangle}{\left\langle x,x\right\rangle}=\min\lambda\left(A\right),\qquad\max_{x\ne0}\frac{\left\langle Ax,x\right\rangle}{\left\langle x,x\right\rangle}=\max\lambda\left(A\right).
+\min_{x\ne0}\frac{\left\langle Ax,x\right\rangle}{\left\langle x,x\right\rangle}=\min\lambda\left(A\right),\quad\max_{x\ne0}\frac{\left\langle Ax,x\right\rangle}{\left\langle x,x\right\rangle}=\max\lambda\left(A\right).
 $$
 
 ### 解答 习题四
@@ -87,7 +87,7 @@ $$
 对任意非零向量 $x\in\mathbb R^n$, 在规范正交基 $\left\{u_j\right\}$ 下展开 $x=\sum_{j=1}^n c_ju_j$, 则
 
 $$
-\left\langle Ax,x\right\rangle=x^{\mathrm T}Ax=\sum_{j=1}^n\lambda_jc_j^2,\qquad\left\langle x,x\right\rangle=x^{\mathrm T}x=\sum_{j=1}^nc_j^2.
+\left\langle Ax,x\right\rangle=x^{\mathrm T}Ax=\sum_{j=1}^n\lambda_jc_j^2,\quad\left\langle x,x\right\rangle=x^{\mathrm T}x=\sum_{j=1}^nc_j^2.
 $$
 
 故瑞利商为
@@ -107,7 +107,7 @@ $$
 取 $x=u_1$ (即 $c_1=1$, 其余 $c_j=0$) , 则 $R\left(u_1\right)=\lambda_1=\min\lambda\left(A\right)$; 取 $x=u_n$, 则 $R\left(u_n\right)=\lambda_n=\max\lambda\left(A\right)$. 因此
 
 $$
-\min_{x\ne0}\frac{\left\langle Ax,x\right\rangle}{\left\langle x,x\right\rangle}=\min\lambda\left(A\right),\qquad\max_{x\ne0}\frac{\left\langle Ax,x\right\rangle}{\left\langle x,x\right\rangle}=\max\lambda\left(A\right).
+\min_{x\ne0}\frac{\left\langle Ax,x\right\rangle}{\left\langle x,x\right\rangle}=\min\lambda\left(A\right),\quad\max_{x\ne0}\frac{\left\langle Ax,x\right\rangle}{\left\langle x,x\right\rangle}=\max\lambda\left(A\right).
 $$
 
 $\blacksquare$
@@ -139,5 +139,5 @@ $$
 继续按**定理 4.1** 作旋转, 非对角元平方和趋于零, 矩阵趋于对角矩阵, 对角元收敛为 $2.449$, $2.000$, $-2.449$. 故 $A$ 的全部特征值为
 
 $$
-\lambda_1\approx2.449,\qquad\lambda_2\approx2.000,\qquad\lambda_3\approx-2.449
+\lambda_1\approx2.449,\quad\lambda_2\approx2.000,\quad\lambda_3\approx-2.449
 $$ (准确值为 $\sqrt6,\ 2,\ -\sqrt6$) . $\blacksquare$

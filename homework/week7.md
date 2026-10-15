@@ -71,7 +71,7 @@ $$
 估计截断误差. 对 $f\left(x\right)=e^{1/x}$, 求得
 
 $$
-f''\left(x\right)=e^{1/x}\left(\frac{1}{x^4}+\frac{2}{x^3}\right),\qquad f^{\left(4\right)}\left(x\right)=e^{1/x}\left(\frac{1}{x^8}+\frac{12}{x^7}+\frac{36}{x^6}+\frac{24}{x^5}\right).
+f''\left(x\right)=e^{1/x}\left(\frac{1}{x^4}+\frac{2}{x^3}\right),\quad f^{\left(4\right)}\left(x\right)=e^{1/x}\left(\frac{1}{x^8}+\frac{12}{x^7}+\frac{36}{x^6}+\frac{24}{x^5}\right).
 $$
 
 二者在 $\left[0.1,0.5\right]$ 上均在 $x=0.1$ 处取最大值, $\max\left|f''\left(x\right)\right|=2.643\times10^8$, $\max\left|f^{\left(4\right)}\left(x\right)\right|=5.692\times10^{12}$. 由**定理 7.2**, **定理 7.3**, $$
@@ -125,7 +125,7 @@ $$
 积分值 $I=\int_0^1 e^{-x^2}dx\approx0.7468$, $0<I<1$, 四位有效数字要求截断误差不超过 $\frac12\times10^{-4}$.
 
 先求各阶导数的界. $f\left(x\right)=e^{-x^2}$, $$
-f''\left(x\right)=\left(4x^2-2\right)e^{-x^2},\qquad f^{\left(4\right)}\left(x\right)=\left(12-48x^2+16x^4\right)e^{-x^2}.
+f''\left(x\right)=\left(4x^2-2\right)e^{-x^2},\quad f^{\left(4\right)}\left(x\right)=\left(12-48x^2+16x^4\right)e^{-x^2}.
 $$
 
 在 $\left[0,1\right]$ 上 $\max\left|f''\left(x\right)\right|=2$ (在 $x=0$ 处) , $\max\left|f^{\left(4\right)}\left(x\right)\right|=12$ (在 $x=0$ 处) .
@@ -289,19 +289,19 @@ $$
 由**定义 7.2** (高斯点与高斯型求积公式) , 两节点高斯公式应具有 $2n-1=3$ 次代数精确度. 由**定理 7.4** (高斯点与正交多项式的关系) , 节点多项式 $w_2\left(x\right)=\left(x-x_1\right)\left(x-x_2\right)=x^2+px+q$ 应与 $1,x$ 关于权函数 $\rho\left(x\right)=\sqrt{x}$ 在 $\left[0,1\right]$ 上正交, 即
 
 $$
-\int_0^1 \sqrt{x}\left(x^2+px+q\right)dx=0,\qquad \int_0^1 x\sqrt{x}\left(x^2+px+q\right)dx=0.
+\int_0^1 \sqrt{x}\left(x^2+px+q\right)dx=0,\quad \int_0^1 x\sqrt{x}\left(x^2+px+q\right)dx=0.
 $$
 
 计算得
 
 $$
-\frac{2}{7}+\frac{2p}{5}+\frac{2q}{3}=0,\qquad \frac{2}{9}+\frac{2p}{7}+\frac{2q}{5}=0.
+\frac{2}{7}+\frac{2p}{5}+\frac{2q}{3}=0,\quad \frac{2}{9}+\frac{2p}{7}+\frac{2q}{5}=0.
 $$
 
 化简为
 
 $$
-\frac17+\frac p5+\frac q3=0,\qquad \frac19+\frac p7+\frac q5=0,
+\frac17+\frac p5+\frac q3=0,\quad \frac19+\frac p7+\frac q5=0,
 $$
 
 解得 $p=-\frac{10}{9}$, $q=\frac{5}{21}$. 于是
@@ -313,11 +313,11 @@ $$
 其两根为
 
 $$
-x_1=\frac{\frac{10}{9}-\sqrt{\left(\frac{10}{9}\right)^2-\frac{20}{21}}}{2}\approx0.28995,\qquad x_2\approx0.82116.
+x_1=\frac{\frac{10}{9}-\sqrt{\left(\frac{10}{9}\right)^2-\frac{20}{21}}}{2}\approx0.28995,\quad x_2\approx0.82116.
 $$
 
 再由**定义 7.1**, 令公式对 $f\left(x\right)=1,x$ 精确成立以确定系数: $$
-A_1+A_2=\int_0^1\sqrt{x}dx=\frac23,\qquad A_1 x_1+A_2 x_2=\int_0^1 x\sqrt{x}dx=\frac25,
+A_1+A_2=\int_0^1\sqrt{x}dx=\frac23,\quad A_1 x_1+A_2 x_2=\int_0^1 x\sqrt{x}dx=\frac25,
 $$
 
 解得 $A_1\approx0.27756$, $A_2\approx0.38911$. 此时公式对 $f\left(x\right)=x^2$ 亦精确成立, 具有 $3$ 次代数精确度, 确为高斯型求积公式. $\blacksquare$

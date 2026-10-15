@@ -1,6 +1,6 @@
 # 作业 3
 
-> **雅可比迭代法** (式 (3.12)) <br>设方程组 $Ax=b$ 的系数矩阵 $A$ 分裂为 $A=D-L-U$, 其中 $D=\mathrm{diag}\left(a_{11},a_{22},\dots,a_{nn}\right)$, 则雅可比迭代格式为 $$x^{\left(k+1\right)}=Bx^{\left(k\right)}+g,\qquad B=I-D^{-1}A,\qquad g=D^{-1}b,$$ 分量形式为 $$x_i^{\left(k+1\right)}=\frac{1}{a_{ii}}\left(b_i-\sum_{j\ne i}a_{ij}x_j^{\left(k\right)}\right),\ i=1,2,\dots,n.$$
+> **雅可比迭代法** (式 (3.12)) <br>设方程组 $Ax=b$ 的系数矩阵 $A$ 分裂为 $A=D-L-U$, 其中 $D=\mathrm{diag}\left(a_{11},a_{22},\dots,a_{nn}\right)$, 则雅可比迭代格式为 $$x^{\left(k+1\right)}=Bx^{\left(k\right)}+g,\quad B=I-D^{-1}A,\quad g=D^{-1}b,$$ 分量形式为 $$x_i^{\left(k+1\right)}=\frac{1}{a_{ii}}\left(b_i-\sum_{j\ne i}a_{ij}x_j^{\left(k\right)}\right),\ i=1,2,\dots,n.$$
 
 > **高斯-赛德尔迭代法** (式 (3.15)) <br>在雅可比迭代中, 一旦新分量 $x_i^{\left(k+1\right)}$ 算出即立即用于后续分量的计算, 便得高斯-赛德尔迭代法, 其矩阵形式为 $$x^{\left(k+1\right)}=\left(D-L\right)^{-1}Ux^{\left(k\right)}+\left(D-L\right)^{-1}b,$$ 迭代矩阵为 $M=\left(D-L\right)^{-1}U$.
 
@@ -10,7 +10,7 @@
 
 > **定理 3.6** (迭代法收敛的充要条件) <br>对任意初始向量 $x^{\left(0\right)}$ 和右端项 $g$, 由迭代格式 $x^{\left(k+1\right)}=Mx^{\left(k\right)}+g$ 产生的向量序列收敛的充要条件是 $$\rho\left(M\right)<1.$$
 
-> **定义 3.4** (对角占优矩阵) <br>若 $n$ 阶方阵 $A=\left(a_{ij}\right)$ 满足 $$\left|a_{ii}\right|\ge\sum_{j\ne i}\left|a_{ij}\right|\qquad\left(i=1,2,\dots,n\right),$$ 且至少有一个 $i$ 使严格不等式成立, 则称 $A$ 为弱对角占优矩阵; 若对所有 $i$ 均严格成立, 则称 $A$ 为严格对角占优矩阵.
+> **定义 3.4** (对角占优矩阵) <br>若 $n$ 阶方阵 $A=\left(a_{ij}\right)$ 满足 $$\left|a_{ii}\right|\ge\sum_{j\ne i}\left|a_{ij}\right|\quad\left(i=1,2,\dots,n\right),$$ 且至少有一个 $i$ 使严格不等式成立, 则称 $A$ 为弱对角占优矩阵; 若对所有 $i$ 均严格成立, 则称 $A$ 为严格对角占优矩阵.
 
 > **几个常用的充分收敛条件** (判敛) <br>设方程组 $Ax=b$: (1) 若 $A$ 为严格对角占优矩阵 (或不可约弱对角占优矩阵) , 则雅可比迭代法与高斯-赛德尔迭代法均收敛; (2) 若 $A$ 为对称正定矩阵且 $0<\omega<2$, 则松弛法收敛 (此条件为充要条件) .
 
@@ -45,11 +45,11 @@ $$
 从 $x^{\left(0\right)}=\left(0,0,0\right)^{T}$ 出发, 得
 
 $$
-x^{\left(1\right)}=\left(1,1,1\right)^{T},\qquad x^{\left(2\right)}=\left(1,-1,-3\right)^{T},
+x^{\left(1\right)}=\left(1,1,1\right)^{T},\quad x^{\left(2\right)}=\left(1,-1,-3\right)^{T},
 $$
 
 $$
-x^{\left(3\right)}=\left(-3,3,1\right)^{T},\qquad x^{\left(4\right)}=\left(-3,3,1\right)^{T}.
+x^{\left(3\right)}=\left(-3,3,1\right)^{T},\quad x^{\left(4\right)}=\left(-3,3,1\right)^{T}.
 $$
 
 由**高斯-赛德尔迭代法** (式 (3.15)) , 迭代公式为
@@ -69,11 +69,11 @@ $$
 从 $x^{\left(0\right)}=\left(0,0,0\right)^{T}$ 出发, 得
 
 $$
-x^{\left(1\right)}=\left(1,0,-1\right)^{T},\qquad x^{\left(2\right)}=\left(-1,3,-3\right)^{T},
+x^{\left(1\right)}=\left(1,0,-1\right)^{T},\quad x^{\left(2\right)}=\left(-1,3,-3\right)^{T},
 $$
 
 $$
-x^{\left(3\right)}=\left(-11,15,-7\right)^{T},\qquad x^{\left(4\right)}=\left(-43,51,-15\right)^{T}.
+x^{\left(3\right)}=\left(-11,15,-7\right)^{T},\quad x^{\left(4\right)}=\left(-43,51,-15\right)^{T}.
 $$
 
 比较: 雅可比迭代在第 3 步即达到精确解 $x=\left(-3,3,1\right)^{T}$ (代入原方程组验证: $Ax=\left(1,1,1\right)^{T}=b$) , 第 4 步保持不变; 高斯-赛德尔迭代的各分量绝对值迅速增大, 呈发散趋势. 事实上, $D=I$, 雅可比迭代矩阵 $B=I-A$ 满足特征方程 $\det\left(\lambda I-B\right)=\lambda^{3}=0$, 故 $\rho\left(B\right)=0<1$; 而高斯-赛德尔迭代矩阵 $M=\left(D-L\right)^{-1}U$ 的特征方程为 $\det\left(\lambda I-M\right)=\lambda\left(\lambda-2\right)^{2}=0$, 特征值为 $0,2,2$, 故 $\rho\left(M\right)=2>1$. 由**定理 3.6** (迭代法收敛的充要条件) , 雅可比迭代收敛而高斯-赛德尔迭代发散. $\blacksquare$
@@ -93,7 +93,7 @@ $$
 由**雅可比迭代法** (式 (3.12)) , $D=\mathrm{diag}\left(a,a,a\right)$, 雅可比迭代矩阵为
 
 $$
-B=I-D^{-1}A=\begin{bmatrix}0&1/a&3/a\\1/a&0&2/a\\-3/a&2/a&0\end{bmatrix}=\frac{1}{a}C,\qquad C=\begin{bmatrix}0&1&3\\1&0&2\\-3&2&0\end{bmatrix}.
+B=I-D^{-1}A=\begin{bmatrix}0&1/a&3/a\\1/a&0&2/a\\-3/a&2/a&0\end{bmatrix}=\frac{1}{a}C,\quad C=\begin{bmatrix}0&1&3\\1&0&2\\-3&2&0\end{bmatrix}.
 $$
 
 矩阵 $C$ 的特征方程为
@@ -109,7 +109,7 @@ $$
 由**定理 3.6** (迭代法收敛的充要条件) , 雅可比迭代法收敛当且仅当 $\rho\left(B\right)<1$, 即 $\left|\frac{2}{a}\right|<1$, 亦即
 
 $$
-\left|a\right|>2\qquad\left(a\ne0\right).
+\left|a\right|>2\quad\left(a\ne0\right).
 $$
 
 故当且仅当实数 $a$ 满足 $\left|a\right|>2$ 时, 雅可比迭代法收敛. $\blacksquare$
@@ -177,7 +177,7 @@ $$
 迭代矩阵 $M_{\omega}=\left(D-\omega L\right)^{-1}\left[\left(1-\omega\right)D+\omega U\right]$. (2) 先判断 $A$ 的正定性: $A^{T}=A$ 为对称矩阵, 其各阶顺序主子式为
 
 $$
-\Delta_1=10>0,\qquad\Delta_2=\det\begin{bmatrix}10&4\\4&10\end{bmatrix}=84>0,
+\Delta_1=10>0,\quad\Delta_2=\det\begin{bmatrix}10&4\\4&10\end{bmatrix}=84>0,
 $$
 
 $$
@@ -215,7 +215,7 @@ $$
 $$
 
 逐行验证对角占优: $$
-\left|-10\right|=10>9+0.5=9.5,\qquad\left|-4\right|=4>1+2=3,\qquad\left|-12\right|=12>1.2+3.6=4.8.
+\left|-10\right|=10>9+0.5=9.5,\quad\left|-4\right|=4>1+2=3,\quad\left|-12\right|=12>1.2+3.6=4.8.
 $$
 
 由**定义 3.4** (对角占优矩阵) , 重排后的系数矩阵为**严格对角占优矩阵**. 由**几个常用的充分收敛条件** (判敛) 之 (1) , 雅可比迭代法与高斯-赛德尔迭代法均收敛.

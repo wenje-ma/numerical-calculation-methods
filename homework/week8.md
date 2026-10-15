@@ -8,9 +8,9 @@
 
 > **定理 8.4** (迭代法收敛阶与迭代函数导数的关系) <br>设迭代函数 $\varphi\left(x\right)$ 在 $x^{*}$ 邻近有 $r$ 阶连续导数 $\left(r\ge2\right)$, 且 $x^{*}=\varphi\left(x^{*}\right)$, $\varphi'\left(x^{*}\right)=\varphi''\left(x^{*}\right)=\dots=\varphi^{\left(r-1\right)}\left(x^{*}\right)=0$, 而 $\varphi^{\left(r\right)}\left(x^{*}\right)\ne0$, 则迭代序列 $\left\{x_n\right\}$ 是 $r$ 阶收敛的; 若 $x^{*}=\varphi\left(x^{*}\right)$ 而 $0<\left|\varphi'\left(x^{*}\right)\right|<1$, 则 $\left\{x_n\right\}$ 是线性收敛的.
 
-> **牛顿迭代法** (切线法, 式(8.16)) <br>将非线性方程在根邻近线性化, 得迭代公式 $$x_{n+1}=x_n-\frac{f\left(x_n\right)}{f'\left(x_n\right)}.$$ **定理 8.5** (牛顿法的局部收敛性) 指出: 当 $f'\left(x^{*}\right)\ne0$ (即 $x^{*}$ 为单根) 时, 牛顿法在 $x^{*}$ 邻近至少二阶收敛; 当 $x^{*}$ 为 $r$ 重根时牛顿法退化为线性收敛, 其改进格式为 $$x_{n+1}=x_n-r\frac{f\left(x_n\right)}{f'\left(x_n\right)}\qquad\left(n=0,1,2,\dots\right)$$ (式(8.17)) , 至少二阶收敛.
+> **牛顿迭代法** (切线法, 式(8.16)) <br>将非线性方程在根邻近线性化, 得迭代公式 $$x_{n+1}=x_n-\frac{f\left(x_n\right)}{f'\left(x_n\right)}.$$ **定理 8.5** (牛顿法的局部收敛性) 指出: 当 $f'\left(x^{*}\right)\ne0$ (即 $x^{*}$ 为单根) 时, 牛顿法在 $x^{*}$ 邻近至少二阶收敛; 当 $x^{*}$ 为 $r$ 重根时牛顿法退化为线性收敛, 其改进格式为 $$x_{n+1}=x_n-r\frac{f\left(x_n\right)}{f'\left(x_n\right)}\quad\left(n=0,1,2,\dots\right)$$ (式(8.17)) , 至少二阶收敛.
 
-> **弦截法** (割线法, 式(8.19)) <br>用差商代替导数, 得两步迭代公式 $$x_{n+1}=x_n-\frac{f\left(x_n\right)\left(x_n-x_{n-1}\right)}{f\left(x_n\right)-f\left(x_{n-1}\right)}\qquad\left(n=1,2,\dots\right).$$
+> **弦截法** (割线法, 式(8.19)) <br>用差商代替导数, 得两步迭代公式 $$x_{n+1}=x_n-\frac{f\left(x_n\right)\left(x_n-x_{n-1}\right)}{f\left(x_n\right)-f\left(x_{n-1}\right)}\quad\left(n=1,2,\dots\right).$$
 
 ### 习题一 (习题 8-3)
 
@@ -67,7 +67,7 @@ $$
 此时 $\left|x_8-x_7\right|=2.04\times10^{-6}$, $2\left|x_8-x_7\right|=4.08\times10^{-6}\le\frac{1}{2}\times10^{-5}$, 故 $x^{*}\approx3.34740$. (3) $\varphi'\left(x\right)=-\frac{2}{3}\sin x$. 由 (2) 知不动点 $x^{*}\approx3.3474$, 此时 $\sin x^{*}\approx-0.2044$, 故
 
 $$
-\varphi'\left(x^{*}\right)=-\frac{2}{3}\sin x^{*}\approx0.136\ne0,\qquad 0<\left|\varphi'\left(x^{*}\right)\right|<1.
+\varphi'\left(x^{*}\right)=-\frac{2}{3}\sin x^{*}\approx0.136\ne0,\quad 0<\left|\varphi'\left(x^{*}\right)\right|<1.
 $$
 
 由**定理 8.4** (迭代法收敛阶与迭代函数导数的关系) , 当 $x^{*}=\varphi\left(x^{*}\right)$ 而 $0<\left|\varphi'\left(x^{*}\right)\right|<1$ 时, 迭代序列是线性收敛的. 故此迭代法为线性 (一阶) 收敛. $\blacksquare$
@@ -77,7 +77,7 @@ $$
 证明由迭代格式
 
 $$
-x_{n+1}=\frac{x_n}{2}+\frac{1}{x_n}\qquad\left(n=0,1,2,\dots\right)
+x_{n+1}=\frac{x_n}{2}+\frac{1}{x_n}\quad\left(n=0,1,2,\dots\right)
 $$
 
 产生的迭代序列 $\left\{x_n\right\}$, 对任意 $x_0>1$ 均收敛到 $\sqrt{2}$, 且是二阶收敛的.
@@ -95,7 +95,7 @@ $$
 $$
 
 等号当且仅当 $\frac{x}{2}=\frac{1}{x}$ 即 $x=\sqrt{2}$ 时成立. 故从任意 $x_0>1$ 出发, $x_1=\varphi\left(x_0\right)\ge\sqrt{2}$. 当 $x_n\ge\sqrt{2}$ 时, $$
-\varphi\left(x\right)-x=\frac{x}{2}+\frac{1}{x}-x=\frac{2-x^{2}}{2x}\le0\qquad\left(x\ge\sqrt{2}\right),
+\varphi\left(x\right)-x=\frac{x}{2}+\frac{1}{x}-x=\frac{2-x^{2}}{2x}\le0\quad\left(x\ge\sqrt{2}\right),
 $$
 
 即 $x_{n+1}=\varphi\left(x_n\right)\le x_n$. 于是自 $x_1$ 起 $\left\{x_n\right\}$ 单调递减且有下界 $\sqrt{2}$, 由单调有界原理, $\left\{x_n\right\}$ 收敛于某极限 $L\ge\sqrt{2}$. 对 $x_{n+1}=\varphi\left(x_n\right)$ 两边取极限 ($\varphi$ 连续) , 得 $L=\frac{L}{2}+\frac{1}{L}$, 即 $L^{2}=2$, 结合 $L\ge\sqrt{2}$ 得 $L=\sqrt{2}$. 故对任意 $x_0>1$, $x_n\to\sqrt{2}$.
@@ -103,7 +103,7 @@ $$
 最后考察收敛阶. $\varphi'\left(x\right)=\frac{1}{2}-\frac{1}{x^{2}}$, $\varphi''\left(x\right)=\frac{2}{x^{3}}$, 于是
 
 $$
-\varphi'\left(\sqrt{2}\right)=\frac{1}{2}-\frac{1}{2}=0,\qquad \varphi''\left(\sqrt{2}\right)=\frac{2}{\left(\sqrt{2}\right)^{3}}=\frac{1}{\sqrt{2}}\ne0.
+\varphi'\left(\sqrt{2}\right)=\frac{1}{2}-\frac{1}{2}=0,\quad \varphi''\left(\sqrt{2}\right)=\frac{2}{\left(\sqrt{2}\right)^{3}}=\frac{1}{\sqrt{2}}\ne0.
 $$
 
 由**定理 8.4** (迭代法收敛阶与迭代函数导数的关系) , 因 $\varphi\left(\sqrt{2}\right)=\sqrt{2}$, $\varphi'\left(\sqrt{2}\right)=0$ 而 $\varphi''\left(\sqrt{2}\right)\ne0$, 故迭代序列 $\left\{x_n\right\}$ 在 $\sqrt{2}$ 邻近是二阶 (平方) 收敛的. $\blacksquare$
@@ -155,7 +155,7 @@ $$
 若 $x^{*}$ 是方程 $f\left(x\right)=0$ 的 $r$ 重根, 即 $f\left(x\right)=\left(x-x^{*}\right)^{r}\varphi\left(x\right)$, 其中 $\varphi\left(x^{*}\right)\ne0$, 试证明: (1) 牛顿法在 $x^{*}$ 邻近是线性收敛的; (2) 改进的牛顿法
 
 $$
-x_{n+1}=x_n-r\frac{f\left(x_n\right)}{f'\left(x_n\right)}\qquad\left(n=0,1,2,\dots\right)
+x_{n+1}=x_n-r\frac{f\left(x_n\right)}{f'\left(x_n\right)}\quad\left(n=0,1,2,\dots\right)
 $$
 
 是二阶收敛的.
