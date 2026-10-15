@@ -2,15 +2,15 @@
 
 > **线性最小二乘法的一般形式** (式(6.7)–(6.9)) <br>对数据组 $\left(x_i,y_i\right)\left(i=1,2,\dots,n\right)$, 取 $\left[a,b\right]$ 上一组线性无关的函数 $\varphi_k\left(x\right)\left(k=0,1,\dots,m\right)$, 求 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使残差加权平方和 $\sum_{i=1}^n w_i\left[y_i-p\left(x_i\right)\right]^2$ 最小. 系数满足正则方程组 $$\sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(y,\varphi_j\right)\qquad\left(j=0,1,\dots,m\right),\qquad\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^n w_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right),\qquad\left(y,\varphi_j\right)=\sum_{i=1}^n w_i y_i\varphi_j\left(x_i\right).$$ 特别地, 取 $\varphi_k\left(x\right)=x^k$ 即多项式拟合; 一次拟合 $y=a_0+a_1x$ ($w_i=1$) 的正则方程组为 $$\begin{cases}n a_0+a_1\sum\limits_{i=1}^n x_i=\sum\limits_{i=1}^n y_i,\\a_0\sum\limits_{i=1}^n x_i+a_1\sum\limits_{i=1}^n x_i^2=\sum\limits_{i=1}^n x_i y_i.\end{cases}$$
 
-> **非线性拟合的线性化** (6.1.2 指数拟合, 6.1.3 分式线性拟合) <br>对指数型 $y=ae^{bx}$, 两端取对数得 $\ln y=\ln a+bx$, 先对变换后的数据组 $\left(x_i,\ln y_i\right)$ 按**线性最小二乘法的一般形式**作一次线性拟合, 再取指数还原; 对可分离变量的分式型 $y=\dfrac{x}{ax+b}$, 两端取倒数得 $\dfrac{1}{y}=a+b\dfrac{1}{x}$, 先对数据组 $\left(\dfrac{1}{x_i},\dfrac{1}{y_i}\right)$ 作一次线性拟合, 再取倒数还原.
+> **非线性拟合的线性化** (6.1.2 指数拟合, 6.1.3 分式线性拟合) <br>对指数型 $y=ae^{bx}$, 两端取对数得 $\ln y=\ln a+bx$, 先对变换后的数据组 $\left(x_i,\ln y_i\right)$ 按**线性最小二乘法的一般形式**作一次线性拟合, 再取指数还原; 对可分离变量的分式型 $y=\frac{x}{ax+b}$, 两端取倒数得 $\frac{1}{y}=a+b\frac{1}{x}$, 先对数据组 $\left(\frac{1}{x_i},\frac{1}{y_i}\right)$ 作一次线性拟合, 再取倒数还原.
 
 > **定义 6.2** (正交函数系) <br>若函数系 $\left\{\varphi_k\left(x\right)\right\}$ 在区间 $\left[a,b\right]$ 上满足 $\left(\varphi_j,\varphi_k\right)=\int_a^b w\left(x\right)\varphi_j\left(x\right)\varphi_k\left(x\right)\,\mathrm dx=0\ \left(j\ne k\right)$ 且 $\left(\varphi_k,\varphi_k\right)>0$, 则称其为 $\left[a,b\right]$ 上关于权函数 $w\left(x\right)$ 的正交函数系, 其中 $\left(\varphi,\psi\right)=\int_a^b w\left(x\right)\varphi\left(x\right)\psi\left(x\right)\,\mathrm dx$ 称为函数的内积.
 
 > **定义 6.3** (最佳平方逼近函数) <br>设 $f\left(x\right)$ 在 $\left[a,b\right]$ 上连续, $H=\operatorname{Span}\left\{\varphi_0,\varphi_1,\dots,\varphi_m\right\}$, 若 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使 $\int_a^b w\left(x\right)\left[f\left(x\right)-p\left(x\right)\right]^2\,\mathrm dx$ 为最小, 则称 $p\left(x\right)$ 为 $f\left(x\right)$ 在 $H$ 中关于权函数 $w\left(x\right)$ 的最佳平方逼近函数.
 
-> **最佳平方逼近的正则方程组** (式(6.32), (6.35), (6.36)) <br>按**定义 6.3**, 系数 $a_k$ 满足正则方程组 $\sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(f,\varphi_j\right)\ \left(j=0,1,\dots,m\right)$, 其中 $\left(f,\varphi_j\right)=\int_a^b w\left(x\right)f\left(x\right)\varphi_j\left(x\right)\,\mathrm dx$. 若 $\left\{\varphi_k\right\}$ 为正交函数系, 则方程组对角化, 解为 $a_k=\dfrac{\left(f,\varphi_k\right)}{\left(\varphi_k,\varphi_k\right)}$, 最佳平方逼近函数为 $p\left(x\right)=\sum_{k=0}^m\dfrac{\left(f,\varphi_k\right)}{\left(\varphi_k,\varphi_k\right)}\varphi_k\left(x\right)$.
+> **最佳平方逼近的正则方程组** (式(6.32), (6.35), (6.36)) <br>按**定义 6.3**, 系数 $a_k$ 满足正则方程组 $\sum_{k=0}^m a_k\left(\varphi_k,\varphi_j\right)=\left(f,\varphi_j\right)\ \left(j=0,1,\dots,m\right)$, 其中 $\left(f,\varphi_j\right)=\int_a^b w\left(x\right)f\left(x\right)\varphi_j\left(x\right)\,\mathrm dx$. 若 $\left\{\varphi_k\right\}$ 为正交函数系, 则方程组对角化, 解为 $a_k=\frac{\left(f,\varphi_k\right)}{\left(\varphi_k,\varphi_k\right)}$, 最佳平方逼近函数为 $p\left(x\right)=\sum_{k=0}^m\frac{\left(f,\varphi_k\right)}{\left(\varphi_k,\varphi_k\right)}\varphi_k\left(x\right)$.
 
-> **勒让德多项式** (式(6.18), (6.19)) <br>前几项为 $P_0\left(x\right)=1$, $P_1\left(x\right)=x$, $P_2\left(x\right)=\dfrac{3x^2-1}{2}$, $P_3\left(x\right)=\dfrac{5x^3-3x}{2}$. 它是 $\left[-1,1\right]$ 上关于权 $w\left(x\right)\equiv1$ 的正交多项式系, 且 $\left(P_n,P_m\right)=0\ \left(n\ne m\right)$, $\left(P_n,P_n\right)=\dfrac{2}{2n+1}$. 在区间 $\left[a,b\right]$ 上使用时作变量替换 $t=\dfrac{2x-\left(b+a\right)}{b-a}$, 取 $\varphi_k\left(x\right)=P_k\left(t\right)$.
+> **勒让德多项式** (式(6.18), (6.19)) <br>前几项为 $P_0\left(x\right)=1$, $P_1\left(x\right)=x$, $P_2\left(x\right)=\frac{3x^2-1}{2}$, $P_3\left(x\right)=\frac{5x^3-3x}{2}$. 它是 $\left[-1,1\right]$ 上关于权 $w\left(x\right)\equiv1$ 的正交多项式系, 且 $\left(P_n,P_m\right)=0\ \left(n\ne m\right)$, $\left(P_n,P_n\right)=\frac{2}{2n+1}$. 在区间 $\left[a,b\right]$ 上使用时作变量替换 $t=\frac{2x-\left(b+a\right)}{b-a}$, 取 $\varphi_k\left(x\right)=P_k\left(t\right)$.
 
 ### 习题一 (习题 6-1)
 
@@ -118,17 +118,17 @@ $\blacksquare$
 
 ### 习题五 (习题 6-7)
 
-某化学反应中, 测得生成物的质量浓度 $y$ 与时间 $t$ 的关系见下表 (单位略) : $t_i=1,2,3,4,6,8,10,12,14,16$; $y_i=4.00,6.41,8.01,8.79,9.53,9.86,10.33,10.42,10.53,10.61$. 试用最小二乘法求一形如 $y=\dfrac{t}{at+b}$ ($a,b$ 为常数) 的经验公式拟合以上数据.
+某化学反应中, 测得生成物的质量浓度 $y$ 与时间 $t$ 的关系见下表 (单位略) : $t_i=1,2,3,4,6,8,10,12,14,16$; $y_i=4.00,6.41,8.01,8.79,9.53,9.86,10.33,10.42,10.53,10.61$. 试用最小二乘法求一形如 $y=\frac{t}{at+b}$ ($a,b$ 为常数) 的经验公式拟合以上数据.
 
 ### 解答 习题五
 
-按**非线性拟合的线性化** (分式线性拟合) , 对 $y=\dfrac{t}{at+b}$ 两端取倒数, 得
+按**非线性拟合的线性化** (分式线性拟合) , 对 $y=\frac{t}{at+b}$ 两端取倒数, 得
 
 $$
 \frac{1}{y}=a+b\frac{1}{t}.
 $$
 
-令 $u=\dfrac{1}{t}$, $z=\dfrac{1}{y}$, 则 $z=a+bu$, 对数据组 $\left(u_i,z_i\right)=\left(\dfrac{1}{t_i},\dfrac{1}{y_i}\right)$ 作一次线性最小二乘拟合. 由 $n=10$, 计算得
+令 $u=\frac{1}{t}$, $z=\frac{1}{y}$, 则 $z=a+bu$, 对数据组 $\left(u_i,z_i\right)=\left(\frac{1}{t_i},\frac{1}{y_i}\right)$ 作一次线性最小二乘拟合. 由 $n=10$, 计算得
 
 $$
 \sum u_i=2.6923,\qquad\sum z_i=1.2330,\qquad\sum u_i^2=1.4930,\qquad\sum u_i z_i=0.45858.
@@ -174,7 +174,7 @@ $$
 
 ### 习题七 (习题 6-13)
 
-求下列函数在指定区间上关于 $f\left(x\right)$ 的一次最佳平方逼近多项式: (1) $f\left(x\right)=\sqrt{x}$, $\left[0,1\right]$; (2) $f\left(x\right)=e^x$, $\left[0,1\right]$; (3) $f\left(x\right)=\sin\dfrac{\pi}{2}x$, $\left[0,1\right]$. (仅要求第 (2) 小题) ### 解答 习题七
+求下列函数在指定区间上关于 $f\left(x\right)$ 的一次最佳平方逼近多项式: (1) $f\left(x\right)=\sqrt{x}$, $\left[0,1\right]$; (2) $f\left(x\right)=e^x$, $\left[0,1\right]$; (3) $f\left(x\right)=\sin\frac{\pi}{2}x$, $\left[0,1\right]$. (仅要求第 (2) 小题) ### 解答 习题七
 
 对 $f\left(x\right)=e^x$, $\left[0,1\right]$, 取权 $w\left(x\right)\equiv1$, 基函数 $\varphi_0\left(x\right)=1$, $\varphi_1\left(x\right)=x$, 即 $H=\operatorname{Span}\left\{1,x\right\}$. 由**定义 6.3** 与**最佳平方逼近的正则方程组** (式(6.32)) , 先计算各内积: $$
 \left(\varphi_0,\varphi_0\right)=\int_0^1\mathrm dx=1,\qquad\left(\varphi_0,\varphi_1\right)=\left(\varphi_1,\varphi_0\right)=\int_0^1x\,\mathrm dx=\frac12,\qquad\left(\varphi_1,\varphi_1\right)=\int_0^1x^2\,\mathrm dx=\frac13,
@@ -185,7 +185,7 @@ $$
 $$
 
 代入正则方程组: $$
-\begin{cases}a_0+\dfrac12 a_1=e-1,\\\dfrac12 a_0+\dfrac13 a_1=1.\end{cases}
+\begin{cases}a_0+\frac12 a_1=e-1,\\\frac12 a_0+\frac13 a_1=1.\end{cases}
 $$
 
 解得 $a_0\approx0.8731$, $a_1\approx1.6903$. 故 $f\left(x\right)=e^x$ 在 $\left[0,1\right]$ 上的一次最佳平方逼近多项式为
@@ -198,13 +198,13 @@ $\blacksquare$
 
 ### 习题八 (习题 6-15)
 
-利用勒让德多项式, 求 $f\left(x\right)=\sin x$ 在 $\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$ 上的三次最佳平方逼近多项式 $P_3\left(x\right)$, 并计算均方误差 $\int_{-\pi/2}^{\pi/2}\left[\sin x-P_3\left(x\right)\right]^2\,\mathrm dx$.
+利用勒让德多项式, 求 $f\left(x\right)=\sin x$ 在 $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ 上的三次最佳平方逼近多项式 $P_3\left(x\right)$, 并计算均方误差 $\int_{-\pi/2}^{\pi/2}\left[\sin x-P_3\left(x\right)\right]^2\,\mathrm dx$.
 
 ### 解答 习题八
 
-按**最佳平方逼近的正则方程组** (正交情形, 式(6.35), (6.36)) , 在区间 $\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$ 上取**勒让德多项式**作基. 令变量替换 $t=\dfrac{2x}{\pi}$, 则 $x=\dfrac{\pi}{2}t$, $\mathrm dx=\dfrac{\pi}{2}\mathrm dt$, $t\in\left[-1,1\right]$, 取 $\varphi_k\left(x\right)=P_k\left(t\right)=P_k\!\left(\dfrac{2x}{\pi}\right)$.
+按**最佳平方逼近的正则方程组** (正交情形, 式(6.35), (6.36)) , 在区间 $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ 上取**勒让德多项式**作基. 令变量替换 $t=\frac{2x}{\pi}$, 则 $x=\frac{\pi}{2}t$, $\mathrm dx=\frac{\pi}{2}\mathrm dt$, $t\in\left[-1,1\right]$, 取 $\varphi_k\left(x\right)=P_k\left(t\right)=P_k\!\left(\frac{2x}{\pi}\right)$.
 
-由勒让德多项式的正交性 $\left(P_n,P_m\right)=\dfrac{2}{2n+1}\delta_{nm}$, 得
+由勒让德多项式的正交性 $\left(P_n,P_m\right)=\frac{2}{2n+1}\delta_{nm}$, 得
 
 $$
 \left(\varphi_k,\varphi_k\right)=\frac{\pi}{2}\int_{-1}^1P_k^2\left(t\right)\,\mathrm dt=\frac{\pi}{2}\cdot\frac{2}{2k+1}=\frac{\pi}{2k+1},
@@ -214,7 +214,7 @@ $$
 \left(f,\varphi_k\right)=\frac{\pi}{2}\int_{-1}^1\sin\!\left(\frac{\pi t}{2}\right)P_k\left(t\right)\,\mathrm dt.
 $$
 
-因 $\sin\!\left(\dfrac{\pi t}{2}\right)$ 为奇函数, $P_0\left(t\right)=1$, $P_2\left(t\right)=\dfrac{3t^2-1}{2}$ 为偶函数, 故 $\left(f,\varphi_0\right)=\left(f,\varphi_2\right)=0$, 只需计算 $a_1,a_3$. 计算积分: $$
+因 $\sin\!\left(\frac{\pi t}{2}\right)$ 为奇函数, $P_0\left(t\right)=1$, $P_2\left(t\right)=\frac{3t^2-1}{2}$ 为偶函数, 故 $\left(f,\varphi_0\right)=\left(f,\varphi_2\right)=0$, 只需计算 $a_1,a_3$. 计算积分: $$
 \int_{-1}^1 t\sin\!\left(\frac{\pi t}{2}\right)\mathrm dt=\frac{8}{\pi^2},\qquad\int_{-1}^1 t^3\sin\!\left(\frac{\pi t}{2}\right)\mathrm dt=\frac{24}{\pi^2}-\frac{192}{\pi^4},
 $$
 
@@ -244,7 +244,7 @@ $$
 \int_{-\pi/2}^{\pi/2}\left[\sin x-P_3\left(x\right)\right]^2\mathrm dx=\left(f,f\right)-a_1^2\left(\varphi_1,\varphi_1\right)-a_3^2\left(\varphi_3,\varphi_3\right),
 $$
 
-其中 $\left(f,f\right)=\int_{-\pi/2}^{\pi/2}\sin^2x\,\mathrm dx=\dfrac{\pi}{2}$, 代入得
+其中 $\left(f,f\right)=\int_{-\pi/2}^{\pi/2}\sin^2x\,\mathrm dx=\frac{\pi}{2}$, 代入得
 
 $$
 \int_{-\pi/2}^{\pi/2}\left[\sin x-P_3\left(x\right)\right]^2\mathrm dx=\frac{\pi}{2}-\frac{12^2}{\pi^4}\cdot\frac{\pi}{3}-\left(\frac{168}{\pi^2}-\frac{1680}{\pi^4}\right)^2\frac{\pi}{7}\approx2.42\times10^{-5}.
