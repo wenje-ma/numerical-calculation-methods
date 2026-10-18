@@ -12,7 +12,7 @@
 
 > **二点与三点求导公式** (式(7.9) 至式(7.12)) <br>对步长 $h$ 的等距节点 $x_0,x_1=x_0+h$, 二点公式 $f'\left(x_0\right)\approx\frac{f\left(x_1\right)-f\left(x_0\right)}{h}$, 截断误差 $R_1\left(x_0\right)=-\frac{h}{2}f''\left(\xi\right)$; 对节点 $x_0,x_1,x_2=x_0+2h$, 三点中心公式 $$f'\left(x_1\right)\approx\frac{f\left(x_2\right)-f\left(x_0\right)}{2h},$$ 截断误差 $R_2\left(x_1\right)=-\frac{h^2}{6}f^{\left(3\right)}\left(\xi\right)$.
 
-> **梯形公式的逐次分半算法** (式(7.34)) <br>记 $2^m$ 等分区间的梯形值为 $T_{2^m}$, 则逐次分半递推为 $$T_{2^m}=\frac{1}{2}T_{2^{m-1}}+\frac{b-a}{2^m}\sum_{k=1}^{2^{m-1}}f\left(a+\left(2k-1\right)\frac{b-a}{2^m}\right),$$ 且事后误差估计为 $\left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|$, 当 $\left|T_{2^m}-T_{2^{m-1}}\right|<3\varepsilon$ 时停止计算.
+> **梯形公式的逐次分半算法** (式(7.34)) <br>记 $2^m$ 等分区间的梯形值为 $T_{2^m}$, 则逐次分半递推为 $$T_{2^m}=\frac{1}{2}T_{2^{m-1}}+\frac{b-a}{2^m}\sum_{k=1}^{2^{m-1}}f\left(a+\left(2k-1\right)\frac{b-a}{2^m}\right),$$ 且事后误差估计为 $\left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|$, 当 $\left|T_{2^m}-T_{2^{m-1}}\right|<3\epsilon$ 时停止计算.
 
 > **龙贝格求积公式** (式(7.41)) <br>由理查森外推法, $$T_m^{\left(k\right)}=\frac{4^m T_{m-1}^{\left(k+1\right)}-T_{m-1}^{\left(k\right)}}{4^m-1},\ m=1,2,\dots,$$ 第一列 $T_0^{\left(k\right)}$ 为复化梯形值序列, 以后各列依次为辛普森, 柯特斯, 龙贝格值, 精度逐列提高.
 
@@ -171,7 +171,7 @@ $$
 
 试用梯形公式的逐次分半算法计算下列积分: (1) $\int_0^\pi \frac{dx}{x+\cos x}$; (2) $\int_0^1 \frac{dx}{1+x^3}$.
 
-要求误差不超过 $\varepsilon=3\times10^{-4}$. (仅要求第 (1) 小题) ### 解答 习题七
+要求误差不超过 $\epsilon=3\times10^{-4}$. (仅要求第 (1) 小题) ### 解答 习题七
 
 这里 $a=0$, $b=\pi$, $f\left(x\right)=\frac{1}{x+\cos x}$. 由**梯形公式的逐次分半算法** (式(7.34)) , 首值 $T_1=\frac{\pi}{2}\left[f\left(0\right)+f\left(\pi\right)\right]=2.3043$, 逐次分半计算梯形值序列, 并用事后误差估计 $\left|R\right|\approx\frac13\left|T_{2^m}-T_{2^{m-1}}\right|$ 控制精度, 结果如下: | $2^m$ | $T_{2^m}$ | $\lvert T_{2^m}-T_{2^{m-1}}\rvert$ |
 |---|---|---|
@@ -183,7 +183,7 @@ $$
 | 32 | 2.0437 | 0.00186 |
 | 64 | 2.0432 | 0.000470 |
 
-当 $2^m=64$ 时, $\lvert T_{64}-T_{32}\rvert=0.000470<3\varepsilon=9\times10^{-4}$, 由**梯形公式的逐次分半算法**的停步准则, 此时 $\left|R\right|\approx\frac13\times0.000470=1.6\times10^{-4}<3\times10^{-4}$, 满足精度. 故
+当 $2^m=64$ 时, $\lvert T_{64}-T_{32}\rvert=0.000470<3\epsilon=9\times10^{-4}$, 由**梯形公式的逐次分半算法**的停步准则, 此时 $\left|R\right|\approx\frac13\times0.000470=1.6\times10^{-4}<3\times10^{-4}$, 满足精度. 故
 
 $$
 \int_0^\pi \frac{dx}{x+\cos x}\approx T_{64}=2.0432.

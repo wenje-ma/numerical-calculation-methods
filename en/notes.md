@@ -4,13 +4,13 @@
 
 **Definition 1.1** (Absolute Error and Error Bound)
 
-Let $x^{*}$ be an approximation to the exact value $x$. The quantity $e\left(x^{*}\right)=x-x^{*}$ is called the absolute error of the approximation $x^{*}$, or error for short. In general the exact value is hard to obtain, and hence the exact value of the absolute error $e\left(x^{*}\right)$ cannot be computed; however, from the measuring instrument or the computation one can estimate the range of its possible values, namely an upper bound $\varepsilon$ on the absolute value of the error:
+Let $x^{*}$ be an approximation to the exact value $x$. The quantity $e\left(x^{*}\right)=x-x^{*}$ is called the absolute error of the approximation $x^{*}$, or error for short. In general the exact value is hard to obtain, and hence the exact value of the absolute error $e\left(x^{*}\right)$ cannot be computed; however, from the measuring instrument or the computation one can estimate the range of its possible values, namely an upper bound $\epsilon$ on the absolute value of the error:
 
 $$
-\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\varepsilon.
+\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\epsilon.
 $$
 
-Then $\varepsilon$ is called the absolute error bound of the approximation $x^{*}$, or error bound for short.
+Then $\epsilon$ is called the absolute error bound of the approximation $x^{*}$, or error bound for short.
 
 **Definition 1.2** (Relative Error and Relative Error Bound)
 
@@ -26,13 +26,13 @@ $$
 e_r\left(x^{*}\right)=\frac{e\left(x^{*}\right)}{x^{*}}.
 $$
 
-Similarly, only an upper bound on the relative error can be estimated. If there exists a positive number $\varepsilon_r$ such that
+Similarly, only an upper bound on the relative error can be estimated. If there exists a positive number $\epsilon_r$ such that
 
 $$
-\left|e_r\left(x^{*}\right)\right|=\left|\frac{e\left(x^{*}\right)}{x^{*}}\right|\le\varepsilon_r,
+\left|e_r\left(x^{*}\right)\right|=\left|\frac{e\left(x^{*}\right)}{x^{*}}\right|\le\epsilon_r,
 $$
 
-then $\varepsilon_r$ is called the relative error bound of $x^{*}$.
+then $\epsilon_r$ is called the relative error bound of $x^{*}$.
 
 **Definition 1.3** (Significant Digits)
 
@@ -52,7 +52,7 @@ then the approximation $x^{*}$ is said to have $n$ significant digits.
 
 **Theorem 1.1** (Relation Between the Relative Error Bound and Significant Digits)
 
-If the approximation $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ of $x$ has $n$ significant digits, then $\frac{1}{2a_1}\times10^{-n+1}$ is its relative error bound. Conversely, if the relative error bound $\varepsilon_r$ of $x^{*}$ satisfies $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, then $x^{*}$ has at least $n$ significant digits.
+If the approximation $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ of $x$ has $n$ significant digits, then $\frac{1}{2a_1}\times10^{-n+1}$ is its relative error bound. Conversely, if the relative error bound $\epsilon_r$ of $x^{*}$ satisfies $\epsilon_r\le\frac{1}{2}\times10^{-n}$, then $x^{*}$ has at least $n$ significant digits.
 
 **Error Propagation** (Error Estimation in Basic Operations)
 
@@ -530,7 +530,7 @@ $$
 \left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|,
 $$
 
-Stop the computation when $\left|T_{2^m}-T_{2^{m-1}}\right|< 3\varepsilon$.
+Stop the computation when $\left|T_{2^m}-T_{2^{m-1}}\right|< 3\epsilon$.
 
 **Romberg Quadrature Formula** (Formula (7.41))
 
