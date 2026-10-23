@@ -4,13 +4,13 @@
 
 **定义 1.1** (绝对误差与误差限)
 
-设 $x^{*}$ 为准确值 $x$ 的一个近似值, 称 $e\left(x^{*}\right)=x-x^{*}$ 为近似值 $x^{*}$ 的绝对误差, 简称误差. 一般情况下准确值难以求出, 从而也不能算出绝对误差 $e\left(x^{*}\right)$ 的准确值, 但可以根据测量工具或计算的情况估计出它的取值范围, 即估计出误差绝对值的一个上界 $\epsilon$:
+设 $x^{*}$ 为准确值 $x$ 的一个近似值, 称 $e\left(x^{*}\right)=x-x^{*}$ 为近似值 $x^{*}$ 的绝对误差, 简称误差. 一般情况下准确值难以求出, 从而也不能算出绝对误差 $e\left(x^{*}\right)$ 的准确值, 但可以根据测量工具或计算的情况估计出它的取值范围, 即估计出误差绝对值的一个上界 $\varepsilon$:
 
 $$
-\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\epsilon.
+\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\varepsilon.
 $$
 
-通常称 $\epsilon$ 为近似值 $x^{*}$ 的绝对误差限, 简称误差限.
+通常称 $\varepsilon$ 为近似值 $x^{*}$ 的绝对误差限, 简称误差限.
 
 **定义 1.2** (相对误差与相对误差限)
 
@@ -26,13 +26,13 @@ $$
 e_r\left(x^{*}\right)=\frac{e\left(x^{*}\right)}{x^{*}}.
 $$
 
-同样, 相对误差也只能估计其上限. 如果存在正数 $\epsilon_r$, 使得
+同样, 相对误差也只能估计其上限. 如果存在正数 $\varepsilon_r$, 使得
 
 $$
-\left|e_r\left(x^{*}\right)\right|=\left|\frac{e\left(x^{*}\right)}{x^{*}}\right|\le\epsilon_r,
+\left|e_r\left(x^{*}\right)\right|=\left|\frac{e\left(x^{*}\right)}{x^{*}}\right|\le\varepsilon_r,
 $$
 
-则称 $\epsilon_r$ 为 $x^{*}$ 的相对误差限.
+则称 $\varepsilon_r$ 为 $x^{*}$ 的相对误差限.
 
 **定义 1.3** (有效数字)
 
@@ -52,7 +52,7 @@ $$
 
 **定理 1.1** (相对误差限与有效数字的关系)
 
-若 $x$ 的近似值 $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ 有 $n$ 位有效数字, 则 $\frac{1}{2a_1}\times10^{-n+1}$ 为其相对误差限. 反之, 若 $x^{*}$ 的相对误差限 $\epsilon_r$ 满足 $\epsilon_r\le\frac{1}{2}\times10^{-n}$, 则 $x^{*}$ 至少具有 $n$ 位有效数字.
+若 $x$ 的近似值 $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ 有 $n$ 位有效数字, 则 $\frac{1}{2a_1}\times10^{-n+1}$ 为其相对误差限. 反之, 若 $x^{*}$ 的相对误差限 $\varepsilon_r$ 满足 $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, 则 $x^{*}$ 至少具有 $n$ 位有效数字.
 
 **误差传播** (基本运算中的误差估计)
 
@@ -530,7 +530,7 @@ $$
 \left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|,
 $$
 
-当 $\left|T_{2^m}-T_{2^{m-1}}\right|< 3\epsilon$ 时停止计算.
+当 $\left|T_{2^m}-T_{2^{m-1}}\right|< 3\varepsilon$ 时停止计算.
 
 **龙贝格求积公式** (式 (7.41))
 
