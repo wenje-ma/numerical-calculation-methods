@@ -16,7 +16,7 @@
 
 > **定理 5.5** (埃尔米特插值余项) <br>设共有 $n+1$ 个函数值节点与 $m+1$ 个导数条件 (在节点 $x_{i_0},\dots,x_{i_m}$ 上) , 若 $f\left(x\right)\in C^{n+m+2}\left[a,b\right]$, 则对任意 $x\in\left[a,b\right]$, 有 $$R\left(x\right)=f\left(x\right)-H\left(x\right)=\frac{f^{\left(n+m+2\right)}\left(\xi\right)}{\left(n+m+2\right)!}\omega_{n+1}\left(x\right)\prod_{k=0}^{m}\left(x-x_{i_k}\right),\quad \xi\in\left(a,b\right).$$
 
-> **定义 5.11** (三次样条插值) <br>已知 $f\left(x\right)$ 在节点 $a=x_0<x_1<\cdots<x_n=b$ 上的值 $y_i=f\left(x_i\right)$, 若 $S\left(x\right)$ 满足 $S\left(x_i\right)=y_i$, 在每个小区间 $\left[x_i,x_{i+1}\right]$ 上是三次多项式, 在 $\left[a,b\right]$ 上二阶连续可微, 则称 $S\left(x\right)$ 为三次样条插值函数. 以 $M_i=S''\left(x_i\right)$ 为参数得三弯矩方程 $$\alpha_j M_{j-1}+2M_j+\beta_j M_{j+1}=C_j\quad\left(j=1,\dots,n-1\right),$$ 其中 $\alpha_j=\frac{h_{j-1}}{h_{j-1}+h_j}$, $\beta_j=1-\alpha_j$, $C_j=\frac{1}{h_{j-1}+h_j}\left(\frac{y_{j+1}-y_j}{h_j}-\frac{y_j-y_{j-1}}{h_{j-1}}\right)$; 端点边界条件可取给定导数值 $S'\left(a\right)=m_0,\ S'\left(b\right)=m_n$ 或给定二阶导数值 $S''\left(a\right)=M_0,\ S''\left(b\right)=M_n$.
+> **定义 5.11** (三次样条插值) <br>已知 $f\left(x\right)$ 在节点 $a=x_0< x_1< \cdots< x_n=b$ 上的值 $y_i=f\left(x_i\right)$, 若 $S\left(x\right)$ 满足 $S\left(x_i\right)=y_i$, 在每个小区间 $\left[x_i,x_{i+1}\right]$ 上是三次多项式, 在 $\left[a,b\right]$ 上二阶连续可微, 则称 $S\left(x\right)$ 为三次样条插值函数. 以 $M_i=S''\left(x_i\right)$ 为参数得三弯矩方程 $$\alpha_j M_{j-1}+2M_j+\beta_j M_{j+1}=C_j\quad\left(j=1,\dots,n-1\right),$$ 其中 $\alpha_j=\frac{h_{j-1}}{h_{j-1}+h_j}$, $\beta_j=1-\alpha_j$, $C_j=\frac{1}{h_{j-1}+h_j}\left(\frac{y_{j+1}-y_j}{h_j}-\frac{y_j-y_{j-1}}{h_{j-1}}\right)$; 端点边界条件可取给定导数值 $S'\left(a\right)=m_0,\ S'\left(b\right)=m_n$ 或给定二阶导数值 $S''\left(a\right)=M_0,\ S''\left(b\right)=M_n$.
 
 ### 习题一 (习题 5-3)
 

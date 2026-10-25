@@ -22,7 +22,7 @@
 \left|e\left(a+b\right)\right|\le\left|e\left(a\right)\right|+\left|e\left(b\right)\right|\le\frac{1}{2}\times10^{-4}+\frac{1}{2}\times10^{-3}=0.00055.
 $$
 
-又 $2.1811=0.21811\times10^{1}$ ($m=1$) , 而 $\frac{1}{2}\times10^{1-4}=\frac{1}{2}\times10^{-3}=0.0005<0.00055\le\frac{1}{2}\times10^{1-3}=\frac{1}{2}\times10^{-2}=0.005$, 故由**定义 1.3** (有效数字) , $a+b$ 有 3 位有效数字.
+又 $2.1811=0.21811\times10^{1}$ ($m=1$) , 而 $\frac{1}{2}\times10^{1-4}=\frac{1}{2}\times10^{-3}=0.0005< 0.00055\le\frac{1}{2}\times10^{1-3}=\frac{1}{2}\times10^{-2}=0.005$, 故由**定义 1.3** (有效数字) , $a+b$ 有 3 位有效数字.
 
 再看积 $a\times b=1.2031\times0.978=1.17663$. 由**定义 1.2** (相对误差与相对误差限) 及**误差传播** (积的相对误差限不超过各数的相对误差限之和) , $$
 \left|e_r\left(a\right)\right|\le\frac{\frac{1}{2}\times10^{-4}}{1.2031}\approx4.156\times10^{-5},\quad\left|e_r\left(b\right)\right|\le\frac{\frac{1}{2}\times10^{-3}}{0.978}\approx5.113\times10^{-4},
@@ -38,7 +38,7 @@ $$
 \left|e\left(a\times b\right)\right|\approx\left|a\times b\right|\cdot\left|e_r\left(a\times b\right)\right|\approx1.17663\times5.528\times10^{-4}\approx6.505\times10^{-4}.
 $$
 
-又 $1.17663=0.117663\times10^{1}$ ($m=1$) , 且 $\frac{1}{2}\times10^{-3}=0.0005<6.505\times10^{-4}\le\frac{1}{2}\times10^{-2}=0.005$, 故由**定义 1.3**, $a\times b$ 有 3 位有效数字. $\blacksquare$
+又 $1.17663=0.117663\times10^{1}$ ($m=1$) , 且 $\frac{1}{2}\times10^{-3}=0.0005< 6.505\times10^{-4}\le\frac{1}{2}\times10^{-2}=0.005$, 故由**定义 1.3**, $a\times b$ 有 3 位有效数字. $\blacksquare$
 
 ### 习题二 (习题 1-7)
 

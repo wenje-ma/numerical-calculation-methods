@@ -12,7 +12,7 @@
 
 > **二点与三点求导公式** (式(7.9) 至式(7.12)) <br>对步长 $h$ 的等距节点 $x_0,x_1=x_0+h$, 二点公式 $f'\left(x_0\right)\approx\frac{f\left(x_1\right)-f\left(x_0\right)}{h}$, 截断误差 $R_1\left(x_0\right)=-\frac{h}{2}f''\left(\xi\right)$; 对节点 $x_0,x_1,x_2=x_0+2h$, 三点中心公式 $$f'\left(x_1\right)\approx\frac{f\left(x_2\right)-f\left(x_0\right)}{2h},$$ 截断误差 $R_2\left(x_1\right)=-\frac{h^2}{6}f^{\left(3\right)}\left(\xi\right)$.
 
-> **梯形公式的逐次分半算法** (式(7.34)) <br>记 $2^m$ 等分区间的梯形值为 $T_{2^m}$, 则逐次分半递推为 $$T_{2^m}=\frac{1}{2}T_{2^{m-1}}+\frac{b-a}{2^m}\sum_{k=1}^{2^{m-1}}f\left(a+\left(2k-1\right)\frac{b-a}{2^m}\right),$$ 且事后误差估计为 $\left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|$, 当 $\left|T_{2^m}-T_{2^{m-1}}\right|<3\varepsilon$ 时停止计算.
+> **梯形公式的逐次分半算法** (式(7.34)) <br>记 $2^m$ 等分区间的梯形值为 $T_{2^m}$, 则逐次分半递推为 $$T_{2^m}=\frac{1}{2}T_{2^{m-1}}+\frac{b-a}{2^m}\sum_{k=1}^{2^{m-1}}f\left(a+\left(2k-1\right)\frac{b-a}{2^m}\right),$$ 且事后误差估计为 $\left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|$, 当 $\left|T_{2^m}-T_{2^{m-1}}\right|< 3\varepsilon$ 时停止计算.
 
 > **龙贝格求积公式** (式(7.41)) <br>由理查森外推法, $$T_m^{\left(k\right)}=\frac{4^m T_{m-1}^{\left(k+1\right)}-T_{m-1}^{\left(k\right)}}{4^m-1},\ m=1,2,\dots,$$ 第一列 $T_0^{\left(k\right)}$ 为复化梯形值序列, 以后各列依次为辛普森, 柯特斯, 龙贝格值, 精度逐列提高.
 
@@ -122,7 +122,7 @@ $$
 
 若用复化梯形公式计算积分 $\int_0^1 e^{-x^2}dx$, 问积分区间要等分为多少份才能保证计算结果有四位有效数字 (假定计算过程无舍入误差) ? 若用复化辛普森公式计算, 积分区间应等分为多少份? ### 解答 习题五
 
-积分值 $I=\int_0^1 e^{-x^2}dx\approx0.7468$, $0<I<1$, 四位有效数字要求截断误差不超过 $\frac12\times10^{-4}$.
+积分值 $I=\int_0^1 e^{-x^2}dx\approx0.7468$, $0< I< 1$, 四位有效数字要求截断误差不超过 $\frac12\times10^{-4}$.
 
 先求各阶导数的界. $f\left(x\right)=e^{-x^2}$, $$
 f''\left(x\right)=\left(4x^2-2\right)e^{-x^2},\quad f^{\left(4\right)}\left(x\right)=\left(12-48x^2+16x^4\right)e^{-x^2}.
@@ -183,7 +183,7 @@ $$
 | 32 | 2.0437 | 0.00186 |
 | 64 | 2.0432 | 0.000470 |
 
-当 $2^m=64$ 时, $\lvert T_{64}-T_{32}\rvert=0.000470<3\varepsilon=9\times10^{-4}$, 由**梯形公式的逐次分半算法**的停步准则, 此时 $\left|R\right|\approx\frac13\times0.000470=1.6\times10^{-4}<3\times10^{-4}$, 满足精度. 故
+当 $2^m=64$ 时, $\lvert T_{64}-T_{32}\rvert=0.000470< 3\varepsilon=9\times10^{-4}$, 由**梯形公式的逐次分半算法**的停步准则, 此时 $\left|R\right|\approx\frac13\times0.000470=1.6\times10^{-4}< 3\times10^{-4}$, 满足精度. 故
 
 $$
 \int_0^\pi \frac{dx}{x+\cos x}\approx T_{64}=2.0432.

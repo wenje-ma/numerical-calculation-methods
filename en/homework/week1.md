@@ -22,7 +22,7 @@ First consider the sum $a+b=1.2031+0.978=2.1811$. By **Error Propagation** (the 
 \left|e\left(a+b\right)\right|\le\left|e\left(a\right)\right|+\left|e\left(b\right)\right|\le\frac{1}{2}\times10^{-4}+\frac{1}{2}\times10^{-3}=0.00055.
 $$
 
-Moreover, $2.1811=0.21811\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{1-4}=\frac{1}{2}\times10^{-3}=0.0005<0.00055\le\frac{1}{2}\times10^{1-3}=\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3** (Significant Digits), $a+b$ has 3 significant digits.
+Moreover, $2.1811=0.21811\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{1-4}=\frac{1}{2}\times10^{-3}=0.0005< 0.00055\le\frac{1}{2}\times10^{1-3}=\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3** (Significant Digits), $a+b$ has 3 significant digits.
 
 Next consider the product $a\times b=1.2031\times0.978=1.17663$. By **Definition 1.2** (Relative Error and Relative Error Bound) and **Error Propagation** (the relative error bound of a product does not exceed the sum of the relative error bounds of the individual numbers), $$
 \left|e_r\left(a\right)\right|\le\frac{\frac{1}{2}\times10^{-4}}{1.2031}\approx4.156\times10^{-5},\quad\left|e_r\left(b\right)\right|\le\frac{\frac{1}{2}\times10^{-3}}{0.978}\approx5.113\times10^{-4},
@@ -38,7 +38,7 @@ $$
 \left|e\left(a\times b\right)\right|\approx\left|a\times b\right|\cdot\left|e_r\left(a\times b\right)\right|\approx1.17663\times5.528\times10^{-4}\approx6.505\times10^{-4}.
 $$
 
-Moreover, $1.17663=0.117663\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{-3}=0.0005<6.505\times10^{-4}\le\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3**, $a\times b$ has 3 significant digits. $\blacksquare$
+Moreover, $1.17663=0.117663\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{-3}=0.0005< 6.505\times10^{-4}\le\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3**, $a\times b$ has 3 significant digits. $\blacksquare$
 
 ### Problem 2 (Problem 1-7)
 

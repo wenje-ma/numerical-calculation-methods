@@ -4,7 +4,7 @@
 
 > **Linearization of Nonlinear Fitting** (6.1.2 Exponential Fitting, 6.1.3 Fractional Linear Fitting) <br>For the exponential form $y=ae^{bx}$, taking logarithms on both sides gives $\ln y=\ln a+bx$; first perform a linear fit on the transformed data set $\left(x_i,\ln y_i\right)$ according to the **General Form of the Linear Least-Squares Method**, then take exponentials to recover. For the separable fractional form $y=\frac{x}{ax+b}$, taking reciprocals on both sides gives $\frac{1}{y}=a+b\frac{1}{x}$; first perform a linear fit on the data set $\left(\frac{1}{x_i},\frac{1}{y_i}\right)$, then take reciprocals to recover.
 
-> **Definition 6.2** (Orthogonal Function System) <br>If a function system $\left\{\varphi_k\left(x\right)\right\}$ on $\left[a,b\right]$ satisfies $\left(\varphi_j,\varphi_k\right)=\int_a^b w\left(x\right)\varphi_j\left(x\right)\varphi_k\left(x\right)\,\mathrm dx=0\ \left(j\ne k\right)$ and $\left(\varphi_k,\varphi_k\right)>0$, then it is called an orthogonal function system on $\left[a,b\right]$ with respect to the weight function $w\left(x\right)$, where $\left(\varphi,\psi\right)=\int_a^b w\left(x\right)\varphi\left(x\right)\psi\left(x\right)\,\mathrm dx$ is called the inner product of the functions.
+> **Definition 6.2** (Orthogonal Function System) <br>If a function system $\left\{\varphi_k\left(x\right)\right\}$ on $\left[a,b\right]$ satisfies $\left(\varphi_j,\varphi_k\right)=\int_a^b w\left(x\right)\varphi_j\left(x\right)\varphi_k\left(x\right)\,\mathrm dx=0\ \left(j\ne k\right)$ and $\left(\varphi_k,\varphi_k\right)> 0$, then it is called an orthogonal function system on $\left[a,b\right]$ with respect to the weight function $w\left(x\right)$, where $\left(\varphi,\psi\right)=\int_a^b w\left(x\right)\varphi\left(x\right)\psi\left(x\right)\,\mathrm dx$ is called the inner product of the functions.
 
 > **Definition 6.3** (Best Least-Squares Approximation Function) <br>Let $f\left(x\right)$ be continuous on $\left[a,b\right]$, $H=\operatorname{Span}\left\{\varphi_0,\varphi_1,\dots,\varphi_m\right\}$; if $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ makes $\int_a^b w\left(x\right)\left[f\left(x\right)-p\left(x\right)\right]^2\,\mathrm dx$ minimal, then $p\left(x\right)$ is called the best least-squares approximation function to $f\left(x\right)$ in $H$ with respect to the weight function $w\left(x\right)$.
 
@@ -160,7 +160,7 @@ $$
 \boldsymbol c^{T}\boldsymbol G\boldsymbol c=\sum_{i=0}^n\sum_{j=0}^n c_i c_j\left(\varphi_i,\varphi_j\right)=\left(\sum_{i=0}^n c_i\varphi_i,\sum_{j=0}^n c_j\varphi_j\right)=\int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx\ge0.
 $$
 
-Sufficiency. Suppose $G\ne0$; assume for contradiction that $\left\{\varphi_i\right\}$ is linearly dependent, then there exists a nonzero $\boldsymbol c$ such that $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, and hence $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$. But when $G\ne0$, $\boldsymbol G$ is invertible (positive-definite), so for $\boldsymbol c\ne0$ one necessarily has $\boldsymbol c^{T}\boldsymbol G\boldsymbol c>0$, a contradiction. Thus $\left\{\varphi_i\right\}$ is linearly independent.
+Sufficiency. Suppose $G\ne0$; assume for contradiction that $\left\{\varphi_i\right\}$ is linearly dependent, then there exists a nonzero $\boldsymbol c$ such that $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, and hence $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$. But when $G\ne0$, $\boldsymbol G$ is invertible (positive-definite), so for $\boldsymbol c\ne0$ one necessarily has $\boldsymbol c^{T}\boldsymbol G\boldsymbol c> 0$, a contradiction. Thus $\left\{\varphi_i\right\}$ is linearly independent.
 
 Necessity. Suppose $\left\{\varphi_i\right\}$ is linearly independent; assume for contradiction that $G=0$, then $\boldsymbol G$ is singular, and there exists a nonzero $\boldsymbol c$ such that $\boldsymbol G\boldsymbol c=\boldsymbol0$, hence $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$, i.e.
 
@@ -168,7 +168,7 @@ $$
 \int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx=0.
 $$
 
-Since $w\left(x\right)>0$ and the integrand is nonnegative, it follows that $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, contradicting the linear independence of $\left\{\varphi_i\right\}$. Thus $G\ne0$.
+Since $w\left(x\right)> 0$ and the integrand is nonnegative, it follows that $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, contradicting the linear independence of $\left\{\varphi_i\right\}$. Thus $G\ne0$.
 
 In summary, the function system $\left\{\varphi_0,\varphi_1,\dots,\varphi_n\right\}$ is linearly independent if and only if the Gram determinant $G\ne0$.$\blacksquare$
 

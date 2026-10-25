@@ -4,7 +4,7 @@
 
 > **非线性拟合的线性化** (6.1.2 指数拟合, 6.1.3 分式线性拟合) <br>对指数型 $y=ae^{bx}$, 两端取对数得 $\ln y=\ln a+bx$, 先对变换后的数据组 $\left(x_i,\ln y_i\right)$ 按**线性最小二乘法的一般形式**作一次线性拟合, 再取指数还原; 对可分离变量的分式型 $y=\frac{x}{ax+b}$, 两端取倒数得 $\frac{1}{y}=a+b\frac{1}{x}$, 先对数据组 $\left(\frac{1}{x_i},\frac{1}{y_i}\right)$ 作一次线性拟合, 再取倒数还原.
 
-> **定义 6.2** (正交函数系) <br>若函数系 $\left\{\varphi_k\left(x\right)\right\}$ 在区间 $\left[a,b\right]$ 上满足 $\left(\varphi_j,\varphi_k\right)=\int_a^b w\left(x\right)\varphi_j\left(x\right)\varphi_k\left(x\right)\,\mathrm dx=0\ \left(j\ne k\right)$ 且 $\left(\varphi_k,\varphi_k\right)>0$, 则称其为 $\left[a,b\right]$ 上关于权函数 $w\left(x\right)$ 的正交函数系, 其中 $\left(\varphi,\psi\right)=\int_a^b w\left(x\right)\varphi\left(x\right)\psi\left(x\right)\,\mathrm dx$ 称为函数的内积.
+> **定义 6.2** (正交函数系) <br>若函数系 $\left\{\varphi_k\left(x\right)\right\}$ 在区间 $\left[a,b\right]$ 上满足 $\left(\varphi_j,\varphi_k\right)=\int_a^b w\left(x\right)\varphi_j\left(x\right)\varphi_k\left(x\right)\,\mathrm dx=0\ \left(j\ne k\right)$ 且 $\left(\varphi_k,\varphi_k\right)> 0$, 则称其为 $\left[a,b\right]$ 上关于权函数 $w\left(x\right)$ 的正交函数系, 其中 $\left(\varphi,\psi\right)=\int_a^b w\left(x\right)\varphi\left(x\right)\psi\left(x\right)\,\mathrm dx$ 称为函数的内积.
 
 > **定义 6.3** (最佳平方逼近函数) <br>设 $f\left(x\right)$ 在 $\left[a,b\right]$ 上连续, $H=\operatorname{Span}\left\{\varphi_0,\varphi_1,\dots,\varphi_m\right\}$, 若 $p\left(x\right)=\sum_{k=0}^m a_k\varphi_k\left(x\right)$ 使 $\int_a^b w\left(x\right)\left[f\left(x\right)-p\left(x\right)\right]^2\,\mathrm dx$ 为最小, 则称 $p\left(x\right)$ 为 $f\left(x\right)$ 在 $H$ 中关于权函数 $w\left(x\right)$ 的最佳平方逼近函数.
 
@@ -160,7 +160,7 @@ $$
 \boldsymbol c^{T}\boldsymbol G\boldsymbol c=\sum_{i=0}^n\sum_{j=0}^n c_i c_j\left(\varphi_i,\varphi_j\right)=\left(\sum_{i=0}^n c_i\varphi_i,\sum_{j=0}^n c_j\varphi_j\right)=\int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx\ge0.
 $$
 
-充分性. 设 $G\ne0$, 反设 $\left\{\varphi_i\right\}$ 线性相关, 则存在不全为零的 $\boldsymbol c$ 使 $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, 从而 $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$. 但 $G\ne0$ 时 $\boldsymbol G$ 可逆 (正定) , $\boldsymbol c\ne0$ 必有 $\boldsymbol c^{T}\boldsymbol G\boldsymbol c>0$, 矛盾. 故 $\left\{\varphi_i\right\}$ 线性无关.
+充分性. 设 $G\ne0$, 反设 $\left\{\varphi_i\right\}$ 线性相关, 则存在不全为零的 $\boldsymbol c$ 使 $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, 从而 $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$. 但 $G\ne0$ 时 $\boldsymbol G$ 可逆 (正定) , $\boldsymbol c\ne0$ 必有 $\boldsymbol c^{T}\boldsymbol G\boldsymbol c> 0$, 矛盾. 故 $\left\{\varphi_i\right\}$ 线性无关.
 
 必要性. 设 $\left\{\varphi_i\right\}$ 线性无关, 反设 $G=0$, 则 $\boldsymbol G$ 奇异, 存在非零 $\boldsymbol c$ 使 $\boldsymbol G\boldsymbol c=\boldsymbol0$, 于是 $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$, 即
 
@@ -168,7 +168,7 @@ $$
 \int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx=0.
 $$
 
-因 $w\left(x\right)>0$, 被积函数非负, 故 $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, 与 $\left\{\varphi_i\right\}$ 线性无关矛盾. 故 $G\ne0$.
+因 $w\left(x\right)> 0$, 被积函数非负, 故 $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, 与 $\left\{\varphi_i\right\}$ 线性无关矛盾. 故 $G\ne0$.
 
 综上, 函数系 $\left\{\varphi_0,\varphi_1,\dots,\varphi_n\right\}$ 线性无关当且仅当格拉姆行列式 $G\ne0$.$\blacksquare$
 

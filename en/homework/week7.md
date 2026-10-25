@@ -12,7 +12,7 @@
 
 > **Two-Point and Three-Point Derivative Formulas** (Formulas (7.9) through (7.12)) <br>For equally spaced nodes $x_0,x_1=x_0+h$ of step size $h$, the two-point formula is $f'\left(x_0\right)\approx\frac{f\left(x_1\right)-f\left(x_0\right)}{h}$ with truncation error $R_1\left(x_0\right)=-\frac{h}{2}f''\left(\xi\right)$; for nodes $x_0,x_1,x_2=x_0+2h$, the three-point central formula is $$f'\left(x_1\right)\approx\frac{f\left(x_2\right)-f\left(x_0\right)}{2h},$$ with truncation error $R_2\left(x_1\right)=-\frac{h^2}{6}f^{\left(3\right)}\left(\xi\right)$.
 
-> **Successive Halving Algorithm for the Trapezoidal Rule** (Formula (7.34)) <br>Denote the trapezoidal value for a subdivision into $2^m$ equal parts by $T_{2^m}$; then the successive-halving recurrence is $$T_{2^m}=\frac{1}{2}T_{2^{m-1}}+\frac{b-a}{2^m}\sum_{k=1}^{2^{m-1}}f\left(a+\left(2k-1\right)\frac{b-a}{2^m}\right),$$ and the a posteriori error estimate is $\left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|$; stop the computation when $\left|T_{2^m}-T_{2^{m-1}}\right|<3\varepsilon$.
+> **Successive Halving Algorithm for the Trapezoidal Rule** (Formula (7.34)) <br>Denote the trapezoidal value for a subdivision into $2^m$ equal parts by $T_{2^m}$; then the successive-halving recurrence is $$T_{2^m}=\frac{1}{2}T_{2^{m-1}}+\frac{b-a}{2^m}\sum_{k=1}^{2^{m-1}}f\left(a+\left(2k-1\right)\frac{b-a}{2^m}\right),$$ and the a posteriori error estimate is $\left|R\left(f,T_{2^m}\right)\right|\approx\frac{1}{3}\left|T_{2^m}-T_{2^{m-1}}\right|$; stop the computation when $\left|T_{2^m}-T_{2^{m-1}}\right|< 3\varepsilon$.
 
 > **Romberg Quadrature Formula** (Formula (7.41)) <br>By Richardson extrapolation, $$T_m^{\left(k\right)}=\frac{4^m T_{m-1}^{\left(k+1\right)}-T_{m-1}^{\left(k\right)}}{4^m-1},\ m=1,2,\dots,$$ the first column $T_0^{\left(k\right)}$ is the sequence of composite trapezoidal values, and the subsequent columns are successively Simpson, Cotes, and Romberg values, with the precision improving column by column.
 
@@ -122,7 +122,7 @@ The exact integral value is $\int_0^1\frac{x}{1+x^2}dx=\frac12\ln 2=0.34657$; th
 
 If the composite trapezoidal rule is used to compute the integral $\int_0^1 e^{-x^2}dx$, into how many equal parts must the interval be subdivided to ensure that the result has four significant digits (assuming no round-off error in the computation)? If the composite Simpson's rule is used, into how many equal parts should the interval be subdivided? ### Solution to Problem 5
 
-The integral value is $I=\int_0^1 e^{-x^2}dx\approx0.7468$, $0<I<1$, and four significant digits requires the truncation error not to exceed $\frac12\times10^{-4}$.
+The integral value is $I=\int_0^1 e^{-x^2}dx\approx0.7468$, $0< I< 1$, and four significant digits requires the truncation error not to exceed $\frac12\times10^{-4}$.
 
 First find bounds on the derivatives. $f\left(x\right)=e^{-x^2}$, $$
 f''\left(x\right)=\left(4x^2-2\right)e^{-x^2},\quad f^{\left(4\right)}\left(x\right)=\left(12-48x^2+16x^4\right)e^{-x^2}.
@@ -183,7 +183,7 @@ Here $a=0$, $b=\pi$, $f\left(x\right)=\frac{1}{x+\cos x}$. By the **Successive H
 | 32 | 2.0437 | 0.00186 |
 | 64 | 2.0432 | 0.000470 |
 
-When $2^m=64$, $\lvert T_{64}-T_{32}\rvert=0.000470<3\varepsilon=9\times10^{-4}$; by the stopping criterion of the **Successive Halving Algorithm for the Trapezoidal Rule**, at this point $\left|R\right|\approx\frac13\times0.000470=1.6\times10^{-4}<3\times10^{-4}$, meeting the precision requirement. Therefore
+When $2^m=64$, $\lvert T_{64}-T_{32}\rvert=0.000470< 3\varepsilon=9\times10^{-4}$; by the stopping criterion of the **Successive Halving Algorithm for the Trapezoidal Rule**, at this point $\left|R\right|\approx\frac13\times0.000470=1.6\times10^{-4}< 3\times10^{-4}$, meeting the precision requirement. Therefore
 
 $$
 \int_0^\pi \frac{dx}{x+\cos x}\approx T_{64}=2.0432.
