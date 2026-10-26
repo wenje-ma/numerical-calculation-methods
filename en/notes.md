@@ -265,7 +265,7 @@ $$
 If the sequence $\left\{a_k\right\}$ of eigenvalue approximations produced by the power method converges linearly to $a$, i.e. $\lim_{k\to\infty}\frac{a_{k+1}-a}{a_k-a}=c\ne1$, then for $k$ sufficiently large
 
 $$
-\hat a_k=a_k-\frac{\left(a_{k+1}-a_k\right)^2}{a_{k+2}-2a_{k+1}+a_k}
+\widehat a_k=a_k-\frac{\left(a_{k+1}-a_k\right)^2}{a_{k+2}-2a_{k+1}+a_k}
 $$
 
 converges to $a$ faster than $\left\{a_k\right\}$; applying it to the sequence produced by the power method accelerates convergence.

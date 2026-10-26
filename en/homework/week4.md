@@ -2,7 +2,7 @@
 
 > **Power Method** (Finding the Dominant Eigenvalue and Eigenvector) <br>Let the eigenvalues of the $n\times n$ real matrix $A$ satisfy $\left|\lambda_1\right|> \left|\lambda_2\right|\ge\cdots\ge\left|\lambda_n\right|$, with corresponding linearly independent eigenvectors $u_1,u_2,\dots,u_n$. Take an initial vector $\alpha^{\left(0\right)}\ne0$ and generate a vector sequence by the iteration $\alpha^{\left(k+1\right)}=A\alpha^{\left(k\right)}$ (Formula (4.1)); when $k$ is sufficiently large, $\alpha^{\left(k+1\right)}$ serves as an approximation to the eigenvector corresponding to $\lambda_1$, and $$\lambda_1\approx\frac{\alpha_i^{\left(k+1\right)}}{\alpha_i^{\left(k\right)}}$$ (Formula (4.3)). To avoid overflow or underflow during iteration, each step is normalized in practice: $$\alpha^{\left(k+1\right)}=Ay^{\left(k\right)},\quad y^{\left(k+1\right)}=\frac{\alpha^{\left(k+1\right)}}{\max_i\left|\alpha_i^{\left(k+1\right)}\right|},\quad\lambda_1\approx\max_i\left|\alpha_i^{\left(k+1\right)}\right|$$ (Formula (4.5)). The convergence rate is determined by the convergence factor $\left|\lambda_2/\lambda_1\right|$; the smaller its value, the faster the convergence.
 
-> **Aitken Acceleration of the Power Method** (Algorithm 4.2) <br>If the sequence $\left\{a_k\right\}$ of eigenvalue approximations produced by the power method converges linearly to $a$, i.e. $\lim_{k\to\infty}\frac{a_{k+1}-a}{a_k-a}=c\ne1$, then for $k$ sufficiently large $$\hat a_k=a_k-\frac{\left(a_{k+1}-a_k\right)^2}{a_{k+2}-2a_{k+1}+a_k}$$ converges to $a$ faster than $\left\{a_k\right\}$; applying it to the sequence produced by the power method accelerates convergence.
+> **Aitken Acceleration of the Power Method** (Algorithm 4.2) <br>If the sequence $\left\{a_k\right\}$ of eigenvalue approximations produced by the power method converges linearly to $a$, i.e. $\lim_{k\to\infty}\frac{a_{k+1}-a}{a_k-a}=c\ne1$, then for $k$ sufficiently large $$\widehat a_k=a_k-\frac{\left(a_{k+1}-a_k\right)^2}{a_{k+2}-2a_{k+1}+a_k}$$ converges to $a$ faster than $\left\{a_k\right\}$; applying it to the sequence produced by the power method accelerates convergence.
 
 > **Inverse Power Method** (Formula (4.10), Algorithm 4.3) <br>If $\lambda,u$ are an eigenvalue and eigenvector of $A$, then $A^{-1}u=\frac{1}{\lambda}u$; that is, the eigenvalues of $A^{-1}$ are the reciprocals of those of $A$, while the eigenvectors remain unchanged. In practice one solves the system $$A\alpha^{\left(k+1\right)}=\alpha^{\left(k\right)}$$ (Formula (4.10)) in place of $\alpha^{\left(k+1\right)}=A^{-1}\alpha^{\left(k\right)}$. If an approximation $\lambda^*$ to an eigenvalue $\lambda$ of $A$ is known, applying the inverse power method to $A-\lambda^*I$ converges rapidly, since $\lambda-\lambda^*$ is the eigenvalue of smallest modulus of $A-\lambda^*I$; after normalization one obtains a component $\beta\approx\frac{1}{\lambda-\lambda^*}$, so that $\lambda\approx\lambda^*+\frac{1}{\beta}$, and the resulting $\alpha^{\left(k\right)}$ is the corresponding eigenvector.
 
@@ -49,11 +49,11 @@ $$
 $$
 
 Applying **Aitken Acceleration of the Power Method** (Algorithm 4.2) to this sequence. First take $a=\lambda_6=5.8235$, $b=\lambda_7=5.9091$, $c=\lambda_8=5.9538$: $$
-\hat a=a-\frac{\left(b-a\right)^2}{c-2b+a}=5.8235-\frac{\left(0.0856\right)^2}{5.9538-2\times5.9091+5.8235}\approx5.8235+0.1794\approx6.003.
+\widehat a=a-\frac{\left(b-a\right)^2}{c-2b+a}=5.8235-\frac{\left(0.0856\right)^2}{5.9538-2\times5.9091+5.8235}\approx5.8235+0.1794\approx6.003.
 $$
 
 Then take $a=\lambda_7=5.9091$, $b=\lambda_8=5.9538$, $c=\lambda_9=5.9767$: $$
-\hat a=5.9091-\frac{\left(0.0447\right)^2}{5.9767-2\times5.9538+5.9091}\approx5.9091+0.0916\approx6.001.
+\widehat a=5.9091-\frac{\left(0.0447\right)^2}{5.9767-2\times5.9538+5.9091}\approx5.9091+0.0916\approx6.001.
 $$
 
 Both accelerations give $\lambda_1\approx6.000$, attaining 4 significant digits. The corresponding eigenvector is the same as in Problem 1, namely $x\approx\left(1,-1,1\right)^{\mathrm T}$. $\blacksquare$

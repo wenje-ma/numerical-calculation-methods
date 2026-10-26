@@ -265,7 +265,7 @@ $$
 若幂法产生的特征值近似序列 $\left\{a_k\right\}$ 线性收敛到 $a$, 即 $\lim_{k\to\infty}\frac{a_{k+1}-a}{a_k-a}=c\ne1$, 则当 $k$ 充分大时
 
 $$
-\hat a_k=a_k-\frac{\left(a_{k+1}-a_k\right)^2}{a_{k+2}-2a_{k+1}+a_k}
+\widehat a_k=a_k-\frac{\left(a_{k+1}-a_k\right)^2}{a_{k+2}-2a_{k+1}+a_k}
 $$
 
 比 $\left\{a_k\right\}$ 更快地收敛到 $a$, 将其用于幂法所产生的序列即可加速收敛.

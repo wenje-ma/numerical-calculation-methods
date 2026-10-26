@@ -2,7 +2,7 @@
 
 > **幂法** (求按模最大的特征值与特征向量) <br>设 $n\times n$ 实矩阵 $A$ 的特征值满足 $\left|\lambda_1\right|> \left|\lambda_2\right|\ge\cdots\ge\left|\lambda_n\right|$, 相应特征向量 $u_1,u_2,\dots,u_n$ 线性无关. 取初始向量 $\alpha^{\left(0\right)}\ne0$, 由迭代 $\alpha^{\left(k+1\right)}=A\alpha^{\left(k\right)}$ (式(4.1)) 产生向量序列, 当 $k$ 充分大时 $\alpha^{\left(k+1\right)}$ 即可作为 $\lambda_1$ 相应特征向量的近似, 且 $$\lambda_1\approx\frac{\alpha_i^{\left(k+1\right)}}{\alpha_i^{\left(k\right)}}$$ (式(4.3)) . 为避免迭代中溢出或归零, 实际计算每次归一化: $$\alpha^{\left(k+1\right)}=Ay^{\left(k\right)},\quad y^{\left(k+1\right)}=\frac{\alpha^{\left(k+1\right)}}{\max_i\left|\alpha_i^{\left(k+1\right)}\right|},\quad\lambda_1\approx\max_i\left|\alpha_i^{\left(k+1\right)}\right|$$ (式(4.5)) . 收敛速度由收敛因子 $\left|\lambda_2/\lambda_1\right|$ 决定, 其值越小收敛越快.
 
-> **幂法的艾特肯加速** (算法4.2) <br>若幂法产生的特征值近似序列 $\left\{a_k\right\}$ 线性收敛到 $a$, 即 $\lim_{k\to\infty}\frac{a_{k+1}-a}{a_k-a}=c\ne1$, 则当 $k$ 充分大时 $$\hat a_k=a_k-\frac{\left(a_{k+1}-a_k\right)^2}{a_{k+2}-2a_{k+1}+a_k}$$ 比 $\left\{a_k\right\}$ 更快地收敛到 $a$, 将其用于幂法所产生的序列即可加速收敛.
+> **幂法的艾特肯加速** (算法4.2) <br>若幂法产生的特征值近似序列 $\left\{a_k\right\}$ 线性收敛到 $a$, 即 $\lim_{k\to\infty}\frac{a_{k+1}-a}{a_k-a}=c\ne1$, 则当 $k$ 充分大时 $$\widehat a_k=a_k-\frac{\left(a_{k+1}-a_k\right)^2}{a_{k+2}-2a_{k+1}+a_k}$$ 比 $\left\{a_k\right\}$ 更快地收敛到 $a$, 将其用于幂法所产生的序列即可加速收敛.
 
 > **反幂法** (式(4.10), 算法4.3) <br>若 $\lambda,u$ 为 $A$ 的特征值与特征向量, 则 $A^{-1}u=\frac{1}{\lambda}u$, 即 $A^{-1}$ 的特征值为 $A$ 特征值的倒数而特征向量不变. 实际运算以解方程组 $$A\alpha^{\left(k+1\right)}=\alpha^{\left(k\right)}$$ (式(4.10)) 代替 $\alpha^{\left(k+1\right)}=A^{-1}\alpha^{\left(k\right)}$. 若已知 $A$ 的某特征值 $\lambda$ 的近似值 $\lambda^*$, 对 $A-\lambda^*I$ 用反幂法, 因 $\lambda-\lambda^*$ 为 $A-\lambda^*I$ 的按模最小特征值, 收敛很快, 迭代归一化后得分量 $\beta\approx\frac{1}{\lambda-\lambda^*}$, 故 $\lambda\approx\lambda^*+\frac{1}{\beta}$, 且所得 $\alpha^{\left(k\right)}$ 即为相应特征向量.
 
@@ -49,11 +49,11 @@ $$
 $$
 
 对此序列用**幂法的艾特肯加速** (算法4.2) . 先取 $a=\lambda_6=5.8235$, $b=\lambda_7=5.9091$, $c=\lambda_8=5.9538$: $$
-\hat a=a-\frac{\left(b-a\right)^2}{c-2b+a}=5.8235-\frac{\left(0.0856\right)^2}{5.9538-2\times5.9091+5.8235}\approx5.8235+0.1794\approx6.003.
+\widehat a=a-\frac{\left(b-a\right)^2}{c-2b+a}=5.8235-\frac{\left(0.0856\right)^2}{5.9538-2\times5.9091+5.8235}\approx5.8235+0.1794\approx6.003.
 $$
 
 再取 $a=\lambda_7=5.9091$, $b=\lambda_8=5.9538$, $c=\lambda_9=5.9767$: $$
-\hat a=5.9091-\frac{\left(0.0447\right)^2}{5.9767-2\times5.9538+5.9091}\approx5.9091+0.0916\approx6.001.
+\widehat a=5.9091-\frac{\left(0.0447\right)^2}{5.9767-2\times5.9538+5.9091}\approx5.9091+0.0916\approx6.001.
 $$
 
 两次加速均给出 $\lambda_1\approx6.000$, 达到 4 位有效数字. 相应特征向量与习题一相同, 即 $x\approx\left(1,-1,1\right)^{\mathrm T}$. $\blacksquare$
