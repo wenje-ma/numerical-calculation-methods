@@ -22,11 +22,11 @@ $$
 \begin{cases}x_1+2x_2-2x_3=1,\\x_1+x_2+x_3=1,\\2x_1+2x_2+x_3=1,\end{cases}
 $$
 
-取初值 $x^{\left(0\right)}=\left(0,0,0\right)^{T}$, 迭代 4 次, 并比较它们的计算结果.
+取初值 $x^{\left(0\right)}=\left(0,0,0\right)^{\top}$, 迭代 4 次, 并比较它们的计算结果.
 
 ### 解答 习题一
 
-系数矩阵 $A=\begin{bmatrix}1&2&-2\\1&1&1\\2&2&1\end{bmatrix}$, $b=\left(1,1,1\right)^{T}$.
+系数矩阵 $A=\begin{bmatrix}1&2&-2\\1&1&1\\2&2&1\end{bmatrix}$, $b=\left(1,1,1\right)^{\top}$.
 
 由**雅可比迭代法** (式 (3.12)) , 因 $a_{ii}=1$, 迭代公式为
 
@@ -42,14 +42,14 @@ $$
 x_3^{\left(k+1\right)}=1-2x_1^{\left(k\right)}-2x_2^{\left(k\right)}.
 $$
 
-从 $x^{\left(0\right)}=\left(0,0,0\right)^{T}$ 出发, 得
+从 $x^{\left(0\right)}=\left(0,0,0\right)^{\top}$ 出发, 得
 
 $$
-x^{\left(1\right)}=\left(1,1,1\right)^{T},\quad x^{\left(2\right)}=\left(1,-1,-3\right)^{T},
+x^{\left(1\right)}=\left(1,1,1\right)^{\top},\quad x^{\left(2\right)}=\left(1,-1,-3\right)^{\top},
 $$
 
 $$
-x^{\left(3\right)}=\left(-3,3,1\right)^{T},\quad x^{\left(4\right)}=\left(-3,3,1\right)^{T}.
+x^{\left(3\right)}=\left(-3,3,1\right)^{\top},\quad x^{\left(4\right)}=\left(-3,3,1\right)^{\top}.
 $$
 
 由**高斯-赛德尔迭代法** (式 (3.15)) , 迭代公式为
@@ -66,17 +66,17 @@ $$
 x_3^{\left(k+1\right)}=1-2x_1^{\left(k+1\right)}-2x_2^{\left(k+1\right)}.
 $$
 
-从 $x^{\left(0\right)}=\left(0,0,0\right)^{T}$ 出发, 得
+从 $x^{\left(0\right)}=\left(0,0,0\right)^{\top}$ 出发, 得
 
 $$
-x^{\left(1\right)}=\left(1,0,-1\right)^{T},\quad x^{\left(2\right)}=\left(-1,3,-3\right)^{T},
+x^{\left(1\right)}=\left(1,0,-1\right)^{\top},\quad x^{\left(2\right)}=\left(-1,3,-3\right)^{\top},
 $$
 
 $$
-x^{\left(3\right)}=\left(-11,15,-7\right)^{T},\quad x^{\left(4\right)}=\left(-43,51,-15\right)^{T}.
+x^{\left(3\right)}=\left(-11,15,-7\right)^{\top},\quad x^{\left(4\right)}=\left(-43,51,-15\right)^{\top}.
 $$
 
-比较: 雅可比迭代在第 3 步即达到精确解 $x=\left(-3,3,1\right)^{T}$ (代入原方程组验证: $Ax=\left(1,1,1\right)^{T}=b$) , 第 4 步保持不变; 高斯-赛德尔迭代的各分量绝对值迅速增大, 呈发散趋势. 事实上, $D=I$, 雅可比迭代矩阵 $B=I-A$ 满足特征方程 $\det\left(\lambda I-B\right)=\lambda^{3}=0$, 故 $\rho\left(B\right)=0< 1$; 而高斯-赛德尔迭代矩阵 $M=\left(D-L\right)^{-1}U$ 的特征方程为 $\det\left(\lambda I-M\right)=\lambda\left(\lambda-2\right)^{2}=0$, 特征值为 $0,2,2$, 故 $\rho\left(M\right)=2> 1$. 由**定理 3.6** (迭代法收敛的充要条件) , 雅可比迭代收敛而高斯-赛德尔迭代发散. $\blacksquare$
+比较: 雅可比迭代在第 3 步即达到精确解 $x=\left(-3,3,1\right)^{\top}$ (代入原方程组验证: $Ax=\left(1,1,1\right)^{\top}=b$) , 第 4 步保持不变; 高斯-赛德尔迭代的各分量绝对值迅速增大, 呈发散趋势. 事实上, $D=I$, 雅可比迭代矩阵 $B=I-A$ 满足特征方程 $\det\left(\lambda I-B\right)=\lambda^{3}=0$, 故 $\rho\left(B\right)=0< 1$; 而高斯-赛德尔迭代矩阵 $M=\left(D-L\right)^{-1}U$ 的特征方程为 $\det\left(\lambda I-M\right)=\lambda\left(\lambda-2\right)^{2}=0$, 特征值为 $0,2,2$, 故 $\rho\left(M\right)=2> 1$. 由**定理 3.6** (迭代法收敛的充要条件) , 雅可比迭代收敛而高斯-赛德尔迭代发散. $\blacksquare$
 
 ### 习题二 (习题 3-5)
 
@@ -124,7 +124,7 @@ $$ (1) 分别写出雅可比迭代法, 高斯-赛德尔迭代法及逐次超松�
 
 ### 解答 习题三
 
-系数矩阵 $A=\begin{bmatrix}10&4&4\\4&10&8\\4&8&10\end{bmatrix}$, $b=\left(13,11,25\right)^{T}$, $D=\mathrm{diag}\left(10,10,10\right)$. (1) 由**雅可比迭代法** (式 (3.12)) , 计算公式为
+系数矩阵 $A=\begin{bmatrix}10&4&4\\4&10&8\\4&8&10\end{bmatrix}$, $b=\left(13,11,25\right)^{\top}$, $D=\mathrm{diag}\left(10,10,10\right)$. (1) 由**雅可比迭代法** (式 (3.12)) , 计算公式为
 
 $$
 x_1^{\left(k+1\right)}=1.3-0.4x_2^{\left(k\right)}-0.4x_3^{\left(k\right)},
@@ -174,7 +174,7 @@ $$
 x_3^{\left(k+1\right)}=-0.35x_3^{\left(k\right)}+1.35\left(2.5-0.4x_1^{\left(k+1\right)}-0.8x_2^{\left(k+1\right)}\right),
 $$
 
-迭代矩阵 $M_{\omega}=\left(D-\omega L\right)^{-1}\left[\left(1-\omega\right)D+\omega U\right]$. (2) 先判断 $A$ 的正定性: $A^{T}=A$ 为对称矩阵, 其各阶顺序主子式为
+迭代矩阵 $M_{\omega}=\left(D-\omega L\right)^{-1}\left[\left(1-\omega\right)D+\omega U\right]$. (2) 先判断 $A$ 的正定性: $A^{\top}=A$ 为对称矩阵, 其各阶顺序主子式为
 
 $$
 \Delta_1=10> 0,\quad\Delta_2=\det\begin{bmatrix}10&4\\4&10\end{bmatrix}=84> 0,

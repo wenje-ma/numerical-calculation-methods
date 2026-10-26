@@ -154,15 +154,15 @@ $\blacksquare$
 
 记格拉姆矩阵 $\boldsymbol G=\left[\left(\varphi_i,\varphi_j\right)\right]_{i,j=0}^n$, 其中内积按**定义 6.2** 为 $\left(\varphi_i,\varphi_j\right)=\int_a^b w\left(x\right)\varphi_i\left(x\right)\varphi_j\left(x\right)\,\mathrm dx$, 格拉姆行列式 $G=\det\boldsymbol G$.
 
-对任意向量 $\boldsymbol c=\left(c_0,c_1,\dots,c_n\right)^{T}$, 有
+对任意向量 $\boldsymbol c=\left(c_0,c_1,\dots,c_n\right)^{\top}$, 有
 
 $$
-\boldsymbol c^{T}\boldsymbol G\boldsymbol c=\sum_{i=0}^n\sum_{j=0}^n c_i c_j\left(\varphi_i,\varphi_j\right)=\left(\sum_{i=0}^n c_i\varphi_i,\sum_{j=0}^n c_j\varphi_j\right)=\int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx\ge0.
+\boldsymbol c^{\top}\boldsymbol G\boldsymbol c=\sum_{i=0}^n\sum_{j=0}^n c_i c_j\left(\varphi_i,\varphi_j\right)=\left(\sum_{i=0}^n c_i\varphi_i,\sum_{j=0}^n c_j\varphi_j\right)=\int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx\ge0.
 $$
 
-充分性. 设 $G\ne0$, 反设 $\left\{\varphi_i\right\}$ 线性相关, 则存在不全为零的 $\boldsymbol c$ 使 $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, 从而 $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$. 但 $G\ne0$ 时 $\boldsymbol G$ 可逆 (正定) , $\boldsymbol c\ne0$ 必有 $\boldsymbol c^{T}\boldsymbol G\boldsymbol c> 0$, 矛盾. 故 $\left\{\varphi_i\right\}$ 线性无关.
+充分性. 设 $G\ne0$, 反设 $\left\{\varphi_i\right\}$ 线性相关, 则存在不全为零的 $\boldsymbol c$ 使 $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, 从而 $\boldsymbol c^{\top}\boldsymbol G\boldsymbol c=0$. 但 $G\ne0$ 时 $\boldsymbol G$ 可逆 (正定) , $\boldsymbol c\ne0$ 必有 $\boldsymbol c^{\top}\boldsymbol G\boldsymbol c> 0$, 矛盾. 故 $\left\{\varphi_i\right\}$ 线性无关.
 
-必要性. 设 $\left\{\varphi_i\right\}$ 线性无关, 反设 $G=0$, 则 $\boldsymbol G$ 奇异, 存在非零 $\boldsymbol c$ 使 $\boldsymbol G\boldsymbol c=\boldsymbol0$, 于是 $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$, 即
+必要性. 设 $\left\{\varphi_i\right\}$ 线性无关, 反设 $G=0$, 则 $\boldsymbol G$ 奇异, 存在非零 $\boldsymbol c$ 使 $\boldsymbol G\boldsymbol c=\boldsymbol0$, 于是 $\boldsymbol c^{\top}\boldsymbol G\boldsymbol c=0$, 即
 
 $$
 \int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx=0.

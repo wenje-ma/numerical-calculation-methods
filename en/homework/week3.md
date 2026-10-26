@@ -22,11 +22,11 @@ $$
 \begin{cases}x_1+2x_2-2x_3=1,\\x_1+x_2+x_3=1,\\2x_1+2x_2+x_3=1,\end{cases}
 $$
 
-taking the initial value $x^{\left(0\right)}=\left(0,0,0\right)^{T}$, iterate 4 times, and compare the computed results.
+taking the initial value $x^{\left(0\right)}=\left(0,0,0\right)^{\top}$, iterate 4 times, and compare the computed results.
 
 ### Solution to Problem 1
 
-The coefficient matrix is $A=\begin{bmatrix}1&2&-2\\1&1&1\\2&2&1\end{bmatrix}$, $b=\left(1,1,1\right)^{T}$.
+The coefficient matrix is $A=\begin{bmatrix}1&2&-2\\1&1&1\\2&2&1\end{bmatrix}$, $b=\left(1,1,1\right)^{\top}$.
 
 By **Jacobi Iteration** (Formula (3.12)), since $a_{ii}=1$, the iteration formula is
 
@@ -42,14 +42,14 @@ $$
 x_3^{\left(k+1\right)}=1-2x_1^{\left(k\right)}-2x_2^{\left(k\right)}.
 $$
 
-Starting from $x^{\left(0\right)}=\left(0,0,0\right)^{T}$, one obtains
+Starting from $x^{\left(0\right)}=\left(0,0,0\right)^{\top}$, one obtains
 
 $$
-x^{\left(1\right)}=\left(1,1,1\right)^{T},\quad x^{\left(2\right)}=\left(1,-1,-3\right)^{T},
+x^{\left(1\right)}=\left(1,1,1\right)^{\top},\quad x^{\left(2\right)}=\left(1,-1,-3\right)^{\top},
 $$
 
 $$
-x^{\left(3\right)}=\left(-3,3,1\right)^{T},\quad x^{\left(4\right)}=\left(-3,3,1\right)^{T}.
+x^{\left(3\right)}=\left(-3,3,1\right)^{\top},\quad x^{\left(4\right)}=\left(-3,3,1\right)^{\top}.
 $$
 
 By **Gauss–Seidel Iteration** (Formula (3.15)), the iteration formula is
@@ -66,17 +66,17 @@ $$
 x_3^{\left(k+1\right)}=1-2x_1^{\left(k+1\right)}-2x_2^{\left(k+1\right)}.
 $$
 
-Starting from $x^{\left(0\right)}=\left(0,0,0\right)^{T}$, one obtains
+Starting from $x^{\left(0\right)}=\left(0,0,0\right)^{\top}$, one obtains
 
 $$
-x^{\left(1\right)}=\left(1,0,-1\right)^{T},\quad x^{\left(2\right)}=\left(-1,3,-3\right)^{T},
+x^{\left(1\right)}=\left(1,0,-1\right)^{\top},\quad x^{\left(2\right)}=\left(-1,3,-3\right)^{\top},
 $$
 
 $$
-x^{\left(3\right)}=\left(-11,15,-7\right)^{T},\quad x^{\left(4\right)}=\left(-43,51,-15\right)^{T}.
+x^{\left(3\right)}=\left(-11,15,-7\right)^{\top},\quad x^{\left(4\right)}=\left(-43,51,-15\right)^{\top}.
 $$
 
-Comparison: Jacobi iteration reaches the exact solution $x=\left(-3,3,1\right)^{T}$ already at step 3 (substituting into the original system verifies $Ax=\left(1,1,1\right)^{T}=b$), and stays unchanged at step 4; the absolute values of the Gauss–Seidel components grow rapidly, showing a divergent trend. In fact, $D=I$, and the Jacobi iteration matrix $B=I-A$ satisfies the characteristic equation $\det\left(\lambda I-B\right)=\lambda^{3}=0$, so $\rho\left(B\right)=0< 1$; whereas the characteristic equation of the Gauss–Seidel iteration matrix $M=\left(D-L\right)^{-1}U$ is $\det\left(\lambda I-M\right)=\lambda\left(\lambda-2\right)^{2}=0$, with eigenvalues $0,2,2$, so $\rho\left(M\right)=2> 1$. By **Theorem 3.6** (Necessary and Sufficient Condition for Convergence of Iterative Methods), Jacobi iteration converges while Gauss–Seidel iteration diverges. $\blacksquare$
+Comparison: Jacobi iteration reaches the exact solution $x=\left(-3,3,1\right)^{\top}$ already at step 3 (substituting into the original system verifies $Ax=\left(1,1,1\right)^{\top}=b$), and stays unchanged at step 4; the absolute values of the Gauss–Seidel components grow rapidly, showing a divergent trend. In fact, $D=I$, and the Jacobi iteration matrix $B=I-A$ satisfies the characteristic equation $\det\left(\lambda I-B\right)=\lambda^{3}=0$, so $\rho\left(B\right)=0< 1$; whereas the characteristic equation of the Gauss–Seidel iteration matrix $M=\left(D-L\right)^{-1}U$ is $\det\left(\lambda I-M\right)=\lambda\left(\lambda-2\right)^{2}=0$, with eigenvalues $0,2,2$, so $\rho\left(M\right)=2> 1$. By **Theorem 3.6** (Necessary and Sufficient Condition for Convergence of Iterative Methods), Jacobi iteration converges while Gauss–Seidel iteration diverges. $\blacksquare$
 
 ### Problem 2 (Problem 3-5)
 
@@ -124,7 +124,7 @@ $$ (1) Write out the iteration formulas and iteration matrices for Jacobi iterat
 
 ### Solution to Problem 3
 
-The coefficient matrix is $A=\begin{bmatrix}10&4&4\\4&10&8\\4&8&10\end{bmatrix}$, $b=\left(13,11,25\right)^{T}$, $D=\mathrm{diag}\left(10,10,10\right)$. (1) By **Jacobi Iteration** (Formula (3.12)), the iteration formula is
+The coefficient matrix is $A=\begin{bmatrix}10&4&4\\4&10&8\\4&8&10\end{bmatrix}$, $b=\left(13,11,25\right)^{\top}$, $D=\mathrm{diag}\left(10,10,10\right)$. (1) By **Jacobi Iteration** (Formula (3.12)), the iteration formula is
 
 $$
 x_1^{\left(k+1\right)}=1.3-0.4x_2^{\left(k\right)}-0.4x_3^{\left(k\right)},
@@ -174,7 +174,7 @@ $$
 x_3^{\left(k+1\right)}=-0.35x_3^{\left(k\right)}+1.35\left(2.5-0.4x_1^{\left(k+1\right)}-0.8x_2^{\left(k+1\right)}\right),
 $$
 
-with iteration matrix $M_{\omega}=\left(D-\omega L\right)^{-1}\left[\left(1-\omega\right)D+\omega U\right]$. (2) First check the positive definiteness of $A$: $A^{T}=A$ is symmetric, and its leading principal minors are
+with iteration matrix $M_{\omega}=\left(D-\omega L\right)^{-1}\left[\left(1-\omega\right)D+\omega U\right]$. (2) First check the positive definiteness of $A$: $A^{\top}=A$ is symmetric, and its leading principal minors are
 
 $$
 \Delta_1=10> 0,\quad\Delta_2=\det\begin{bmatrix}10&4\\4&10\end{bmatrix}=84> 0,

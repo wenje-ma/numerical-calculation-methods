@@ -154,15 +154,15 @@ Prove that the function system $\left\{\varphi_0,\varphi_1,\dots,\varphi_n\right
 
 Denote the Gram matrix by $\boldsymbol G=\left[\left(\varphi_i,\varphi_j\right)\right]_{i,j=0}^n$, where the inner product is given by **Definition 6.2** as $\left(\varphi_i,\varphi_j\right)=\int_a^b w\left(x\right)\varphi_i\left(x\right)\varphi_j\left(x\right)\,\mathrm dx$, and the Gram determinant is $G=\det\boldsymbol G$.
 
-For any vector $\boldsymbol c=\left(c_0,c_1,\dots,c_n\right)^{T}$,
+For any vector $\boldsymbol c=\left(c_0,c_1,\dots,c_n\right)^{\top}$,
 
 $$
-\boldsymbol c^{T}\boldsymbol G\boldsymbol c=\sum_{i=0}^n\sum_{j=0}^n c_i c_j\left(\varphi_i,\varphi_j\right)=\left(\sum_{i=0}^n c_i\varphi_i,\sum_{j=0}^n c_j\varphi_j\right)=\int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx\ge0.
+\boldsymbol c^{\top}\boldsymbol G\boldsymbol c=\sum_{i=0}^n\sum_{j=0}^n c_i c_j\left(\varphi_i,\varphi_j\right)=\left(\sum_{i=0}^n c_i\varphi_i,\sum_{j=0}^n c_j\varphi_j\right)=\int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx\ge0.
 $$
 
-Sufficiency. Suppose $G\ne0$; assume for contradiction that $\left\{\varphi_i\right\}$ is linearly dependent, then there exists a nonzero $\boldsymbol c$ such that $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, and hence $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$. But when $G\ne0$, $\boldsymbol G$ is invertible (positive-definite), so for $\boldsymbol c\ne0$ one necessarily has $\boldsymbol c^{T}\boldsymbol G\boldsymbol c> 0$, a contradiction. Thus $\left\{\varphi_i\right\}$ is linearly independent.
+Sufficiency. Suppose $G\ne0$; assume for contradiction that $\left\{\varphi_i\right\}$ is linearly dependent, then there exists a nonzero $\boldsymbol c$ such that $\sum_{i=0}^n c_i\varphi_i\left(x\right)\equiv0$, and hence $\boldsymbol c^{\top}\boldsymbol G\boldsymbol c=0$. But when $G\ne0$, $\boldsymbol G$ is invertible (positive-definite), so for $\boldsymbol c\ne0$ one necessarily has $\boldsymbol c^{\top}\boldsymbol G\boldsymbol c> 0$, a contradiction. Thus $\left\{\varphi_i\right\}$ is linearly independent.
 
-Necessity. Suppose $\left\{\varphi_i\right\}$ is linearly independent; assume for contradiction that $G=0$, then $\boldsymbol G$ is singular, and there exists a nonzero $\boldsymbol c$ such that $\boldsymbol G\boldsymbol c=\boldsymbol0$, hence $\boldsymbol c^{T}\boldsymbol G\boldsymbol c=0$, i.e.
+Necessity. Suppose $\left\{\varphi_i\right\}$ is linearly independent; assume for contradiction that $G=0$, then $\boldsymbol G$ is singular, and there exists a nonzero $\boldsymbol c$ such that $\boldsymbol G\boldsymbol c=\boldsymbol0$, hence $\boldsymbol c^{\top}\boldsymbol G\boldsymbol c=0$, i.e.
 
 $$
 \int_a^b w\left(x\right)\left[\sum_{i=0}^n c_i\varphi_i\left(x\right)\right]^2\,\mathrm dx=0.
