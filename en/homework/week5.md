@@ -124,11 +124,7 @@ $$
 Substituting $x=1.682$, where $x-1.615=0.067$, $x-1.634=0.048$, $x-1.702=-0.020$, gives
 
 $$
-\begin{aligned}
-N_3\left(1.682\right)&=2.414\,50+2.531\,05\times0.067+3.044\,02\times0.067\times0.048-9.420\,63\times0.067\times0.048\times\left(-0.020\right)\\
-&=2.414\,50+0.169\,58+0.009\,79+0.000\,61\\
-&=2.594\,48.
-\end{aligned}
+N_3\left(1.682\right)=2.414\,50+2.531\,05\times0.067+3.044\,02\times0.067\times0.048-9.420\,63\times0.067\times0.048\times\left(-0.020\right)=2.414\,50+0.169\,58+0.009\,79+0.000\,61=2.594\,48.
 $$
 
 Thus $f\left(1.682\right)\approx 2.594\,48$. $\blacksquare$
