@@ -1,27 +1,27 @@
 # week1
 
 > **基础知识: 误差在基本运算中的传播**
->
+> 
 > 设数值计算中求得的解与参量 $x_1,x_2,\dots,x_n$ 有关, 记为 $y=f\left(x_1,x_2,\dots,x_n\right)$, 参量 $x_i$ 的近似值为 $x_i^{*}$. 假定 $f$ 在点 $\left(x_1^{*},x_2^{*},\dots,x_n^{*}\right)$ 处可微, 则当参量误差较小时, 解的绝对误差与相对误差分别为 $e\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}e\left(x_i^{*}\right)$, $e_r\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}\frac{x_i^{*}}{f}e_r\left(x_i^{*}\right)$. 特别地, 和与差的误差限不超过各数误差限之和, 积与商的相对误差限不超过各数相对误差限之和.
 
 > **基础知识: 避免两个相近的数相减**
->
+> 
 > 由误差在基本运算中的传播, 两数之差 $u=x-y$ 的相对误差为 $e_r\left(u\right)\approx\frac{x}{x-y}e_r\left(x\right)-\frac{y}{x-y}e_r\left(y\right)$. 当 $x$ 与 $y$ 很接近时, $\left|x-y\right|$ 很小, $u$ 的相对误差很大, 有效数字位数将严重丢失, 故应改变计算公式以避免两个相近数相减.
 
 > **定义 1.1 (绝对误差与误差限)**
->
+> 
 > 设 $x^{*}$ 为准确值 $x$ 的一个近似值, 称 $e\left(x^{*}\right)=x-x^{*}$ 为近似值 $x^{*}$ 的绝对误差, 简称误差. 若存在正数 $\varepsilon$ 使得 $\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\varepsilon$, 则称 $\varepsilon$ 为近似值 $x^{*}$ 的绝对误差限, 简称误差限.
 
 > **定理 1.1 (相对误差限与有效数字的关系)**
->
+> 
 > 若 $x$ 的近似值 $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ 有 $n$ 位有效数字, 则 $\frac{1}{2a_1}\times10^{-n+1}$ 为其相对误差限. 反之, 若 $x^{*}$ 的相对误差限 $\varepsilon_r$ 满足 $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, 则 $x^{*}$ 至少具有 $n$ 位有效数字.
 
 > **定义 1.2 (相对误差与相对误差限)**
->
+> 
 > 设 $x^{*}$ 为准确值 $x$ 的近似值, 称 $e_r\left(x^{*}\right)=\frac{e\left(x^{*}\right)}{x^{*}}$ 为近似值 $x^{*}$ 的相对误差. 若存在正数 $\varepsilon_r$ 使得 $\left|e_r\left(x^{*}\right)\right|\le\varepsilon_r$, 则称 $\varepsilon_r$ 为 $x^{*}$ 的相对误差限.
 
 > **定义 1.3 (有效数字)**
->
+> 
 > 如果近似值 $x^{*}$ 的规格化形式为 $x^{*}=\pm0.a_1a_2\cdots a_n\cdots\times10^{m}$, 其中 $m$ 为整数, $a_1\ne0$, 且 $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, 则称近似值 $x^{*}$ 有 $n$ 位有效数字.
 
 ---

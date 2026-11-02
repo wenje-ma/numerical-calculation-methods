@@ -1,35 +1,35 @@
 # week5
 
 > **Definition 5.1 (Interpolation Problem)**
->
-> $P_n(x_i)=y_i$.
+> 
+> $P_n\left(x_i\right)=y_i$.
 
 > **Theorem 5.1 (Interpolation Remainder)**
->
-> $R_n=f^{(n+1)}(\xi)\omega/(n+1)!$.
+> 
+> $R_n=f^{\left(n+1\right)}\left(\xi\right)\omega/\left(n+1\right)!$.
 
 > **Theorem 5.2 (Piecewise Linear Remainder)**
->
-> $|R|\le h^2M/8$.
+> 
+> $\left|R\right|\le h^2M/8$.
 
 > **Definition 5.3 (Lagrange Interpolation)**
->
+> 
 > Basis polynomials.
 
 > **Definition 5.4 (Newton Interpolation)**
->
+> 
 > Divided differences.
 
 > **Theorem 5.5 (Hermite Remainder)**
->
+> 
 > Higher order remainder.
 
 > **Definition 5.9 (Hermite Interpolation)**
->
+> 
 > Values and derivatives.
 
 > **Definition 5.11 (Cubic Spline)**
->
+> 
 > $C^2$ piecewise cubic.
 ---
 
@@ -39,7 +39,7 @@ Lagrange interpolation at 4 nodes.
 
 ### Solution Exercise 5-3
 
-$f(2)\approx0.4$. $\blacksquare$
+$f\left(2\right)\approx0.4$. $\blacksquare$
 
 ---
 
@@ -59,7 +59,7 @@ Newton interpolation.
 
 ### Solution Exercise 5-8
 
-$f(1.682)\approx2.59448$. $\blacksquare$
+$f\left(1.682\right)\approx2.59448$. $\blacksquare$
 
 ---
 
@@ -89,7 +89,7 @@ Hermite interpolation.
 
 ### Solution Exercise 5-16
 
-$H_4=-x^2+2x+1+\frac12x(x-1)^2(x-2)$. $\blacksquare$
+$H_4=-x^2+2x+1+\frac12x\left(x-1\right)^2\left(x-2\right)$. $\blacksquare$
 
 ---
 

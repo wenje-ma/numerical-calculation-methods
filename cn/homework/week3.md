@@ -1,32 +1,32 @@
 # week3
 
 > **基础知识: 雅可比迭代法**
->
-> $x_i^{(k+1)}=(b_i-\sum_{j\ne i}a_{ij}x_j^{(k)})/a_{ii}$.
+> 
+> $x_i^{\left(k+1\right)}=\left(b_i-\sum_{j\ne i}a_{ij}x_j^{\left(k\right)}\right)/a_{ii}$.
 
 > **基础知识: 高斯-赛德尔迭代法**
->
+> 
 > 新分量立即用于后续计算.
 
 > **基础知识: 松弛迭代法**
->
+> 
 > $\omega$ 松弛因子, $\omega=1$ 即高斯-赛德尔.
 
 > **基础知识: 几个常用的充分收敛条件**
->
+> 
 > 严格对角占优时雅可比与高斯-赛德尔均收敛.
 
 > **定义 3.3 (谱半径)**
->
-> $\rho(A)=\max|\lambda_i|$.
+> 
+> $\rho\left(A\right)=\max\left|\lambda_i\right|$.
 
 > **定义 3.4 (对角占优矩阵)**
->
-> $|a_{ii}|\ge\sum_{j\ne i}|a_{ij}|$.
+> 
+> $\left|a_{ii}\right|\ge\sum_{j\ne i}\left|a_{ij}\right|$.
 
 > **定理 3.6 (迭代法收敛的充要条件)**
->
-> $\rho(M)<1$.
+> 
+> $\rho\left(M\right)< 1$.
 ---
 
 ## 习题 3-3
@@ -35,7 +35,7 @@
 
 ### 解答 习题 3-3
 
-雅可比收敛于 $(-3,3,1)^\top$, 高斯-赛德尔发散. $\blacksquare$
+雅可比收敛于 $\left(-3,3,1\right)^\top$, 高斯-赛德尔发散. $\blacksquare$
 
 ---
 
@@ -45,7 +45,7 @@
 
 ### 解答 习题 3-5
 
-$\rho(B)=|2/a|$, 收敛当 $|a|>2$. $\blacksquare$
+$\rho\left(B\right)=\left|2/a\right|$, 收敛当 $\left|a\right|> 2$. $\blacksquare$
 
 ---
 
@@ -55,7 +55,7 @@ $\rho(B)=|2/a|$, 收敛当 $|a|>2$. $\blacksquare$
 
 ### 解答 习题 3-7
 
-$A$ 对称正定, $0<\omega=1.35<2$, 高斯-赛德尔与 SOR 收敛, 雅可比发散. $\blacksquare$
+$A$ 对称正定, $0< \omega=1.35< 2$, 高斯-赛德尔与 SOR 收敛, 雅可比发散. $\blacksquare$
 
 ---
 

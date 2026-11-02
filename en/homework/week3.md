@@ -1,32 +1,32 @@
 # week3
 
 > **Basic Knowledge: Jacobi Iteration**
->
+> 
 > Componentwise update.
 
 > **Basic Knowledge: Gauss-Seidel Iteration**
->
+> 
 > Use new components immediately.
 
 > **Basic Knowledge: SOR Method**
->
+> 
 > Relaxation factor $\omega$.
 
 > **Basic Knowledge: Sufficient Convergence Conditions**
->
+> 
 > Strict diagonal dominance.
 
 > **Definition 3.3 (Spectral Radius)**
->
-> $\rho(A)=\max|\lambda_i|$.
+> 
+> $\rho\left(A\right)=\max\left|\lambda_i\right|$.
 
 > **Definition 3.4 (Diagonally Dominant Matrix)**
->
-> $|a_{ii}|\ge\sum_{j\ne i}|a_{ij}|$.
+> 
+> $\left|a_{ii}\right|\ge\sum_{j\ne i}\left|a_{ij}\right|$.
 
 > **Theorem 3.6 (Convergence Criterion)**
->
-> $\rho(M)<1$.
+> 
+> $\rho\left(M\right)< 1$.
 ---
 
 ## Exercise 3-3
@@ -45,7 +45,7 @@ Find range of $a$ for convergence.
 
 ### Solution Exercise 3-5
 
-$|a|>2$. $\blacksquare$
+$\left|a\right|> 2$. $\blacksquare$
 
 ---
 

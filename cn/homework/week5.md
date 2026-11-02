@@ -1,45 +1,45 @@
 # week5
 
 > **定义 5.1 (插值问题)**
->
-> $P_n(x_i)=y_i$.
+> 
+> $P_n\left(x_i\right)=y_i$.
 
 > **定理 5.1 (插值余项)**
->
-> $R_n=f^{(n+1)}(\xi)\omega_{n+1}(x)/(n+1)!$.
+> 
+> $R_n=f^{\left(n+1\right)}\left(\xi\right)\omega_{n+1}\left(x\right)/\left(n+1\right)!$.
 
 > **定理 5.2 (分段线性插值余项)**
->
-> $|R|\le h^2M/8$.
+> 
+> $\left|R\right|\le h^2M/8$.
 
 > **定义 5.3 (拉格朗日插值多项式)**
->
-> $l_i(x)=\prod_{j\ne i}(x-x_j)/(x_i-x_j)$.
+> 
+> $l_i\left(x\right)=\prod_{j\ne i}\left(x-x_j\right)/\left(x_i-x_j\right)$.
 
 > **定义 5.4 (差商与牛顿插值多项式)**
->
-> $N_n(x)=\sum f[x_0,\cdots,x_k]\prod(x-x_j)$.
+> 
+> $N_n\left(x\right)=\sum f\left[x_0,\cdots,x_k\right]\prod\left(x-x_j\right)$.
 
 > **定理 5.5 (埃尔米特插值余项)**
->
-> $R=f^{(n+m+2)}(\xi)\omega_{n+1}\prod(x-x_{i_k})/(n+m+2)!$.
+> 
+> $R=f^{\left(n+m+2\right)}\left(\xi\right)\omega_{n+1}\prod\left(x-x_{i_k}\right)/\left(n+m+2\right)!$.
 
 > **定义 5.9 (埃尔米特插值)**
->
+> 
 > 同时插值函数值与导数值.
 
 > **定义 5.11 (三次样条插值)**
->
+> 
 > $C^2$ 分段三次多项式.
 ---
 
 ## 习题 5-3
 
-求三阶拉格朗日插值多项式并计算 $f(2)$.
+求三阶拉格朗日插值多项式并计算 $f\left(2\right)$.
 
 ### 解答 习题 5-3
 
-$f(2)\approx0.4$. $\blacksquare$
+$f\left(2\right)\approx0.4$. $\blacksquare$
 
 ---
 
@@ -55,21 +55,21 @@ $f(2)\approx0.4$. $\blacksquare$
 
 ## 习题 5-8
 
-求三阶牛顿插值多项式并计算 $f(1.682)$.
+求三阶牛顿插值多项式并计算 $f\left(1.682\right)$.
 
 ### 解答 习题 5-8
 
-$f(1.682)\approx2.59448$. $\blacksquare$
+$f\left(1.682\right)\approx2.59448$. $\blacksquare$
 
 ---
 
 ## 习题 5-10
 
-用向前/向后差分计算 $f(1.5)$, $f(3.7)$.
+用向前/向后差分计算 $f\left(1.5\right)$, $f\left(3.7\right)$.
 
 ### 解答 习题 5-10
 
-$f(1.5)\approx3.75$, $f(3.7)\approx12.99$. $\blacksquare$
+$f\left(1.5\right)\approx3.75$, $f\left(3.7\right)\approx12.99$. $\blacksquare$
 
 ---
 
@@ -89,7 +89,7 @@ $f(1.5)\approx3.75$, $f(3.7)\approx12.99$. $\blacksquare$
 
 ### 解答 习题 5-16
 
-$H_4(x)=-x^2+2x+1+\frac12x(x-1)^2(x-2)$. $\blacksquare$
+$H_4\left(x\right)=-x^2+2x+1+\frac12x\left(x-1\right)^2\left(x-2\right)$. $\blacksquare$
 
 ---
 

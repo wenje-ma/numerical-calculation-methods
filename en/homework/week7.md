@@ -1,47 +1,47 @@
 # week7
 
 > **Basic Knowledge: Composite Trapezoidal**
->
+> 
 > $T_n$.
 
 > **Basic Knowledge: Composite Simpson**
->
+> 
 > $S_n$.
 
 > **Basic Knowledge: Numerical Derivatives**
->
+> 
 > 2-point and 3-point formulas.
 
 > **Basic Knowledge: Richardson Extrapolation**
->
+> 
 > Romberg integration.
 
 > **Basic Knowledge: Gauss-Legendre**
->
-> On $[-1,1]$.
+> 
+> On $\left[-1,1\right]$.
 
 > **Basic Knowledge: Double Integrals**
->
+> 
 > Tensor product.
 
 > **Definition 7.1 (Algebraic Accuracy)**
->
+> 
 > Exact up to degree $m$.
 
 > **Definition 7.2 (Gauss Points)**
->
+> 
 > $2n-1$ degree accuracy.
 
 > **Theorem 7.2 (Trapezoidal Error)**
->
-> $R=-(b-a)^3f''/12$.
+> 
+> $R=-\left(b-a\right)^3f''/12$.
 
 > **Theorem 7.3 (Simpson Error)**
->
-> $R=-(b-a)^5f^{(4)}/2880$.
+> 
+> $R=-\left(b-a\right)^5f^{\left(4\right)}/2880$.
 
 > **Theorem 7.4 (Gauss Points and Orthogonality)**
->
+> 
 > $w_n$ orthogonal to polynomials.
 ---
 

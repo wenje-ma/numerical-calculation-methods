@@ -1,27 +1,27 @@
 # week6
 
 > **Basic Knowledge: Linear Least Squares**
->
+> 
 > Normal equations.
 
 > **Basic Knowledge: Linearization of Nonlinear Fits**
->
+> 
 > Log or reciprocal transform.
 
 > **Basic Knowledge: Normal Equations**
->
+> 
 > Orthogonal case diagonalizes.
 
 > **Basic Knowledge: Legendre Polynomials**
->
-> Orthogonal on $[-1,1]$.
+> 
+> Orthogonal on $\left[-1,1\right]$.
 
 > **Definition 6.2 (Orthogonal Function System)**
->
-> $(\varphi_j,\varphi_k)=0$.
+> 
+> $\left(\varphi_j,\varphi_k\right)=0$.
 
 > **Definition 6.3 (Best Least Squares Approximation)**
->
+> 
 > Minimize weighted squared error.
 ---
 
@@ -31,7 +31,7 @@ Linear least squares fit.
 
 ### Solution Exercise 6-1
 
-$P_1(x)=3.9161+7.4639x$. $\blacksquare$
+$P_1\left(x\right)=3.9161+7.4639x$. $\blacksquare$
 
 ---
 
@@ -71,7 +71,7 @@ Rational fit.
 
 ### Solution Exercise 6-7
 
-$y=t/(0.07891t+0.16486)$. $\blacksquare$
+$y=t/\left(0.07891t+0.16486\right)$. $\blacksquare$
 
 ---
 
@@ -91,7 +91,7 @@ Best approximation of $e^x$.
 
 ### Solution Exercise 6-13(2)
 
-$p(x)=0.8731+1.6903x$. $\blacksquare$
+$p\left(x\right)=0.8731+1.6903x$. $\blacksquare$
 
 ---
 

@@ -1,28 +1,28 @@
 # week8
 
 > **基础知识: 牛顿迭代法**
->
-> $x_{n+1}=x_n-f(x_n)/f'(x_n)$.
+> 
+> $x_{n+1}=x_n-f\left(x_n\right)/f'\left(x_n\right)$.
 
 > **基础知识: 弦截法**
->
-> 两步迭代 $x_{n+1}=x_n-\frac{f(x_n)(x_n-x_{n-1})}{f(x_n)-f(x_{n-1})}$.
+> 
+> 两步迭代 $x_{n+1}=x_n-\frac{f\left(x_n\right)\left(x_n-x_{n-1}\right)}{f\left(x_n\right)-f\left(x_{n-1}\right)}$.
 
 > **定义 8.1 (迭代法与不动点迭代法)**
->
-> $x_{n+1}=\varphi(x_n)$.
+> 
+> $x_{n+1}=\varphi\left(x_n\right)$.
 
 > **定义 8.2 (迭代法的收敛阶)**
->
-> $\lim|e_{n+1}|/|e_n|^r=a$.
+> 
+> $\lim\left|e_{n+1}\right|/\left|e_n\right|^r=a$.
 
 > **定理 8.2 (不动点迭代法的收敛条件)**
->
-> $|\varphi'(x)|\le L<1$ 时收敛.
+> 
+> $\left|\varphi'\left(x\right)\right|\le L< 1$ 时收敛.
 
 > **定理 8.4 (迭代法收敛阶与迭代函数导数的关系)**
->
-> $\varphi^{(k)}(x^*)=0$ ($k<r$) 时 $r$ 阶收敛.
+> 
+> $\varphi^{\left(k\right)}\left(x^*\right)=0$ ($k< r$) 时 $r$ 阶收敛.
 ---
 
 ## 习题 8-3
@@ -51,7 +51,7 @@ $x^*\approx3.34740$, 线性收敛. $\blacksquare$
 
 ### 解答 习题 8-8
 
-$\varphi'(\sqrt2)=0$, $\varphi''(\sqrt2)\ne0$. $\blacksquare$
+$\varphi'\left(\sqrt2\right)=0$, $\varphi''\left(\sqrt2\right)\ne0$. $\blacksquare$
 
 ---
 
@@ -81,7 +81,7 @@ $x^*\approx1.3247$, 二阶收敛. $\blacksquare$
 
 ### 解答 习题 8-13
 
-比值 $(r-1)/r$. $\blacksquare$
+比值 $\left(r-1\right)/r$. $\blacksquare$
 
 ---
 

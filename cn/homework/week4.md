@@ -1,19 +1,19 @@
 # week4
 
 > **基础知识: 幂法**
->
-> $\alpha^{(k+1)}=A\alpha^{(k)}$ 求最大模特征值.
+> 
+> $\alpha^{\left(k+1\right)}=A\alpha^{\left(k\right)}$ 求最大模特征值.
 
 > **基础知识: 幂法的艾特肯加速**
->
+> 
 > 线性收敛序列加速.
 
 > **基础知识: 反幂法**
->
-> 解 $A\alpha^{(k+1)}=\alpha^{(k)}$.
+> 
+> 解 $A\alpha^{\left(k+1\right)}=\alpha^{\left(k\right)}$.
 
 > **基础知识: 雅可比方法**
->
+> 
 > 正交旋转对角化对称矩阵.
 
 ---
@@ -24,7 +24,7 @@
 
 ### 解答 习题 4-1(2)
 
-$\lambda_1\approx6$, 特征向量 $(1,-1,1)^\top$. $\blacksquare$
+$\lambda_1\approx6$, 特征向量 $\left(1,-1,1\right)^\top$. $\blacksquare$
 
 ---
 
@@ -44,7 +44,7 @@ $\lambda_1\approx6.000$. $\blacksquare$
 
 ### 解答 习题 4-4
 
-$x\approx(1,-0.732,0.268)^\top$. $\blacksquare$
+$x\approx\left(1,-0.732,0.268\right)^\top$. $\blacksquare$
 
 ---
 

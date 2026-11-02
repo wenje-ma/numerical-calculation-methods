@@ -1,28 +1,28 @@
 # week6
 
 > **基础知识: 线性最小二乘法的一般形式**
->
-> 正则方程组 $\sum a_k(\varphi_k,\varphi_j)=(y,\varphi_j)$.
+> 
+> 正则方程组 $\sum a_k\left(\varphi_k,\varphi_j\right)=\left(y,\varphi_j\right)$.
 
 > **基础知识: 非线性拟合的线性化**
->
+> 
 > 指数拟合取对数, 分式拟合取倒数.
 
 > **基础知识: 最佳平方逼近的正则方程组**
->
-> 正交时 $a_k=(f,\varphi_k)/(\varphi_k,\varphi_k)$.
+> 
+> 正交时 $a_k=\left(f,\varphi_k\right)/\left(\varphi_k,\varphi_k\right)$.
 
 > **基础知识: 勒让德多项式**
->
-> $[-1,1]$ 上正交, $(P_n,P_n)=2/(2n+1)$.
+> 
+> $\left[-1,1\right]$ 上正交, $\left(P_n,P_n\right)=2/\left(2n+1\right)$.
 
 > **定义 6.2 (正交函数系)**
->
-> $(\varphi_j,\varphi_k)=0$ ($j\ne k$).
+> 
+> $\left(\varphi_j,\varphi_k\right)=0$ ($j\ne k$).
 
 > **定义 6.3 (最佳平方逼近函数)**
->
-> 使 $\int w(f-p)^2\mathrm dx$ 最小.
+> 
+> 使 $\int w\left(f-p\right)^2\mathrm dx$ 最小.
 ---
 
 ## 习题 6-1
@@ -31,7 +31,7 @@
 
 ### 解答 习题 6-1
 
-$P_1(x)=3.9161+7.4639x$. $\blacksquare$
+$P_1\left(x\right)=3.9161+7.4639x$. $\blacksquare$
 
 ---
 
@@ -67,11 +67,11 @@ $y=11.436e^{0.2913x}$. $\blacksquare$
 
 ## 习题 6-7
 
-求 $y=t/(at+b)$ 型经验公式.
+求 $y=t/\left(at+b\right)$ 型经验公式.
 
 ### 解答 习题 6-7
 
-$y=t/(0.07891t+0.16486)$. $\blacksquare$
+$y=t/\left(0.07891t+0.16486\right)$. $\blacksquare$
 
 ---
 
@@ -87,18 +87,18 @@ $y=t/(0.07891t+0.16486)$. $\blacksquare$
 
 ## 习题 6-13(2)
 
-求 $e^x$ 在 $[0,1]$ 上一次最佳平方逼近.
+求 $e^x$ 在 $\left[0,1\right]$ 上一次最佳平方逼近.
 
 ### 解答 习题 6-13(2)
 
-$p(x)=0.8731+1.6903x$. $\blacksquare$
+$p\left(x\right)=0.8731+1.6903x$. $\blacksquare$
 
 ---
 
 ## 习题 6-15
 
-用勒让德多项式求 $\sin x$ 在 $[-\pi/2,\pi/2]$ 上三次最佳平方逼近.
+用勒让德多项式求 $\sin x$ 在 $\left[-\pi/2,\pi/2\right]$ 上三次最佳平方逼近.
 
 ### 解答 习题 6-15
 
-$P_3(x)\approx0.9888x-0.1451x^3$, 均方误差 $\approx2.42\times10^{-5}$. $\blacksquare$
+$P_3\left(x\right)\approx0.9888x-0.1451x^3$, 均方误差 $\approx2.42\times10^{-5}$. $\blacksquare$

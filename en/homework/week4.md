@@ -1,19 +1,19 @@
 # week4
 
 > **Basic Knowledge: Power Method**
->
+> 
 > Largest eigenvalue.
 
 > **Basic Knowledge: Aitken Acceleration**
->
+> 
 > Speed up linear convergence.
 
 > **Basic Knowledge: Inverse Power Method**
->
+> 
 > Shifted for eigenvectors.
 
 > **Basic Knowledge: Jacobi Method**
->
+> 
 > Orthogonal rotations.
 
 ---
@@ -24,7 +24,7 @@ Power method on the 3x3 matrix.
 
 ### Solution Exercise 4-1(2)
 
-$\lambda_1\approx6$, eigenvector $(1,-1,1)^\top$. $\blacksquare$
+$\lambda_1\approx6$, eigenvector $\left(1,-1,1\right)^\top$. $\blacksquare$
 
 ---
 
@@ -44,7 +44,7 @@ Inverse power method.
 
 ### Solution Exercise 4-4
 
-$x\approx(1,-0.732,0.268)^\top$. $\blacksquare$
+$x\approx\left(1,-0.732,0.268\right)^\top$. $\blacksquare$
 
 ---
 

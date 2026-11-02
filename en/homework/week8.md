@@ -1,27 +1,27 @@
 # week8
 
 > **Basic Knowledge: Newton's Method**
->
+> 
 > $x_{n+1}=x_n-f/f'$.
 
 > **Basic Knowledge: Secant Method**
->
+> 
 > Two-step formula.
 
 > **Definition 8.1 (Fixed Point Iteration)**
->
-> $x_{n+1}=\varphi(x_n)$.
+> 
+> $x_{n+1}=\varphi\left(x_n\right)$.
 
 > **Definition 8.2 (Order of Convergence)**
->
-> $\lim|e_{n+1}|/|e_n|^r=a$.
+> 
+> $\lim\left|e_{n+1}\right|/\left|e_n\right|^r=a$.
 
 > **Theorem 8.2 (Convergence Condition)**
->
-> $|\varphi'|\le L<1$.
+> 
+> $\left|\varphi'\right|\le L< 1$.
 
 > **Theorem 8.4 (Order and Derivatives)**
->
+> 
 > $r$-th order when first $r-1$ derivatives vanish.
 ---
 
@@ -51,7 +51,7 @@ Prove convergence to $\sqrt2$ quadratically.
 
 ### Solution Exercise 8-8
 
-$\varphi'(\sqrt2)=0$. $\blacksquare$
+$\varphi'\left(\sqrt2\right)=0$. $\blacksquare$
 
 ---
 
@@ -81,7 +81,7 @@ Prove modified Newton convergence.
 
 ### Solution Exercise 8-13
 
-Ratio $(r-1)/r$. $\blacksquare$
+Ratio $\left(r-1\right)/r$. $\blacksquare$
 
 ---
 
