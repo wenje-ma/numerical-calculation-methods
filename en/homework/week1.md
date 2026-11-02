@@ -1,16 +1,28 @@
 # week1
 
-> **Basic Knowledge: Error Propagation in Basic Operations**<br>Suppose the solution obtained in numerical computation depends on the parameters $x_1,x_2,\dots,x_n$, denoted $y=f\left(x_1,x_2,\dots,x_n\right)$, and let the approximation of $x_i$ be $x_i^{*}$. Assuming $f$ is differentiable at $\left(x_1^{*},x_2^{*},\dots,x_n^{*}\right)$, when the parameter errors are small, the absolute error and relative error of the solution are $e\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}e\left(x_i^{*}\right)$ and $e_r\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}\frac{x_i^{*}}{f}e_r\left(x_i^{*}\right)$. In particular, the error bound of a sum or difference does not exceed the sum of the error bounds of the individual numbers, and the relative error bound of a product or quotient does not exceed the sum of the relative error bounds of the individual numbers.
+> **Basic Knowledge: Error Propagation in Basic Operations**
+>
+> Suppose the solution obtained in numerical computation depends on the parameters $x_1,x_2,\dots,x_n$, denoted $y=f\left(x_1,x_2,\dots,x_n\right)$, and let the approximation of $x_i$ be $x_i^{*}$. Assuming $f$ is differentiable at $\left(x_1^{*},x_2^{*},\dots,x_n^{*}\right)$, when the parameter errors are small, the absolute error and relative error of the solution are $e\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}e\left(x_i^{*}\right)$ and $e_r\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}\frac{x_i^{*}}{f}e_r\left(x_i^{*}\right)$. In particular, the error bound of a sum or difference does not exceed the sum of the error bounds of the individual numbers, and the relative error bound of a product or quotient does not exceed the sum of the relative error bounds of the individual numbers.
 
-> **Basic Knowledge: Avoid Subtracting Two Nearly Equal Numbers**<br>By error propagation in basic operations, the relative error of the difference $u=x-y$ of two numbers is $e_r\left(u\right)\approx\frac{x}{x-y}e_r\left(x\right)-\frac{y}{x-y}e_r\left(y\right)$. When $x$ and $y$ are very close, $\left|x-y\right|$ is very small and the relative error of $u$ is very large, causing a serious loss of significant digits; hence the computational formula should be changed to avoid subtracting two nearly equal numbers.
+> **Basic Knowledge: Avoid Subtracting Two Nearly Equal Numbers**
+>
+> By error propagation in basic operations, the relative error of the difference $u=x-y$ of two numbers is $e_r\left(u\right)\approx\frac{x}{x-y}e_r\left(x\right)-\frac{y}{x-y}e_r\left(y\right)$. When $x$ and $y$ are very close, $\left|x-y\right|$ is very small and the relative error of $u$ is very large, causing a serious loss of significant digits; hence the computational formula should be changed to avoid subtracting two nearly equal numbers.
 
-> **Definition 1.1 (Absolute Error and Error Bound)**<br>Let $x^{*}$ be an approximation to the exact value $x$. The quantity $e\left(x^{*}\right)=x-x^{*}$ is called the absolute error of $x^{*}$, or error for short. If there exists a positive number $\varepsilon$ such that $\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\varepsilon$, then $\varepsilon$ is called the absolute error bound of $x^{*}$, or error bound for short.
+> **Definition 1.1 (Absolute Error and Error Bound)**
+>
+> Let $x^{*}$ be an approximation to the exact value $x$. The quantity $e\left(x^{*}\right)=x-x^{*}$ is called the absolute error of $x^{*}$, or error for short. If there exists a positive number $\varepsilon$ such that $\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\varepsilon$, then $\varepsilon$ is called the absolute error bound of $x^{*}$, or error bound for short.
 
-> **Theorem 1.1 (Relation Between the Relative Error Bound and Significant Digits)**<br>If the approximation $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ of $x$ has $n$ significant digits, then $\frac{1}{2a_1}\times10^{-n+1}$ is its relative error bound. Conversely, if the relative error bound $\varepsilon_r$ of $x^{*}$ satisfies $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, then $x^{*}$ has at least $n$ significant digits.
+> **Theorem 1.1 (Relation Between the Relative Error Bound and Significant Digits)**
+>
+> If the approximation $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ of $x$ has $n$ significant digits, then $\frac{1}{2a_1}\times10^{-n+1}$ is its relative error bound. Conversely, if the relative error bound $\varepsilon_r$ of $x^{*}$ satisfies $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, then $x^{*}$ has at least $n$ significant digits.
 
-> **Definition 1.2 (Relative Error and Relative Error Bound)**<br>Let $x^{*}$ be an approximation to the exact value $x$. The quantity $e_r\left(x^{*}\right)=\frac{e\left(x^{*}\right)}{x^{*}}$ is called the relative error of $x^{*}$. If there exists a positive number $\varepsilon_r$ such that $\left|e_r\left(x^{*}\right)\right|\le\varepsilon_r$, then $\varepsilon_r$ is called the relative error bound of $x^{*}$.
+> **Definition 1.2 (Relative Error and Relative Error Bound)**
+>
+> Let $x^{*}$ be an approximation to the exact value $x$. The quantity $e_r\left(x^{*}\right)=\frac{e\left(x^{*}\right)}{x^{*}}$ is called the relative error of $x^{*}$. If there exists a positive number $\varepsilon_r$ such that $\left|e_r\left(x^{*}\right)\right|\le\varepsilon_r$, then $\varepsilon_r$ is called the relative error bound of $x^{*}$.
 
-> **Definition 1.3 (Significant Digits)**<br>If the normalized form of the approximation $x^{*}$ is $x^{*}=\pm0.a_1a_2\cdots a_n\cdots\times10^{m}$, where $m$ is an integer, $a_1\ne0$, and $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, then $x^{*}$ is said to have $n$ significant digits.
+> **Definition 1.3 (Significant Digits)**
+>
+> If the normalized form of the approximation $x^{*}$ is $x^{*}=\pm0.a_1a_2\cdots a_n\cdots\times10^{m}$, where $m$ is an integer, $a_1\ne0$, and $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, then $x^{*}$ is said to have $n$ significant digits.
 
 ---
 

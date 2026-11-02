@@ -1,16 +1,28 @@
 # week6
 
-> **Basic Knowledge: Linear Least Squares**<br>Normal equations.
+> **Basic Knowledge: Linear Least Squares**
+>
+> Normal equations.
 
-> **Basic Knowledge: Linearization of Nonlinear Fits**<br>Log or reciprocal transform.
+> **Basic Knowledge: Linearization of Nonlinear Fits**
+>
+> Log or reciprocal transform.
 
-> **Basic Knowledge: Normal Equations**<br>Orthogonal case diagonalizes.
+> **Basic Knowledge: Normal Equations**
+>
+> Orthogonal case diagonalizes.
 
-> **Basic Knowledge: Legendre Polynomials**<br>Orthogonal on $[-1,1]$.
+> **Basic Knowledge: Legendre Polynomials**
+>
+> Orthogonal on $[-1,1]$.
 
-> **Definition 6.2 (Orthogonal Function System)**<br>$(\varphi_j,\varphi_k)=0$.
+> **Definition 6.2 (Orthogonal Function System)**
+>
+> $(\varphi_j,\varphi_k)=0$.
 
-> **Definition 6.3 (Best Least Squares Approximation)**<br>Minimize weighted squared error.
+> **Definition 6.3 (Best Least Squares Approximation)**
+>
+> Minimize weighted squared error.
 ---
 
 ## Exercise 6-1

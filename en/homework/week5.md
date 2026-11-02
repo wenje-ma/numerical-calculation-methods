@@ -1,20 +1,36 @@
 # week5
 
-> **Definition 5.1 (Interpolation Problem)**<br>$P_n(x_i)=y_i$.
+> **Definition 5.1 (Interpolation Problem)**
+>
+> $P_n(x_i)=y_i$.
 
-> **Theorem 5.1 (Interpolation Remainder)**<br>$R_n=f^{(n+1)}(\xi)\omega/(n+1)!$.
+> **Theorem 5.1 (Interpolation Remainder)**
+>
+> $R_n=f^{(n+1)}(\xi)\omega/(n+1)!$.
 
-> **Theorem 5.2 (Piecewise Linear Remainder)**<br>$|R|\le h^2M/8$.
+> **Theorem 5.2 (Piecewise Linear Remainder)**
+>
+> $|R|\le h^2M/8$.
 
-> **Definition 5.3 (Lagrange Interpolation)**<br>Basis polynomials.
+> **Definition 5.3 (Lagrange Interpolation)**
+>
+> Basis polynomials.
 
-> **Definition 5.4 (Newton Interpolation)**<br>Divided differences.
+> **Definition 5.4 (Newton Interpolation)**
+>
+> Divided differences.
 
-> **Theorem 5.5 (Hermite Remainder)**<br>Higher order remainder.
+> **Theorem 5.5 (Hermite Remainder)**
+>
+> Higher order remainder.
 
-> **Definition 5.9 (Hermite Interpolation)**<br>Values and derivatives.
+> **Definition 5.9 (Hermite Interpolation)**
+>
+> Values and derivatives.
 
-> **Definition 5.11 (Cubic Spline)**<br>$C^2$ piecewise cubic.
+> **Definition 5.11 (Cubic Spline)**
+>
+> $C^2$ piecewise cubic.
 ---
 
 ## Exercise 5-3

@@ -1,12 +1,20 @@
 # week4
 
-> **Basic Knowledge: Power Method**<br>Largest eigenvalue.
+> **Basic Knowledge: Power Method**
+>
+> Largest eigenvalue.
 
-> **Basic Knowledge: Aitken Acceleration**<br>Speed up linear convergence.
+> **Basic Knowledge: Aitken Acceleration**
+>
+> Speed up linear convergence.
 
-> **Basic Knowledge: Inverse Power Method**<br>Shifted for eigenvectors.
+> **Basic Knowledge: Inverse Power Method**
+>
+> Shifted for eigenvectors.
 
-> **Basic Knowledge: Jacobi Method**<br>Orthogonal rotations.
+> **Basic Knowledge: Jacobi Method**
+>
+> Orthogonal rotations.
 
 ---
 

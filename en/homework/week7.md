@@ -1,26 +1,48 @@
 # week7
 
-> **Basic Knowledge: Composite Trapezoidal**<br>$T_n$.
+> **Basic Knowledge: Composite Trapezoidal**
+>
+> $T_n$.
 
-> **Basic Knowledge: Composite Simpson**<br>$S_n$.
+> **Basic Knowledge: Composite Simpson**
+>
+> $S_n$.
 
-> **Basic Knowledge: Numerical Derivatives**<br>2-point and 3-point formulas.
+> **Basic Knowledge: Numerical Derivatives**
+>
+> 2-point and 3-point formulas.
 
-> **Basic Knowledge: Richardson Extrapolation**<br>Romberg integration.
+> **Basic Knowledge: Richardson Extrapolation**
+>
+> Romberg integration.
 
-> **Basic Knowledge: Gauss-Legendre**<br>On $[-1,1]$.
+> **Basic Knowledge: Gauss-Legendre**
+>
+> On $[-1,1]$.
 
-> **Basic Knowledge: Double Integrals**<br>Tensor product.
+> **Basic Knowledge: Double Integrals**
+>
+> Tensor product.
 
-> **Definition 7.1 (Algebraic Accuracy)**<br>Exact up to degree $m$.
+> **Definition 7.1 (Algebraic Accuracy)**
+>
+> Exact up to degree $m$.
 
-> **Definition 7.2 (Gauss Points)**<br>$2n-1$ degree accuracy.
+> **Definition 7.2 (Gauss Points)**
+>
+> $2n-1$ degree accuracy.
 
-> **Theorem 7.2 (Trapezoidal Error)**<br>$R=-(b-a)^3f''/12$.
+> **Theorem 7.2 (Trapezoidal Error)**
+>
+> $R=-(b-a)^3f''/12$.
 
-> **Theorem 7.3 (Simpson Error)**<br>$R=-(b-a)^5f^{(4)}/2880$.
+> **Theorem 7.3 (Simpson Error)**
+>
+> $R=-(b-a)^5f^{(4)}/2880$.
 
-> **Theorem 7.4 (Gauss Points and Orthogonality)**<br>$w_n$ orthogonal to polynomials.
+> **Theorem 7.4 (Gauss Points and Orthogonality)**
+>
+> $w_n$ orthogonal to polynomials.
 ---
 
 ## Exercise 7-3

@@ -1,18 +1,32 @@
 # week3
 
-> **Basic Knowledge: Jacobi Iteration**<br>Componentwise update.
+> **Basic Knowledge: Jacobi Iteration**
+>
+> Componentwise update.
 
-> **Basic Knowledge: Gauss-Seidel Iteration**<br>Use new components immediately.
+> **Basic Knowledge: Gauss-Seidel Iteration**
+>
+> Use new components immediately.
 
-> **Basic Knowledge: SOR Method**<br>Relaxation factor $\omega$.
+> **Basic Knowledge: SOR Method**
+>
+> Relaxation factor $\omega$.
 
-> **Basic Knowledge: Sufficient Convergence Conditions**<br>Strict diagonal dominance.
+> **Basic Knowledge: Sufficient Convergence Conditions**
+>
+> Strict diagonal dominance.
 
-> **Definition 3.3 (Spectral Radius)**<br>$\rho(A)=\max|\lambda_i|$.
+> **Definition 3.3 (Spectral Radius)**
+>
+> $\rho(A)=\max|\lambda_i|$.
 
-> **Definition 3.4 (Diagonally Dominant Matrix)**<br>$|a_{ii}|\ge\sum_{j\ne i}|a_{ij}|$.
+> **Definition 3.4 (Diagonally Dominant Matrix)**
+>
+> $|a_{ii}|\ge\sum_{j\ne i}|a_{ij}|$.
 
-> **Theorem 3.6 (Convergence Criterion)**<br>$\rho(M)<1$.
+> **Theorem 3.6 (Convergence Criterion)**
+>
+> $\rho(M)<1$.
 ---
 
 ## Exercise 3-3

@@ -1,20 +1,36 @@
 # week2
 
-> **Basic Knowledge: Gaussian Elimination**<br>Eliminate the augmented matrix of the system column by column into an equivalent upper triangular system, then back-substitute in reverse variable order. At step $k$, take $a_{kk}^{\left(k\right)}\ne0$ as the pivot, with multipliers $l_{ik}=a_{ik}^{\left(k\right)}/a_{kk}^{\left(k\right)}$; the back-substitution formulas are $x_n=\frac{b_n^{\left(n\right)}}{a_{nn}^{\left(n\right)}}$ and $x_k=\frac{b_k^{\left(k\right)}-\sum_{j=k+1}^{n}a_{kj}^{\left(k\right)}x_j}{a_{kk}^{\left(k\right)}}$ ($k=n-1,\dots,1$). To suppress the growth of roundoff errors caused by small pivots, one may select the entry of largest absolute value in column $k$ (column pivoting) or among all remaining entries (complete pivoting), perform the corresponding row (column) exchange, and then eliminate.
+> **Basic Knowledge: Gaussian Elimination**
+>
+> Eliminate the augmented matrix of the system column by column into an equivalent upper triangular system, then back-substitute in reverse variable order. At step $k$, take $a_{kk}^{\left(k\right)}\ne0$ as the pivot, with multipliers $l_{ik}=a_{ik}^{\left(k\right)}/a_{kk}^{\left(k\right)}$; the back-substitution formulas are $x_n=\frac{b_n^{\left(n\right)}}{a_{nn}^{\left(n\right)}}$ and $x_k=\frac{b_k^{\left(k\right)}-\sum_{j=k+1}^{n}a_{kj}^{\left(k\right)}x_j}{a_{kk}^{\left(k\right)}}$ ($k=n-1,\dots,1$). To suppress the growth of roundoff errors caused by small pivots, one may select the entry of largest absolute value in column $k$ (column pivoting) or among all remaining entries (complete pivoting), perform the corresponding row (column) exchange, and then eliminate.
 
-> **Basic Knowledge: Compact Formulas for Triangular Decomposition**<br>In the order of row 1 column 1, row 2 column 2, ..., comparing $A=LU$ gives $u_{1j}=a_{1j}$, $l_{i1}=\frac{a_{i1}}{u_{11}}$, $u_{rj}=a_{rj}-\sum_{k=1}^{r-1}l_{rk}u_{kj}$, $l_{ir}=\frac{a_{ir}-\sum_{k=1}^{r-1}l_{ik}u_{kr}}{u_{rr}}$. In solving, append the right-hand side vector $b$ as the last column, first forward-substitute to find $y$ in the same compact form, then back-substitute by $x_k=\left(y_k-\sum_{j=k+1}^{n}u_{kj}x_j\right)/u_{kk}$.
+> **Basic Knowledge: Compact Formulas for Triangular Decomposition**
+>
+> In the order of row 1 column 1, row 2 column 2, ..., comparing $A=LU$ gives $u_{1j}=a_{1j}$, $l_{i1}=\frac{a_{i1}}{u_{11}}$, $u_{rj}=a_{rj}-\sum_{k=1}^{r-1}l_{rk}u_{kj}$, $l_{ir}=\frac{a_{ir}-\sum_{k=1}^{r-1}l_{ik}u_{kr}}{u_{rr}}$. In solving, append the right-hand side vector $b$ as the last column, first forward-substitute to find $y$ in the same compact form, then back-substitute by $x_k=\left(y_k-\sum_{j=k+1}^{n}u_{kj}x_j\right)/u_{kk}$.
 
-> **Definition 2.1 (Tridiagonal System)**<br>The nonzero entries of the coefficient matrix $A$ lie only on the main diagonal and the two adjacent subdiagonals: $A=\begin{bmatrix}b_1&c_1&&\\a_2&b_2&c_2&\\&\ddots&\ddots&\ddots\\&&a_n&b_n\end{bmatrix}$.
+> **Definition 2.1 (Tridiagonal System)**
+>
+> The nonzero entries of the coefficient matrix $A$ lie only on the main diagonal and the two adjacent subdiagonals: $A=\begin{bmatrix}b_1&c_1&&\\a_2&b_2&c_2&\\&\ddots&\ddots&\ddots\\&&a_n&b_n\end{bmatrix}$.
 
-> **Theorem 2.1 (Existence and Uniqueness of Direct Triangular Decomposition)**<br>Let $A$ be an $n\times n$ matrix. If all leading principal minors $\det A_i$ ($i=1,2,\dots,n-1$) of $A$ are nonzero, then $A$ has a unique Doolittle decomposition $A=LU$, where $L$ is a unit lower triangular matrix and $U$ is an upper triangular matrix. Solving $Ax=b$ is then equivalent to solving $Ly=b$ and $Ux=y$ in sequence.
+> **Theorem 2.1 (Existence and Uniqueness of Direct Triangular Decomposition)**
+>
+> Let $A$ be an $n\times n$ matrix. If all leading principal minors $\det A_i$ ($i=1,2,\dots,n-1$) of $A$ are nonzero, then $A$ has a unique Doolittle decomposition $A=LU$, where $L$ is a unit lower triangular matrix and $U$ is an upper triangular matrix. Solving $Ax=b$ is then equivalent to solving $Ly=b$ and $Ux=y$ in sequence.
 
-> **Theorem 2.3 (Thomas Algorithm)**<br>When the tridiagonal matrix $A$ satisfies the row diagonal dominance condition, it can be decomposed as $A=LU$, where $u_1=b_1$, $l_i=a_i/u_{i-1}$, $u_i=b_i-c_{i-1}l_i$; the forward sweep is $y_1=d_1$, $y_k=d_k-l_k y_{k-1}$, and the backward sweep is $x_n=\frac{y_n}{u_n}$, $x_k=\frac{y_k-c_k x_{k+1}}{u_k}$ ($k=n-1,\dots,1$).
+> **Theorem 2.3 (Thomas Algorithm)**
+>
+> When the tridiagonal matrix $A$ satisfies the row diagonal dominance condition, it can be decomposed as $A=LU$, where $u_1=b_1$, $l_i=a_i/u_{i-1}$, $u_i=b_i-c_{i-1}l_i$; the forward sweep is $y_1=d_1$, $y_k=d_k-l_k y_{k-1}$, and the backward sweep is $x_n=\frac{y_n}{u_n}$, $x_k=\frac{y_k-c_k x_{k+1}}{u_k}$ ($k=n-1,\dots,1$).
 
-> **Definition 2.4 (Condition Number of a Matrix)**<br>For a nonsingular matrix $A$, the quantity $\mathrm{cond}\left(A\right)=\left\|A\right\|\,\left\|A^{-1}\right\|$ is called the condition number of $A$. The larger the condition number, the more ill-conditioned the system $Ax=b$ is with respect to perturbations in the right-hand side or the coefficient matrix, and always $\mathrm{cond}\left(A\right)\ge1$.
+> **Definition 2.4 (Condition Number of a Matrix)**
+>
+> For a nonsingular matrix $A$, the quantity $\mathrm{cond}\left(A\right)=\left\|A\right\|\,\left\|A^{-1}\right\|$ is called the condition number of $A$. The larger the condition number, the more ill-conditioned the system $Ax=b$ is with respect to perturbations in the right-hand side or the coefficient matrix, and always $\mathrm{cond}\left(A\right)\ge1$.
 
-> **Theorem 2.4 (Cholesky Decomposition of a Symmetric Positive Definite Matrix)**<br>Let $A$ be a symmetric positive definite matrix. Then there exists a unique lower triangular matrix $L$ with positive diagonal entries such that $A=LL^{\mathrm T}$, known as the square root method. Comparing $A=LL^{\mathrm T}$ gives $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$ and $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. Solving $Ax=b$ reduces to solving $Ly=b$ and $L^{\mathrm T}x=y$ in sequence. Also $A$ can be decomposed as $A=LDL^{\mathrm T}$ (improved square root method, where $L$ is unit lower triangular and $D$ is diagonal), avoiding square roots.
+> **Theorem 2.4 (Cholesky Decomposition of a Symmetric Positive Definite Matrix)**
+>
+> Let $A$ be a symmetric positive definite matrix. Then there exists a unique lower triangular matrix $L$ with positive diagonal entries such that $A=LL^{\mathrm T}$, known as the square root method. Comparing $A=LL^{\mathrm T}$ gives $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$ and $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. Solving $Ax=b$ reduces to solving $Ly=b$ and $L^{\mathrm T}x=y$ in sequence. Also $A$ can be decomposed as $A=LDL^{\mathrm T}$ (improved square root method, where $L$ is unit lower triangular and $D$ is diagonal), avoiding square roots.
 
-> **Theorem 2.5 (Operator Norm of a Matrix)**<br>The matrix norm induced by a vector norm is $\left\|A\right\|=\max_{\left\|x\right\|=1}\left\|Ax\right\|$, satisfying the compatibility condition $\left\|Ax\right\|\le\left\|A\right\|\left\|x\right\|$. The commonly used 1-norm (column norm) and $\infty$-norm (row norm) are $\left\|A\right\|_1=\max_{1\le j\le n}\sum_{i=1}^{n}\left|a_{ij}\right|$ and $\left\|A\right\|_\infty=\max_{1\le i\le n}\sum_{j=1}^{n}\left|a_{ij}\right|$.
+> **Theorem 2.5 (Operator Norm of a Matrix)**
+>
+> The matrix norm induced by a vector norm is $\left\|A\right\|=\max_{\left\|x\right\|=1}\left\|Ax\right\|$, satisfying the compatibility condition $\left\|Ax\right\|\le\left\|A\right\|\left\|x\right\|$. The commonly used 1-norm (column norm) and $\infty$-norm (row norm) are $\left\|A\right\|_1=\max_{1\le j\le n}\sum_{i=1}^{n}\left|a_{ij}\right|$ and $\left\|A\right\|_\infty=\max_{1\le i\le n}\sum_{j=1}^{n}\left|a_{ij}\right|$.
 
 ---
 

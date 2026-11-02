@@ -1,16 +1,28 @@
 # week8
 
-> **Basic Knowledge: Newton's Method**<br>$x_{n+1}=x_n-f/f'$.
+> **Basic Knowledge: Newton's Method**
+>
+> $x_{n+1}=x_n-f/f'$.
 
-> **Basic Knowledge: Secant Method**<br>Two-step formula.
+> **Basic Knowledge: Secant Method**
+>
+> Two-step formula.
 
-> **Definition 8.1 (Fixed Point Iteration)**<br>$x_{n+1}=\varphi(x_n)$.
+> **Definition 8.1 (Fixed Point Iteration)**
+>
+> $x_{n+1}=\varphi(x_n)$.
 
-> **Definition 8.2 (Order of Convergence)**<br>$\lim|e_{n+1}|/|e_n|^r=a$.
+> **Definition 8.2 (Order of Convergence)**
+>
+> $\lim|e_{n+1}|/|e_n|^r=a$.
 
-> **Theorem 8.2 (Convergence Condition)**<br>$|\varphi'|\le L<1$.
+> **Theorem 8.2 (Convergence Condition)**
+>
+> $|\varphi'|\le L<1$.
 
-> **Theorem 8.4 (Order and Derivatives)**<br>$r$-th order when first $r-1$ derivatives vanish.
+> **Theorem 8.4 (Order and Derivatives)**
+>
+> $r$-th order when first $r-1$ derivatives vanish.
 ---
 
 ## Exercise 8-3
