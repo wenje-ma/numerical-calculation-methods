@@ -1,13 +1,5 @@
 # week2
 
-> **Basic Knowledge: Gaussian Elimination**
-> 
-> Eliminate the augmented matrix of the system column by column into an equivalent upper triangular system, then back-substitute in reverse variable order. At step $k$, take $a_{kk}^{\left(k\right)}\ne0$ as the pivot, with multipliers $l_{ik}=a_{ik}^{\left(k\right)}/a_{kk}^{\left(k\right)}$; the back-substitution formulas are $x_n=\frac{b_n^{\left(n\right)}}{a_{nn}^{\left(n\right)}}$ and $x_k=\frac{b_k^{\left(k\right)}-\sum_{j=k+1}^{n}a_{kj}^{\left(k\right)}x_j}{a_{kk}^{\left(k\right)}}$ ($k=n-1,\dots,1$). To suppress the growth of roundoff errors caused by small pivots, one may select the entry of largest absolute value in column $k$ (column pivoting) or among all remaining entries (complete pivoting), perform the corresponding row (column) exchange, and then eliminate.
-
-> **Basic Knowledge: Compact Formulas for Triangular Decomposition**
-> 
-> In the order of row 1 column 1, row 2 column 2, ..., comparing $A=LU$ gives $u_{1j}=a_{1j}$, $l_{i1}=\frac{a_{i1}}{u_{11}}$, $u_{rj}=a_{rj}-\sum_{k=1}^{r-1}l_{rk}u_{kj}$, $l_{ir}=\frac{a_{ir}-\sum_{k=1}^{r-1}l_{ik}u_{kr}}{u_{rr}}$. In solving, append the right-hand side vector $b$ as the last column, first forward-substitute to find $y$ in the same compact form, then back-substitute by $x_k=\left(y_k-\sum_{j=k+1}^{n}u_{kj}x_j\right)/u_{kk}$.
-
 > **Definition 2.1 (Tridiagonal System)**
 > 
 > The nonzero entries of the coefficient matrix $A$ lie only on the main diagonal and the two adjacent subdiagonals: $A=\begin{bmatrix}b_1&c_1&&\\a_2&b_2&c_2&\\&\ddots&\ddots&\ddots\\&&a_n&b_n\end{bmatrix}$.
@@ -52,7 +44,7 @@ $$
 \overline A=\begin{bmatrix}2&6&-4&4\\1&4&-5&3\\6&-1&18&2\end{bmatrix}.
 $$
 
-First eliminate by **Basic Knowledge: Gaussian Elimination**. At step 1 take $a_{11}=2$ as pivot, with multipliers $l_{21}=1/2=0.500$, $l_{31}=6/2=3.000$; subtracting the corresponding multiples of row 1 from rows 2 and 3 gives
+First eliminate by Gaussian Elimination. At step 1 take $a_{11}=2$ as pivot, with multipliers $l_{21}=1/2=0.500$, $l_{31}=6/2=3.000$; subtracting the corresponding multiples of row 1 from rows 2 and 3 gives
 
 $$
 \begin{bmatrix}2&6&-4&4\\0&1&-3&1\\0&-19&30&-10\end{bmatrix}.
@@ -82,7 +74,7 @@ Solve the system in Problem 1 using triangular decomposition.
 
 ### Solution 2-2
 
-By **Theorem 2.1 (Existence and Uniqueness of Direct Triangular Decomposition)** and **Basic Knowledge: Compact Formulas for Triangular Decomposition**, perform the Doolittle decomposition $A=LU$ on the system of Problem 1, then solve $Ly=b$ and $Ux=y$ in sequence.
+By **Theorem 2.1 (Existence and Uniqueness of Direct Triangular Decomposition)** and Compact Formulas for Triangular Decomposition, perform the Doolittle decomposition $A=LU$ on the system of Problem 1, then solve $Ly=b$ and $Ux=y$ in sequence.
 
 The system has $A=\begin{bmatrix}2&6&-4\\1&4&-5\\6&-1&18\end{bmatrix}$ and $b=\left(4,3,2\right)^{\mathrm T}$. The compact formulas give
 
@@ -104,7 +96,7 @@ $$
 
 ### Solution 2-3
 
-By **Basic Knowledge: Compact Formulas for Triangular Decomposition**, decompose $A=LU$ in the order row 1 column 1, row 2 column 2, ...
+By Compact Formulas for Triangular Decomposition, decompose $A=LU$ in the order row 1 column 1, row 2 column 2, ...
 
 Row 1 column 1: row 1 of $U$ is $\left(1,2,3,4\right)$, and $l_{i1}=a_{i1}/u_{11}=1$ ($i=2,3,4$).
 

@@ -1,21 +1,5 @@
 # week3
 
-> **Basic Knowledge: Jacobi Iteration**
-> 
-> Componentwise update.
-
-> **Basic Knowledge: Gauss-Seidel Iteration**
-> 
-> Use new components immediately.
-
-> **Basic Knowledge: SOR Method**
-> 
-> Relaxation factor $\omega$.
-
-> **Basic Knowledge: Sufficient Convergence Conditions**
-> 
-> Strict diagonal dominance.
-
 > **Definition 3.3 (Spectral Radius)**
 > 
 > $\rho\left(A\right)=\max\left|\lambda_i\right|$.

@@ -1,29 +1,5 @@
 # week7
 
-> **Basic Knowledge: Composite Trapezoidal**
-> 
-> $T_n$.
-
-> **Basic Knowledge: Composite Simpson**
-> 
-> $S_n$.
-
-> **Basic Knowledge: Numerical Derivatives**
-> 
-> 2-point and 3-point formulas.
-
-> **Basic Knowledge: Richardson Extrapolation**
-> 
-> Romberg integration.
-
-> **Basic Knowledge: Gauss-Legendre**
-> 
-> On $\left[-1,1\right]$.
-
-> **Basic Knowledge: Double Integrals**
-> 
-> Tensor product.
-
 > **Definition 7.1 (Algebraic Accuracy)**
 > 
 > Exact up to degree $m$.

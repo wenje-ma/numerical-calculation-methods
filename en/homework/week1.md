@@ -1,13 +1,5 @@
 # week1
 
-> **Basic Knowledge: Error Propagation in Basic Operations**
-> 
-> Suppose the solution obtained in numerical computation depends on the parameters $x_1,x_2,\dots,x_n$, denoted $y=f\left(x_1,x_2,\dots,x_n\right)$, and let the approximation of $x_i$ be $x_i^{*}$. Assuming $f$ is differentiable at $\left(x_1^{*},x_2^{*},\dots,x_n^{*}\right)$, when the parameter errors are small, the absolute error and relative error of the solution are $e\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}e\left(x_i^{*}\right)$ and $e_r\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}\frac{x_i^{*}}{f}e_r\left(x_i^{*}\right)$. In particular, the error bound of a sum or difference does not exceed the sum of the error bounds of the individual numbers, and the relative error bound of a product or quotient does not exceed the sum of the relative error bounds of the individual numbers.
-
-> **Basic Knowledge: Avoid Subtracting Two Nearly Equal Numbers**
-> 
-> By error propagation in basic operations, the relative error of the difference $u=x-y$ of two numbers is $e_r\left(u\right)\approx\frac{x}{x-y}e_r\left(x\right)-\frac{y}{x-y}e_r\left(y\right)$. When $x$ and $y$ are very close, $\left|x-y\right|$ is very small and the relative error of $u$ is very large, causing a serious loss of significant digits; hence the computational formula should be changed to avoid subtracting two nearly equal numbers.
-
 > **Definition 1.1 (Absolute Error and Error Bound)**
 > 
 > Let $x^{*}$ be an approximation to the exact value $x$. The quantity $e\left(x^{*}\right)=x-x^{*}$ is called the absolute error of $x^{*}$, or error for short. If there exists a positive number $\varepsilon$ such that $\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\varepsilon$, then $\varepsilon$ is called the absolute error bound of $x^{*}$, or error bound for short.
@@ -34,7 +26,7 @@ Given that $a=1.2031$ and $b=0.978$ are approximations obtained after rounding, 
 
 By **Definition 1.1 (Absolute Error and Error Bound)** and the meaning of rounding, $a=1.2031$ has 5 significant digits, with error bound $\frac{1}{2}\times10^{-4}$; $b=0.978$ has 3 significant digits, with error bound $\frac{1}{2}\times10^{-3}$.
 
-First consider the sum $a+b=1.2031+0.978=2.1811$. By **Basic Knowledge: Error Propagation in Basic Operations**, the error bound of a sum does not exceed the sum of the error bounds of the individual numbers, so
+First consider the sum $a+b=1.2031+0.978=2.1811$. By Error Propagation in Basic Operations, the error bound of a sum does not exceed the sum of the error bounds of the individual numbers, so
 
 $$
 \left|e\left(a+b\right)\right|\le\left|e\left(a\right)\right|+\left|e\left(b\right)\right|\le\frac{1}{2}\times10^{-4}+\frac{1}{2}\times10^{-3}=0.00055.
@@ -42,7 +34,7 @@ $$
 
 Moreover, $2.1811=0.21811\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{1-4}=\frac{1}{2}\times10^{-3}=0.0005< 0.00055\le\frac{1}{2}\times10^{1-3}=\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3 (Significant Digits)**, $a+b$ has 3 significant digits.
 
-Next consider the product $a\times b=1.2031\times0.978=1.17663$. By **Definition 1.2 (Relative Error and Relative Error Bound)** and **Basic Knowledge: Error Propagation in Basic Operations**, the relative error bound of a product does not exceed the sum of the relative error bounds of the individual numbers, so
+Next consider the product $a\times b=1.2031\times0.978=1.17663$. By **Definition 1.2 (Relative Error and Relative Error Bound)** and Error Propagation in Basic Operations, the relative error bound of a product does not exceed the sum of the relative error bounds of the individual numbers, so
 
 $$
 \left|e_r\left(a\right)\right|\le\frac{\frac{1}{2}\times10^{-4}}{1.2031}\approx4.156\times10^{-5},\quad\left|e_r\left(b\right)\right|\le\frac{\frac{1}{2}\times10^{-3}}{0.978}\approx5.113\times10^{-4},
@@ -66,7 +58,7 @@ The side length of a square is about $100$ centimeters. How large must the error
 
 ### Solution 1-7
 
-Let the side length of the square be $a\approx100$ centimeters and the area be $S=a^{2}$. By **Basic Knowledge: Error Propagation in Basic Operations**, the absolute error of the area satisfies
+Let the side length of the square be $a\approx100$ centimeters and the area be $S=a^{2}$. By Error Propagation in Basic Operations, the absolute error of the area satisfies
 
 $$
 \left|e\left(S\right)\right|\approx\left|S'\left(a\right)\right|\cdot\left|e\left(a\right)\right|=2a\left|e\left(a\right)\right|=200\left|e\left(a\right)\right|.
@@ -88,7 +80,7 @@ Let $s=\frac{1}{2}gt^{2}$. Suppose $g$ is exact, while the measurement of $t$ ha
 
 ### Solution 1-9
 
-By **Basic Knowledge: Error Propagation in Basic Operations**, $s=\frac{1}{2}gt^{2}$; since $g$ is exact, i.e. $e\left(g\right)=0$, the absolute error of $s$ is approximately
+By Error Propagation in Basic Operations, $s=\frac{1}{2}gt^{2}$; since $g$ is exact, i.e. $e\left(g\right)=0$, the absolute error of $s$ is approximately
 
 $$
 \left|e\left(s\right)\right|\approx\left|\frac{\partial s}{\partial t}\right|\left|e\left(t\right)\right|=gt\left|e\left(t\right)\right|=0.1gt.
@@ -96,7 +88,7 @@ $$
 
 As $t$ increases, $0.1gt$ increases, so the absolute error of $s$ increases.
 
-Also by **Basic Knowledge: Error Propagation in Basic Operations**, for $\ln s=\ln\frac{g}{2}+2\ln t$, we have
+Also by Error Propagation in Basic Operations, for $\ln s=\ln\frac{g}{2}+2\ln t$, we have
 
 $$
 \left|e_r\left(s\right)\right|\approx\left|2\frac{e\left(t\right)}{t}\right|=\frac{2\times0.1}{t}=\frac{0.2}{t}.
@@ -128,7 +120,7 @@ $$
 x_2=\frac{56-\sqrt{\Delta}}{2}=28-\sqrt{783}\approx28-27.983=0.017.
 $$
 
-If $x_2$ is computed directly as $28-\sqrt{783}$, this is the subtraction of two nearly equal numbers; by **Basic Knowledge: Avoid Subtracting Two Nearly Equal Numbers**, significant digits would be seriously lost, so this direct computation cannot be used.
+If $x_2$ is computed directly as $28-\sqrt{783}$, this is the subtraction of two nearly equal numbers; by Avoid Subtracting Two Nearly Equal Numbers, significant digits would be seriously lost, so this direct computation cannot be used.
 
 By Vieta's formulas, the product of the two roots is $x_1x_2=1$, so $x_2=\frac{1}{x_1}$ (note $x_1\ne0$). First compute $x_1$: by **Definition 1.3 (Significant Digits)**, $\sqrt{783}\approx27.983=0.27983\times10^{2}$ has 5 significant digits with error bound $\frac{1}{2}\times10^{2-5}=\frac{1}{2}\times10^{-3}=0.0005$, so
 
@@ -138,7 +130,7 @@ $$
 
 i.e. $x_1\approx55.983$ has at least 4 significant digits.
 
-Then by **Basic Knowledge: Error Propagation in Basic Operations**, for $x_2=\frac{1}{x_1}$, the relative error of a quotient is approximately the difference of the relative errors of numerator and denominator, so
+Then by Error Propagation in Basic Operations, for $x_2=\frac{1}{x_1}$, the relative error of a quotient is approximately the difference of the relative errors of numerator and denominator, so
 
 $$
 \left|e_r\left(x_2\right)\right|\approx\left|e_r\left(x_1\right)\right|\le\frac{0.0005}{55.983}\approx8.93\times10^{-6},
@@ -162,7 +154,7 @@ Rewrite the following expressions so that the computation is more accurate: (1) 
 
 ### Solution 1-12
 
-By **Basic Knowledge: Avoid Subtracting Two Nearly Equal Numbers**, when $\left|x\right|\ll1$, both $\frac{1}{1+2x}$ and $\frac{1-x}{1+x}$ are close to $1$, and subtracting them directly would cause a serious loss of significant digits. Combine the expression over a common denominator:
+By Avoid Subtracting Two Nearly Equal Numbers, when $\left|x\right|\ll1$, both $\frac{1}{1+2x}$ and $\frac{1-x}{1+x}$ are close to $1$, and subtracting them directly would cause a serious loss of significant digits. Combine the expression over a common denominator:
 
 $$
 \frac{1}{1+2x}-\frac{1-x}{1+x}=\frac{\left(1+x\right)-\left(1-x\right)\left(1+2x\right)}{\left(1+2x\right)\left(1+x\right)}.

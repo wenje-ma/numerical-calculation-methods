@@ -1,13 +1,5 @@
 # week8
 
-> **Basic Knowledge: Newton's Method**
-> 
-> $x_{n+1}=x_n-f/f'$.
-
-> **Basic Knowledge: Secant Method**
-> 
-> Two-step formula.
-
 > **Definition 8.1 (Fixed Point Iteration)**
 > 
 > $x_{n+1}=\varphi\left(x_n\right)$.

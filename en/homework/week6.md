@@ -1,21 +1,5 @@
 # week6
 
-> **Basic Knowledge: Linear Least Squares**
-> 
-> Normal equations.
-
-> **Basic Knowledge: Linearization of Nonlinear Fits**
-> 
-> Log or reciprocal transform.
-
-> **Basic Knowledge: Normal Equations**
-> 
-> Orthogonal case diagonalizes.
-
-> **Basic Knowledge: Legendre Polynomials**
-> 
-> Orthogonal on $\left[-1,1\right]$.
-
 > **Definition 6.2 (Orthogonal Function System)**
 > 
 > $\left(\varphi_j,\varphi_k\right)=0$.

@@ -1,13 +1,5 @@
 # week8
 
-> **基础知识: 牛顿迭代法**
-> 
-> $x_{n+1}=x_n-f\left(x_n\right)/f'\left(x_n\right)$.
-
-> **基础知识: 弦截法**
-> 
-> 两步迭代 $x_{n+1}=x_n-\frac{f\left(x_n\right)\left(x_n-x_{n-1}\right)}{f\left(x_n\right)-f\left(x_{n-1}\right)}$.
-
 > **定义 8.1 (迭代法与不动点迭代法)**
 > 
 > $x_{n+1}=\varphi\left(x_n\right)$.

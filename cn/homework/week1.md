@@ -1,13 +1,5 @@
 # week1
 
-> **基础知识: 误差在基本运算中的传播**
-> 
-> 设数值计算中求得的解与参量 $x_1,x_2,\dots,x_n$ 有关, 记为 $y=f\left(x_1,x_2,\dots,x_n\right)$, 参量 $x_i$ 的近似值为 $x_i^{*}$. 假定 $f$ 在点 $\left(x_1^{*},x_2^{*},\dots,x_n^{*}\right)$ 处可微, 则当参量误差较小时, 解的绝对误差与相对误差分别为 $e\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}e\left(x_i^{*}\right)$, $e_r\left(y^{*}\right)\approx\sum_{i=1}^n\frac{\partial f}{\partial x_i}\frac{x_i^{*}}{f}e_r\left(x_i^{*}\right)$. 特别地, 和与差的误差限不超过各数误差限之和, 积与商的相对误差限不超过各数相对误差限之和.
-
-> **基础知识: 避免两个相近的数相减**
-> 
-> 由误差在基本运算中的传播, 两数之差 $u=x-y$ 的相对误差为 $e_r\left(u\right)\approx\frac{x}{x-y}e_r\left(x\right)-\frac{y}{x-y}e_r\left(y\right)$. 当 $x$ 与 $y$ 很接近时, $\left|x-y\right|$ 很小, $u$ 的相对误差很大, 有效数字位数将严重丢失, 故应改变计算公式以避免两个相近数相减.
-
 > **定义 1.1 (绝对误差与误差限)**
 > 
 > 设 $x^{*}$ 为准确值 $x$ 的一个近似值, 称 $e\left(x^{*}\right)=x-x^{*}$ 为近似值 $x^{*}$ 的绝对误差, 简称误差. 若存在正数 $\varepsilon$ 使得 $\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\varepsilon$, 则称 $\varepsilon$ 为近似值 $x^{*}$ 的绝对误差限, 简称误差限.
@@ -34,7 +26,7 @@
 
 由**定义 1.1 (绝对误差与误差限)** 及四舍五入的含义, $a=1.2031$ 有 5 位有效数字, 其误差限为 $\frac{1}{2}\times10^{-4}$; $b=0.978$ 有 3 位有效数字, 其误差限为 $\frac{1}{2}\times10^{-3}$.
 
-先看和 $a+b=1.2031+0.978=2.1811$. 由**基础知识: 误差在基本运算中的传播**, 和的误差限不超过各数误差限之和, 故
+先看和 $a+b=1.2031+0.978=2.1811$. 由误差在基本运算中的传播, 和的误差限不超过各数误差限之和, 故
 
 $$
 \left|e\left(a+b\right)\right|\le\left|e\left(a\right)\right|+\left|e\left(b\right)\right|\le\frac{1}{2}\times10^{-4}+\frac{1}{2}\times10^{-3}=0.00055.
@@ -42,7 +34,7 @@ $$
 
 又 $2.1811=0.21811\times10^{1}$ ($m=1$), 而 $\frac{1}{2}\times10^{1-4}=\frac{1}{2}\times10^{-3}=0.0005< 0.00055\le\frac{1}{2}\times10^{1-3}=\frac{1}{2}\times10^{-2}=0.005$, 故由**定义 1.3 (有效数字)**, $a+b$ 有 3 位有效数字.
 
-再看积 $a\times b=1.2031\times0.978=1.17663$. 由**定义 1.2 (相对误差与相对误差限)** 及**基础知识: 误差在基本运算中的传播**, 积的相对误差限不超过各数相对误差限之和, 故
+再看积 $a\times b=1.2031\times0.978=1.17663$. 由**定义 1.2 (相对误差与相对误差限)** 及误差在基本运算中的传播, 积的相对误差限不超过各数相对误差限之和, 故
 
 $$
 \left|e_r\left(a\right)\right|\le\frac{\frac{1}{2}\times10^{-4}}{1.2031}\approx4.156\times10^{-5},\quad\left|e_r\left(b\right)\right|\le\frac{\frac{1}{2}\times10^{-3}}{0.978}\approx5.113\times10^{-4},
@@ -66,7 +58,7 @@ $$
 
 ### 解答 1-7
 
-设正方形边长为 $a\approx100$ 厘米, 面积为 $S=a^{2}$. 由**基础知识: 误差在基本运算中的传播**, 面积的绝对误差满足
+设正方形边长为 $a\approx100$ 厘米, 面积为 $S=a^{2}$. 由误差在基本运算中的传播, 面积的绝对误差满足
 
 $$
 \left|e\left(S\right)\right|\approx\left|S'\left(a\right)\right|\cdot\left|e\left(a\right)\right|=2a\left|e\left(a\right)\right|=200\left|e\left(a\right)\right|.
@@ -88,7 +80,7 @@ $$
 
 ### 解答 1-9
 
-由**基础知识: 误差在基本运算中的传播**, $s=\frac{1}{2}gt^{2}$, 因 $g$ 准确即 $e\left(g\right)=0$, 故 $s$ 的绝对误差近似为
+由误差在基本运算中的传播, $s=\frac{1}{2}gt^{2}$, 因 $g$ 准确即 $e\left(g\right)=0$, 故 $s$ 的绝对误差近似为
 
 $$
 \left|e\left(s\right)\right|\approx\left|\frac{\partial s}{\partial t}\right|\left|e\left(t\right)\right|=gt\left|e\left(t\right)\right|=0.1gt.
@@ -96,7 +88,7 @@ $$
 
 当 $t$ 增大时, $0.1gt$ 增大, 故 $s$ 的绝对误差增大.
 
-又由**基础知识: 误差在基本运算中的传播**, 对 $\ln s=\ln\frac{g}{2}+2\ln t$, 有
+又由误差在基本运算中的传播, 对 $\ln s=\ln\frac{g}{2}+2\ln t$, 有
 
 $$
 \left|e_r\left(s\right)\right|\approx\left|2\frac{e\left(t\right)}{t}\right|=\frac{2\times0.1}{t}=\frac{0.2}{t}.
@@ -128,7 +120,7 @@ $$
 x_2=\frac{56-\sqrt{\Delta}}{2}=28-\sqrt{783}\approx28-27.983=0.017.
 $$
 
-若直接按 $28-\sqrt{783}$ 计算 $x_2$, 则是两个相近的数相减, 由**基础知识: 避免两个相近的数相减**, 有效数字会严重丢失, 故不能直接这样算.
+若直接按 $28-\sqrt{783}$ 计算 $x_2$, 则是两个相近的数相减, 由避免两个相近的数相减, 有效数字会严重丢失, 故不能直接这样算.
 
 由韦达定理, 两根之积 $x_1x_2=1$, 故 $x_2=\frac{1}{x_1}$ (注意 $x_1\ne0$). 先算 $x_1$: 由**定义 1.3 (有效数字)**, $\sqrt{783}\approx27.983=0.27983\times10^{2}$ 有 5 位有效数字, 误差限为 $\frac{1}{2}\times10^{2-5}=\frac{1}{2}\times10^{-3}=0.0005$, 故
 
@@ -138,7 +130,7 @@ $$
 
 即 $x_1\approx55.983$ 至少有 4 位有效数字.
 
-再由**基础知识: 误差在基本运算中的传播**, $x_2=\frac{1}{x_1}$, 商的相对误差近似等于分子分母相对误差之差, 故
+再由误差在基本运算中的传播, $x_2=\frac{1}{x_1}$, 商的相对误差近似等于分子分母相对误差之差, 故
 
 $$
 \left|e_r\left(x_2\right)\right|\approx\left|e_r\left(x_1\right)\right|\le\frac{0.0005}{55.983}\approx8.93\times10^{-6},
@@ -162,7 +154,7 @@ $$
 
 ### 解答 1-12
 
-由**基础知识: 避免两个相近的数相减**, 当 $\left|x\right|\ll1$ 时, $\frac{1}{1+2x}$ 与 $\frac{1-x}{1+x}$ 都接近 $1$, 直接相减会严重丢失有效数字. 对表达式通分合并:
+由避免两个相近的数相减, 当 $\left|x\right|\ll1$ 时, $\frac{1}{1+2x}$ 与 $\frac{1-x}{1+x}$ 都接近 $1$, 直接相减会严重丢失有效数字. 对表达式通分合并:
 
 $$
 \frac{1}{1+2x}-\frac{1-x}{1+x}=\frac{\left(1+x\right)-\left(1-x\right)\left(1+2x\right)}{\left(1+2x\right)\left(1+x\right)}.

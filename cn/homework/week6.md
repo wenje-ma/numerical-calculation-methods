@@ -1,21 +1,5 @@
 # week6
 
-> **基础知识: 线性最小二乘法的一般形式**
-> 
-> 正则方程组 $\sum a_k\left(\varphi_k,\varphi_j\right)=\left(y,\varphi_j\right)$.
-
-> **基础知识: 非线性拟合的线性化**
-> 
-> 指数拟合取对数, 分式拟合取倒数.
-
-> **基础知识: 最佳平方逼近的正则方程组**
-> 
-> 正交时 $a_k=\left(f,\varphi_k\right)/\left(\varphi_k,\varphi_k\right)$.
-
-> **基础知识: 勒让德多项式**
-> 
-> $\left[-1,1\right]$ 上正交, $\left(P_n,P_n\right)=2/\left(2n+1\right)$.
-
 > **定义 6.2 (正交函数系)**
 > 
 > $\left(\varphi_j,\varphi_k\right)=0$ ($j\ne k$).
