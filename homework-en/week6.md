@@ -7,8 +7,6 @@
 > **Definition 6.3 (Best Least Squares Approximation)**
 > 
 > Minimize weighted squared error.
----
-
 ## Exercise 6-1
 
 Linear least squares fit.
@@ -16,8 +14,6 @@ Linear least squares fit.
 ### Solution Exercise 6-1
 
 $P_1\left(x\right)=3.9161+7.4639x$. $\blacksquare$
-
----
 
 ## Exercise 6-3
 
@@ -27,8 +23,6 @@ Furnace data fit.
 
 $y=-54.534+1.4724x$. $\blacksquare$
 
----
-
 ## Exercise 6-4
 
 Quadratic-in-$x^2$ fit.
@@ -36,8 +30,6 @@ Quadratic-in-$x^2$ fit.
 ### Solution Exercise 6-4
 
 $y=0.9726+0.05004x^2$. $\blacksquare$
-
----
 
 ## Exercise 6-6
 
@@ -47,8 +39,6 @@ Exponential fit.
 
 $y=11.436e^{0.2913x}$. $\blacksquare$
 
----
-
 ## Exercise 6-7
 
 Rational fit.
@@ -56,8 +46,6 @@ Rational fit.
 ### Solution Exercise 6-7
 
 $y=t/\left(0.07891t+0.16486\right)$. $\blacksquare$
-
----
 
 ## Exercise 6-10
 
@@ -67,8 +55,6 @@ Prove Gram determinant criterion.
 
 By positive definiteness. $\blacksquare$
 
----
-
 ## Exercise 6-13(2)
 
 Best approximation of $e^x$.
@@ -76,8 +62,6 @@ Best approximation of $e^x$.
 ### Solution Exercise 6-13(2)
 
 $p\left(x\right)=0.8731+1.6903x$. $\blacksquare$
-
----
 
 ## Exercise 6-15
 

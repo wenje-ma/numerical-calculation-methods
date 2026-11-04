@@ -16,8 +16,6 @@
 > 
 > If the normalized form of the approximation $x^{*}$ is $x^{*}=\pm0.a_1a_2\cdots a_n\cdots\times10^{m}$, where $m$ is an integer, $a_1\ne0$, and $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, then $x^{*}$ is said to have $n$ significant digits.
 
----
-
 ## 1-3
 
 Given that $a=1.2031$ and $b=0.978$ are approximations obtained after rounding, how many significant digits do $a+b$ and $a\times b$ have?
@@ -50,8 +48,6 @@ $$
 
 Moreover, $1.17663=0.117663\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{-3}=0.0005< 6.505\times10^{-4}\le\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3 (Significant Digits)**, $a\times b$ has 3 significant digits. $\blacksquare$
 
----
-
 ## 1-7
 
 The side length of a square is about $100$ centimeters. How large must the error in measuring the side length be to ensure that the error in the area does not exceed $1$ centimeter$^{2}$?
@@ -71,8 +67,6 @@ $$
 $$
 
 Therefore, when measuring the side length, the error bound in the side length should not exceed $0.005$ centimeters. $\blacksquare$
-
----
 
 ## 1-9
 
@@ -95,8 +89,6 @@ $$
 $$
 
 As $t$ increases, $\frac{0.2}{t}$ decreases, so the relative error of $s$ decreases. In summary, as $t$ increases, the absolute error of $s$ increases while its relative error decreases. $\blacksquare$
-
----
 
 ## 1-10
 
@@ -145,8 +137,6 @@ $$
 by **Definition 1.3 (Significant Digits)**, $x_2\approx0.017862$ has at least 4 significant digits.
 
 Therefore the two roots are $x_1\approx55.983$ and $x_2\approx0.017862$, each having at least 4 significant digits. $\blacksquare$
-
----
 
 ## 1-12
 

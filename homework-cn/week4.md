@@ -1,7 +1,5 @@
 # week4
 
----
-
 ## 习题 4-1(2)
 
 用幂法求 $A=\begin{bmatrix}4&-1&1\\-1&3&-2\\1&-2&3\end{bmatrix}$ 的最大模特征值.
@@ -9,8 +7,6 @@
 ### 解答 习题 4-1(2)
 
 $\lambda_1\approx6$, 特征向量 $\left(1,-1,1\right)^\top$. $\blacksquare$
-
----
 
 ## 习题 4-2
 
@@ -20,8 +16,6 @@ $\lambda_1\approx6$, 特征向量 $\left(1,-1,1\right)^\top$. $\blacksquare$
 
 $\lambda_1\approx6.000$. $\blacksquare$
 
----
-
 ## 习题 4-4
 
 用反幂法求对应于 $1.2679$ 的特征向量.
@@ -30,8 +24,6 @@ $\lambda_1\approx6.000$. $\blacksquare$
 
 $x\approx\left(1,-0.732,0.268\right)^\top$. $\blacksquare$
 
----
-
 ## 习题 4-7
 
 证明瑞利商的极值为最小/最大特征值.
@@ -39,8 +31,6 @@ $x\approx\left(1,-0.732,0.268\right)^\top$. $\blacksquare$
 ### 解答 习题 4-7
 
 正交对角化后展开. $\blacksquare$
-
----
 
 ## 习题 4-8(2)
 

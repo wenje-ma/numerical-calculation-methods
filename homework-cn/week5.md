@@ -31,8 +31,6 @@
 > **定义 5.11 (三次样条插值)**
 > 
 > $C^2$ 分段三次多项式.
----
-
 ## 习题 5-3
 
 求三阶拉格朗日插值多项式并计算 $f\left(2\right)$.
@@ -40,8 +38,6 @@
 ### 解答 习题 5-3
 
 $f\left(2\right)\approx0.4$. $\blacksquare$
-
----
 
 ## 习题 5-7
 
@@ -51,8 +47,6 @@ $f\left(2\right)\approx0.4$. $\blacksquare$
 
 利用插值多项式唯一性. $\blacksquare$
 
----
-
 ## 习题 5-8
 
 求三阶牛顿插值多项式并计算 $f\left(1.682\right)$.
@@ -60,8 +54,6 @@ $f\left(2\right)\approx0.4$. $\blacksquare$
 ### 解答 习题 5-8
 
 $f\left(1.682\right)\approx2.59448$. $\blacksquare$
-
----
 
 ## 习题 5-10
 
@@ -71,8 +63,6 @@ $f\left(1.682\right)\approx2.59448$. $\blacksquare$
 
 $f\left(1.5\right)\approx3.75$, $f\left(3.7\right)\approx12.99$. $\blacksquare$
 
----
-
 ## 习题 5-12
 
 求步长使截断误差不超过 $10^{-6}$.
@@ -81,8 +71,6 @@ $f\left(1.5\right)\approx3.75$, $f\left(3.7\right)\approx12.99$. $\blacksquare$
 
 线性 $h\le0.00283$, 二次 $h\le0.0250$. $\blacksquare$
 
----
-
 ## 习题 5-16
 
 求四次埃尔米特插值多项式.
@@ -90,8 +78,6 @@ $f\left(1.5\right)\approx3.75$, $f\left(3.7\right)\approx12.99$. $\blacksquare$
 ### 解答 习题 5-16
 
 $H_4\left(x\right)=-x^2+2x+1+\frac12x\left(x-1\right)^2\left(x-2\right)$. $\blacksquare$
-
----
 
 ## 习题 5-17
 

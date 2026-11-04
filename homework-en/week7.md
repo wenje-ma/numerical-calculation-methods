@@ -19,8 +19,6 @@
 > **Theorem 7.4 (Gauss Points and Orthogonality)**
 > 
 > $w_n$ orthogonal to polynomials.
----
-
 ## Exercise 7-3
 
 Numerical derivative.
@@ -28,8 +26,6 @@ Numerical derivative.
 ### Solution Exercise 7-3
 
 Two-point and three-point. $\blacksquare$
-
----
 
 ## Exercise 7-4(2)
 
@@ -39,8 +35,6 @@ Trapezoidal and Simpson.
 
 $4406.77$ and $1476.40$. $\blacksquare$
 
----
-
 ## Exercise 7-8
 
 Degree of accuracy.
@@ -48,8 +42,6 @@ Degree of accuracy.
 ### Solution Exercise 7-8
 
 3. $\blacksquare$
-
----
 
 ## Exercise 7-10(1)
 
@@ -59,8 +51,6 @@ Composite formulas.
 
 $T_8=0.34527$, $S_8=0.34658$. $\blacksquare$
 
----
-
 ## Exercise 7-11
 
 Find number of subintervals.
@@ -68,8 +58,6 @@ Find number of subintervals.
 ### Solution Exercise 7-11
 
 $n=58$ or $n=8$. $\blacksquare$
-
----
 
 ## Exercise 7-12
 
@@ -79,8 +67,6 @@ Table-based integration.
 
 $0.946084$. $\blacksquare$
 
----
-
 ## Exercise 7-13(1)
 
 Romberg halving.
@@ -88,8 +74,6 @@ Romberg halving.
 ### Solution Exercise 7-13(1)
 
 $2.0432$. $\blacksquare$
-
----
 
 ## Exercise 7-15
 
@@ -99,8 +83,6 @@ Romberg method.
 
 $0.7468$. $\blacksquare$
 
----
-
 ## Exercise 7-16(2)
 
 Find Gauss nodes.
@@ -108,8 +90,6 @@ Find Gauss nodes.
 ### Solution Exercise 7-16(2)
 
 $1\pm1/\sqrt3$. $\blacksquare$
-
----
 
 ## Exercise 7-16(3)
 
@@ -119,8 +99,6 @@ Find nodes and weights.
 
 $x_1=1/3$, $A_1=-3$, $A_2=4$. $\blacksquare$
 
----
-
 ## Exercise 7-18
 
 Gauss-type formula.
@@ -128,8 +106,6 @@ Gauss-type formula.
 ### Solution Exercise 7-18
 
 Nodes $\approx0.290,0.821$. $\blacksquare$
-
----
 
 ## Exercise 7-21
 
@@ -139,8 +115,6 @@ Nodes $\approx0.290,0.821$. $\blacksquare$
 
 $0.17705$. $\blacksquare$
 
----
-
 ## Exercise 7-26(1)
 
 Double integral.
@@ -148,8 +122,6 @@ Double integral.
 ### Solution Exercise 7-26(1)
 
 $0.27929$. $\blacksquare$
-
----
 
 ## Exercise 7-27
 

@@ -15,8 +15,6 @@
 > **Theorem 8.4 (Order and Derivatives)**
 > 
 > $r$-th order when first $r-1$ derivatives vanish.
----
-
 ## Exercise 8-3
 
 Simple iteration.
@@ -24,8 +22,6 @@ Simple iteration.
 ### Solution Exercise 8-3
 
 $0.73908$, $0.20389$, $2.09455$. $\blacksquare$
-
----
 
 ## Exercise 8-7
 
@@ -35,8 +31,6 @@ Prove convergence and order.
 
 $3.34740$, linear. $\blacksquare$
 
----
-
 ## Exercise 8-8
 
 Prove convergence to $\sqrt2$ quadratically.
@@ -44,8 +38,6 @@ Prove convergence to $\sqrt2$ quadratically.
 ### Solution Exercise 8-8
 
 $\varphi'\left(\sqrt2\right)=0$. $\blacksquare$
-
----
 
 ## Exercise 8-10
 
@@ -55,8 +47,6 @@ Newton's method.
 
 $3.14619$, $0.56714$, $0.51097$. $\blacksquare$
 
----
-
 ## Exercise 8-12
 
 Newton's method for cubic.
@@ -65,8 +55,6 @@ Newton's method for cubic.
 
 $1.3247$, quadratic. $\blacksquare$
 
----
-
 ## Exercise 8-13
 
 Prove modified Newton convergence.
@@ -74,8 +62,6 @@ Prove modified Newton convergence.
 ### Solution Exercise 8-13
 
 Ratio $\left(r-1\right)/r$. $\blacksquare$
-
----
 
 ## Exercise 8-16(1)
 

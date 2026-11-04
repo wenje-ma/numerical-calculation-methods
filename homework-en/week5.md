@@ -31,8 +31,6 @@
 > **Definition 5.11 (Cubic Spline)**
 > 
 > $C^2$ piecewise cubic.
----
-
 ## Exercise 5-3
 
 Lagrange interpolation at 4 nodes.
@@ -40,8 +38,6 @@ Lagrange interpolation at 4 nodes.
 ### Solution Exercise 5-3
 
 $f\left(2\right)\approx0.4$. $\blacksquare$
-
----
 
 ## Exercise 5-7
 
@@ -51,8 +47,6 @@ Prove basis identities.
 
 By uniqueness. $\blacksquare$
 
----
-
 ## Exercise 5-8
 
 Newton interpolation.
@@ -60,8 +54,6 @@ Newton interpolation.
 ### Solution Exercise 5-8
 
 $f\left(1.682\right)\approx2.59448$. $\blacksquare$
-
----
 
 ## Exercise 5-10
 
@@ -71,8 +63,6 @@ Forward/backward difference formulas.
 
 $3.75$ and $12.99$. $\blacksquare$
 
----
-
 ## Exercise 5-12
 
 Find step size.
@@ -81,8 +71,6 @@ Find step size.
 
 $h\le0.00283$ or $0.0250$. $\blacksquare$
 
----
-
 ## Exercise 5-16
 
 Hermite interpolation.
@@ -90,8 +78,6 @@ Hermite interpolation.
 ### Solution Exercise 5-16
 
 $H_4=-x^2+2x+1+\frac12x\left(x-1\right)^2\left(x-2\right)$. $\blacksquare$
-
----
 
 ## Exercise 5-17
 

@@ -24,8 +24,6 @@
 > 
 > The matrix norm induced by a vector norm is $\left\|A\right\|=\max_{\left\|x\right\|=1}\left\|Ax\right\|$, satisfying the compatibility condition $\left\|Ax\right\|\le\left\|A\right\|\left\|x\right\|$. The commonly used 1-norm (column norm) and $\infty$-norm (row norm) are $\left\|A\right\|_1=\max_{1\le j\le n}\sum_{i=1}^{n}\left|a_{ij}\right|$ and $\left\|A\right\|_\infty=\max_{1\le i\le n}\sum_{j=1}^{n}\left|a_{ij}\right|$.
 
----
-
 ## 2-1
 
 Solve the following system using Gaussian elimination, column pivoting, and complete pivoting respectively, keeping 3 decimal places throughout:
@@ -66,8 +64,6 @@ $$
 
 $\blacksquare$
 
----
-
 ## 2-2
 
 Solve the system in Problem 1 using triangular decomposition.
@@ -83,8 +79,6 @@ L=\begin{bmatrix}1&0&0\\0.5&1&0\\3&-19&1\end{bmatrix},\quad U=\begin{bmatrix}2&6
 $$
 
 Forward substitution: $y_1=4$, $y_2=3-0.5\times4=1$, $y_3=2-3\times4-\left(-19\right)\times1=9$. Back substitution: $x_3=9/\left(-27\right)=-1/3$, $x_2=\left[1-\left(-3\right)\times\left(-1/3\right)\right]/1=0$, $x_1=\left[4-\left(-4\right)\times\left(-1/3\right)\right]/2=4/3$. Thus $x=\left(4/3,0,-1/3\right)^{\mathrm T}$. $\blacksquare$
-
----
 
 ## 2-3
 
@@ -116,8 +110,6 @@ Appending $b=\left(2,10,44,190\right)^{\mathrm T}$ as the last column, forward s
 
 Therefore $x=\left(-1,1,-1,1\right)^{\mathrm T}$. $\blacksquare$
 
----
-
 ## 2-6
 
 Solve the following system using both the square root method and the improved square root method:
@@ -142,8 +134,6 @@ Improved square root method: form $A=\widetilde L D\widetilde L^{\mathrm T}$, wh
 
 Hence $x=\left(1,1,1,1\right)^{\mathrm T}$. $\blacksquare$
 
----
-
 ## 2-8
 
 Solve the following system using the Thomas algorithm:
@@ -163,8 +153,6 @@ Forward sweep ($Ly=d$): $u_1=b_1=2$, $y_1=d_1=0$; $l_2=a_2/u_1=-1/2=-0.5$, $u_2=
 Backward sweep ($Ux=y$): $x_4=y_4/u_4=3/1.25=2.4$; $x_3=\left[y_3-c_3 x_4\right]/u_3=\left[2/3-\left(-1\right)\times2.4\right]/\left(4/3\right)=2.3$; $x_2=\left[1-\left(-1\right)\times2.3\right]/1.5=2.2$; $x_1=\left[0-\left(-1\right)\times2.2\right]/2=1.1$.
 
 Hence $x=\left(1.1,2.2,2.3,2.4\right)^{\mathrm T}$. $\blacksquare$
-
----
 
 ## 2-10
 

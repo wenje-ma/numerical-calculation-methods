@@ -15,8 +15,6 @@
 > **定理 8.4 (迭代法收敛阶与迭代函数导数的关系)**
 > 
 > $\varphi^{\left(k\right)}\left(x^*\right)=0$ ($k< r$) 时 $r$ 阶收敛.
----
-
 ## 习题 8-3
 
 用简单迭代法求根.
@@ -24,8 +22,6 @@
 ### 解答 习题 8-3
 
 (1) $x\approx0.73908$, (2) $x\approx0.20389$, (3) $x\approx2.09455$. $\blacksquare$
-
----
 
 ## 习题 8-7
 
@@ -35,8 +31,6 @@
 
 $x^*\approx3.34740$, 线性收敛. $\blacksquare$
 
----
-
 ## 习题 8-8
 
 证明迭代收敛到 $\sqrt2$ 且二阶收敛.
@@ -44,8 +38,6 @@ $x^*\approx3.34740$, 线性收敛. $\blacksquare$
 ### 解答 习题 8-8
 
 $\varphi'\left(\sqrt2\right)=0$, $\varphi''\left(\sqrt2\right)\ne0$. $\blacksquare$
-
----
 
 ## 习题 8-10
 
@@ -55,8 +47,6 @@ $\varphi'\left(\sqrt2\right)=0$, $\varphi''\left(\sqrt2\right)\ne0$. $\blacksqua
 
 (1) $3.14619$, (2) $0.56714$, (3) $0.51097$. $\blacksquare$
 
----
-
 ## 习题 8-12
 
 牛顿法求 $x^3-x-1=0$ 的根.
@@ -65,8 +55,6 @@ $\varphi'\left(\sqrt2\right)=0$, $\varphi''\left(\sqrt2\right)\ne0$. $\blacksqua
 
 $x^*\approx1.3247$, 二阶收敛. $\blacksquare$
 
----
-
 ## 习题 8-13
 
 证明牛顿法对重根线性收敛, 改进格式二阶收敛.
@@ -74,8 +62,6 @@ $x^*\approx1.3247$, 二阶收敛. $\blacksquare$
 ### 解答 习题 8-13
 
 比值 $\left(r-1\right)/r$. $\blacksquare$
-
----
 
 ## 习题 8-16(1)
 

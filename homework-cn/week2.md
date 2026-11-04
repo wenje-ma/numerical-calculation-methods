@@ -24,8 +24,6 @@
 > 
 > 由向量范数诱导的矩阵范数为 $\left\|A\right\|=\max_{\left\|x\right\|=1}\left\|Ax\right\|$, 且满足相容性 $\left\|Ax\right\|\le\left\|A\right\|\left\|x\right\|$. 常用的 1-范数 (列范数) 与 $\infty$-范数 (行范数) 为 $\left\|A\right\|_1=\max_{1\le j\le n}\sum_{i=1}^{n}\left|a_{ij}\right|$, $\left\|A\right\|_\infty=\max_{1\le i\le n}\sum_{j=1}^{n}\left|a_{ij}\right|$.
 
----
-
 ## 2-1
 
 分别用高斯消去法, 列主元素法和全主元素法解下列方程组, 计算过程保留 3 位小数:
@@ -66,8 +64,6 @@ $$
 
 $\blacksquare$
 
----
-
 ## 2-2
 
 用三角分解法求解题 1 中的方程组.
@@ -83,8 +79,6 @@ L=\begin{bmatrix}1&0&0\\0.5&1&0\\3&-19&1\end{bmatrix},\quad U=\begin{bmatrix}2&6
 $$
 
 前代: $y_1=4$, $y_2=3-0.5\times4=1$, $y_3=2-3\times4-\left(-19\right)\times1=9$. 回代: $x_3=9/\left(-27\right)=-1/3$, $x_2=\left[1-\left(-3\right)\times\left(-1/3\right)\right]/1=0$, $x_1=\left[4-\left(-4\right)\times\left(-1/3\right)\right]/2=4/3$. 即 $x=\left(4/3,0,-1/3\right)^{\mathrm T}$. $\blacksquare$
-
----
 
 ## 2-3
 
@@ -116,8 +110,6 @@ $$
 
 所以 $x=\left(-1,1,-1,1\right)^{\mathrm T}$. $\blacksquare$
 
----
-
 ## 2-6
 
 分别用平方根法和改进平方根法求解方程组:
@@ -142,8 +134,6 @@ $$
 
 故 $x=\left(1,1,1,1\right)^{\mathrm T}$. $\blacksquare$
 
----
-
 ## 2-8
 
 用追赶法解下列方程组:
@@ -163,8 +153,6 @@ $$
 赶 (回代 $Ux=y$): $x_4=y_4/u_4=3/1.25=2.4$; $x_3=\left[y_3-c_3 x_4\right]/u_3=\left[2/3-\left(-1\right)\times2.4\right]/\left(4/3\right)=2.3$; $x_2=\left[1-\left(-1\right)\times2.3\right]/1.5=2.2$; $x_1=\left[0-\left(-1\right)\times2.2\right]/2=1.1$.
 
 故 $x=\left(1.1,2.2,2.3,2.4\right)^{\mathrm T}$. $\blacksquare$
-
----
 
 ## 2-10
 
