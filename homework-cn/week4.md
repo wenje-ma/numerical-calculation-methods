@@ -1,41 +1,47 @@
 # week4
 
-## 习题 4-1(2)
+> **定义 1.1 (绝对误差与误差限)**
+> 
+> 设 $x^{*}$ 为准确值 $x$ 的一个近似值, 称 $e\left(x^{*}\right)=x-x^{*}$ 为近似值 $x^{*}$ 的绝对误差, 简称误差. 若存在正数 $\varepsilon$ 使得 $\left|e\left(x^{*}\right)\right|=\left|x-x^{*}\right|\le\varepsilon$, 则称 $\varepsilon$ 为近似值 $x^{*}$ 的绝对误差限, 简称误差限.
 
-用幂法求 $A=\begin{bmatrix}4&-1&1\\-1&3&-2\\1&-2&3\end{bmatrix}$ 的最大模特征值.
+> **定理 1.1 (相对误差限与有效数字的关系)**
+> 
+> 若 $x$ 的近似值 $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ 有 $n$ 位有效数字, 则 $\frac{1}{2a_1}\times10^{-n+1}$ 为其相对误差限. 反之, 若 $x^{*}$ 的相对误差限 $\varepsilon_r$ 满足 $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, 则 $x^{*}$ 至少具有 $n$ 位有效数字.
 
-### 解答 习题 4-1(2)
+> **定义 1.2 (相对误差与相对误差限)**
+> 
+> 设 $x^{*}$ 为准确值 $x$ 的近似值, 称 $e_r\left(x^{*}\right)=\frac{e\left(x^{*}\right)}{x^{*}}$ 为近似值 $x^{*}$ 的相对误差. 若存在正数 $\varepsilon_r$ 使得 $\left|e_r\left(x^{*}\right)\right|\le\varepsilon_r$, 则称 $\varepsilon_r$ 为 $x^{*}$ 的相对误差限.
 
-$\lambda_1\approx6$, 特征向量 $\left(1,-1,1\right)^\top$. $\blacksquare$
+> **定义 1.3 (有效数字)**
+> 
+> 如果近似值 $x^{*}$ 的规格化形式为 $x^{*}=\pm0.a_1a_2\cdots a_n\cdots\times10^{m}$, 其中 $m$ 为整数, $a_1\ne0$, 且 $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, 则称近似值 $x^{*}$ 有 $n$ 位有效数字.
 
-## 习题 4-2
+## 1-12
 
-用艾特肯加速求最大模特征值, 4 位有效数字.
+试改变下列表达式, 使计算结果比较精确: (1) $\frac{1}{1+2x}-\frac{1-x}{1+x}$, $\left|x\right|\ll1$; (2) $\sqrt{x+\frac{1}{x}}-\sqrt{x-\frac{1}{x}}$, $\left|x\right|\gg1$; (3) $\frac{\tan x-\sin x}{x^{2}}$, $\left|x\right|\ll1$ 且 $x\ne0$. (仅要求第 (1) 小题)
 
-### 解答 习题 4-2
+### 解答 1-12
 
-$\lambda_1\approx6.000$. $\blacksquare$
+由避免两个相近的数相减, 当 $\left|x\right|\ll1$ 时, $\frac{1}{1+2x}$ 与 $\frac{1-x}{1+x}$ 都接近 $1$, 直接相减会严重丢失有效数字. 对表达式通分合并:
 
-## 习题 4-4
+$$
+\frac{1}{1+2x}-\frac{1-x}{1+x}=\frac{\left(1+x\right)-\left(1-x\right)\left(1+2x\right)}{\left(1+2x\right)\left(1+x\right)}.
+$$
 
-用反幂法求对应于 $1.2679$ 的特征向量.
+而
 
-### 解答 习题 4-4
+$$
+\left(1-x\right)\left(1+2x\right)=1+2x-x-2x^{2}=1+x-2x^{2},
+$$
 
-$x\approx\left(1,-0.732,0.268\right)^\top$. $\blacksquare$
+$$
+\left(1+x\right)-\left(1-x\right)\left(1+2x\right)=\left(1+x\right)-\left(1+x-2x^{2}\right)=2x^{2},
+$$
 
-## 习题 4-7
+故
 
-证明瑞利商的极值为最小/最大特征值.
+$$
+\frac{1}{1+2x}-\frac{1-x}{1+x}=\frac{2x^{2}}{\left(1+2x\right)\left(1+x\right)}.
+$$
 
-### 解答 习题 4-7
-
-正交对角化后展开. $\blacksquare$
-
-## 习题 4-8(2)
-
-用雅可比方法求 $A=\begin{bmatrix}2&-1&0\\-1&-2&-1\\0&-1&2\end{bmatrix}$ 的全部特征值.
-
-### 解答 习题 4-8(2)
-
-$\lambda\approx2.449,2.000,-2.449$. $\blacksquare$
+当 $\left|x\right|\ll1$ 时, $\left(1+2x\right)\left(1+x\right)$ 接近 $1$, 改写后的分母不涉及相近数相减, 分子 $2x^{2}$ 很小, 从而避免了有效数字的丢失. 故应改用 $\frac{2x^{2}}{\left(1+2x\right)\left(1+x\right)}$ 计算. $\blacksquare$
