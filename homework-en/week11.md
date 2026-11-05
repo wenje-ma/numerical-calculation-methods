@@ -78,7 +78,7 @@ $p\left(x\right)=0.8731+1.6903x$. $\blacksquare$
 
 ## Exercise 6-15
 
-Legendre approximation of $\sin x$.
+Legendre approximation of $\sin{x}$.
 
 ### Solution to Exercise 6-15
 

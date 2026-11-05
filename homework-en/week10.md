@@ -10,7 +10,7 @@
 
 > **Theorem 5.2 (Piecewise Linear Remainder)**
 > 
-> $\left|R\right|\le h^2M/8$.
+> $\left|R\right|\le{h}^2M/8$.
 
 > **Definition 5.3 (Lagrange Interpolation)**
 > 

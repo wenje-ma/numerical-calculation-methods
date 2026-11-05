@@ -6,7 +6,7 @@
 
 > **Theorem 1.1 (Relation Between the Relative Error Bound and Significant Digits)**
 > 
-> If the approximation $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ of $x$ has $n$ significant digits, then $\frac{1}{2a_1}\times10^{-n+1}$ is its relative error bound. Conversely, if the relative error bound $\varepsilon_r$ of $x^{*}$ satisfies $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, then $x^{*}$ has at least $n$ significant digits.
+> If the approximation $x^{*}=\pm0.a_1a_2\cdots{a}_n\times10^{m}\left(a_1\ne0\right)$ of $x$ has $n$ significant digits, then $\frac{1}{2a_1}\times10^{-n+1}$ is its relative error bound. Conversely, if the relative error bound $\varepsilon_r$ of $x^{*}$ satisfies $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, then $x^{*}$ has at least $n$ significant digits.
 
 > **Definition 1.2 (Relative Error and Relative Error Bound)**
 > 
@@ -14,11 +14,11 @@
 
 > **Definition 1.3 (Significant Digits)**
 > 
-> If the normalized form of the approximation $x^{*}$ is $x^{*}=\pm0.a_1a_2\cdots a_n\cdots\times10^{m}$, where $m$ is an integer, $a_1\ne0$, and $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, then $x^{*}$ is said to have $n$ significant digits.
+> If the normalized form of the approximation $x^{*}$ is $x^{*}=\pm0.a_1a_2\cdots{a}_n\cdots\times10^{m}$, where $m$ is an integer, $a_1\ne0$, and $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, then $x^{*}$ is said to have $n$ significant digits.
 
 ## 1-3
 
-Given that $a=1.2031$ and $b=0.978$ are approximations obtained after rounding, how many significant digits do $a+b$ and $a\times b$ have?
+Given that $a=1.2031$ and $b=0.978$ are approximations obtained after rounding, how many significant digits do $a+b$ and $a\times{b}$ have?
 
 ### Solution to 1-3
 
@@ -30,20 +30,20 @@ $$
 \left|e\left(a+b\right)\right|\le\left|e\left(a\right)\right|+\left|e\left(b\right)\right|\le\frac{1}{2}\times10^{-4}+\frac{1}{2}\times10^{-3}=0.00055.
 $$
 
-Moreover, $2.1811=0.21811\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{1-4}=\frac{1}{2}\times10^{-3}=0.0005< 0.00055\le\frac{1}{2}\times10^{1-3}=\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3 (Significant Digits)**, $a+b$ has 3 significant digits.
+Moreover, $2.1811=0.21811\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{1-4}=\frac{1}{2}\times10^{-3}=0.0005<0.00055\le\frac{1}{2}\times10^{1-3}=\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3 (Significant Digits)**, $a+b$ has 3 significant digits.
 
-Next consider the product $a\times b=1.2031\times0.978=1.17663$. By **Definition 1.2 (Relative Error and Relative Error Bound)** and Error Propagation in Basic Operations, the relative error bound of a product does not exceed the sum of the relative error bounds of the individual numbers, so
+Next consider the product $a\times{b}=1.2031\times0.978=1.17663$. By **Definition 1.2 (Relative Error and Relative Error Bound)** and Error Propagation in Basic Operations, the relative error bound of a product does not exceed the sum of the relative error bounds of the individual numbers, so
 
 $$
 \left|e_r\left(a\right)\right|\le\frac{\frac{1}{2}\times10^{-4}}{1.2031}\approx4.156\times10^{-5},\quad\left|e_r\left(b\right)\right|\le\frac{\frac{1}{2}\times10^{-3}}{0.978}\approx5.113\times10^{-4},
 $$
 
 $$
-\left|e_r\left(a\times b\right)\right|\le\left|e_r\left(a\right)\right|+\left|e_r\left(b\right)\right|\approx5.528\times10^{-4},
+\left|e_r\left(a\times{b}\right)\right|\le\left|e_r\left(a\right)\right|+\left|e_r\left(b\right)\right|\approx5.528\times10^{-4},
 $$
 
 $$
-\left|e\left(a\times b\right)\right|\approx\left|a\times b\right|\cdot\left|e_r\left(a\times b\right)\right|\approx1.17663\times5.528\times10^{-4}\approx6.505\times10^{-4}.
+\left|e\left(a\times{b}\right)\right|\approx\left|a\times{b}\right|\cdot\left|e_r\left(a\times{b}\right)\right|\approx1.17663\times5.528\times10^{-4}\approx6.505\times10^{-4}.
 $$
 
-Moreover, $1.17663=0.117663\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{-3}=0.0005< 6.505\times10^{-4}\le\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3 (Significant Digits)**, $a\times b$ has 3 significant digits. $\blacksquare$
+Moreover, $1.17663=0.117663\times10^{1}$ ($m=1$), and $\frac{1}{2}\times10^{-3}=0.0005<6.505\times10^{-4}\le\frac{1}{2}\times10^{-2}=0.005$, so by **Definition 1.3 (Significant Digits)**, $a\times{b}$ has 3 significant digits. $\blacksquare$

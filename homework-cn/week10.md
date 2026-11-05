@@ -10,15 +10,15 @@
 
 > **定理 5.2 (分段线性插值余项)**
 > 
-> $\left|R\right|\le h^2M/8$.
+> $\left|R\right|\le{h}^2M/8$.
 
 > **定义 5.3 (拉格朗日插值多项式)**
 > 
-> $l_i\left(x\right)=\prod_{j\ne i}\left(x-x_j\right)/\left(x_i-x_j\right)$.
+> $l_i\left(x\right)=\prod_{j\ne{i}}\left(x-x_j\right)/\left(x_i-x_j\right)$.
 
 > **定义 5.4 (差商与牛顿插值多项式)**
 > 
-> $N_n\left(x\right)=\sum f\left[x_0,\cdots,x_k\right]\prod\left(x-x_j\right)$.
+> $N_n\left(x\right)=\sum{f}\left[x_0,\cdots,x_k\right]\prod\left(x-x_j\right)$.
 
 > **定理 5.5 (埃尔米特插值余项)**
 > 
@@ -34,11 +34,11 @@
 
 > **定义 6.2 (正交函数系)**
 > 
-> $\left(\varphi_j,\varphi_k\right)=0$ ($j\ne k$).
+> $\left(\varphi_j,\varphi_k\right)=0$ ($j\ne{k}$).
 
 > **定义 6.3 (最佳平方逼近函数)**
 > 
-> 使 $\int w\left(f-p\right)^2\mathrm dx$ 最小.
+> 使 $\int{w}\left(f-p\right)^2\mathrm{d}x$ 最小.
 
 ## 习题 4-2
 

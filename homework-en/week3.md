@@ -6,7 +6,7 @@
 
 > **Theorem 1.1 (Relation Between the Relative Error Bound and Significant Digits)**
 > 
-> If the approximation $x^{*}=\pm0.a_1a_2\cdots a_n\times10^{m}\left(a_1\ne0\right)$ of $x$ has $n$ significant digits, then $\frac{1}{2a_1}\times10^{-n+1}$ is its relative error bound. Conversely, if the relative error bound $\varepsilon_r$ of $x^{*}$ satisfies $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, then $x^{*}$ has at least $n$ significant digits.
+> If the approximation $x^{*}=\pm0.a_1a_2\cdots{a}_n\times10^{m}\left(a_1\ne0\right)$ of $x$ has $n$ significant digits, then $\frac{1}{2a_1}\times10^{-n+1}$ is its relative error bound. Conversely, if the relative error bound $\varepsilon_r$ of $x^{*}$ satisfies $\varepsilon_r\le\frac{1}{2}\times10^{-n}$, then $x^{*}$ has at least $n$ significant digits.
 
 > **Definition 1.2 (Relative Error and Relative Error Bound)**
 > 
@@ -14,7 +14,7 @@
 
 > **Definition 1.3 (Significant Digits)**
 > 
-> If the normalized form of the approximation $x^{*}$ is $x^{*}=\pm0.a_1a_2\cdots a_n\cdots\times10^{m}$, where $m$ is an integer, $a_1\ne0$, and $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, then $x^{*}$ is said to have $n$ significant digits.
+> If the normalized form of the approximation $x^{*}$ is $x^{*}=\pm0.a_1a_2\cdots{a}_n\cdots\times10^{m}$, where $m$ is an integer, $a_1\ne0$, and $\left|x-x^{*}\right|\le\frac{1}{2}\times10^{m-n}$, then $x^{*}$ is said to have $n$ significant digits.
 
 ## 1-10
 
@@ -57,7 +57,7 @@ $$
 while $x_2=\frac{1}{55.983}\approx0.017862=0.17862\times10^{-1}$, so
 
 $$
-\left|e\left(x_2\right)\right|\approx x_2\left|e_r\left(x_2\right)\right|\approx0.017862\times8.93\times10^{-6}\approx1.595\times10^{-7}\le\frac{1}{2}\times10^{-1-4}=\frac{1}{2}\times10^{-5},
+\left|e\left(x_2\right)\right|\approx{x}_2\left|e_r\left(x_2\right)\right|\approx0.017862\times8.93\times10^{-6}\approx1.595\times10^{-7}\le\frac{1}{2}\times10^{-1-4}=\frac{1}{2}\times10^{-5},
 $$
 
 by **Definition 1.3 (Significant Digits)**, $x_2\approx0.017862$ has at least 4 significant digits.

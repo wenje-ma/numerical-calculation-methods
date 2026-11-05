@@ -30,7 +30,7 @@
 
 > **Theorem 8.2 (Convergence Condition)**
 > 
-> $\left|\varphi'\right|\le L< 1$.
+> $\left|\varphi'\right|\le{L}<1$.
 
 > **Theorem 8.4 (Order and Derivatives)**
 > 

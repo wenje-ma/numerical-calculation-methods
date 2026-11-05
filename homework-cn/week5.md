@@ -6,11 +6,11 @@
 
 > **定理 2.1 (直接三角分解的存在唯一性)**
 > 
-> 设 $A$ 为 $n$ 阶方阵, 若 $A$ 的各阶顺序主子式 $\det A_i$ ($i=1,2,\dots,n-1$) 均不为零, 则 $A$ 有唯一的杜利特尔分解 $A=LU$, 其中 $L$ 为单位下三角形矩阵, $U$ 为上三角形矩阵. 此时解 $Ax=b$ 等价于依次求解 $Ly=b$, $Ux=y$.
+> 设 $A$ 为 $n$ 阶方阵, 若 $A$ 的各阶顺序主子式 $\det{A}_i$ ($i=1,2,\dots,n-1$) 均不为零, 则 $A$ 有唯一的杜利特尔分解 $A=LU$, 其中 $L$ 为单位下三角形矩阵, $U$ 为上三角形矩阵. 此时解 $Ax=b$ 等价于依次求解 $Ly=b$, $Ux=y$.
 
 > **定理 2.3 (追赶法)**
 > 
-> 当三对角矩阵 $A$ 满足按行对角占优条件时, 可分解为 $A=LU$, 其中 $u_1=b_1$, $l_i=a_i/u_{i-1}$, $u_i=b_i-c_{i-1}l_i$; 追 (前代) 为 $y_1=d_1$, $y_k=d_k-l_k y_{k-1}$, 赶 (回代) 为 $x_n=\frac{y_n}{u_n}$, $x_k=\frac{y_k-c_k x_{k+1}}{u_k}$ ($k=n-1,\dots,1$).
+> 当三对角矩阵 $A$ 满足按行对角占优条件时, 可分解为 $A=LU$, 其中 $u_1=b_1$, $l_i=a_i/u_{i-1}$, $u_i=b_i-c_{i-1}l_i$; 追 (前代) 为 $y_1=d_1$, $y_k=d_k-l_ky_{k-1}$, 赶 (回代) 为 $x_n=\frac{y_n}{u_n}$, $x_k=\frac{y_k-c_kx_{k+1}}{u_k}$ ($k=n-1,\dots,1$).
 
 > **定义 2.4 (矩阵的条件数)**
 > 
@@ -18,11 +18,11 @@
 
 > **定理 2.4 (对称正定矩阵的乔列斯基分解)**
 > 
-> 设 $A$ 为对称正定矩阵, 则存在唯一的对角元皆为正数的下三角形矩阵 $L$, 使 $A=LL^{\mathrm T}$, 即平方根法. 由比较 $A=LL^{\mathrm T}$ 得 $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$, $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. 求解 $Ax=b$ 化为依次解 $Ly=b$ 与 $L^{\mathrm T}x=y$. 又 $A$ 可分解为 $A=LDL^{\mathrm T}$ (改进平方根法, $L$ 为单位下三角, $D$ 为对角阵), 运算中无须开方.
+> 设 $A$ 为对称正定矩阵, 则存在唯一的对角元皆为正数的下三角形矩阵 $L$, 使 $A=LL^{\mathrm{T}}$, 即平方根法. 由比较 $A=LL^{\mathrm{T}}$ 得 $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$, $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. 求解 $Ax=b$ 化为依次解 $Ly=b$ 与 $L^{\mathrm{T}}x=y$. 又 $A$ 可分解为 $A=LDL^{\mathrm{T}}$ (改进平方根法, $L$ 为单位下三角, $D$ 为对角阵), 运算中无须开方.
 
 > **定理 2.5 (矩阵的算子范数)**
 > 
-> 由向量范数诱导的矩阵范数为 $\left\|A\right\|=\max_{\left\|x\right\|=1}\left\|Ax\right\|$, 且满足相容性 $\left\|Ax\right\|\le\left\|A\right\|\left\|x\right\|$. 常用的 1-范数 (列范数) 与 $\infty$-范数 (行范数) 为 $\left\|A\right\|_1=\max_{1\le j\le n}\sum_{i=1}^{n}\left|a_{ij}\right|$, $\left\|A\right\|_\infty=\max_{1\le i\le n}\sum_{j=1}^{n}\left|a_{ij}\right|$.
+> 由向量范数诱导的矩阵范数为 $\left\|A\right\|=\max_{\left\|x\right\|=1}\left\|Ax\right\|$, 且满足相容性 $\left\|Ax\right\|\le\left\|A\right\|\left\|x\right\|$. 常用的 1-范数 (列范数) 与 $\infty$-范数 (行范数) 为 $\left\|A\right\|_1=\max_{1\le{j}\le{n}}\sum_{i=1}^{n}\left|a_{ij}\right|$, $\left\|A\right\|_\infty=\max_{1\le{i}\le{n}}\sum_{j=1}^{n}\left|a_{ij}\right|$.
 
 ## 2-1
 
@@ -39,7 +39,7 @@ $$
 方程组的增广矩阵为
 
 $$
-\overline A=\begin{bmatrix}2&6&-4&4\\1&4&-5&3\\6&-1&18&2\end{bmatrix}.
+\overline{A}=\begin{bmatrix}2&6&-4&4\\1&4&-5&3\\6&-1&18&2\end{bmatrix}.
 $$
 
 先按高斯消去法 消元. 第 1 步取 $a_{11}=2$ 为主元, 乘子 $l_{21}=1/2=0.500$, $l_{31}=6/2=3.000$, 第 2, 3 行分别减去第 1 行的相应倍数, 得
@@ -59,7 +59,7 @@ $$
 列主元素法在第 1 列中选绝对值最大者 $\left|6\right|$ 作行交换, 全主元素法在全部剩余元素中选最大者作行, 列交换; 本题主元 $2,1,-27$ 均非小量, 选主元交换后消元所得上三角形方程组与上相同, 回代结果一致. 故
 
 $$
-x_1=1.333,\quad x_2=0.000,\quad x_3=-0.333.
+x_1=1.333,\quad{x}_2=0.000,\quad{x}_3=-0.333.
 $$
 
 $\blacksquare$
@@ -72,10 +72,10 @@ $\blacksquare$
 
 由**定理 2.1 (直接三角分解的存在唯一性)** 及紧凑格式三角分解计算公式, 对题 1 的方程组作杜利特尔分解 $A=LU$, 再依次解 $Ly=b$, $Ux=y$.
 
-方程组 $A=\begin{bmatrix}2&6&-4\\1&4&-5\\6&-1&18\end{bmatrix}$, $b=\left(4,3,2\right)^{\mathrm T}$. 紧凑格式算得
+方程组 $A=\begin{bmatrix}2&6&-4\\1&4&-5\\6&-1&18\end{bmatrix}$, $b=\left(4,3,2\right)^{\mathrm{T}}$. 紧凑格式算得
 
 $$
-L=\begin{bmatrix}1&0&0\\0.5&1&0\\3&-19&1\end{bmatrix},\quad U=\begin{bmatrix}2&6&-4\\0&1&-3\\0&0&-27\end{bmatrix}.
+L=\begin{bmatrix}1&0&0\\0.5&1&0\\3&-19&1\end{bmatrix},\quad{U}=\begin{bmatrix}2&6&-4\\0&1&-3\\0&0&-27\end{bmatrix}.
 $$
 
-前代: $y_1=4$, $y_2=3-0.5\times4=1$, $y_3=2-3\times4-\left(-19\right)\times1=9$. 回代: $x_3=9/\left(-27\right)=-1/3$, $x_2=\left[1-\left(-3\right)\times\left(-1/3\right)\right]/1=0$, $x_1=\left[4-\left(-4\right)\times\left(-1/3\right)\right]/2=4/3$. 即 $x=\left(4/3,0,-1/3\right)^{\mathrm T}$. $\blacksquare$
+前代: $y_1=4$, $y_2=3-0.5\times4=1$, $y_3=2-3\times4-\left(-19\right)\times1=9$. 回代: $x_3=9/\left(-27\right)=-1/3$, $x_2=\left[1-\left(-3\right)\times\left(-1/3\right)\right]/1=0$, $x_1=\left[4-\left(-4\right)\times\left(-1/3\right)\right]/2=4/3$. 即 $x=\left(4/3,0,-1/3\right)^{\mathrm{T}}$. $\blacksquare$
