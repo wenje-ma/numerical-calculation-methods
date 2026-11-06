@@ -18,7 +18,7 @@
 
 > **Theorem 2.4 (Cholesky Decomposition of a Symmetric Positive Definite Matrix)**
 > 
-> Let $A$ be a symmetric positive definite matrix. Then there exists a unique lower triangular matrix $L$ with positive diagonal entries such that $A=LL^{\mathrm{T}}$, known as the square root method. Comparing $A=LL^{\mathrm{T}}$ gives $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$ and $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. Solving $Ax=b$ reduces to solving $Ly=b$ and $L^{\mathrm{T}}x=y$ in sequence. Also $A$ can be decomposed as $A=LDL^{\mathrm{T}}$ (improved square root method, where $L$ is unit lower triangular and $D$ is diagonal), avoiding square roots.
+> Let $A$ be a symmetric positive definite matrix. Then there exists a unique lower triangular matrix $L$ with positive diagonal entries such that $A=LL^\top$, known as the square root method. Comparing $A=LL^\top$ gives $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$ and $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. Solving $Ax=b$ reduces to solving $Ly=b$ and $L^\topx=y$ in sequence. Also $A$ can be decomposed as $A=LDL^\top$ (improved square root method, where $L$ is unit lower triangular and $D$ is diagonal), avoiding square roots.
 
 > **Theorem 2.5 (Operator Norm of a Matrix)**
 > 
