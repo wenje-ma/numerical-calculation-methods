@@ -18,7 +18,7 @@
 
 > **Theorem 2.4 (Cholesky Decomposition of a Symmetric Positive Definite Matrix)**
 > 
-> Let $A$ be a symmetric positive definite matrix. Then there exists a unique lower triangular matrix $L$ with positive diagonal entries such that $A=LL^\top$, known as the square root method. Comparing $A=LL^\top$ gives $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$ and $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. Solving $Ax=b$ reduces to solving $Ly=b$ and $L^\topx=y$ in sequence. Also $A$ can be decomposed as $A=LDL^\top$ (improved square root method, where $L$ is unit lower triangular and $D$ is diagonal), avoiding square roots.
+> Let $A$ be a symmetric positive definite matrix. Then there exists a unique lower triangular matrix $L$ with positive diagonal entries such that $A=LL^{\top}$, known as the square root method. Comparing $A=LL^{\top}$ gives $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$ and $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. Solving $Ax=b$ reduces to solving $Ly=b$ and $L^{\top}x=y$ in sequence. Also $A$ can be decomposed as $A=LDL^{\top}$ (improved square root method, where $L$ is unit lower triangular and $D$ is diagonal), avoiding square roots.
 
 > **Theorem 2.5 (Operator Norm of a Matrix)**
 > 
@@ -72,10 +72,10 @@ Solve the system in Problem 1 using triangular decomposition.
 
 By **Theorem 2.1 (Existence and Uniqueness of Direct Triangular Decomposition)** and Compact Formulas for Triangular Decomposition, perform the Doolittle decomposition $A=LU$ on the system of Problem 1, then solve $Ly=b$ and $Ux=y$ in sequence.
 
-The system has $A=\begin{bmatrix}2&6&-4\\1&4&-5\\6&-1&18\end{bmatrix}$ and $b=\left(4,3,2\right)^\top$. The compact formulas give
+The system has $A=\begin{bmatrix}2&6&-4\\1&4&-5\\6&-1&18\end{bmatrix}$ and $b=\left(4,3,2\right)^{\top}$. The compact formulas give
 
 $$
 L=\begin{bmatrix}1&0&0\\0.5&1&0\\3&-19&1\end{bmatrix},\quad{U}=\begin{bmatrix}2&6&-4\\0&1&-3\\0&0&-27\end{bmatrix}.
 $$
 
-Forward substitution: $y_1=4$, $y_2=3-0.5\times4=1$, $y_3=2-3\times4-\left(-19\right)\times1=9$. Back substitution: $x_3=9/\left(-27\right)=-1/3$, $x_2=\left[1-\left(-3\right)\times\left(-1/3\right)\right]/1=0$, $x_1=\left[4-\left(-4\right)\times\left(-1/3\right)\right]/2=4/3$. Thus $x=\left(4/3,0,-1/3\right)^\top$. $\blacksquare$
+Forward substitution: $y_1=4$, $y_2=3-0.5\times4=1$, $y_3=2-3\times4-\left(-19\right)\times1=9$. Back substitution: $x_3=9/\left(-27\right)=-1/3$, $x_2=\left[1-\left(-3\right)\times\left(-1/3\right)\right]/1=0$, $x_1=\left[4-\left(-4\right)\times\left(-1/3\right)\right]/2=4/3$. Thus $x=\left(4/3,0,-1/3\right)^{\top}$. $\blacksquare$

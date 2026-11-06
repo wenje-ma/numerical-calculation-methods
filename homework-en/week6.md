@@ -18,7 +18,7 @@
 
 > **Theorem 2.4 (Cholesky Decomposition of a Symmetric Positive Definite Matrix)**
 > 
-> Let $A$ be a symmetric positive definite matrix. Then there exists a unique lower triangular matrix $L$ with positive diagonal entries such that $A=LL^\top$, known as the square root method. Comparing $A=LL^\top$ gives $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$ and $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. Solving $Ax=b$ reduces to solving $Ly=b$ and $L^\topx=y$ in sequence. Also $A$ can be decomposed as $A=LDL^\top$ (improved square root method, where $L$ is unit lower triangular and $D$ is diagonal), avoiding square roots.
+> Let $A$ be a symmetric positive definite matrix. Then there exists a unique lower triangular matrix $L$ with positive diagonal entries such that $A=LL^{\top}$, known as the square root method. Comparing $A=LL^{\top}$ gives $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$ and $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. Solving $Ax=b$ reduces to solving $Ly=b$ and $L^{\top}x=y$ in sequence. Also $A$ can be decomposed as $A=LDL^{\top}$ (improved square root method, where $L$ is unit lower triangular and $D$ is diagonal), avoiding square roots.
 
 > **Theorem 2.5 (Operator Norm of a Matrix)**
 > 
@@ -50,6 +50,6 @@ $$
 L=\begin{bmatrix}1&0&0&0\\1&1&0&0\\1&3&1&0\\1&7&6&1\end{bmatrix},\quad{U}=\begin{bmatrix}1&2&3&4\\0&2&6&12\\0&0&6&24\\0&0&0&24\end{bmatrix}.
 $$
 
-Appending $b=\left(2,10,44,190\right)^\top$ as the last column, forward substitution gives $y_1=2$, $y_2=10-1\times2=8$, $y_3=44-1\times2-3\times8=18$, $y_4=190-1\times2-7\times8-6\times18=24$. Back substitution: $x_4=24/24=1$, $x_3=\left(18-24\times1\right)/6=-1$, $x_2=\left[8-6\times\left(-1\right)-12\times1\right]/2=1$, $x_1=2-2\times1-3\times\left(-1\right)-4\times1=-1$.
+Appending $b=\left(2,10,44,190\right)^{\top}$ as the last column, forward substitution gives $y_1=2$, $y_2=10-1\times2=8$, $y_3=44-1\times2-3\times8=18$, $y_4=190-1\times2-7\times8-6\times18=24$. Back substitution: $x_4=24/24=1$, $x_3=\left(18-24\times1\right)/6=-1$, $x_2=\left[8-6\times\left(-1\right)-12\times1\right]/2=1$, $x_1=2-2\times1-3\times\left(-1\right)-4\times1=-1$.
 
-Therefore $x=\left(-1,1,-1,1\right)^\top$. $\blacksquare$
+Therefore $x=\left(-1,1,-1,1\right)^{\top}$. $\blacksquare$

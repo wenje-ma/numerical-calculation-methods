@@ -18,7 +18,7 @@
 
 > **定理 2.4 (对称正定矩阵的乔列斯基分解)**
 > 
-> 设 $A$ 为对称正定矩阵, 则存在唯一的对角元皆为正数的下三角形矩阵 $L$, 使 $A=LL^\top$, 即平方根法. 由比较 $A=LL^\top$ 得 $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$, $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. 求解 $Ax=b$ 化为依次解 $Ly=b$ 与 $L^\topx=y$. 又 $A$ 可分解为 $A=LDL^\top$ (改进平方根法, $L$ 为单位下三角, $D$ 为对角阵), 运算中无须开方.
+> 设 $A$ 为对称正定矩阵, 则存在唯一的对角元皆为正数的下三角形矩阵 $L$, 使 $A=LL^{\top}$, 即平方根法. 由比较 $A=LL^{\top}$ 得 $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$, $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. 求解 $Ax=b$ 化为依次解 $Ly=b$ 与 $L^{\top}x=y$. 又 $A$ 可分解为 $A=LDL^{\top}$ (改进平方根法, $L$ 为单位下三角, $D$ 为对角阵), 运算中无须开方.
 
 > **定理 2.5 (矩阵的算子范数)**
 > 
@@ -72,10 +72,10 @@ $\blacksquare$
 
 由**定理 2.1 (直接三角分解的存在唯一性)** 及紧凑格式三角分解计算公式, 对题 1 的方程组作杜利特尔分解 $A=LU$, 再依次解 $Ly=b$, $Ux=y$.
 
-方程组 $A=\begin{bmatrix}2&6&-4\\1&4&-5\\6&-1&18\end{bmatrix}$, $b=\left(4,3,2\right)^\top$. 紧凑格式算得
+方程组 $A=\begin{bmatrix}2&6&-4\\1&4&-5\\6&-1&18\end{bmatrix}$, $b=\left(4,3,2\right)^{\top}$. 紧凑格式算得
 
 $$
 L=\begin{bmatrix}1&0&0\\0.5&1&0\\3&-19&1\end{bmatrix},\quad{U}=\begin{bmatrix}2&6&-4\\0&1&-3\\0&0&-27\end{bmatrix}.
 $$
 
-前代: $y_1=4$, $y_2=3-0.5\times4=1$, $y_3=2-3\times4-\left(-19\right)\times1=9$. 回代: $x_3=9/\left(-27\right)=-1/3$, $x_2=\left[1-\left(-3\right)\times\left(-1/3\right)\right]/1=0$, $x_1=\left[4-\left(-4\right)\times\left(-1/3\right)\right]/2=4/3$. 即 $x=\left(4/3,0,-1/3\right)^\top$. $\blacksquare$
+前代: $y_1=4$, $y_2=3-0.5\times4=1$, $y_3=2-3\times4-\left(-19\right)\times1=9$. 回代: $x_3=9/\left(-27\right)=-1/3$, $x_2=\left[1-\left(-3\right)\times\left(-1/3\right)\right]/1=0$, $x_1=\left[4-\left(-4\right)\times\left(-1/3\right)\right]/2=4/3$. 即 $x=\left(4/3,0,-1/3\right)^{\top}$. $\blacksquare$

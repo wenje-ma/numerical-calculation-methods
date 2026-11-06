@@ -54,7 +54,7 @@ $\lambda_1\approx6.000$. $\blacksquare$
 
 ### 解答 习题 4-4
 
-$x\approx\left(1,-0.732,0.268\right)^\top$. $\blacksquare$
+$x\approx\left(1,-0.732,0.268\right)^{\top}$. $\blacksquare$
 
 ## 习题 4-7
 

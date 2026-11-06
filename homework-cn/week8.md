@@ -18,7 +18,7 @@
 
 > **定理 2.4 (对称正定矩阵的乔列斯基分解)**
 > 
-> 设 $A$ 为对称正定矩阵, 则存在唯一的对角元皆为正数的下三角形矩阵 $L$, 使 $A=LL^\top$, 即平方根法. 由比较 $A=LL^\top$ 得 $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$, $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. 求解 $Ax=b$ 化为依次解 $Ly=b$ 与 $L^\topx=y$. 又 $A$ 可分解为 $A=LDL^\top$ (改进平方根法, $L$ 为单位下三角, $D$ 为对角阵), 运算中无须开方.
+> 设 $A$ 为对称正定矩阵, 则存在唯一的对角元皆为正数的下三角形矩阵 $L$, 使 $A=LL^{\top}$, 即平方根法. 由比较 $A=LL^{\top}$ 得 $l_{kk}=\left(a_{kk}-\sum_{j=1}^{k-1}l_{kj}^{2}\right)^{1/2}$, $l_{ik}=\frac{a_{ik}-\sum_{j=1}^{k-1}l_{ij}l_{kj}}{l_{kk}}$. 求解 $Ax=b$ 化为依次解 $Ly=b$ 与 $L^{\top}x=y$. 又 $A$ 可分解为 $A=LDL^{\top}$ (改进平方根法, $L$ 为单位下三角, $D$ 为对角阵), 运算中无须开方.
 
 > **定理 2.5 (矩阵的算子范数)**
 > 
@@ -36,10 +36,10 @@ $$
 
 ### 解答 2-8
 
-由**定义 2.1 (三对角方程组)**, 本题主对角 $b_i=2$, 下次对角 $a_i=-1$, 上次对角 $c_i=-1$, 右端 $d=\left(0,1,0,2.5\right)^\top$, 且满足按行对角占优. 由**定理 2.3 (追赶法)**.
+由**定义 2.1 (三对角方程组)**, 本题主对角 $b_i=2$, 下次对角 $a_i=-1$, 上次对角 $c_i=-1$, 右端 $d=\left(0,1,0,2.5\right)^{\top}$, 且满足按行对角占优. 由**定理 2.3 (追赶法)**.
 
 追 (前代 $Ly=d$): $u_1=b_1=2$, $y_1=d_1=0$; $l_2=a_2/u_1=-1/2=-0.5$, $u_2=2-\left(-1\right)\times\left(-0.5\right)=1.5$, $y_2=1-\left(-0.5\right)\times0=1$; $l_3=-1/1.5=-2/3$, $u_3=2-\left(-1\right)\times\left(-2/3\right)=4/3$, $y_3=0-\left(-2/3\right)\times1=2/3$; $l_4=-1/\left(4/3\right)=-3/4$, $u_4=2-\left(-1\right)\times\left(-3/4\right)=5/4$, $y_4=2.5-\left(-3/4\right)\times\left(2/3\right)=3$.
 
 赶 (回代 $Ux=y$): $x_4=y_4/u_4=3/1.25=2.4$; $x_3=\left[y_3-c_3x_4\right]/u_3=\left[2/3-\left(-1\right)\times2.4\right]/\left(4/3\right)=2.3$; $x_2=\left[1-\left(-1\right)\times2.3\right]/1.5=2.2$; $x_1=\left[0-\left(-1\right)\times2.2\right]/2=1.1$.
 
-故 $x=\left(1.1,2.2,2.3,2.4\right)^\top$. $\blacksquare$
+故 $x=\left(1.1,2.2,2.3,2.4\right)^{\top}$. $\blacksquare$

@@ -54,7 +54,7 @@ Inverse power method.
 
 ### Solution to Exercise 4-4
 
-$x\approx\left(1,-0.732,0.268\right)^\top$. $\blacksquare$
+$x\approx\left(1,-0.732,0.268\right)^{\top}$. $\blacksquare$
 
 ## Exercise 4-7
 
