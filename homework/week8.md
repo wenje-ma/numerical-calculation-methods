@@ -2,11 +2,11 @@
 
 > **定义 6.1 (以给定权关于点集的正交函数族)**
 > 
-> 若函数族 $\left\{\varphi_0\left(x\right),\varphi_1\left(x\right),\ldots,\varphi_m\left(x\right)\right\}$ 满足 $\left(\varphi_k,\varphi_k\right)=\sum_{i=1}^{n}\omega_i\varphi_k^{2}\left(x_i\right)>0$ ($k=0,1,\ldots,m$) 且 $\left(\varphi_k,\varphi_j\right)=0$ ($k\ne j$), 其中 $\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^{n}\omega_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right)$, 则称它为以 $\left\{\omega_i\right\}$ 为权关于点集 $\left\{x_1,x_2,\ldots,x_n\right\}$ 的正交函数族. (教材 $\S6.1$, p176)
+> 若函数族 $\left\{\varphi_0\left(x\right),\varphi_1\left(x\right),\ldots,\varphi_m\left(x\right)\right\}$ 满足 $\left(\varphi_k,\varphi_k\right)=\sum_{i=1}^{n}\omega_i\varphi_k^{2}\left(x_i\right)>0$ ($k=0,1,\ldots,m$) 且 $\left(\varphi_k,\varphi_j\right)=0$ ($k\ne{}j$), 其中 $\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^{n}\omega_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right)$, 则称它为以 $\left\{\omega_i\right\}$ 为权关于点集 $\left\{x_1,x_2,\ldots,x_n\right\}$ 的正交函数族. (教材 $\S6.1$, p176)
 
 > **定理 6.1 (正则方程组的解即最小二乘函数)**
 > 
-> 设 $\varphi_0\left(x\right),\ldots,\varphi_m\left(x\right)$ 线性无关, $a_0,a_1,\ldots,a_m$ 为正则方程组 $\sum_{k=0}^{m}\left(\varphi_k,\varphi_j\right)a_k=\left(y,\varphi_j\right)$ ($j=0,1,\ldots,m$) 的解, 则 $\varphi\left(x\right)=\sum_{k=0}^{m}a_k\varphi_k\left(x\right)$ 满足 $\sum_{i=1}^{n}\omega_i\left[y_i-\varphi\left(x_i\right)\right]^{2}=\min_{\psi\in H}\sum_{i=1}^{n}\omega_i\left[y_i-\psi\left(x_i\right)\right]^{2}$. (教材 $\S6.1$, p175)
+> 设 $\varphi_0\left(x\right),\ldots,\varphi_m\left(x\right)$ 线性无关, $a_0,a_1,\ldots,a_m$ 为正则方程组 $\sum_{k=0}^{m}\left(\varphi_k,\varphi_j\right)a_k=\left(y,\varphi_j\right)$ ($j=0,1,\ldots,m$) 的解, 则 $\varphi\left(x\right)=\sum_{k=0}^{m}a_k\varphi_k\left(x\right)$ 满足 $\sum_{i=1}^{n}\omega_i\left[y_i-\varphi\left(x_i\right)\right]^{2}=\min_{\psi\in{}H}\sum_{i=1}^{n}\omega_i\left[y_i-\psi\left(x_i\right)\right]^{2}$. (教材 $\S6.1$, p175)
 
 > **定理 6.2 (正交函数系必定线性无关)**
 > 
@@ -14,7 +14,7 @@
 
 > **定义 6.3 (最佳平方逼近多项式)**
 > 
-> 设 $f\left(x\right)$ 在 $\left[a,b\right]$ 上连续, $\varphi_i\left(x\right)$ ($i=0,1,\ldots,m$) 为 $\left[a,b\right]$ 上线性无关的连续函数, $H=\mathrm{Span}\left\{\varphi_0,\ldots,\varphi_m\right\}$. 若 $\varphi\left(x\right)=\sum_{k=0}^{m}a_k\varphi_k\left(x\right)$ 使 $F\left(a_0,\ldots,a_m\right)=\int_a^b\omega\left(x\right)\left[f\left(x\right)-\sum_{k=0}^{m}a_k\varphi_k\left(x\right)\right]^{2}\mathrm{d}x=\min_{\psi\in H}\int_a^b\omega\left(x\right)\left[f\left(x\right)-\psi\left(x\right)\right]^{2}\mathrm{d}x$, 则称 $\varphi$ 为 $f$ 在 $H$ 中关于权函数 $\omega\left(x\right)$ 的最佳平方逼近函数; 若 $\varphi_k$ 为 $k$ 次多项式, 则称 $\varphi$ 为 $m$ 次最佳平方逼近多项式. 未指明权函数时取 $\omega\left(x\right)\equiv1$. (教材 $\S6.3$, p184)
+> 设 $f\left(x\right)$ 在 $\left[a,b\right]$ 上连续, $\varphi_i\left(x\right)$ ($i=0,1,\ldots,m$) 为 $\left[a,b\right]$ 上线性无关的连续函数, $H=\mathrm{Span}\left\{\varphi_0,\ldots,\varphi_m\right\}$. 若 $\varphi\left(x\right)=\sum_{k=0}^{m}a_k\varphi_k\left(x\right)$ 使 $F\left(a_0,\ldots,a_m\right)=\int_a^b\omega\left(x\right)\left[f\left(x\right)-\sum_{k=0}^{m}a_k\varphi_k\left(x\right)\right]^{2}\mathrm{d}x=\min_{\psi\in{}H}\int_a^b\omega\left(x\right)\left[f\left(x\right)-\psi\left(x\right)\right]^{2}\mathrm{d}x$, 则称 $\varphi$ 为 $f$ 在 $H$ 中关于权函数 $\omega\left(x\right)$ 的最佳平方逼近函数; 若 $\varphi_k$ 为 $k$ 次多项式, 则称 $\varphi$ 为 $m$ 次最佳平方逼近多项式. 未指明权函数时取 $\omega\left(x\right)\equiv1$. (教材 $\S6.3$, p184)
 
 > **定理 6.5 (最佳平方逼近的充要条件)**
 > 
@@ -66,13 +66,13 @@ $$
 五个和:
 
 $$
-n=10,\quad \sum u_i=2.692262,\quad \sum u_i^{2}=1.492967,\quad \sum v_i=1.232960,\quad \sum u_iv_i=0.458577.
+n=10,\quad\sum{}u_i=2.692262,\quad\sum{}u_i^{2}=1.492967,\quad\sum{}v_i=1.232960,\quad\sum{}u_iv_i=0.458577.
 $$
 
 **解**. 由**定理 6.1 (正则方程组的解即最小二乘函数)**, 正则方程组为
 
 $$
-\begin{cases}10a+2.692262\,b=1.232960,\\ 2.692262\,a+1.492967\,b=0.458577,\end{cases}
+\begin{cases}10a+2.692262\,b=1.232960,\\2.692262\,a+1.492967\,b=0.458577,\end{cases}
 $$
 
 $\Delta=10\times1.492967-2.692262^{2}=14.929670-7.248275=7.681395$, 故
@@ -105,21 +105,21 @@ $\blacksquare$
 
 **先把"线性无关"定在哪一层**. 由**定义 6.1 (以给定权关于点集的正交函数族)**, 这里的内积是离散和 $\left(\varphi,\psi\right)=\sum_{i=1}^{n}\omega_i\varphi\left(x_i\right)\psi\left(x_i\right)$. 设节点 $x_1,\ldots,x_n$ 互异且权 $\omega_i>0$, 把 $\varphi_k$ 看成在节点上取值的向量 $\Phi_k=\left(\varphi_k\left(x_1\right),\ldots,\varphi_k\left(x_n\right)\right)\in\mathbb{R}^{n}$, 则 $\left(\varphi_k,\varphi_j\right)=\Phi_k^{\mathrm{T}}W\Phi_j$, 其中 $W=\mathrm{diag}\left(\omega_1,\ldots,\omega_n\right)$ 正定. 题目中的"线性无关"就指这组向量的无关性, 这也正是正则方程组系数矩阵非奇异所需要的. 记 $G=\left(\left(\varphi_i,\varphi_j\right)\right)_{i,j=0}^{n}$.
 
-**必要性**. 若 $\left\{\varphi_k\right\}$ 线性相关, 则存在不全为零的 $c_0,\ldots,c_n$ 使 $\Phi c=0$, 其中 $\Phi=\left(\Phi_0,\ldots,\Phi_n\right)$, $c=\left(c_0,\ldots,c_n\right)^{\mathrm{T}}$. 两边左乘 $\Phi^{\mathrm{T}}W$ 得 $\Phi^{\mathrm{T}}W\Phi c=0$, 即 $Gc=0$. 因 $c\ne0$, $G$ 有非零向量被映为零, 故 $\det G=0$.
+**必要性**. 若 $\left\{\varphi_k\right\}$ 线性相关, 则存在不全为零的 $c_0,\ldots,c_n$ 使 $\Phi{}c=0$, 其中 $\Phi=\left(\Phi_0,\ldots,\Phi_n\right)$, $c=\left(c_0,\ldots,c_n\right)^{\mathrm{T}}$. 两边左乘 $\Phi^{\mathrm{T}}W$ 得 $\Phi^{\mathrm{T}}W\Phi{}c=0$, 即 $Gc=0$. 因 $c\ne0$, $G$ 有非零向量被映为零, 故 $\det{}G=0$.
 
 $\blacksquare$
 
-**充分性**. 若 $\det G=0$, 则 $G$ 奇异, 存在 $c\ne0$ 使 $Gc=0$. 两边左乘 $c^{\mathrm{T}}$ 得
+**充分性**. 若 $\det{}G=0$, 则 $G$ 奇异, 存在 $c\ne0$ 使 $Gc=0$. 两边左乘 $c^{\mathrm{T}}$ 得
 
 $$
-c^{\mathrm{T}}Gc=\sum_{i=0}^{n}\sum_{j=0}^{n}c_ic_j\left(\varphi_i,\varphi_j\right)=\left(\sum_{i=0}^{n}c_i\varphi_i,\ \sum_{j=0}^{n}c_j\varphi_j\right)=\left(\Phi c\right)^{\mathrm{T}}W\left(\Phi c\right)=0.
+c^{\mathrm{T}}Gc=\sum_{i=0}^{n}\sum_{j=0}^{n}c_ic_j\left(\varphi_i,\varphi_j\right)=\left(\sum_{i=0}^{n}c_i\varphi_i,\sum_{j=0}^{n}c_j\varphi_j\right)=\left(\Phi{}c\right)^{\mathrm{T}}W\left(\Phi{}c\right)=0.
 $$
 
-$W$ 正定, 故 $\left(\Phi c\right)^{\mathrm{T}}W\left(\Phi c\right)=0$ 当且仅当 $\Phi c=0$. 于是存在不全为零的系数使 $\sum_{k}c_k\Phi_k=0$, 即 $\left\{\Phi_k\right\}$ 线性相关, 与假设矛盾.
+$W$ 正定, 故 $\left(\Phi{}c\right)^{\mathrm{T}}W\left(\Phi{}c\right)=0$ 当且仅当 $\Phi{}c=0$. 于是存在不全为零的系数使 $\sum_{k}c_k\Phi_k=0$, 即 $\left\{\Phi_k\right\}$ 线性相关, 与假设矛盾.
 
 $\blacksquare$
 
-**两点附注**. 其一, 若 $\det G\ne0$, 则 $\left\{\varphi_k\right\}$ 作为函数也线性无关: 恒等于零的函数在每个节点取零, 故函数相关必导致向量相关. 其二, 反向不成立, 因为两个不同的函数可以在给定节点上取相同的值; 所以题目把"线性无关"与节点上的 Gram 行列式对应起来, 本质上是在说 $\Phi$ 的列无关性, 而 Gram 矩阵只是 $\Phi$ 的加权 Gram 矩阵, 由 $\Phi^{\mathrm{T}}W\Phi$ 与 $\Phi$ 的列空间维数相同 (因 $W$ 正定) 即可看出.
+**两点附注**. 其一, 若 $\det{}G\ne0$, 则 $\left\{\varphi_k\right\}$ 作为函数也线性无关: 恒等于零的函数在每个节点取零, 故函数相关必导致向量相关. 其二, 反向不成立, 因为两个不同的函数可以在给定节点上取相同的值; 所以题目把"线性无关"与节点上的 Gram 行列式对应起来, 本质上是在说 $\Phi$ 的列无关性, 而 Gram 矩阵只是 $\Phi$ 的加权 Gram 矩阵, 由 $\Phi^{\mathrm{T}}W\Phi$ 与 $\Phi$ 的列空间维数相同 (因 $W$ 正定) 即可看出.
 
 $\blacksquare$
 
@@ -136,13 +136,13 @@ $\blacksquare$
 由**定理 6.5 (最佳平方逼近的充要条件)** 的等价形式 (投影条件 $\left(f-\varphi,\varphi_j\right)=0$), 正则方程组为
 
 $$
-\begin{cases}a_0+\dfrac{1}{2}a_1=e-1,\\ \dfrac{1}{2}a_0+\dfrac{1}{3}a_1=1.\end{cases}
+\begin{cases}a_0+\dfrac{1}{2}a_1=e-1,\\\dfrac{1}{2}a_0+\dfrac{1}{3}a_1=1.\end{cases}
 $$
 
 由第一式 $a_0=e-1-\dfrac{a_1}{2}$, 代入第二式:
 
 $$
-\frac{e-1}{2}-\frac{a_1}{4}+\frac{a_1}{3}=1\quad\Longrightarrow\quad\frac{e-1}{2}+\frac{a_1}{12}=1\quad\Longrightarrow\quad a_1=12\left(1-\frac{e-1}{2}\right)=18-6e,
+\frac{e-1}{2}-\frac{a_1}{4}+\frac{a_1}{3}=1\quad\Longrightarrow\quad\frac{e-1}{2}+\frac{a_1}{12}=1\quad\Longrightarrow\quad{}a_1=12\left(1-\frac{e-1}{2}\right)=18-6e,
 $$
 
 $$
@@ -167,42 +167,42 @@ $$
 
 $\blacksquare$
 
-## 习题 6-15 (用 Legendre 多项式求 $f\left(x\right)=\sin x$ 的三次最佳平方逼近)
+## 习题 6-15 (用 Legendre 多项式求 $f\left(x\right)=\sin{}x$ 的三次最佳平方逼近)
 
-利用 Legendre 多项式, 求 $f\left(x\right)=\sin x$ 在 $\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$ 上的三次最佳平方逼近多项式 $P_3\left(x\right)$, 并计算均方误差 $\int_{-\pi/2}^{\pi/2}\left[\sin x-P_3\left(x\right)\right]^{2}\mathrm{d}x$.
+利用 Legendre 多项式, 求 $f\left(x\right)=\sin{}x$ 在 $\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$ 上的三次最佳平方逼近多项式 $P_3\left(x\right)$, 并计算均方误差 $\int_{-\pi/2}^{\pi/2}\left[\sin{}x-P_3\left(x\right)\right]^{2}\mathrm{d}x$.
 
 ### 解答 6-15
 
-**变到 $\left[-1,1\right]$**. 令 $x=\dfrac{\pi}{2}t$, 则 $f\left(t\right)=\sin\dfrac{\pi t}{2}$, $t\in\left[-1,1\right]$, 权函数为 $1$. 由**定义 6.3 (最佳平方逼近多项式)**, 三次最佳平方逼近多项式即 $H=\mathrm{Span}\left\{1,t,t^{2},t^{3}\right\}$ 中的最佳平方逼近函数; 取正交基为 Legendre 多项式
+**变到 $\left[-1,1\right]$**. 令 $x=\dfrac{\pi}{2}t$, 则 $f\left(t\right)=\sin\dfrac{\pi{}t}{2}$, $t\in\left[-1,1\right]$, 权函数为 $1$. 由**定义 6.3 (最佳平方逼近多项式)**, 三次最佳平方逼近多项式即 $H=\mathrm{Span}\left\{1,t,t^{2},t^{3}\right\}$ 中的最佳平方逼近函数; 取正交基为 Legendre 多项式
 
 $$
-P_0\left(t\right)=1,\qquad P_1\left(t\right)=t,\qquad P_2\left(t\right)=\frac{3t^{2}-1}{2},\qquad P_3\left(t\right)=\frac{5t^{3}-3t}{2}.
+P_0\left(t\right)=1,\quad{}P_1\left(t\right)=t,\quad{}P_2\left(t\right)=\frac{3t^{2}-1}{2},\quad{}P_3\left(t\right)=\frac{5t^{3}-3t}{2}.
 $$
 
-由**定理 6.2 (正交函数系必定线性无关)**, 这组基线性无关; 它们还是 $\left[-1,1\right]$ 上关于权 $1$ 的正交系, 即 $\left(P_k,P_j\right)=0$ ($k\ne j$), $\left(P_k,P_k\right)=\dfrac{2}{2k+1}$. 于是投影条件 $\left(f-P_3,P_k\right)=0$ 给出
+由**定理 6.2 (正交函数系必定线性无关)**, 这组基线性无关; 它们还是 $\left[-1,1\right]$ 上关于权 $1$ 的正交系, 即 $\left(P_k,P_j\right)=0$ ($k\ne{}j$), $\left(P_k,P_k\right)=\dfrac{2}{2k+1}$. 于是投影条件 $\left(f-P_3,P_k\right)=0$ 给出
 
 $$
-a_k=\frac{\left(f,P_k\right)}{\left(P_k,P_k\right)},\qquad k=0,1,2,3.
+a_k=\frac{\left(f,P_k\right)}{\left(P_k,P_k\right)},\quad{}k=0,1,2,3.
 $$
 
-**奇偶性化简**. $f\left(t\right)=\sin\dfrac{\pi t}{2}$ 是奇函数, $P_0$ 与 $P_2$ 是偶函数, $P_1$ 与 $P_3$ 是奇函数, 在对称区间上奇偶函数之积积分为零, 故 $a_0=a_2=0$, 只需算 $a_1,a_3$.
+**奇偶性化简**. $f\left(t\right)=\sin\dfrac{\pi{}t}{2}$ 是奇函数, $P_0$ 与 $P_2$ 是偶函数, $P_1$ 与 $P_3$ 是奇函数, 在对称区间上奇偶函数之积积分为零, 故 $a_0=a_2=0$, 只需算 $a_1,a_3$.
 
 $\blacksquare$
 
 **系数**. 分部积分两次得
 
 $$
-\left(f,P_1\right)=\int_{-1}^{1}t\sin\frac{\pi t}{2}\,\mathrm{d}t=2\int_0^1t\sin\frac{\pi t}{2}\,\mathrm{d}t=2\left[-\frac{2}{\pi}t\cos\frac{\pi t}{2}+\frac{4}{\pi^{2}}\sin\frac{\pi t}{2}\right]_0^1=\frac{8}{\pi^{2}},
+\left(f,P_1\right)=\int_{-1}^{1}t\sin\frac{\pi{}t}{2}\,\mathrm{d}t=2\int_0^1t\sin\frac{\pi{}t}{2}\,\mathrm{d}t=2\left[-\frac{2}{\pi}t\cos\frac{\pi{}t}{2}+\frac{4}{\pi^{2}}\sin\frac{\pi{}t}{2}\right]_0^1=\frac{8}{\pi^{2}},
 $$
 
 $$
-\left(f,P_3\right)=\int_{-1}^{1}\frac{5t^{3}-3t}{2}\sin\frac{\pi t}{2}\,\mathrm{d}t=\frac{1}{2}\left[5\int_{-1}^{1}t^{3}\sin\frac{\pi t}{2}\,\mathrm{d}t-3\left(f,P_1\right)\right].
+\left(f,P_3\right)=\int_{-1}^{1}\frac{5t^{3}-3t}{2}\sin\frac{\pi{}t}{2}\,\mathrm{d}t=\frac{1}{2}\left[5\int_{-1}^{1}t^{3}\sin\frac{\pi{}t}{2}\,\mathrm{d}t-3\left(f,P_1\right)\right].
 $$
 
-其中 $\int_0^1t^{3}\sin\dfrac{\pi t}{2}\,\mathrm{d}t=\left[-\dfrac{2}{\pi}t^{3}\cos\dfrac{\pi t}{2}+\dfrac{12}{\pi^{2}}t^{2}\sin\dfrac{\pi t}{2}+\dfrac{48}{\pi^{3}}t\cos\dfrac{\pi t}{2}-\dfrac{96}{\pi^{4}}\sin\dfrac{\pi t}{2}\right]_0^1=\dfrac{12}{\pi^{2}}-\dfrac{96}{\pi^{4}}$, 由奇偶性
+其中 $\int_0^1t^{3}\sin\dfrac{\pi{}t}{2}\,\mathrm{d}t=\left[-\dfrac{2}{\pi}t^{3}\cos\dfrac{\pi{}t}{2}+\dfrac{12}{\pi^{2}}t^{2}\sin\dfrac{\pi{}t}{2}+\dfrac{48}{\pi^{3}}t\cos\dfrac{\pi{}t}{2}-\dfrac{96}{\pi^{4}}\sin\dfrac{\pi{}t}{2}\right]_0^1=\dfrac{12}{\pi^{2}}-\dfrac{96}{\pi^{4}}$, 由奇偶性
 
 $$
-\int_{-1}^{1}t^{3}\sin\frac{\pi t}{2}\,\mathrm{d}t=\frac{24}{\pi^{2}}-\frac{192}{\pi^{4}},
+\int_{-1}^{1}t^{3}\sin\frac{\pi{}t}{2}\,\mathrm{d}t=\frac{24}{\pi^{2}}-\frac{192}{\pi^{4}},
 $$
 
 $$
@@ -212,7 +212,7 @@ $$
 于是
 
 $$
-a_1=\frac{8/\pi^{2}}{2/3}=\frac{12}{\pi^{2}}\approx1.215854,\qquad a_3=\frac{48/\pi^{2}-480/\pi^{4}}{2/7}=\frac{168}{\pi^{2}}-\frac{1680}{\pi^{4}}\approx-0.224891.
+a_1=\frac{8/\pi^{2}}{2/3}=\frac{12}{\pi^{2}}\approx1.215854,\quad{}a_3=\frac{48/\pi^{2}-480/\pi^{4}}{2/7}=\frac{168}{\pi^{2}}-\frac{1680}{\pi^{4}}\approx-0.224891.
 $$
 
 $\blacksquare$
@@ -230,7 +230,7 @@ $\blacksquare$
 **均方误差**. 先算 $t$ 区间上的误差, 再由 $\mathrm{d}x=\dfrac{\pi}{2}\mathrm{d}t$ 换算. 因 $\left\{P_k\right\}$ 正交,
 
 $$
-\left\|f-P_3\right\|_{t}^{2}=\left(f,f\right)-\sum_{k=0}^{3}a_k^{2}\left(P_k,P_k\right),\qquad \left(f,f\right)=\int_{-1}^{1}\sin^{2}\frac{\pi t}{2}\,\mathrm{d}t=1,
+\left\|f-P_3\right\|_{t}^{2}=\left(f,f\right)-\sum_{k=0}^{3}a_k^{2}\left(P_k,P_k\right),\quad\left(f,f\right)=\int_{-1}^{1}\sin^{2}\frac{\pi{}t}{2}\,\mathrm{d}t=1,
 $$
 
 $$
@@ -240,7 +240,7 @@ $$
 故 $\left\|f-P_3\right\|_{t}^{2}=1.5386\times10^{-5}$, 于是
 
 $$
-\int_{-\pi/2}^{\pi/2}\left[\sin x-P_3\left(x\right)\right]^{2}\mathrm{d}x=\frac{\pi}{2}\cdot1.5386\times10^{-5}\approx2.417\times10^{-5},
+\int_{-\pi/2}^{\pi/2}\left[\sin{}x-P_3\left(x\right)\right]^{2}\mathrm{d}x=\frac{\pi}{2}\cdot1.5386\times10^{-5}\approx2.417\times10^{-5},
 $$
 
 即均方根误差约 $4.9\times10^{-3}$.
@@ -260,7 +260,7 @@ $\blacksquare$
 **真值与导数**. $f'\left(x\right)=-\dfrac{2}{\left(1+x\right)^{3}}$, 故 $f'\left(0.5\right)=-\dfrac{2}{1.5^{3}}=-\dfrac{16}{27}\approx-0.592593$. 又
 
 $$
-f''\left(x\right)=\frac{6}{\left(1+x\right)^{4}},\qquad f'''\left(x\right)=-\frac{24}{\left(1+x\right)^{5}}.
+f''\left(x\right)=\frac{6}{\left(1+x\right)^{4}},\quad{}f'''\left(x\right)=-\frac{24}{\left(1+x\right)^{5}}.
 $$
 
 **二点公式**. 取 $x_0=0.5$, $x_1=0.6$, 由**公式 (7.9) (两点公式)**,

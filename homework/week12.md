@@ -33,7 +33,7 @@
 证明由迭代格式
 
 $$
-x_{n+1}=\frac{x_n}{2}+\frac{1}{x_n}\qquad\left(n=0,1,2,\ldots\right)
+x_{n+1}=\frac{x_n}{2}+\frac{1}{x_n}\quad\left(n=0,1,2,\ldots\right)
 $$
 
 产生的迭代序列 $\left\{x_n\right\}$, 对任意 $x_0>1$ 均收敛到 $\sqrt{2}$, 且是二阶收敛的.
@@ -66,14 +66,14 @@ $$
 g\left(x\right)-x=\frac{1}{x}-\frac{x}{2}=\frac{2-x^{2}}{2x},
 $$
 
-故 $g\left(x\right)<x$ 当且仅当 $x>\sqrt{2}$, $g\left(x\right)=x$ 当且仅当 $x=\sqrt{2}$. 于是对 $n\ge1$, 若 $x_n>\sqrt{2}$ 则 $x_{n+1}<x_n$; 若 $x_n=\sqrt{2}$ 则序列从该步起停在 $\sqrt{2}$ (已是精确根).
+故 $g\left(x\right)<{}x$ 当且仅当 $x>\sqrt{2}$, $g\left(x\right)=x$ 当且仅当 $x=\sqrt{2}$. 于是对 $n\ge1$, 若 $x_n>\sqrt{2}$ 则 $x_{n+1}<{}x_n$; 若 $x_n=\sqrt{2}$ 则序列从该步起停在 $\sqrt{2}$ (已是精确根).
 
 $\blacksquare$
 
 **第三步: 收敛**. 分两种情形. 若某个 $x_n=\sqrt{2}$, 结论已成. 否则对一切 $n\ge1$ 有 $x_n>\sqrt{2}$, 由第二步 $\left\{x_n\right\}_{n\ge1}$ 单调递减且以 $\sqrt{2}$ 为下界, 故收敛, 记极限为 $L\ge\sqrt{2}>0$. 在递推式两端取极限, 由 $g$ 在 $L$ 处连续得
 
 $$
-L=\frac{L}{2}+\frac{1}{L}\implies L^{2}=2\implies L=\sqrt{2},
+L=\frac{L}{2}+\frac{1}{L}\Rightarrow{}L^{2}=2\Rightarrow{}L=\sqrt{2},
 $$
 
 (另有一根 $-\sqrt{2}$ 与 $L>0$ 矛盾). 所以对任意 $x_0>1$ 序列收敛到 $\sqrt{2}$.
@@ -109,16 +109,16 @@ $\blacksquare$
 
 ## 习题 8-10 (用 Newton 法解三个方程)
 
-用 Newton 法求解下列方程, 要求 $\left|x_{n+1}-x_n\right|<10^{-6}$: (1) $x-\ln x=2$; (2) $xe^{x}-1=0$; (3) $x+\sin x=1$.
+用 Newton 法求解下列方程, 要求 $\left|x_{n+1}-x_n\right|<10^{-6}$: (1) $x-\ln{}x=2$; (2) $xe^{x}-1=0$; (3) $x+\sin{}x=1$.
 
 ### 解答 8-10
 
 统一按**公式 (8.16) (Newton 迭代格式)** 计算. 各题在初值附近都满足**定理 8.5 (Newton 法的局部收敛性)** 的条件 (根为单根且 $f$ 二阶连续可微), 故收敛为二阶.
 
-**(1) $x-\ln x=2$**. $f\left(x\right)=x-\ln x-2$, $f'\left(x\right)=1-\dfrac{1}{x}$, 迭代格式
+**(1) $x-\ln{}x=2$**. $f\left(x\right)=x-\ln{}x-2$, $f'\left(x\right)=1-\dfrac{1}{x}$, 迭代格式
 
 $$
-x_{n+1}=x_n-\frac{x_n-\ln x_n-2}{1-1/x_n}.
+x_{n+1}=x_n-\frac{x_n-\ln{}x_n-2}{1-1/x_n}.
 $$
 
 取 $x_0=3$:
@@ -128,9 +128,9 @@ $$
 | $x_n$ | $3.000000000$ | $3.147918433$ | $3.146193441$ | $3.146193221$ |
 | $\left|x_n-x_{n-1}\right|$ | — | $1.48\times10^{-1}$ | $1.72\times10^{-3}$ | $2.2\times10^{-7}$ |
 
-$n=3$ 时满足要求, 故 $x^{*}\approx3.146193221$. 校验 $f\left(x^{*}\right)=x^{*}-\ln x^{*}-2=2.6\times10^{-10}$.
+$n=3$ 时满足要求, 故 $x^{*}\approx3.146193221$. 校验 $f\left(x^{*}\right)=x^{*}-\ln{}x^{*}-2=2.6\times10^{-10}$.
 
-**注**. 该方程其实有两个正根: $x-\ln x-2$ 在 $x=1$ 处取最小值 $-1<0$, 而 $f\left(0.1\right)=0.40>0$, $f\left(4\right)=0.61>0$, 故在 $\left(0.1,1\right)$ 与 $\left(3,4\right)$ 内各有唯一根. 上表得到的是大根. 若取 $x_0=0.2$, 得到小根
+**注**. 该方程其实有两个正根: $x-\ln{}x-2$ 在 $x=1$ 处取最小值 $-1<0$, 而 $f\left(0.1\right)=0.40>0$, $f\left(4\right)=0.61>0$, 故在 $\left(0.1,1\right)$ 与 $\left(3,4\right)$ 内各有唯一根. 上表得到的是大根. 若取 $x_0=0.2$, 得到小根
 
 $$
 0.2\to0.152359478\to0.158447821\to0.158594259\to0.158594340,
@@ -157,10 +157,10 @@ $n=4$ 时 $\left|x_4-x_3\right|=1\times10^{-9}<10^{-6}$, 故 $x^{*}\approx0.5671
 
 $\blacksquare$
 
-**(3) $x+\sin x=1$**. $f\left(x\right)=x+\sin x-1$, $f'\left(x\right)=1+\cos x$, 迭代格式
+**(3) $x+\sin{}x=1$**. $f\left(x\right)=x+\sin{}x-1$, $f'\left(x\right)=1+\cos{}x$, 迭代格式
 
 $$
-x_{n+1}=x_n-\frac{x_n+\sin x_n-1}{1+\cos x_n}.
+x_{n+1}=x_n-\frac{x_n+\sin{}x_n-1}{1+\cos{}x_n}.
 $$
 
 取 $x_0=0.5$:
@@ -213,13 +213,13 @@ $\blacksquare$
 **收敛阶**. 相邻误差满足
 
 $$
-\frac{e_{n+1}}{e_n^{2}}:\quad0.752,\ 0.903,\ 0.932,\ 0.931\ \longrightarrow\ 0.9319,
+\frac{e_{n+1}}{e_n^{2}}:\quad0.752,0.903,0.932,0.931\,\longrightarrow\,0.9319,
 $$
 
 而理论上由 $f\left(x^{*}\right)=0$ 得
 
 $$
-e_{n+1}=\frac{f''\left(x^{*}\right)}{2f'\left(x^{*}\right)}e_n^{2}+O\left(e_n^{3}\right),\qquad \frac{f''\left(x^{*}\right)}{2f'\left(x^{*}\right)}=\frac{6\times1.324718}{2\times4.264633}=0.9319,
+e_{n+1}=\frac{f''\left(x^{*}\right)}{2f'\left(x^{*}\right)}e_n^{2}+O\left(e_n^{3}\right),\quad\frac{f''\left(x^{*}\right)}{2f'\left(x^{*}\right)}=\frac{6\times1.324718}{2\times4.264633}=0.9319,
 $$
 
 两者吻合. 按**定义 8.2 (收敛阶)**, 第二个极限
@@ -253,7 +253,7 @@ $$
 在 $x^{*}$ 处, $h\left(x^{*}\right)=0$, $h'\left(x^{*}\right)=\varphi\left(x^{*}\right)$, $D\left(x^{*}\right)=r\varphi\left(x^{*}\right)$, $D'\left(x^{*}\right)=\left(r+1\right)\varphi'\left(x^{*}\right)$, $h''\left(x^{*}\right)=2\varphi'\left(x^{*}\right)$, $D''\left(x^{*}\right)=\left(r+2\right)\varphi''\left(x^{*}\right)$. 又
 
 $$
-\left(\frac{h}{D}\right)'\left(x^{*}\right)=\frac{h'D-hD'}{D^{2}}\left(x^{*}\right)=\frac{\varphi\left(x^{*}\right)\cdot r\varphi\left(x^{*}\right)-0}{\left(r\varphi\left(x^{*}\right)\right)^{2}}=\frac{1}{r}.
+\left(\frac{h}{D}\right)'\left(x^{*}\right)=\frac{h'D-hD'}{D^{2}}\left(x^{*}\right)=\frac{\varphi\left(x^{*}\right)\cdot{}r\varphi\left(x^{*}\right)-0}{\left(r\varphi\left(x^{*}\right)\right)^{2}}=\frac{1}{r}.
 $$
 
 $\blacksquare$
@@ -295,7 +295,7 @@ $$
 再算二阶导数. 对上式用商的二阶导数公式, 并注意 $\dfrac{h}{D}$ 在 $x^{*}$ 处为零而其一, 二阶导数不为零:
 
 $$
-\left(\frac{h}{D}\right)''\left(x^{*}\right)=\frac{h''}{D}\bigg|_{x^{*}}-2\frac{h'D'}{D^{2}}\bigg|_{x^{*}}-\frac{hD''}{D^{2}}\bigg|_{x^{*}}+2\frac{h\left(D'\right)^{2}}{D^{3}}\bigg|_{x^{*}}
+\left(\frac{h}{D}\right)''\left(x^{*}\right)=\left.\frac{h''}{D}\right|_{x^{*}}-\left.2\frac{h'D'}{D^{2}}\right|_{x^{*}}-\left.\frac{hD''}{D^{2}}\right|_{x^{*}}+\left.2\frac{h\left(D'\right)^{2}}{D^{3}}\right|_{x^{*}}
 $$
 
 $$
@@ -332,16 +332,16 @@ $\blacksquare$
 
 $\blacksquare$
 
-## 习题 8-16(1) (用割线法解 $x-\ln x=2$)
+## 习题 8-16(1) (用割线法解 $x-\ln{}x=2$)
 
-试用割线法求解方程 $x-\ln x=2$, 要求 $\left|x_{n+1}-x_n\right|<10^{-5}$.
+试用割线法求解方程 $x-\ln{}x=2$, 要求 $\left|x_{n+1}-x_n\right|<10^{-5}$.
 
 ### 解答 8-16(1)
 
 **格式与初值**. 按**公式 (8.19) (弦截法迭代格式)**,
 
 $$
-x_{n+1}=x_n-\frac{f\left(x_n\right)}{f\left(x_n\right)-f\left(x_{n-1}\right)}\left(x_n-x_{n-1}\right),\qquad f\left(x\right)=x-\ln x-2.
+x_{n+1}=x_n-\frac{f\left(x_n\right)}{f\left(x_n\right)-f\left(x_{n-1}\right)}\left(x_n-x_{n-1}\right),\quad{}f\left(x\right)=x-\ln{}x-2.
 $$
 
 由 $f\left(3\right)=-0.098612<0$, $f\left(4\right)=0.613706>0$, 取 $x_0=3$, $x_1=4$.

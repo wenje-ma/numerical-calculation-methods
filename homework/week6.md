@@ -10,7 +10,7 @@
 
 > **定义 5.4 (差商)**
 > 
-> 设 $f\left(x\right)$ 在互异点 $x_0,x_1,\ldots$ 上有值, 称 $\dfrac{f\left(x_i\right)-f\left(x_j\right)}{x_i-x_j}$ ($i\ne j$) 为 $f$ 关于 $x_i,x_j$ 的一阶差商; 一般地 $k$ 阶差商由 $k-1$ 阶差商递归定义 $f\left[x_0,x_1,\ldots,x_k\right]=\dfrac{f\left[x_1,\ldots,x_k\right]-f\left[x_0,\ldots,x_{k-1}\right]}{x_k-x_0}$. (教材 $\S5.3$, p138)
+> 设 $f\left(x\right)$ 在互异点 $x_0,x_1,\ldots$ 上有值, 称 $\dfrac{f\left(x_i\right)-f\left(x_j\right)}{x_i-x_j}$ ($i\ne{}j$) 为 $f$ 关于 $x_i,x_j$ 的一阶差商; 一般地 $k$ 阶差商由 $k-1$ 阶差商递归定义 $f\left[x_0,x_1,\ldots,x_k\right]=\dfrac{f\left[x_1,\ldots,x_k\right]-f\left[x_0,\ldots,x_{k-1}\right]}{x_k-x_0}$. (教材 $\S5.3$, p138)
 
 > **定义 5.7 (差分)**
 > 
@@ -18,7 +18,7 @@
 
 > **定理 5.2 (分段线性插值的余项)**
 > 
-> 如果 $f\left(x\right)$ 在 $\left[a,b\right]$ 上二阶连续可微, 则分段线性插值函数 $\varphi\left(x\right)$ 的余项有估计 $\left|f\left(x\right)-\varphi\left(x\right)\right|\le\dfrac{h^{2}}{8}\max_{a\le x\le b}\left|f''\left(x\right)\right|$, 其中 $h$ 为步长. (教材 $\S5.4$, p150)
+> 如果 $f\left(x\right)$ 在 $\left[a,b\right]$ 上二阶连续可微, 则分段线性插值函数 $\varphi\left(x\right)$ 的余项有估计 $\left|f\left(x\right)-\varphi\left(x\right)\right|\le\dfrac{h^{2}}{8}\max_{a\le{}x\le{}b}\left|f''\left(x\right)\right|$, 其中 $h$ 为步长. (教材 $\S5.4$, p150)
 
 > **定义 5.9 (Hermite 插值)**
 > 
@@ -38,10 +38,10 @@ $$
 
 ### 解答 5-7
 
-(1) 固定 $x$, 把 $g\left(t\right)=\left(t-x\right)^{k}$ 看作 $t$ 的多项式. 因 $k\le n$, $g$ 的次数不超过 $n$. 而 $\sum_{j=0}^{n}g\left(x_j\right)l_j\left(x\right)$ 是一个关于 $x$ 的次数不超过 $n$ 与 在节点 $x_0,\ldots,x_n$ 上取值为 $g\left(x_j\right)$ 的多项式, 即 $g$ 在这组节点上的 $n$ 次插值多项式. 由**定理 5.1 (插值多项式的存在唯一性)**, 它只能是 $g$ 本身, 即
+(1) 固定 $x$, 把 $g\left(t\right)=\left(t-x\right)^{k}$ 看作 $t$ 的多项式. 因 $k\le{}n$, $g$ 的次数不超过 $n$. 而 $\sum_{j=0}^{n}g\left(x_j\right)l_j\left(x\right)$ 是一个关于 $x$ 的次数不超过 $n$ 与 在节点 $x_0,\ldots,x_n$ 上取值为 $g\left(x_j\right)$ 的多项式, 即 $g$ 在这组节点上的 $n$ 次插值多项式. 由**定理 5.1 (插值多项式的存在唯一性)**, 它只能是 $g$ 本身, 即
 
 $$
-\sum_{j=0}^{n}\left(x_j-x\right)^{k}l_j\left(x\right)=g\left(x\right)=\left(x-x\right)^{k}=0,\qquad k=1,2,\ldots,n.
+\sum_{j=0}^{n}\left(x_j-x\right)^{k}l_j\left(x\right)=g\left(x\right)=\left(x-x\right)^{k}=0,\quad{}k=1,2,\ldots,n.
 $$
 
 若 $k=0$, 同样的论证给出 $\sum_jl_j\left(x\right)\equiv1$, 这正是基函数的单位分解性质, 也解释了 $k\ge1$ 时必须为零.
@@ -57,7 +57,7 @@ $$
 右端第二项的次数不超过 $n$, 故 $Q$ 的次数不超过 $n+1$, 且 $Q$ 的最高次项系数就是 $P$ 的最高次项系数 $1$ ($Q$ 是首一多项式). 又在每个节点处
 
 $$
-Q\left(x_i\right)=P\left(x_i\right)-\sum_{j=0}^{n}P\left(x_j\right)l_j\left(x_i\right)=P\left(x_i\right)-P\left(x_i\right)=0,\qquad i=0,1,\ldots,n,
+Q\left(x_i\right)=P\left(x_i\right)-\sum_{j=0}^{n}P\left(x_j\right)l_j\left(x_i\right)=P\left(x_i\right)-P\left(x_i\right)=0,\quad{}i=0,1,\ldots,n,
 $$
 
 这里用到 $l_j\left(x_i\right)=\delta_{ij}$. 于是 $Q$ 是次数不超过 $n+1$ 与 以 $x_0,\ldots,x_n$ 为根的首一多项式, 而这类多项式只有 $\prod_j\left(x-x_j\right)$ (次数 $n+1$ 且首一, 根已给定唯一确定), 故
@@ -96,7 +96,7 @@ f\left[x_0,x_1\right]=\frac{2.46259-2.41450}{1.634-1.615}=\frac{0.04809}{0.019}=
 $$
 
 $$
-f\left[x_1,x_2\right]=\frac{2.65271-2.46259}{1.702-1.634}=\frac{0.19012}{0.068}=2.79588235,\qquad f\left[x_2,x_3\right]=\frac{0.37764}{0.126}=2.99714286;
+f\left[x_1,x_2\right]=\frac{2.65271-2.46259}{1.702-1.634}=\frac{0.19012}{0.068}=2.79588235,\quad{}f\left[x_2,x_3\right]=\frac{0.37764}{0.126}=2.99714286;
 $$
 
 $$
@@ -155,7 +155,7 @@ $\blacksquare$
 (1) Newton 向前插值公式 (以 $x_0=1$ 为基点, $t=x-1$):
 
 $$
-N\left(x\right)=f_0+t\Delta f_0+\frac{t\left(t-1\right)}{2!}\Delta^{2}f_0+\frac{t\left(t-1\right)\left(t-2\right)}{3!}\Delta^{3}f_0
+N\left(x\right)=f_0+t\Delta{}f_0+\frac{t\left(t-1\right)}{2!}\Delta^{2}f_0+\frac{t\left(t-1\right)\left(t-2\right)}{3!}\Delta^{3}f_0
 =3+2t+\frac{t\left(t-1\right)}{2}\times2+0.
 $$
 
@@ -168,11 +168,11 @@ $$
 (2) Newton 向后插值公式 (以 $x_3=4$ 为基点, $t=x-4$, 用 $\nabla$ 差分):
 
 $$
-N\left(x\right)=f_3+t\nabla f_3+\frac{t\left(t+1\right)}{2!}\nabla^{2}f_3+\frac{t\left(t+1\right)\left(t+2\right)}{3!}\nabla^{3}f_3
+N\left(x\right)=f_3+t\nabla{}f_3+\frac{t\left(t+1\right)}{2!}\nabla^{2}f_3+\frac{t\left(t+1\right)\left(t+2\right)}{3!}\nabla^{3}f_3
 =15+6t+\frac{t\left(t+1\right)}{2}\times2+0,
 $$
 
-其中 $\nabla f_3=f_3-f_2=6$, $\nabla^{2}f_3=\nabla f_3-\nabla f_2=6-4=2$. 代入 $x=3.7$, $t=-0.3$:
+其中 $\nabla{}f_3=f_3-f_2=6$, $\nabla^{2}f_3=\nabla{}f_3-\nabla{}f_2=6-4=2$. 代入 $x=3.7$, $t=-0.3$:
 
 $$
 f\left(3.7\right)\approx15+6\times\left(-0.3\right)+\left(-0.3\right)\times0.7=15-1.8-0.21=12.99.
@@ -184,20 +184,20 @@ $\blacksquare$
 
 ## 习题 5-12 (插值步长的选取)
 
-在 $\left[0,\pi/2\right]$ 上给出 $f\left(x\right)=\sin x$ 的等距节点函数表, 为保证用分段线性插值求非节点处的正弦值时截断误差不超过 $10^{-6}$, 函数表的步长至多应取多大? 若改用分段二次插值, 步长至多应取多大?
+在 $\left[0,\pi/2\right]$ 上给出 $f\left(x\right)=\sin{}x$ 的等距节点函数表, 为保证用分段线性插值求非节点处的正弦值时截断误差不超过 $10^{-6}$, 函数表的步长至多应取多大? 若改用分段二次插值, 步长至多应取多大?
 
 ### 解答 5-12
 
 (1) 分段线性插值. 由**定理 5.2 (分段线性插值的余项)**, 在每个小区间 $\left[x_i,x_{i+1}\right]$ 上
 
 $$
-\left|f\left(x\right)-\varphi\left(x\right)\right|\le\frac{h^{2}}{8}\max_{x_i\le x\le x_{i+1}}\left|f''\left(x\right)\right|.
+\left|f\left(x\right)-\varphi\left(x\right)\right|\le\frac{h^{2}}{8}\max_{x_i\le{}x\le{}x_{i+1}}\left|f''\left(x\right)\right|.
 $$
 
-$f\left(x\right)=\sin x$ 满足 $\left|f''\left(x\right)\right|=\left|\sin x\right|\le1$, 故
+$f\left(x\right)=\sin{}x$ 满足 $\left|f''\left(x\right)\right|=\left|\sin{}x\right|\le1$, 故
 
 $$
-\frac{h^{2}}{8}\times1\le10^{-6}\quad\Longrightarrow\quad h\le\sqrt{8\times10^{-6}}=2\sqrt{2}\times10^{-3}\approx2.828\times10^{-3}.
+\frac{h^{2}}{8}\times1\le10^{-6}\quad\Longrightarrow\quad{}h\le\sqrt{8\times10^{-6}}=2\sqrt{2}\times10^{-3}\approx2.828\times10^{-3}.
 $$
 
 即步长不得超过 $0.0028$ (取 $\pi/2$ 均分时, 分段数 $n$ 需满足 $\left(\pi/2\right)/n\le0.00283$, 即 $n\ge556$).
@@ -223,7 +223,7 @@ $$
 $$
 
 $$
-\Longrightarrow\quad h\le\left(\frac{216}{\sqrt{3}}\times10^{-6}\right)^{1/3}=\left(1.24708\times10^{-4}\right)^{1/3}\approx0.04996.
+\Longrightarrow\quad{}h\le\left(\frac{216}{\sqrt{3}}\times10^{-6}\right)^{1/3}=\left(1.24708\times10^{-4}\right)^{1/3}\approx0.04996.
 $$
 
 即步长不得超过 $0.0500$ (校验: $h=0.05$ 时误差界为 $\sqrt{3}\times0.05^{3}/216=1.00\times10^{-6}$, 恰在临界; 取 $\pi/2$ 均分时 $n\ge32$).
@@ -260,11 +260,11 @@ $\blacksquare$
 逐格核对: $f\left[0,1\right]=\left(2-1\right)/1=1$; $f\left[1,2\right]=\left(1-2\right)/1=-1$; $f\left[2,2\right]=f'\left(2\right)=-1$; 
 
 $$
-f\left[0,0,1\right]=\frac{1-0}{1-0}=1,\quad f\left[0,1,2\right]=\frac{-1-1}{2-0}=-1,\quad f\left[1,2,2\right]=\frac{-1-\left(-1\right)}{2-1}=0;
+f\left[0,0,1\right]=\frac{1-0}{1-0}=1,\quad{}f\left[0,1,2\right]=\frac{-1-1}{2-0}=-1,\quad{}f\left[1,2,2\right]=\frac{-1-\left(-1\right)}{2-1}=0;
 $$
 
 $$
-f\left[0,0,1,2\right]=\frac{-1-1}{2-0}=-1,\quad f\left[0,1,2,2\right]=\frac{0-\left(-1\right)}{2-0}=0.5;
+f\left[0,0,1,2\right]=\frac{-1-1}{2-0}=-1,\quad{}f\left[0,1,2,2\right]=\frac{0-\left(-1\right)}{2-0}=0.5;
 $$
 
 $$
@@ -274,7 +274,7 @@ $$
 取对角线上元素构造:
 
 $$
-H_4\left(x\right)=1+0\cdot x+1\cdot x\left(x-0\right)+\left(-1\right)x\left(x-0\right)\left(x-1\right)+0.75\,x\left(x-0\right)\left(x-1\right)\left(x-2\right)
+H_4\left(x\right)=1+0\cdot{}x+1\cdot{}x\left(x-0\right)+\left(-1\right)x\left(x-0\right)\left(x-1\right)+0.75\,x\left(x-0\right)\left(x-1\right)\left(x-2\right)
 $$
 
 $$
@@ -284,11 +284,11 @@ $$
 校验五个条件:
 
 $$
-H_4\left(0\right)=1,\quad H_4\left(1\right)=0.75-3.25+3.5+1=2,\quad H_4\left(2\right)=12-26+14+1=1,
+H_4\left(0\right)=1,\quad{}H_4\left(1\right)=0.75-3.25+3.5+1=2,\quad{}H_4\left(2\right)=12-26+14+1=1,
 $$
 
 $$
-H_4'\left(x\right)=3x^{3}-9.75x^{2}+7x,\quad H_4'\left(0\right)=0,\quad H_4'\left(2\right)=24-39+14=-1,
+H_4'\left(x\right)=3x^{3}-9.75x^{2}+7x,\quad{}H_4'\left(0\right)=0,\quad{}H_4'\left(2\right)=24-39+14=-1,
 $$
 
 与表中数据及 $f'\left(0\right)=0$ 与 $f'\left(2\right)=-1$ 完全一致.
@@ -296,7 +296,7 @@ $$
 余项. 由**定义 5.2 (截断误差, 即插值余项)**, 插值余项由 $H_4$ 与被插函数之差给出. 因插值条件共 $5$ 个 (相当于 $5$ 个重节点), 余项形式为
 
 $$
-f\left(x\right)-H_4\left(x\right)=\frac{f^{\left(5\right)}\left(\xi\right)}{5!}\,x^{2}\left(x-1\right)\left(x-2\right)^{2},\qquad\xi\in\left(0,2\right)\ \text{依赖于}\ x,
+f\left(x\right)-H_4\left(x\right)=\frac{f^{\left(5\right)}\left(\xi\right)}{5!}\,x^{2}\left(x-1\right)\left(x-2\right)^{2},\quad\xi\in\left(0,2\right)\;\text{依赖于}\;x,
 $$
 
 其中 $x^{2}\left(x-1\right)\left(x-2\right)^{2}$ 是重节点的节点多项式 (节点 $0$ 与 $2$ 各二重, 节点 $1$ 一重). 特别地在节点处该式为零, 与插值条件相符.

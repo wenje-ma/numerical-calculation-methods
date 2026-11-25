@@ -22,14 +22,14 @@
 
 ## 习题 7-13(1) (梯形公式的逐次分半算法)
 
-用梯形公式的逐次分半算法计算积分 $\displaystyle\int_0^{\pi}\frac{\mathrm{d}x}{x+\cos x}$, 要求误差不超过 $\varepsilon=3\times10^{-4}$.
+用梯形公式的逐次分半算法计算积分 $\displaystyle\int_0^{\pi}\frac{\mathrm{d}x}{x+\cos{}x}$, 要求误差不超过 $\varepsilon=3\times10^{-4}$.
 
 ### 解答 7-13(1)
 
-**准备**. $f\left(x\right)=\dfrac{1}{x+\cos x}$, $a=0$, $b=\pi$. 在 $\left[0,\pi\right]$ 上 $x+\cos x$ 单调递增 (其导数为 $1-\sin x\ge0$), 取值从 $1$ 增至 $\pi-1=2.141593$, 故
+**准备**. $f\left(x\right)=\dfrac{1}{x+\cos{}x}$, $a=0$, $b=\pi$. 在 $\left[0,\pi\right]$ 上 $x+\cos{}x$ 单调递增 (其导数为 $1-\sin{}x\ge0$), 取值从 $1$ 增至 $\pi-1=2.141593$, 故
 
 $$
-f\left(0\right)=1,\qquad f\left(\pi\right)=\frac{1}{\pi-1}=0.466943,
+f\left(0\right)=1,\quad{}f\left(\pi\right)=\frac{1}{\pi-1}=0.466943,
 $$
 
 被积函数在区间上光滑无奇点.
@@ -41,7 +41,7 @@ T_1=\frac{b-a}{2}\left[f\left(a\right)+f\left(b\right)\right]=\frac{\pi}{2}\left
 $$
 
 $$
-T_2=\frac{1}{2}T_1+h_1f\left(\frac{\pi}{2}\right),\qquad h_1=\frac{b-a}{2}=\frac{\pi}{2},\quad f\left(\frac{\pi}{2}\right)=\frac{1}{\pi/2}=\frac{2}{\pi},
+T_2=\frac{1}{2}T_1+h_1f\left(\frac{\pi}{2}\right),\quad{}h_1=\frac{b-a}{2}=\frac{\pi}{2},\quad{}f\left(\frac{\pi}{2}\right)=\frac{1}{\pi/2}=\frac{2}{\pi},
 $$
 
 $$
@@ -63,7 +63,7 @@ $\blacksquare$
 | $64$ | $0.049087$ | $2.04322000$ | $4.696\times10^{-4}$ | $1.569\times10^{-4}$ |
 | $128$ | $0.024544$ | $2.04310233$ | $1.177\times10^{-4}$ | $3.925\times10^{-5}$ |
 
-其中 $I=\displaystyle\int_0^{\pi}\frac{\mathrm{d}x}{x+\cos x}=2.04306309$ (由高精度复化梯形与 Romberg 校核).
+其中 $I=\displaystyle\int_0^{\pi}\frac{\mathrm{d}x}{x+\cos{}x}=2.04306309$ (由高精度复化梯形与 Romberg 校核).
 
 $\blacksquare$
 
@@ -76,7 +76,7 @@ $$
 故应在 $2^{m}=64$ 处停止, 取
 
 $$
-I\approx T_{64}=2.04322000,
+I\approx{}T_{64}=2.04322000,
 $$
 
 其实际误差 $1.569\times10^{-4}<\varepsilon=3\times10^{-4}$, 满足要求.
@@ -96,11 +96,11 @@ $\blacksquare$
 **梯形值序列**. $f\left(x\right)=e^{-x^{2}}$, 由**公式 (7.34) (梯形公式的逐次分半计算公式)** 得
 
 $$
-T_0^{\left(0\right)}=0.68393972,\quad T_0^{\left(1\right)}=0.73137025,\quad T_0^{\left(2\right)}=0.74298410,
+T_0^{\left(0\right)}=0.68393972,\quad{}T_0^{\left(1\right)}=0.73137025,\quad{}T_0^{\left(2\right)}=0.74298410,
 $$
 
 $$
-T_0^{\left(3\right)}=0.74586561,\quad T_0^{\left(4\right)}=0.74658460.
+T_0^{\left(3\right)}=0.74586561,\quad{}T_0^{\left(4\right)}=0.74658460.
 $$
 
 其中 $T_0^{\left(k\right)}$ 为 $2^{k}$ 等分的复化梯形值, 例如 $T_0^{\left(1\right)}=\dfrac{1}{2}\left[T_0^{\left(0\right)}+f\left(0.5\right)\right]=\dfrac{1}{2}\left(0.68393972+0.77880078\right)$.
@@ -108,7 +108,7 @@ $$
 **外推**. 按**公式 (7.41) (Romberg 求积公式)** 逐列外推:
 
 $$
-T_1^{\left(k\right)}=\frac{4T_0^{\left(k+1\right)}-T_0^{\left(k\right)}}{3},\qquad T_2^{\left(k\right)}=\frac{16T_1^{\left(k+1\right)}-T_1^{\left(k\right)}}{15},\qquad T_3^{\left(k\right)}=\frac{64T_2^{\left(k+1\right)}-T_2^{\left(k\right)}}{63}.
+T_1^{\left(k\right)}=\frac{4T_0^{\left(k+1\right)}-T_0^{\left(k\right)}}{3},\quad{}T_2^{\left(k\right)}=\frac{16T_1^{\left(k+1\right)}-T_1^{\left(k\right)}}{15},\quad{}T_3^{\left(k\right)}=\frac{64T_2^{\left(k+1\right)}-T_2^{\left(k\right)}}{63}.
 $$
 
 $\blacksquare$
@@ -131,7 +131,7 @@ $$
 \left|T_3^{\left(0\right)}-T_2^{\left(0\right)}\right|=\left|0.74682402-0.74683371\right|=9.69\times10^{-6}<10^{-4},
 $$
 
-故停止, 取 $I\approx T_3^{\left(0\right)}=0.74682402$.
+故停止, 取 $I\approx{}T_3^{\left(0\right)}=0.74682402$.
 
 $\blacksquare$
 
@@ -141,14 +141,14 @@ $\blacksquare$
 
 ## 习题 7-16(2) (权系数给定, 确定节点)
 
-确定积分公式 $\displaystyle\int_0^2f\left(x\right)\mathrm{d}x\approx f\left(x_1\right)+f\left(x_2\right)$ 中的节点 $x_1,x_2$, 使公式具有尽可能高的代数精确度, 并指出该精确度.
+确定积分公式 $\displaystyle\int_0^2f\left(x\right)\mathrm{d}x\approx{}f\left(x_1\right)+f\left(x_2\right)$ 中的节点 $x_1,x_2$, 使公式具有尽可能高的代数精确度, 并指出该精确度.
 
 ### 解答 7-16(2)
 
 **自由度分析**. 公式的权系数已给定为 $1$ 和 $1$, 只剩两个未知量 $x_1,x_2$, 故最多能精确满足两个独立条件. 先看 $f\equiv1$:
 
 $$
-1+1=2=\int_0^2 1\,\mathrm{d}x,
+1+1=2=\int_0^21\,\mathrm{d}x,
 $$
 
 自动成立, 这一条件不消耗自由度.
@@ -172,7 +172,7 @@ $$
 的两根, 解得 $t=1\pm\dfrac{\sqrt{3}}{3}$, 即
 
 $$
-x_1=1-\frac{\sqrt{3}}{3}=0.422650,\qquad x_2=1+\frac{\sqrt{3}}{3}=1.577350.
+x_1=1-\frac{\sqrt{3}}{3}=0.422650,\quad{}x_2=1+\frac{\sqrt{3}}{3}=1.577350.
 $$
 
 $\blacksquare$
@@ -195,7 +195,7 @@ $\blacksquare$
 
 ## 习题 7-16(3) (三个参数, 确定节点与权)
 
-确定积分公式 $\displaystyle\int_{-1}^{1}f\left(x\right)\mathrm{d}x\approx A_1f\left(x_1\right)+A_2f\left(0\right)+f\left(1\right)$ 中的 $A_1,A_2,x_1$, 使公式具有尽可能高的代数精确度.
+确定积分公式 $\displaystyle\int_{-1}^{1}f\left(x\right)\mathrm{d}x\approx{}A_1f\left(x_1\right)+A_2f\left(0\right)+f\left(1\right)$ 中的 $A_1,A_2,x_1$, 使公式具有尽可能高的代数精确度.
 
 ### 解答 7-16(3)
 
@@ -250,7 +250,7 @@ $\blacksquare$
 试确定 $x_1,x_2,A_1,A_2$, 使求积公式
 
 $$
-\int_0^1\sqrt{x}\,f\left(x\right)\mathrm{d}x\approx A_1f\left(x_1\right)+A_2f\left(x_2\right)
+\int_0^1\sqrt{x}\,f\left(x\right)\mathrm{d}x\approx{}A_1f\left(x_1\right)+A_2f\left(x_2\right)
 $$
 
 成为 Gauss 型求积公式.
@@ -260,25 +260,25 @@ $$
 **权函数的矩**. $\rho\left(x\right)=\sqrt{x}$, $\left[a,b\right]=\left[0,1\right]$, 各阶矩为
 
 $$
-\mu_l=\int_0^1x^{l+1/2}\,\mathrm{d}x=\frac{1}{l+3/2}=\frac{2}{2l+3}:\qquad \mu_0=\frac{2}{3},\quad \mu_1=\frac{2}{5},\quad \mu_2=\frac{2}{7},\quad \mu_3=\frac{2}{9}.
+\mu_l=\int_0^1x^{l+1/2}\,\mathrm{d}x=\frac{1}{l+3/2}=\frac{2}{2l+3}:\quad\mu_0=\frac{2}{3},\quad\mu_1=\frac{2}{5},\quad\mu_2=\frac{2}{7},\quad\mu_3=\frac{2}{9}.
 $$
 
 **求 Gauss 点**. 由**定理 7.4 (节点为 Gauss 点的充要条件)**, 二节点情形需 $\omega_2\left(x\right)=x^{2}+px+q$ 与 $1$ 及 $x$ 都关于 $\rho$ 正交:
 
 $$
-\mu_2+p\mu_1+q\mu_0=0,\qquad \mu_3+p\mu_2+q\mu_1=0,
+\mu_2+p\mu_1+q\mu_0=0,\quad\mu_3+p\mu_2+q\mu_1=0,
 $$
 
 即
 
 $$
-\frac{2}{7}+\frac{2p}{5}+\frac{2q}{3}=0,\qquad \frac{2}{9}+\frac{2p}{7}+\frac{2q}{5}=0.
+\frac{2}{7}+\frac{2p}{5}+\frac{2q}{3}=0,\quad\frac{2}{9}+\frac{2p}{7}+\frac{2q}{5}=0.
 $$
 
 消去分母 (第一式乘 $105$, 第二式乘 $315$):
 
 $$
-30+42p+70q=0,\qquad 70+90p+126q=0.
+30+42p+70q=0,\quad70+90p+126q=0.
 $$
 
 由第一式 $p=\dfrac{-30-70q}{42}$, 代入第二式得 $90\cdot\dfrac{-30-70q}{42}+126q=-70$, 即 $-64.2857-150q+126q=-70$, 故 $q=\dfrac{5}{21}$, 回代得 $p=-\dfrac{10}{9}$. 于是
@@ -290,7 +290,7 @@ $$
 其判别式 $\dfrac{100}{81}-\dfrac{20}{21}=\dfrac{100\times21-20\times81}{1701}=\dfrac{2100-1620}{1701}=\dfrac{480}{1701}>0$, 两根为
 
 $$
-x_{1,2}=\frac{1}{2}\left(\frac{10}{9}\mp\sqrt{\frac{480}{1701}}\right)=0.2899492,\ 0.8211619,
+x_{1,2}=\frac{1}{2}\left(\frac{10}{9}\mp\sqrt{\frac{480}{1701}}\right)=0.2899492,0.8211619,
 $$
 
 均在 $\left(0,1\right)$ 内, 故确为 Gauss 点.
@@ -300,7 +300,7 @@ $\blacksquare$
 **求权系数**. 由**公式 (7.50) (Gauss 型求积公式的求积系数)**, 或用更省事的线性插值基函数法: $A_1$ 是 $\omega_2$ 在 $x_1$ 处的插值基函数的权积分, 即
 
 $$
-A_1=\int_0^1\sqrt{x}\,\frac{x-x_2}{x_1-x_2}\mathrm{d}x=\frac{\mu_1-x_2\mu_0}{x_1-x_2},\qquad A_2=\mu_0-A_1.
+A_1=\int_0^1\sqrt{x}\,\frac{x-x_2}{x_1-x_2}\mathrm{d}x=\frac{\mu_1-x_2\mu_0}{x_1-x_2},\quad{}A_2=\mu_0-A_1.
 $$
 
 代入数值: $\mu_0=\dfrac{2}{3}=0.6666667$, $\mu_1=\dfrac{2}{5}=0.4$,

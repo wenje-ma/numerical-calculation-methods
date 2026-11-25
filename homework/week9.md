@@ -14,27 +14,27 @@
 
 > **定理 7.2 (梯形公式的截断误差)**
 > 
-> 若 $f\in C^{\left(2\right)}\left[a,b\right]$, 则 $R_1\left(f\right)=\int_a^bf\left(x\right)\mathrm{d}x-\dfrac{b-a}{2}\left[f\left(a\right)+f\left(b\right)\right]=-\dfrac{\left(b-a\right)^{3}}{12}f''\left(\xi\right)$, $\xi\in\left(a,b\right)$. (教材 $\S7.2$, p204)
+> 若 $f\in{}C^{\left(2\right)}\left[a,b\right]$, 则 $R_1\left(f\right)=\int_a^bf\left(x\right)\mathrm{d}x-\dfrac{b-a}{2}\left[f\left(a\right)+f\left(b\right)\right]=-\dfrac{\left(b-a\right)^{3}}{12}f''\left(\xi\right)$, $\xi\in\left(a,b\right)$. (教材 $\S7.2$, p204)
 
 > **定理 7.3 (Simpson 公式的截断误差)**
 > 
-> 若 $f\in C^{\left(4\right)}\left[a,b\right]$, 则 $R_2\left(f\right)=\int_a^bf\left(x\right)\mathrm{d}x-\dfrac{b-a}{6}\left[f\left(a\right)+4f\left(\dfrac{a+b}{2}\right)+f\left(b\right)\right]=-\dfrac{\left(b-a\right)^{5}}{2880}f^{\left(4\right)}\left(\xi\right)=-\dfrac{h^{5}}{90}f^{\left(4\right)}\left(\xi\right)$, $\xi\in\left(a,b\right)$, $h=\dfrac{b-a}{2}$. (教材 $\S7.2$, p204)
+> 若 $f\in{}C^{\left(4\right)}\left[a,b\right]$, 则 $R_2\left(f\right)=\int_a^bf\left(x\right)\mathrm{d}x-\dfrac{b-a}{6}\left[f\left(a\right)+4f\left(\dfrac{a+b}{2}\right)+f\left(b\right)\right]=-\dfrac{\left(b-a\right)^{5}}{2880}f^{\left(4\right)}\left(\xi\right)=-\dfrac{h^{5}}{90}f^{\left(4\right)}\left(\xi\right)$, $\xi\in\left(a,b\right)$, $h=\dfrac{b-a}{2}$. (教材 $\S7.2$, p204)
 
 > **公式 (7.29) (复化梯形公式)**
 > 
-> 将 $\left[a,b\right]$ 等分为 $n$ 份, $h=\dfrac{b-a}{n}$, $x_k=a+kh$, 则 $\int_a^bf\left(x\right)\mathrm{d}x\approx T_n=h\left[\dfrac{1}{2}f\left(a\right)+\sum_{k=1}^{n-1}f\left(x_k\right)+\dfrac{1}{2}f\left(b\right)\right]$. (教材 $\S7.3$, p206)
+> 将 $\left[a,b\right]$ 等分为 $n$ 份, $h=\dfrac{b-a}{n}$, $x_k=a+kh$, 则 $\int_a^bf\left(x\right)\mathrm{d}x\approx{}T_n=h\left[\dfrac{1}{2}f\left(a\right)+\sum_{k=1}^{n-1}f\left(x_k\right)+\dfrac{1}{2}f\left(b\right)\right]$. (教材 $\S7.3$, p206)
 
 > **公式 (7.30) (复化梯形公式的截断误差)**
 > 
-> 若 $f\in C^{\left(2\right)}\left[a,b\right]$, 则 $R_T\left(f\right)=\int_a^bf\left(x\right)\mathrm{d}x-T_n=-\dfrac{b-a}{12}h^{2}f''\left(\xi\right)$, $\xi\in\left(a,b\right)$. (教材 $\S7.3$, p207)
+> 若 $f\in{}C^{\left(2\right)}\left[a,b\right]$, 则 $R_T\left(f\right)=\int_a^bf\left(x\right)\mathrm{d}x-T_n=-\dfrac{b-a}{12}h^{2}f''\left(\xi\right)$, $\xi\in\left(a,b\right)$. (教材 $\S7.3$, p207)
 
 > **公式 (7.31) (复化 Simpson 公式)**
 > 
-> 将 $\left[a,b\right]$ 分成 $n=2m$ 等份, $h=\dfrac{b-a}{n}$, 则 $\int_a^bf\left(x\right)\mathrm{d}x\approx S_n=\dfrac{h}{3}\left[f\left(a\right)+f\left(b\right)+2\sum_{k=1}^{m-1}f\left(x_{2k}\right)+4\sum_{k=1}^{m}f\left(x_{2k-1}\right)\right]$. (教材 $\S7.3$, p207)
+> 将 $\left[a,b\right]$ 分成 $n=2m$ 等份, $h=\dfrac{b-a}{n}$, 则 $\int_a^bf\left(x\right)\mathrm{d}x\approx{}S_n=\dfrac{h}{3}\left[f\left(a\right)+f\left(b\right)+2\sum_{k=1}^{m-1}f\left(x_{2k}\right)+4\sum_{k=1}^{m}f\left(x_{2k-1}\right)\right]$. (教材 $\S7.3$, p207)
 
 > **公式 (7.32) (复化 Simpson 公式的截断误差)**
 > 
-> 若 $f\in C^{\left(4\right)}\left[a,b\right]$, 则 $R_S\left(f\right)=\int_a^bf\left(x\right)\mathrm{d}x-S_n=-\dfrac{b-a}{180}h^{4}f^{\left(4\right)}\left(\xi\right)$, $\xi\in\left(a,b\right)$. (教材 $\S7.3$, p208)
+> 若 $f\in{}C^{\left(4\right)}\left[a,b\right]$, 则 $R_S\left(f\right)=\int_a^bf\left(x\right)\mathrm{d}x-S_n=-\dfrac{b-a}{180}h^{4}f^{\left(4\right)}\left(\xi\right)$, $\xi\in\left(a,b\right)$. (教材 $\S7.3$, p208)
 
 ## 习题 7-4(2) (梯形公式与 Simpson 公式: $e^{1/x}$)
 
@@ -45,7 +45,7 @@
 **函数值**. $f\left(x\right)=e^{1/x}$, 则
 
 $$
-f\left(0.1\right)=e^{10}=22026.4658,\qquad f\left(0.3\right)=e^{10/3}=28.0316,\qquad f\left(0.5\right)=e^{2}=7.3891.
+f\left(0.1\right)=e^{10}=22026.4658,\quad{}f\left(0.3\right)=e^{10/3}=28.0316,\quad{}f\left(0.5\right)=e^{2}=7.3891.
 $$
 
 **梯形公式**. 由**公式 (7.23) (梯形公式)**,
@@ -71,7 +71,7 @@ $$
 (用高精度数值积分核对, 结果与此一致). 于是实际误差为
 
 $$
-T-I=4118.4483,\qquad S-I=1188.0761,
+T-I=4118.4483,\quad{}S-I=1188.0761,
 $$
 
 即梯形值是真值的 $15.3$ 倍, Simpson 值仍有 $5.1$ 倍.
@@ -81,13 +81,13 @@ $\blacksquare$
 **误差估计**. 先算导数. $f'\left(x\right)=-\dfrac{e^{1/x}}{x^{2}}$, 逐次求导得
 
 $$
-f''\left(x\right)=e^{1/x}\left(\frac{1}{x^{4}}+\frac{2}{x^{3}}\right),\qquad f^{\left(4\right)}\left(x\right)=e^{1/x}\left(\frac{1}{x^{8}}+\frac{12}{x^{7}}+\frac{36}{x^{6}}+\frac{24}{x^{5}}\right).
+f''\left(x\right)=e^{1/x}\left(\frac{1}{x^{4}}+\frac{2}{x^{3}}\right),\quad{}f^{\left(4\right)}\left(x\right)=e^{1/x}\left(\frac{1}{x^{8}}+\frac{12}{x^{7}}+\frac{36}{x^{6}}+\frac{24}{x^{5}}\right).
 $$
 
 两者在 $\left[0.1,0.5\right]$ 上都随 $x$ 减小而急剧增大, 故最大值在左端点:
 
 $$
-\left|f''\left(0.1\right)\right|=e^{10}\times12000=2.6432\times10^{8},\qquad \left|f^{\left(4\right)}\left(0.1\right)\right|=e^{10}\times2.584\times10^{8}=5.6919\times10^{12}.
+\left|f''\left(0.1\right)\right|=e^{10}\times12000=2.6432\times10^{8},\quad\left|f^{\left(4\right)}\left(0.1\right)\right|=e^{10}\times2.584\times10^{8}=5.6919\times10^{12}.
 $$
 
 由**定理 7.2 (梯形公式的截断误差)**,
@@ -123,7 +123,7 @@ $$
 记 $Q\left(f\right)=\dfrac{1}{3}\left[2f\left(\dfrac{1}{4}\right)-f\left(\dfrac{1}{2}\right)+2f\left(\dfrac{3}{4}\right)\right]$, 由**定义 7.1 (求积公式的代数精确度)**, 只需逐一检验 $f\left(x\right)=x^{k}$ ($k=0,1,2,\ldots$), 直到首次失败.
 
 $$
-Q\left(1\right)=\frac{1}{3}\left(2-1+2\right)=1=\int_0^1 1\,\mathrm{d}x,
+Q\left(1\right)=\frac{1}{3}\left(2-1+2\right)=1=\int_0^11\,\mathrm{d}x,
 $$
 
 $$
@@ -192,7 +192,7 @@ $\blacksquare$
 由**公式 (7.30) (复化梯形公式的截断误差)**, $R_T=-\dfrac{1}{12}h^{2}f''\left(\xi\right)$; 而
 
 $$
-f'\left(x\right)=\frac{1-x^{2}}{\left(1+x^{2}\right)^{2}},\qquad f''\left(x\right)=\frac{2x^{3}-6x}{\left(1+x^{2}\right)^{3}},
+f'\left(x\right)=\frac{1-x^{2}}{\left(1+x^{2}\right)^{2}},\quad{}f''\left(x\right)=\frac{2x^{3}-6x}{\left(1+x^{2}\right)^{3}},
 $$
 
 在 $\left[0,1\right]$ 上 $\left|f''\right|$ 的最大值为 $1.4571$ (在 $x\approx0.47$ 处), 故
@@ -234,7 +234,7 @@ $\blacksquare$
 **导数估计**. $f\left(x\right)=e^{-x^{2}}$,
 
 $$
-f''\left(x\right)=\left(4x^{2}-2\right)e^{-x^{2}},\qquad f^{\left(4\right)}\left(x\right)=\left(16x^{4}-48x^{2}+12\right)e^{-x^{2}}.
+f''\left(x\right)=\left(4x^{2}-2\right)e^{-x^{2}},\quad{}f^{\left(4\right)}\left(x\right)=\left(16x^{4}-48x^{2}+12\right)e^{-x^{2}}.
 $$
 
 在 $\left[0,1\right]$ 上 $\left|f''\right|$ 的最大值在 $x=0$ 处, 为 $2$; $\left|f^{\left(4\right)}\right|$ 的最大值也在 $x=0$ 处, 为 $12$ (在 $x=1$ 处为 $\left|16-48+12\right|e^{-1}=7.358<12$).
@@ -248,7 +248,7 @@ $$
 $$
 
 $$
-h\le\sqrt{3\times10^{-4}}=0.0173205,\qquad n=\frac{1}{h}\ge57.735,
+h\le\sqrt{3\times10^{-4}}=0.0173205,\quad{}n=\frac{1}{h}\ge57.735,
 $$
 
 故需 $n=58$ 等分 (此时 $h=1/58=0.017241$, $\dfrac{h^{2}}{6}=4.954\times10^{-5}$, 刚好满足).
@@ -262,7 +262,7 @@ $$
 $$
 
 $$
-h^{4}\le7.5\times10^{-4},\qquad h\le0.165488,\qquad n\ge6.043,
+h^{4}\le7.5\times10^{-4},\quad{}h\le0.165488,\quad{}n\ge6.043,
 $$
 
 复化 Simpson 要求 $n$ 为偶数, 故取 $n=8$ (此时 $\dfrac{h^{4}}{15}=1.628\times10^{-5}$).
@@ -286,7 +286,7 @@ $\blacksquare$
 
 ### 解答 7-12
 
-**识别被积函数**. 表中数据满足 $f\left(0\right)=1$ 与 $f\left(x\right)=\dfrac{\sin x}{x}$ ($x>0$), 例如 $f\left(0.125\right)=\dfrac{\sin0.125}{0.125}=0.997398$, $f\left(1\right)=\sin1=0.841471$. 故 $I=\displaystyle\int_0^1\frac{\sin x}{x}\mathrm{d}x$, 其值为 $0.9460831$.
+**识别被积函数**. 表中数据满足 $f\left(0\right)=1$ 与 $f\left(x\right)=\dfrac{\sin{}x}{x}$ ($x>0$), 例如 $f\left(0.125\right)=\dfrac{\sin0.125}{0.125}=0.997398$, $f\left(1\right)=\sin1=0.841471$. 故 $I=\displaystyle\int_0^1\frac{\sin{}x}{x}\mathrm{d}x$, 其值为 $0.9460831$.
 
 **复化梯形** ($n=8$, $h=0.125$). 由**公式 (7.29) (复化梯形公式)**,
 
@@ -309,7 +309,7 @@ $\blacksquare$
 **误差估计 (靠表内数据) **. 因只有节点值, 只能用差商近似导数. 由**公式 (7.30) (复化梯形公式的截断误差)**, $R_T=-\dfrac{1}{12}h^{2}f''\left(\xi\right)$, 而 $f''$ 可用二阶差分估计:
 
 $$
-f''\left(x_i\right)\approx\frac{f_{i+1}-2f_i+f_{i-1}}{h^{2}},\qquad i=1,\ldots,7,
+f''\left(x_i\right)\approx\frac{f_{i+1}-2f_i+f_{i-1}}{h^{2}},\quad{}i=1,\ldots,7,
 $$
 
 七个值依次为 $-0.3315$, $-0.3268$, $-0.3192$, $-0.3084$, $-0.2950$, $-0.2787$, $-0.2600$, 绝对值最大 $0.3315$ (与真值 $f''\left(0\right)=-\dfrac{1}{3}$ 相符). 于是

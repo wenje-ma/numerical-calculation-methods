@@ -2,11 +2,11 @@
 
 > **定义 5.10 (m 次样条函数)**
 > 
-> 设区间 $\left[a,b\right]$ 有分划 $\Delta:a=x_0<x_1<\cdots<x_n=b$. 若函数 $S\left(x\right)$ 在每个小区间 $\left[x_i,x_{i+1}\right]$ ($i=0,1,\ldots,n-1$) 上是 $m$ 次多项式, 且在整个 $\left[a,b\right]$ 上具有 $m-1$ 阶连续导数, 则称 $S\left(x\right)$ 为关于分划 $\Delta$ 的 $m$ 次样条函数. (教材 $\S5.5$, p148)
+> 设区间 $\left[a,b\right]$ 有分划 $\Delta:a=x_0<{}x_1<\cdots<{}x_n=b$. 若函数 $S\left(x\right)$ 在每个小区间 $\left[x_i,x_{i+1}\right]$ ($i=0,1,\ldots,n-1$) 上是 $m$ 次多项式, 且在整个 $\left[a,b\right]$ 上具有 $m-1$ 阶连续导数, 则称 $S\left(x\right)$ 为关于分划 $\Delta$ 的 $m$ 次样条函数. (教材 $\S5.5$, p148)
 
 > **定义 5.11 (三次样条插值)**
 > 
-> 已知 $y=f\left(x\right)$ 在 $a=x_0<x_1<\cdots<x_n=b$ 上的值 $y_i=f\left(x_i\right)$, 若插值函数 $S\left(x\right)$ 满足: (1) $S\left(x_i\right)=y_i$; (2) 在每个 $\left[x_j,x_{j+1}\right]$ 上 $S\left(x\right)$ 是三次多项式, 记为 $S_j\left(x\right)$; (3) $S\left(x\right)$ 在 $\left[a,b\right]$ 上二阶连续可微, 则称 $S\left(x\right)$ 为 $f\left(x\right)$ 的三次样条插值函数. (教材 $\S5.5$, p148)
+> 已知 $y=f\left(x\right)$ 在 $a=x_0<{}x_1<\cdots<{}x_n=b$ 上的值 $y_i=f\left(x_i\right)$, 若插值函数 $S\left(x\right)$ 满足: (1) $S\left(x_i\right)=y_i$; (2) 在每个 $\left[x_j,x_{j+1}\right]$ 上 $S\left(x\right)$ 是三次多项式, 记为 $S_j\left(x\right)$; (3) $S\left(x\right)$ 在 $\left[a,b\right]$ 上二阶连续可微, 则称 $S\left(x\right)$ 为 $f\left(x\right)$ 的三次样条插值函数. (教材 $\S5.5$, p148)
 
 > **公式 (5.37) (三弯矩形式的分段表达式)**
 > 
@@ -26,7 +26,7 @@
 
 > **定理 6.1 (正则方程组的解即最小二乘函数)**
 > 
-> 设 $\varphi_0\left(x\right),\ldots,\varphi_m\left(x\right)$ 线性无关, $a_0,a_1,\ldots,a_m$ 为正则方程组 $\sum_{k=0}^{m}\left(\varphi_k,\varphi_j\right)a_k=\left(y,\varphi_j\right)$ ($j=0,1,\ldots,m$) 的解, 其中 $\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^{n}\omega_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right)$, $\left(y,\varphi_j\right)=\sum_{i=1}^{n}\omega_iy_i\varphi_j\left(x_i\right)$, 则 $\varphi\left(x\right)=\sum_{k=0}^{m}a_k\varphi_k\left(x\right)$ 满足 $\sum_{i=1}^{n}\omega_i\left[y_i-\varphi\left(x_i\right)\right]^{2}=\min_{\psi\in H}\sum_{i=1}^{n}\omega_i\left[y_i-\psi\left(x_i\right)\right]^{2}$. (教材 $\S6.1$, p175)
+> 设 $\varphi_0\left(x\right),\ldots,\varphi_m\left(x\right)$ 线性无关, $a_0,a_1,\ldots,a_m$ 为正则方程组 $\sum_{k=0}^{m}\left(\varphi_k,\varphi_j\right)a_k=\left(y,\varphi_j\right)$ ($j=0,1,\ldots,m$) 的解, 其中 $\left(\varphi_k,\varphi_j\right)=\sum_{i=1}^{n}\omega_i\varphi_k\left(x_i\right)\varphi_j\left(x_i\right)$, $\left(y,\varphi_j\right)=\sum_{i=1}^{n}\omega_iy_i\varphi_j\left(x_i\right)$, 则 $\varphi\left(x\right)=\sum_{k=0}^{m}a_k\varphi_k\left(x\right)$ 满足 $\sum_{i=1}^{n}\omega_i\left[y_i-\varphi\left(x_i\right)\right]^{2}=\min_{\psi\in{}H}\sum_{i=1}^{n}\omega_i\left[y_i-\psi\left(x_i\right)\right]^{2}$. (教材 $\S6.1$, p175)
 
 ## 习题 5-17 (三次样条: 两种边界条件)
 
@@ -47,19 +47,19 @@
 由**公式 (5.45) (三转角方程)**, $h_0=h_1=h_2=1$, 故 $\alpha_j=\beta_j=\dfrac{1}{2}$ ($j=1,2$), 又 $y_0=y_1=y_2=y_3=0$, 故
 
 $$
-d_j=3\left[\frac{1}{2}\cdot\frac{0-0}{1}+\frac{1}{2}\cdot\frac{0-0}{1}\right]=0,\qquad j=1,2.
+d_j=3\left[\frac{1}{2}\cdot\frac{0-0}{1}+\frac{1}{2}\cdot\frac{0-0}{1}\right]=0,\quad{}j=1,2.
 $$
 
 代入 $m_0=1$, $m_3=0$ 得两个方程
 
 $$
-\frac{1}{2}\cdot1+2m_1+\frac{1}{2}m_2=0,\qquad \frac{1}{2}m_1+2m_2+\frac{1}{2}\cdot0=0.
+\frac{1}{2}\cdot1+2m_1+\frac{1}{2}m_2=0,\quad\frac{1}{2}m_1+2m_2+\frac{1}{2}\cdot0=0.
 $$
 
 由第二式 $m_1=-4m_2$, 代入第一式得 $\dfrac{1}{2}-\dfrac{15}{2}m_2=0$, 即
 
 $$
-m_2=\frac{1}{15},\qquad m_1=-\frac{4}{15}.
+m_2=\frac{1}{15},\quad{}m_1=-\frac{4}{15}.
 $$
 
 $\blacksquare$
@@ -69,13 +69,13 @@ $\blacksquare$
 由**公式 (5.41) (三弯矩方程)**, $h_j=1$ 且 $y_j$ 全为零, 故 $c_j=0$ ($j=1,2$). 代入 $M_0=1$, $M_3=0$ 得
 
 $$
-\frac{1}{2}\cdot1+2M_1+\frac{1}{2}M_2=0,\qquad \frac{1}{2}M_1+2M_2+\frac{1}{2}\cdot0=0.
+\frac{1}{2}\cdot1+2M_1+\frac{1}{2}M_2=0,\quad\frac{1}{2}M_1+2M_2+\frac{1}{2}\cdot0=0.
 $$
 
 与 (1) 的方程组逐项相同, 故
 
 $$
-M_2=\frac{1}{15},\qquad M_1=-\frac{4}{15}.
+M_2=\frac{1}{15},\quad{}M_1=-\frac{4}{15}.
 $$
 
 $\blacksquare$
@@ -149,13 +149,13 @@ $\blacksquare$
 取 $\varphi_0\left(x\right)=1$, $\varphi_1\left(x\right)=x$, 权 $\omega_i=1$, 拟合函数 $\varphi\left(x\right)=a_0+a_1x$. 计算五个和:
 
 $$
-n=8,\qquad \sum x_i=15.26,\qquad \sum x_i^{2}=30.1556,\qquad \sum y_i=145.227,\qquad \sum x_iy_i=284.83628.
+n=8,\quad\sum{}x_i=15.26,\quad\sum{}x_i^{2}=30.1556,\quad\sum{}y_i=145.227,\quad\sum{}x_iy_i=284.83628.
 $$
 
 由**定理 6.1 (正则方程组的解即最小二乘函数)**, 正则方程组为
 
 $$
-\begin{cases}8a_0+15.26a_1=145.227,\\ 15.26a_0+30.1556a_1=284.83628,\end{cases}
+\begin{cases}8a_0+15.26a_1=145.227,\\15.26a_0+30.1556a_1=284.83628,\end{cases}
 $$
 
 系数行列式 $\Delta=8\times30.1556-15.26^{2}=241.2448-232.8676=8.3772$, 故
@@ -196,13 +196,13 @@ $i$ 为实验次数, $x_i$ 为全部炉料熔化完毕时钢液的含碳量, $y_
 仍取 $\varphi_0\left(x\right)=1$, $\varphi_1\left(x\right)=x$, $\omega_i=1$, 计算
 
 $$
-n=5,\qquad \sum x_i=700,\qquad \sum x_i^{2}=99376,\qquad \sum y_i=758,\qquad \sum x_iy_i=108146.
+n=5,\quad\sum{}x_i=700,\quad\sum{}x_i^{2}=99376,\quad\sum{}y_i=758,\quad\sum{}x_iy_i=108146.
 $$
 
 由**定理 6.1 (正则方程组的解即最小二乘函数)**, 正则方程组为
 
 $$
-\begin{cases}5a_0+700a_1=758,\\ 700a_0+99376a_1=108146,\end{cases}
+\begin{cases}5a_0+700a_1=758,\\700a_0+99376a_1=108146,\end{cases}
 $$
 
 $\Delta=5\times99376-700^{2}=496880-490000=6880$, 故
@@ -246,19 +246,19 @@ $\blacksquare$
 模型对参数 $a,b$ 是线性的, 取 $\varphi_0\left(x\right)=1$, $\varphi_1\left(x\right)=x^{2}$, 记 $u_i=x_i^{2}$:
 
 $$
-u=\left(361,\ 625,\ 961,\ 1444,\ 1936\right).
+u=\left(361,625,961,1444,1936\right).
 $$
 
 计算
 
 $$
-n=5,\qquad \sum u_i=5327,\qquad \sum u_i^{2}=7277699,\qquad \sum y_i=271.4,\qquad \sum u_iy_i=369321.5.
+n=5,\quad\sum{}u_i=5327,\quad\sum{}u_i^{2}=7277699,\quad\sum{}y_i=271.4,\quad\sum{}u_iy_i=369321.5.
 $$
 
 由**定理 6.1 (正则方程组的解即最小二乘函数)**, 正则方程组为
 
 $$
-\begin{cases}5a+5327b=271.4,\\ 5327a+7277699b=369321.5,\end{cases}
+\begin{cases}5a+5327b=271.4,\\5327a+7277699b=369321.5,\end{cases}
 $$
 
 $\Delta=5\times7277699-5327^{2}=36388495-28376929=8011566$, 故
@@ -293,22 +293,22 @@ $\blacksquare$
 
 ### 解答 6-6
 
-两边取对数化为线性模型: $\ln y=\ln a+bx$. 记 $v_i=\ln y_i$, 取 $\varphi_0\left(x\right)=1$, $\varphi_1\left(x\right)=x$, 待定系数为 $\ln a$ 与 $b$. 数据为
+两边取对数化为线性模型: $\ln{}y=\ln{}a+bx$. 记 $v_i=\ln{}y_i$, 取 $\varphi_0\left(x\right)=1$, $\varphi_1\left(x\right)=x$, 待定系数为 $\ln{}a$ 与 $b$. 数据为
 
 $$
-v=\left(2.727853,\ 3.020425,\ 3.310543,\ 3.600048,\ 3.893859,\ 4.183576,\ 4.475858,\ 4.767289\right).
+v=\left(2.727853,3.020425,3.310543,3.600048,3.893859,4.183576,4.475858,4.767289\right).
 $$
 
 计算
 
 $$
-n=8,\qquad \sum x_i=36,\qquad \sum x_i^{2}=204,\qquad \sum v_i=29.979451,\qquad \sum x_iv_i=147.140593.
+n=8,\quad\sum{}x_i=36,\quad\sum{}x_i^{2}=204,\quad\sum{}v_i=29.979451,\quad\sum{}x_iv_i=147.140593.
 $$
 
 由**定理 6.1 (正则方程组的解即最小二乘函数)**, 正则方程组为
 
 $$
-\begin{cases}8\ln a+36b=29.979451,\\ 36\ln a+204b=147.140593,\end{cases}
+\begin{cases}8\ln{}a+36b=29.979451,\\36\ln{}a+204b=147.140593,\end{cases}
 $$
 
 $\Delta=8\times204-36^{2}=1632-1296=336$, 故
@@ -318,7 +318,7 @@ b=\frac{8\times147.140593-36\times29.979451}{336}=\frac{1177.124744-1079.260236}
 $$
 
 $$
-\ln a=\frac{29.979451-36\times0.291263}{8}=\frac{29.979451-10.485468}{8}\approx2.436748,
+\ln{}a=\frac{29.979451-36\times0.291263}{8}=\frac{29.979451-10.485468}{8}\approx2.436748,
 $$
 
 $$
@@ -337,6 +337,6 @@ $\blacksquare$
 
 $\blacksquare$
 
-**方法说明**. 对数变换是拟合一类的标准化简, 它最小化的是 $\sum\left(\ln y_i-\ln a-bx_i\right)^{2}$, 而不是 $\sum\left(y_i-ae^{bx_i}\right)^{2}$, 二者只在残差很小时近似等价. 本题 $y$ 从 $15.3$ 单调增到 $117.6$, 相邻比值的对数平均即 $b$ 的估计 $0.291$, 而 $\ln y$ 关于 $x$ 的残差只有 $5.9\times10^{-6}$ 量级, 说明 $\ln y$ 几乎严格是 $x$ 的一次函数, 用对数最小二乘是恰当的.
+**方法说明**. 对数变换是拟合一类的标准化简, 它最小化的是 $\sum\left(\ln{}y_i-\ln{}a-bx_i\right)^{2}$, 而不是 $\sum\left(y_i-ae^{bx_i}\right)^{2}$, 二者只在残差很小时近似等价. 本题 $y$ 从 $15.3$ 单调增到 $117.6$, 相邻比值的对数平均即 $b$ 的估计 $0.291$, 而 $\ln{}y$ 关于 $x$ 的残差只有 $5.9\times10^{-6}$ 量级, 说明 $\ln{}y$ 几乎严格是 $x$ 的一次函数, 用对数最小二乘是恰当的.
 
 $\blacksquare$
